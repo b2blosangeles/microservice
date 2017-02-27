@@ -77,7 +77,7 @@ $(document).ready(
 			}, 200
 		);
 		
-		setTimeout(
+		setInterval(
 			function() {
 				$('<qalet>{"module":"giant_jsmarty"}</qalet>').appendTo($('#niu')[0]);	
 			}
