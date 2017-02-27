@@ -13,15 +13,15 @@ $(document).ready(
 				var o = parse(data);
 				if (!_QALET_.lets[o.module]) {
 					r[o.module] = true;
-					_QALET_._p++;
-					_QALET_.lets[o.module] = true;
-					o.id = o.module + '_plugin_' + _QALET_._p;
-					data[_QALET_._p] = o;
-					$(v[i]).replaceWith('<div class="class_' + o.module +' '+o.id+'"></div>');
-					console.log(o);
-				}
+				}	
+				_QALET_._p++;
+				_QALET_.lets[o.module] = true;
+				o.id = o.module + '_plugin_' + _QALET_._p;
+				_QALET_.data[o.id] = o;
+				$(v[i]).replaceWith('<div class="class_' + o.module +' '+o.id+'"></div>');
 			}
 			console.log(Object.keys(r))
+			console.log(_QALET_.data)
 		}
 		_QALET_.addLet();
 	}
