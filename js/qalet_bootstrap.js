@@ -41,8 +41,10 @@ $(document).ready(
 						for (var i=0; i< _Q_.data.length; i++) {
 							var o = _Q_.data[i];
 							if (typeof _QALET_[o.module] == 'function') {
+								console.log(1);
 								_QALET_[o.module](o);				
 							} else {
+								console.log(2);
 								console.log('=='+o.module+'==');
 							}
 						}
