@@ -24,10 +24,11 @@ $(document).ready(
 		}
 		
 		console.log('check change -->');
+		_QALET_.loadLet();
 		setInterval(
 			function() {
 				_QALET_.loadLet();
-			}, 1000
+			}, 500
 		);		
 		console.log(_QALET_.data);
 	}
