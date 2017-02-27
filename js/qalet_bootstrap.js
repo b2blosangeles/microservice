@@ -21,7 +21,7 @@ $(document).ready(
 					console.log(o);
 				}
 			}
-			console.log(r)
+			console.log(Object.keys(r))
 		}
 		_QALET_.addLet();
 	}
