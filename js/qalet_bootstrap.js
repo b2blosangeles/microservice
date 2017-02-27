@@ -55,10 +55,9 @@ $(document).ready(
 							}
 						}
 					});
-			} 
-			
-			if (Object.keys(rid).length) {	
-				for (var v in _QALET_.rid) {
+			} else if (Object.keys(rid).length) {	
+				console.log(rid)
+				for (var v in rid) {
 					var o = _QALET_.data[v];
 					if (typeof _QALET_._Q[o.module] == 'function') {
 						console.log(1);
