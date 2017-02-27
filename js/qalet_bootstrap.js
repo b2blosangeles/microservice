@@ -63,7 +63,7 @@ $(document).ready(
 		
 		setTimeout(
 			function() {
-				$('#niu').html('<qalet>{"module":"test"}</qalet>').hide();	
+		//		$('#niu').html('<qalet>{"module":"test"}</qalet>').hide();	
 			}
 		,4000);
 		console.log(_Q_.data);
