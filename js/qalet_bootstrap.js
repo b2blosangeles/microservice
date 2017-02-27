@@ -23,7 +23,7 @@ $(document).ready(
 			console.log(Object.keys(r));
 		}
 		
-		
+		console.log('check change -->');
 		_QALET_.watch('lets', function (id, oldval, newval) {
 		  console.log('o.' + id + ' changed from ' + oldval + ' to ' + newval);
 		  return newval;
