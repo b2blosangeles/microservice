@@ -33,7 +33,7 @@ $(document).ready(
 			}, 500
 		);
 		
-		setTimeout({
+		setTimeout(
 			function() {
 				$('#niu').html('<qalet>{"module":"video"}</qalet>');	
 			}
