@@ -39,6 +39,7 @@ $(document).ready(
 		setInterval(
 			function() {
 				_QALET_.loadLet();
+				$('#niu').show();
 			}, 200
 		);
 		
