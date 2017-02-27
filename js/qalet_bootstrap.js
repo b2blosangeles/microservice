@@ -12,6 +12,9 @@ $(document).ready(
 				var data = $(v[i]).html();
 				if (!data) data = $(v[i]).attr('data');
 				var o = parse(data);
+				if (!o.module) {
+					$(v[i]).replaceWith('<div style="color:red">Miss module on '+ data + '</div>');
+				}
 				if (!_QALET_.lets[o.module]) {
 					r[o.module] = true;
 					_QALET_.lets[o.module] = true;
@@ -23,7 +26,6 @@ $(document).ready(
 			if (Object.keys(r).length) console.log(Object.keys(r));
 		}
 		
-		console.log('check change -->');
 		_QALET_.loadLet();
 		setInterval(
 			function() {
