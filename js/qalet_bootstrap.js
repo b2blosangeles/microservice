@@ -5,7 +5,7 @@ $(document).ready(
 			var t = v.replace(/(“|”)/ig, '"');
 			return JSON.parse(t);
 		}
-		_QALET_.addLet = function() {
+		_QALET_.loadLet = function() {
 			var v = $('QALET'), r = {};	
 			for (var i = 0; i < v.length; i++) {
 				var data = $(v[i]).html();
@@ -23,6 +23,6 @@ $(document).ready(
 			console.log(Object.keys(r))
 			console.log(_QALET_.data)
 		}
-		_QALET_.addLet();
+		_QALET_.loadLet();
 	}
 );
