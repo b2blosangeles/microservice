@@ -1,4 +1,4 @@
-if (!_QALET_) var _QALET_={lets:{}, _p:0, data:{}};
+if (!_QALET_) var _QALET_={lets:{}, _p:0, data:{}, _file:{}};
 $(document).ready(	
 	function() {		
 		function parse(v) {
@@ -20,9 +20,9 @@ $(document).ready(
 				_QALET_.data[o.id] = o;
 				$(v[i]).replaceWith('<div class="class_' + o.module +' '+o.id+'"></div>');
 			}
+			console.log(Object.keys(r));
 		}
 		_QALET_.loadLet();
-		console.log(Object.keys(r))
-		console.log(_QALET_.data)
+		console.log(_QALET_.data);
 	}
 );
