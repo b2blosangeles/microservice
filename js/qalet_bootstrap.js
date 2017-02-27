@@ -24,10 +24,6 @@ $(document).ready(
 		}
 		
 		console.log('check change -->');
-		_QALET_.watch('lets', function (id, oldval, newval) {
-		  console.log('o.' + id + ' changed from ' + oldval + ' to ' + newval);
-		  return newval;
-		});
 				
 		watch(_QALET_, "_p", function(prop, action, newvalue, oldvalue){
 		    alert(prop+" - action: "+action+" - new: "+newvalue+", old: "+oldvalue+"... and the context: "+JSON.stringify(this));
