@@ -23,6 +23,12 @@ $(document).ready(
 			console.log(Object.keys(r));
 		}
 		_QALET_.loadLet();
+		
+		var watcher = createWatcher(_QALET_);
+		watcher.watch('lets', function() {
+			console.log('changed');
+		});		
+		
 		console.log(_QALET_.data);
 	}
 );
