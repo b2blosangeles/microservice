@@ -1,4 +1,4 @@
-if !(_QALET_) _QALET_={lets:{}};
+if (!_QALET_) _QALET_={lets:{}};
 $(document).ready(	
 	function() {		
 		function parse(v) {
