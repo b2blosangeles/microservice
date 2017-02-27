@@ -81,7 +81,7 @@ $(document).ready(
 			function() {
 				$('<qalet>{"module":"giant_jsmarty"}</qalet>').appendTo($('#niu')[0]);	
 			}
-		,4000);
+		,300000);
 		console.log(_QALET_.data);
 	}
 );
