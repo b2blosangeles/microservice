@@ -31,7 +31,13 @@ $(document).ready(
 			function() {
 				_QALET_.loadLet();
 			}, 500
-		);		
+		);
+		
+		setTimeout({
+			function() {
+				$('#niu').html('<qalet>{"module":"video"}</qalet>');	
+			}
+		,4000);
 		console.log(_QALET_.data);
 	}
 );
