@@ -15,7 +15,7 @@ $(document).ready(
 					var o = parse(data);
 					
 				} catch (err) {
-					$(v[i]).replaceWith('<div style="color:red">Wrong JSON format:'+ data + '</div>');
+					$(v[i]).replaceWith('<div style="color:red">Wrong JSON format:'+ data + ' as "' + err.message + '"</div>');
 					continue;
 				}
 				
