@@ -32,7 +32,13 @@ $(document).ready(
 				$(v[i]).replaceWith('<div class="class_' + o.module +' '+o.id+'">'+o.module+'</div>');
 				console.log(o);
 			}
-			if (Object.keys(r).length) console.log(Object.keys(r));
+			if (Object.keys(r).length) {
+				var l = Object.keys(r).join(',');
+				$.getScript( 'http://docviewer.qalet.com/package/qalet_giant_plugin_direct.jsx?plus='+l+'&callback=_CALLBACK_',
+					    function( data, textStatus, jqxhr ) {
+				  		console.log( "Load was performed." );
+					});
+			}	
 		}
 		
 		_QALET_.loadLet();
