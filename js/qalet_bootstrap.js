@@ -29,7 +29,7 @@ $(document).ready(
 				}	
 				o.id = o.module + '_plugin_' + _QALET_._p;
 				_QALET_.data[o.id] = o;
-				$(v[i]).replaceWith('<div class="class_' + o.module +' '+o.id+'"></div>');
+				$(v[i]).replaceWith('<div class="class_' + o.module +' '+o.id+'">'+o.module+'</div>');
 				console.log(o);
 			}
 			if (Object.keys(r).length) console.log(Object.keys(r));
@@ -44,7 +44,7 @@ $(document).ready(
 		
 		setTimeout(
 			function() {
-				$('#niu').html('<qalet>{"module":"test"}</qalet>');	
+				$('#niu').html('<qalet>{"module":"test"}</qalet>').hide();	
 			}
 		,4000);
 		console.log(_QALET_.data);
