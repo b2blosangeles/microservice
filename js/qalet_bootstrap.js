@@ -38,8 +38,8 @@ $(document).ready(
 					    function( data, textStatus, jqxhr ) {
 				  		console.log( "Load was performed." );
 					
-						for (var o in _Q_.data) {
-							console.log(o);
+						for (var v in _Q_.data) {
+							var o = _Q_.data[v];
 							if (typeof _QALET_[o.module] == 'function') {
 								console.log(1);
 								_QALET_[o.module](o);				
