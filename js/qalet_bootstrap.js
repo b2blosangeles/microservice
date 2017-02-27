@@ -26,7 +26,8 @@ $(document).ready(
 		console.log('check change -->');
 				
 		watch(_QALET_, "_p", function(prop, action, newvalue, oldvalue){
-		    alert(prop+" - action: "+action+" - new: "+newvalue+", old: "+oldvalue+"... and the context: "+JSON.stringify(this));
+			console.log(newvalue);
+			console.log('=========');
 		});
 		_QALET_.loadLet();
 		console.log(_QALET_.data);
