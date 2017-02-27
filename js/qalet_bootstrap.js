@@ -28,8 +28,11 @@ $(document).ready(
 		  console.log('o.' + id + ' changed from ' + oldval + ' to ' + newval);
 		  return newval;
 		});
-		_QALET_.loadLet();		
-		
+				
+		watch(_QALET_, "_p", function(prop, action, newvalue, oldvalue){
+		    alert(prop+" - action: "+action+" - new: "+newvalue+", old: "+oldvalue+"... and the context: "+JSON.stringify(this));
+		});
+		_QALET_.loadLet();
 		console.log(_QALET_.data);
 	}
 );
