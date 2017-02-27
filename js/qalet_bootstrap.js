@@ -11,9 +11,17 @@ $(document).ready(
 				_QALET_._p++;
 				var data = $(v[i]).html();
 				if (!data) data = $(v[i]).attr('data');
-				var o = parse(data);
+				try {
+					var o = parse(data);
+					
+				} catch (err) {
+					$(v[i]).replaceWith('<div style="color:red">Wrong JSON format:'+ data + '</div>');
+					continue;
+				}
+				
 				if (!o.module) {
 					$(v[i]).replaceWith('<div style="color:red">Miss module on '+ data + '</div>');
+					continue;
 				}
 				if (!_QALET_.lets[o.module]) {
 					r[o.module] = true;
