@@ -1,4 +1,4 @@
-if (!_QALET_) _QALET_={lets:{}, _p:0, data:{}};
+if (!_QALET_) var _QALET_={lets:{}, _p:0, data:{}};
 $(document).ready(	
 	function() {		
 		function parse(v) {
