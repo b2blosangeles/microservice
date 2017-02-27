@@ -34,6 +34,10 @@ $(document).ready(
 			}
 			if (Object.keys(r).length) {
 				var l = Object.keys(r).join(',');
+				var csslink = 'http://docviewer.qalet.com/package/qalet_giant_plugin_direct.css?plus='+l;
+				console.log(csslink );
+				$('<link rel="stylesheet" type="text/css" href="'+csslink+'" />').appendTo("head");
+				
 				$.getScript( 'http://docviewer.qalet.com/package/qalet_giant_plugin_direct.jsx?plus='+l+'&callback=_CALLBACK_',
 					    function( data, textStatus, jqxhr ) {
 				  		console.log( "Load was performed." );
@@ -48,9 +52,6 @@ $(document).ready(
 								console.log('=='+o.module+'==');
 							}
 						}
-					
-					
-					
 					});
 			}	
 		}
