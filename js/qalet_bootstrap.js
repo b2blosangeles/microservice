@@ -22,12 +22,13 @@ $(document).ready(
 			}
 			console.log(Object.keys(r));
 		}
-		_QALET_.loadLet();
 		
-		var watcher = createWatcher(_QALET_);
-		watcher.watch('lets', function() {
-			console.log('changed');
-		});		
+		
+		_QALET_.watch('lets', function (id, oldval, newval) {
+		  console.log('o.' + id + ' changed from ' + oldval + ' to ' + newval);
+		  return newval;
+		});
+		_QALET_.loadLet();		
 		
 		console.log(_QALET_.data);
 	}
