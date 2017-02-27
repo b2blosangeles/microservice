@@ -20,16 +20,15 @@ $(document).ready(
 				_QALET_.data[o.id] = o;
 				$(v[i]).replaceWith('<div class="class_' + o.module +' '+o.id+'"></div>');
 			}
-			console.log(Object.keys(r));
+			if (Object.keys(r).length) console.log(Object.keys(r));
 		}
 		
 		console.log('check change -->');
-				
-		watch(_QALET_, "_p", function(prop, action, newvalue, oldvalue){
-			console.log(newvalue);
-			console.log('=========');
-		});
-		_QALET_.loadLet();
+		setInterval(
+			function() {
+				_QALET_.loadLet();
+			}, 1000
+		);		
 		console.log(_QALET_.data);
 	}
 );
