@@ -5,7 +5,7 @@
 		"/js/jquery-2.1.3/jquery-2.1.3.js",
 	    "/js/UIQALET/css.js",
 		"/js/bootstrap.3.3.7/bootstrap.3.3.7.js",
-		"/js/qalet_plugin.js"
+		"/js/qalet_bootstrap.js"
       ],
 	"mservice": {
 		"giant_react":[],
