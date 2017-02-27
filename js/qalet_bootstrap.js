@@ -74,13 +74,12 @@ $(document).ready(
 		setInterval(
 			function() {
 				_QALET_.loadLet();
-				$('#niu').show();
 			}, 200
 		);
 		
 		setTimeout(
 			function() {
-				$('#niu').html('<qalet>{"module":"giant_jsmarty"}</qalet>').hide();	
+				$('<qalet>{"module":"giant_jsmarty"}</qalet>').appendTo($('#niu')[0]);	
 			}
 		,4000);
 		console.log(_QALET_.data);
