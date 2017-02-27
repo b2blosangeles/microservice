@@ -20,7 +20,6 @@ $(document).ready(
 				_QALET_.data[o.id] = o;
 				$(v[i]).replaceWith('<div class="class_' + o.module +' '+o.id+'"></div>');
 			}
-
 		}
 		_QALET_.loadLet();
 		console.log(Object.keys(r))
