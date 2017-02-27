@@ -1,14 +1,14 @@
-if (!_QALET_) var _QALET_={lets:{}, _p:0, data:{}, _file:{}};
+if (!_Q_) var _Q_={lets:{}, _p:0, data:{}, _file:{}};
 $(document).ready(	
 	function() {		
 		function parse(v) {
 			var t = v.replace(/(“|”)/ig, '"');
 			return JSON.parse(t);
 		}
-		_QALET_.loadLet = function() {
+		_Q_.loadLet = function() {
 			var v = $('QALET'), r = {};	
 			for (var i = 0; i < v.length; i++) {
-				_QALET_._p++;
+				_Q_._p++;
 				var data = $(v[i]).html();
 				if (!data) data = $(v[i]).attr('data');
 				try {
@@ -23,12 +23,12 @@ $(document).ready(
 					$(v[i]).replaceWith('<div style="color:red">Miss module on '+ data + '</div>');
 					continue;
 				}
-				if (!_QALET_.lets[o.module]) {
+				if (!_Q_.lets[o.module]) {
 					r[o.module] = true;
-					_QALET_.lets[o.module] = true;
+					_Q_.lets[o.module] = true;
 				}	
-				o.id = o.module + '_plugin_' + _QALET_._p;
-				_QALET_.data[o.id] = o;
+				o.id = o.module + '_plugin_' + _Q_._p;
+				_Q_.data[o.id] = o;
 				$(v[i]).replaceWith('<div class="class_' + o.module +' '+o.id+'">'+o.module+'</div>');
 				console.log(o);
 			}
@@ -37,14 +37,26 @@ $(document).ready(
 				$.getScript( 'http://docviewer.qalet.com/package/qalet_giant_plugin_direct.jsx?plus='+l+'&callback=_CALLBACK_',
 					    function( data, textStatus, jqxhr ) {
 				  		console.log( "Load was performed." );
+					
+						for (var i=0; i< _Q_.data.length; i++) {
+							var o = _Q_.data[i];
+							if (typeof _QALET_[o.module] == 'function') {
+								_QALET_[o.module](o);				
+							} else {
+								console.log('=='+o.module+'==');
+							}
+						}
+					
+					
+					
 					});
 			}	
 		}
 		
-		_QALET_.loadLet();
+		_Q_.loadLet();
 		setInterval(
 			function() {
-				_QALET_.loadLet();
+				_Q_.loadLet();
 				$('#niu').show();
 			}, 200
 		);
@@ -54,6 +66,6 @@ $(document).ready(
 				$('#niu').html('<qalet>{"module":"test"}</qalet>').hide();	
 			}
 		,4000);
-		console.log(_QALET_.data);
+		console.log(_Q_.data);
 	}
 );
