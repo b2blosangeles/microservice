@@ -44,7 +44,7 @@ $(document).ready(
 		
 		setTimeout(
 			function() {
-				$('#niu').html('<qalet>{"module":""}</qalet>');	
+				$('#niu').html('<qalet>{"module":"test"}</qalet>');	
 			}
 		,4000);
 		console.log(_QALET_.data);
