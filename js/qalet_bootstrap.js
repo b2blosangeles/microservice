@@ -16,13 +16,6 @@ $(document).ready(
 				$(v[i]).replaceWith('<div class="class_' + o.module +' '+o.id+'"></div>');
 				console.log(o);
 			}
-		}		
-		for (var i=0; i<f.length; i++) {
-			if (typeof _QALET_[f[i].module] == 'function') {
-				_QALET_[f[i].module](f[i]);				
-			} else {
-				console.log('=='+f[i].module+'==');
-			}
 		}
 	}
 );
