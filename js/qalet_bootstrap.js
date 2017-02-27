@@ -30,6 +30,7 @@ $(document).ready(
 				o.id = o.module + '_plugin_' + _QALET_._p;
 				_QALET_.data[o.id] = o;
 				$(v[i]).replaceWith('<div class="class_' + o.module +' '+o.id+'"></div>');
+				console.log(o);
 			}
 			if (Object.keys(r).length) console.log(Object.keys(r));
 		}
@@ -38,7 +39,7 @@ $(document).ready(
 		setInterval(
 			function() {
 				_QALET_.loadLet();
-			}, 500
+			}, 200
 		);
 		
 		setTimeout(
