@@ -44,9 +44,9 @@ $(document).ready(
 					
 						for (var v in _QALET_.data) {
 							var o = _QALET_.data[v];
-							if (typeof _QALET_[o.module] == 'function') {
+							if (typeof _QALET_._Q[o.module] == 'function') {
 								console.log(1);
-								_QALET_[o.module](o);				
+								_QALET_._Q[o.module](o);				
 							} else {
 								console.log(2);
 								console.log('=='+o.module+'==');
