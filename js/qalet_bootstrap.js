@@ -81,7 +81,7 @@ $(document).ready(
 		
 		setTimeout(
 			function() {
-				$('#niu').html('<qalet>{"module":"giant_smarty"}</qalet>').hide();	
+				$('#niu').html('<qalet>{"module":"giant_jsmarty"}</qalet>').hide();	
 			}
 		,4000);
 		console.log(_QALET_.data);
