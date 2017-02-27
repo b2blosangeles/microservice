@@ -1,8 +1,6 @@
 {
 	"tpls":[],
-	"filelist":[
-		
-	],
+	"filelist":[],
 	"mservice": {	
 		"giant_jsmarty":[
 			"/js/bootstrap.3.3.7/bootstrap.3.3.7.js",
@@ -11,7 +9,7 @@
 	}, 
 	"dependence": {
 		"giant_jsmarty":[
-			"/js/UIQALET/css.js"
+			"/js/UIQALET/css.js",
 			"/js/jsmarty/smart-2.9.min.js"
 		]	
 	},
