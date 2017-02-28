@@ -27,7 +27,6 @@ $(document).ready(
 			for (var i = 0; i < v.length; i++) {
 				_QALET_._p++;
 				var data = $(v[i]).html();
-			//	if (!data) data = $(v[i]).attr('data');
 				if (!data) {
 					continue;
 				}
