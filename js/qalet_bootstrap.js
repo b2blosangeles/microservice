@@ -10,7 +10,6 @@ $(document).ready(
 				try {
 					var v = UIQALET.css.parse(data.replace(/\}([\;|\s]*)/g, '} '));
 						UIQALET.css.ruleSelect(v.stylesheet,'.'+o.id);
-						console.log(UIQALET.css.stringify(v));
 						$('head').append('<style>'+UIQALET.css.stringify(v)+'</style>');
 				} catch (err) {
 					console.log(err.message);
@@ -23,7 +22,6 @@ $(document).ready(
 					delete _QALET_._newlet[v];
 					var o = _QALET_.data[v];
 					if (o.css) {
-						console.log(o);
 						$.get(o.css, _QALET_.customStyle(o));
 					}			
 					if (typeof _QALET_._Q[o.module] == 'function') {
