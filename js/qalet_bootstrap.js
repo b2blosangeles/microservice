@@ -5,7 +5,7 @@ $(document).ready(
 			var t = v.replace(/(“|”)/ig, '"');
 			return JSON.parse(t);
 		}
-		_QALET_.style = function (o) {
+		_QALET_.customStyle = function (o) {
 			return function(data){
 				try {
 					var v = UIQALET.css.parse(data.replace(/\}([\;|\s]*)/g, '} '));
@@ -24,7 +24,7 @@ $(document).ready(
 					var o = _QALET_.data[v];
 					if (o.css) {
 						console.log(o);
-						$.get(o.css, _QALET_.style(o)});
+						$.get(o.css, _QALET_.customStyle(o));
 					}			
 					if (typeof _QALET_._Q[o.module] == 'function') {
 						_QALET_._Q[o.module](o);				
