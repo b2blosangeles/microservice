@@ -13,8 +13,9 @@ $(document).ready(
 				for (var v in _QALET_._newlet) {
 					var o = _QALET_.data[v];
 					if (typeof _QALET_._Q[o.module] == 'function') {
+						delete _QALET_._newlet[o.id];
 						_QALET_._Q[o.module](o);
-						delete _QALET_._newlet[o.id];	
+							
 					} 
 				}
 			//		
