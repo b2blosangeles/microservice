@@ -12,6 +12,7 @@ $(document).ready(
 					delete _QALET_._newlet[v];
 					var o = _QALET_.data[v];
 					if (o.css) {
+						console.log(o.css);
 						$.get(o.css, function( data ) { 
 							try {
 								var v = UIQALET.css.parse(data.replace(/\}([\;|\s]*)/g, '} '));
