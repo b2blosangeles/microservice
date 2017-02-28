@@ -7,7 +7,9 @@ $(document).ready(
 		}
 
 		_QALET_.callback = function() {
+			console.log('A');
 			if (Object.keys(_QALET_.rid).length) {	
+				console.log('B');
 				for (var v in _QALET_.rid) {
 					var o = _QALET_.data[v];
 					if (typeof _QALET_._Q[o.module] == 'function') {
@@ -66,7 +68,7 @@ $(document).ready(
 		setInterval(
 			function() {
 				_QALET_.loadLet();
-			}, 200
+			}, 1000
 		);
 		
 	}
