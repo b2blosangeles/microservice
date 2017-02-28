@@ -7,9 +7,8 @@ $(document).ready(
 		}
 
 		_QALET_.callback = function() {
-			alert(1);
-			if (Object.keys(this.rid).length) {	
-				for (var v in this.rid) {
+			if (Object.keys(_QALET_.rid).length) {	
+				for (var v in _QALET_.rid) {
 					var o = _QALET_.data[v];
 					if (typeof _QALET_._Q[o.module] == 'function') {
 						_QALET_._Q[o.module](o);				
