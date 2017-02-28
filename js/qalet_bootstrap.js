@@ -6,9 +6,9 @@ $(document).ready(
 			return JSON.parse(t);
 		}
 
-		_QALET_.callback = function(rid) {
-			if (Object.keys(rid).length) {	
-				for (var v in rid) {
+		_QALET_.callback = function() {
+			if (Object.keys(this.rid).length) {	
+				for (var v in this.rid) {
 					var o = _QALET_.data[v];
 					if (typeof _QALET_._Q[o.module] == 'function') {
 						_QALET_._Q[o.module](o);				
@@ -19,7 +19,8 @@ $(document).ready(
 		};
 
 		_QALET_.loadLet = function() {
-			var v = $('QALET'), r = {}, rid = {};	
+			var v = $('QALET'), r = {}; 
+			_QALET_.rid = {};	
 			for (var i = 0; i < v.length; i++) {
 				_QALET_._p++;
 				var data = $(v[i]).html();
@@ -51,14 +52,13 @@ $(document).ready(
 				var l = Object.keys(r).join(',');
 				var csslink = '/package/wordpress_plugin.css?plus='+l;	
 				$('<link rel="stylesheet" type="text/css" href="'+csslink+'" />').appendTo("head");
-				$.getScript( '/package/wordpress_plugin.jsx?plus='+l+'&callback=_CALLBACK_',
+				$.getScript( '/package/wordpress_plugin.jsx?plus='+l+'&callback=_QALET_.callback',
 					    function( data, textStatus, jqxhr ) {
 				  		console.log( "Load was performed." );
-						_QALET_.callback(rid);
 						
 					});
 			} else  {	
-				_QALET_.callback(rid);		
+				_QALET_.callback();		
 			}
 		}
 		
