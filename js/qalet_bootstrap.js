@@ -7,16 +7,16 @@ $(document).ready(
 		}
 
 		_QALET_.callback = function() {
-			console.log('A');
+			console.log('AC');
 			if (Object.keys(_QALET_._newlet).length) {	
-				console.log('B');
+				console.log('BC');
 				for (var v in _QALET_._newlet) {
 					var o = _QALET_.data[v];
 					if (typeof _QALET_._Q[o.module] == 'function') {
 						_QALET_._Q[o.module](o);				
 					} 
 				}
-				_QALET_._newlet = {};	
+			//	_QALET_._newlet = {};	
 			}	
 
 		};
