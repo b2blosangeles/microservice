@@ -37,6 +37,7 @@ $(document).ready(
 			if (Object.keys(r).length) {
 				var l = Object.keys(r).join(',');
 				var csslink = '/package/wordpress_plugin.css?plus='+l;	
+				$('<link rel="stylesheet" type="text/css" href="'+csslink+'" />').appendTo("head");
 				$.getScript( '/package/wordpress_plugin.jsx?plus='+l+'&callback=_CALLBACK_',
 					    function( data, textStatus, jqxhr ) {
 				  		console.log( "Load was performed." );
@@ -48,7 +49,7 @@ $(document).ready(
 							} 
 						}
 					
-						$('<link rel="stylesheet" type="text/css" href="'+csslink+'" />').appendTo("head");
+						
 					});
 			} else if (Object.keys(rid).length) {	
 				console.log(rid)
