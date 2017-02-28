@@ -7,6 +7,6 @@ $('.'+mapping_data.id).html(res).load();
 setTimeout(
 	function() {
 		$('.'+mapping_data.id).show();
-	}, 500
+	}, 10
 );
 
