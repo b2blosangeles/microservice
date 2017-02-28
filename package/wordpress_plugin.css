@@ -1,11 +1,9 @@
 {
 	"tpls":[],
-	"filelist":[
-		"/css/bootstrap.3.3.7/Bootstrap.3.3.7.css"
-	],
+	"filelist":[],
 	"mservice": {	
 		"giant_jsmarty":[
-			
+			"/css/bootstrap.3.3.7/Bootstrap.3.3.7.css"
 		]	
 	}
 }
