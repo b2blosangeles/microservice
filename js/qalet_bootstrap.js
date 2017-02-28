@@ -5,24 +5,26 @@ $(document).ready(
 			var t = v.replace(/(“|”)/ig, '"');
 			return JSON.parse(t);
 		}
-
+		_QALET_.style = function (o) {
+			return function(data){
+				try {
+					var v = UIQALET.css.parse(data.replace(/\}([\;|\s]*)/g, '} '));
+						UIQALET.css.ruleSelect(v.stylesheet,'.'+o.id);
+						console.log(UIQALET.css.stringify(v));
+						$('head').append('<style>'+UIQALET.css.stringify(v)+'</style>');
+				} catch (err) {
+					console.log(err.message);
+				}							
+			}
+		}; 
 		_QALET_.callback = function() {
 			if (Object.keys(_QALET_._newlet).length) {	
 				for (var v in _QALET_._newlet) {
 					delete _QALET_._newlet[v];
 					var o = _QALET_.data[v];
 					if (o.css) {
-						console.log(o.css);
-						$.get(o.css, function( data ) { 
-							try {
-								var v = UIQALET.css.parse(data.replace(/\}([\;|\s]*)/g, '} '));
-								UIQALET.css.ruleSelect(v.stylesheet,'.'+o.id);
-								console.log(UIQALET.css.stringify(v));
-								$('head').append('<style>'+UIQALET.css.stringify(v)+'</style>');
-							} catch (err) {
-								console.log(err.message);
-							}			
-						});
+						console.log(o);
+						$.get(o.css, _QALET_.style(o)});
 					}			
 					if (typeof _QALET_._Q[o.module] == 'function') {
 						_QALET_._Q[o.module](o);				
