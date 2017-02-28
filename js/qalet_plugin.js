@@ -1,61 +1,100 @@
-var _CALLBACK_ = function() {
-	$(document).ready(	
-		function() {	/*	
-			function parse(v) {
-				var t = v.replace(/(“|”)/ig, '"');
-				return JSON.parse(t);
-			}			
-			var v = $('QALET'), r={}, f=[];	
-			for (var i = 0; i < v.length; i++) {
-				var data = $(v[i]).html();
-				if (!data) data = $(v[i]).attr('data');
-				var o = parse(data);
-				if (o.module) {
-					r[o.module] = true;
-					o.id = o.module + '_plugin_' + i;
-					f[f.length] = o;
-					 $(v[i]).replaceWith('<div class="class_' + o.module +' '+o.id+'"></div>');
-					if (o.css) {
-						 $('.'+o.id).hide();
-						(function(o){
-							function getRandomColor() {
-								var letters = '0123456789ABCDEF';
-								var color = '#';
-								for (var i = 0; i < 6; i++ ) {
-									color += letters[Math.floor(Math.random() * 16)];
-								}
-								return color;
-							}	
-							if (o.css) {
-								$.get(o.css, function( data ) { 
-									try {
-										var v = UIQALET.css.parse(data.replace(/\}([\;|\s]*)/g, '} '));
-										UIQALET.css.ruleSelect(v.stylesheet,'.'+o.id);
-										setInterval(
-											function () {	
-												jSmart.prototype.left_delimiter = '[';
-												jSmart.prototype.right_delimiter = ']';														
-												var tpl = new jSmart(UIQALET.css.stringify(v));
-												$('head').append('<style>'+tpl.fetch( {color:getRandomColor(), bgcolor:getRandomColor()})+'</style>');
-											}, 300);
-									} catch (err) {
-										console.log(err.message);
-									}
-									$('.'+o.id).show();									
-								});									
-							}		
-						})(o);
-					}
-				}
-			}		
-			for (var i=0; i<f.length; i++) {
-				if (typeof _QALET_[f[i].module] == 'function') {
-					_QALET_[f[i].module](f[i]);				
-				} else {
-					console.log('=='+f[i].module+'==');
-				}
-			}
-			*/
+if (!_QALET_) var _QALET_={lets:{}, _p:0, data:{}, _file:{}, _Q:{}, _newlet:{}};
+$(document).ready(	
+	function() {		
+		function parse(v) {
+			var t = v.replace(/(“|”)/ig, '"');
+			return JSON.parse(t);
 		}
-	);
-};
+		_QALET_.customStyle = function (o) {
+			return function(data){
+				try {
+					var v = UIQALET.css.parse(data.replace(/\}([\;|\s]*)/g, '} '));
+					UIQALET.css.ruleSelect(v.stylesheet,'.'+o.id);
+
+					if (o.css_data) {
+						jSmart.prototype.left_delimiter = '[';
+						jSmart.prototype.right_delimiter = ']';														
+						var tpl = new jSmart(UIQALET.css.stringify(v));
+						$('head').append('<style>'+tpl.fetch(o.css_data)+'</style>');
+					} else {
+						$('head').append('<style>'+UIQALET.css.stringify(v)+'</style>');
+					}
+						
+				} catch (err) {
+					console.log(err.message);
+				}							
+			}
+		}; 
+		_QALET_.callback = function() {
+			if (Object.keys(_QALET_._newlet).length) {	
+				for (var v in _QALET_._newlet) {
+					delete _QALET_._newlet[v];
+					var o = _QALET_.data[v];
+					if (o.css) {
+						$.get(o.css, _QALET_.customStyle(o));
+					}			
+					if (typeof _QALET_._Q[o.module] == 'function') {
+						_QALET_._Q[o.module](o);				
+					}
+				}	
+			}	
+		};
+
+		_QALET_.loadLet = function() {
+			var v = $('QALET'), r = {}; 
+			if (Object.keys(_QALET_._newlet).length) {
+				return false;
+			}
+			for (var i = 0; i < v.length; i++) {
+				_QALET_._p++;
+				var data = $(v[i]).html();
+				if (!data) {
+					continue;
+				}
+				try {
+					var o = parse(data);
+					
+				} catch (err) {
+					$(v[i]).replaceWith('<div style="color:red">Wrong JSON format:'+ data + ' as "' + err.message + '"</div>');
+					continue;
+				}
+				
+				if (!o.module) {
+					$(v[i]).replaceWith('<div style="color:red">Miss module on '+ data + '</div>');
+					continue;
+				}
+				if (!_QALET_.lets[o.module]) {
+					r[o.module] = true;
+					_QALET_.lets[o.module] = true;
+				}
+				
+				o.id = o.module + '_plugin_' + _QALET_._p;
+				_QALET_.data[o.id] = o;
+				_QALET_._newlet[o.id] = o;
+				$(v[i]).replaceWith('<div class="class_' + o.module +' '+o.id+'"></div>');
+				$('.'+o.id).hide();
+			}
+			if (Object.keys(r).length) {
+				var l = Object.keys(r).join(',');
+				r = {};	
+				var csslink = '/package/wordpress_plugin.css?plus='+l;	
+				$('<link rel="stylesheet" type="text/css" href="'+csslink+'" />').appendTo("head");
+				$.getScript( '/package/wordpress_plugin.jsx?plus='+l+'&callback=_QALET_.callback',
+					function( data, textStatus, jqxhr ) {
+				  		console.log( "Load was performed." );
+						
+					});
+				
+			} else  {	
+				_QALET_.callback();		
+			}
+		}
+		
+		_QALET_.loadLet();
+		setInterval(
+			function() {
+				_QALET_.loadLet();
+			}, 200
+		);			
+	}
+);
