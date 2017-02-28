@@ -1,4 +1,4 @@
-if (!_QALET_) var _QALET_={lets:{}, _p:0, data:{}, _file:{}, _Q:{}};
+if (!_QALET_) var _QALET_={lets:{}, _p:0, data:{}, _file:{}, _Q:{}, _newlet:{}};
 $(document).ready(	
 	function() {		
 		function parse(v) {
@@ -15,14 +15,17 @@ $(document).ready(
 					if (typeof _QALET_._Q[o.module] == 'function') {
 						_QALET_._Q[o.module](o);				
 					} 
-				}	
+				}
+				_QALET_._newlet = {};	
 			}	
 
 		};
 
 		_QALET_.loadLet = function() {
 			var v = $('QALET'), r = {}; 
-			_QALET_._newlet = {};	
+			if (Object.keys(_QALET_._newlet).length) {
+				return false;
+			}
 			for (var i = 0; i < v.length; i++) {
 				_QALET_._p++;
 				var data = $(v[i]).html();
@@ -68,7 +71,7 @@ $(document).ready(
 		setInterval(
 			function() {
 				_QALET_.loadLet();
-			}, 2000
+			}, 200
 		);
 		
 	}
