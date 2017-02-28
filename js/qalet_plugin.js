@@ -1,6 +1,6 @@
 var _CALLBACK_ = function() {
 	$(document).ready(	
-		function() {		
+		function() {	/*	
 			function parse(v) {
 				var t = v.replace(/(“|”)/ig, '"');
 				return JSON.parse(t);
@@ -55,6 +55,7 @@ var _CALLBACK_ = function() {
 					console.log('=='+f[i].module+'==');
 				}
 			}
+			*/
 		}
 	);
 };
