@@ -8,9 +8,9 @@ $(document).ready(
 
 		_QALET_.callback = function() {
 			var me = this;
-			alert('C');
+			console.log('C');
 			if (Object.keys(me._newlet).length) {	
-				alert('D');
+				console.log('D');
 				for (var v in me._newlet) {
 					var o = me.data[v];
 					if (typeof me._Q[o.module] == 'function') {
