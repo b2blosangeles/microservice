@@ -6,7 +6,7 @@ $(document).ready(
 			return JSON.parse(t);
 		}
 
-		_QALET_.callback = function(opt) {
+		_QALET_.callback = function() {
 			if (Object.keys(_QALET_._newlet).length) {	
 				for (var v in _QALET_._newlet) {
 					delete _QALET_._newlet[v];
@@ -64,7 +64,7 @@ $(document).ready(
 					});
 				
 			} else  {	
-				_QALET_.callback('XX');		
+				_QALET_.callback();		
 			}
 		}
 		
