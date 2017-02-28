@@ -7,20 +7,17 @@ $(document).ready(
 		}
 
 		_QALET_.callback = function(opt) {
-			if (!opt) { console.log('==optg=>'); }
+			if (!opt) { console.log('==optdg=>'); }
 			console.log(Object.keys(_QALET_._newlet).length);
 			if (Object.keys(_QALET_._newlet).length) {	
 				for (var v in _QALET_._newlet) {
-					var o = _QALET_.data[v];
 					delete _QALET_._newlet[v];
+					var o = _QALET_.data[v];
 					if (typeof _QALET_._Q[o.module] == 'function') {
 						_QALET_._Q[o.module](o);				
 					}
-						
-				}
-			//	_QALET_._newlet = {};	
+				}	
 			}	
-
 		};
 
 		_QALET_.loadLet = function() {
