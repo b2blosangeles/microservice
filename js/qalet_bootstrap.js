@@ -44,7 +44,7 @@ $(document).ready(
 				
 				o.id = o.module + '_plugin_' + _QALET_._p;
 				_QALET_.data[o.id] = o;
-				rid[o.id] = o;
+				_QALET_.rid[o.id] = o;
 				$(v[i]).replaceWith('<div class="class_' + o.module +' '+o.id+'"></div>');
 				$('.'+o.id).hide();
 			}
