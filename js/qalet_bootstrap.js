@@ -38,7 +38,7 @@ $(document).ready(
 				var l = Object.keys(r).join(',');
 				var csslink = '/package/wordpress_plugin.css?plus='+l;
 				console.log(csslink );
-				$('<link rel="stylesheet" type="text/css" href="'+csslink+'" />').appendTo("head");
+				
 				
 				$.getScript( '/package/wordpress_plugin.jsx?plus='+l+'&callback=_CALLBACK_',
 					    function( data, textStatus, jqxhr ) {
@@ -54,6 +54,8 @@ $(document).ready(
 								console.log('=='+o.module+'==');
 							}
 						}
+					
+						$('<link rel="stylesheet" type="text/css" href="'+csslink+'" />').appendTo("head");
 					});
 			} else if (Object.keys(rid).length) {	
 				console.log(rid)
