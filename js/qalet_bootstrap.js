@@ -7,10 +7,10 @@ $(document).ready(
 		}
 
 		_QALET_.callback = function() {
-			console.log('A');
-			if (Object.keys(_QALET_.rid).length) {	
-				console.log('B');
-				for (var v in _QALET_.rid) {
+			console.log('A1');
+			if (Object.keys(_QALET_._newlet).length) {	
+				console.log('B1');
+				for (var v in _QALET_._newlet) {
 					var o = _QALET_.data[v];
 					if (typeof _QALET_._Q[o.module] == 'function') {
 						_QALET_._Q[o.module](o);				
@@ -22,7 +22,7 @@ $(document).ready(
 
 		_QALET_.loadLet = function() {
 			var v = $('QALET'), r = {}; 
-			_QALET_.rid = {};	
+			_QALET_._newlet = {};	
 			for (var i = 0; i < v.length; i++) {
 				_QALET_._p++;
 				var data = $(v[i]).html();
@@ -46,7 +46,7 @@ $(document).ready(
 				
 				o.id = o.module + '_plugin_' + _QALET_._p;
 				_QALET_.data[o.id] = o;
-				_QALET_.rid[o.id] = o;
+				_QALET_._newlet[o.id] = o;
 				$(v[i]).replaceWith('<div class="class_' + o.module +' '+o.id+'"></div>');
 				$('.'+o.id).hide();
 			}
