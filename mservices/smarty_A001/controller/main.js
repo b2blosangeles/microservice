@@ -3,10 +3,10 @@ var data = {
 };
 var tpl = new jSmart(_TPL_['/mservices/smarty_A001/view/infobox.html']);
 var res = tpl.fetch( data );
-$('.'+mapping_data.id).html(res).load();
+$('.'+mapping_data.id).html(res).dropdown();
 setTimeout(
 	function() {
 		$('.'+mapping_data.id).show();
-	}, 500
+	}, 10
 );
 
