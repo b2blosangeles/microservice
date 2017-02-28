@@ -26,6 +26,7 @@ $(document).ready(
 
 		_QALET_.loadLet = function() {
 			var v = $('QALET'), r = {}; 
+			console.log(Object.keys(_QALET_._newlet).length);
 			if (Object.keys(_QALET_._newlet).length) {
 				return false;
 			}
