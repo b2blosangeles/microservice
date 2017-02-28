@@ -6,7 +6,8 @@ $(document).ready(
 			return JSON.parse(t);
 		}
 
-		_QALET_.callback = function() {
+		_QALET_.callback = function(opt) {
+			console.log('==opt=' + opt);
 			console.log(Object.keys(_QALET_._newlet).length);
 			if (Object.keys(_QALET_._newlet).length) {	
 				for (var v in _QALET_._newlet) {
@@ -65,7 +66,7 @@ $(document).ready(
 						
 					});
 			} else  {	
-				_QALET_.callback();		
+				_QALET_.callback('XX');		
 			}
 		}
 		
