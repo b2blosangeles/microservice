@@ -7,7 +7,7 @@ $(document).ready(
 		}
 
 		_QALET_.callback = function(opt) {
-			console.log('==opt=' + opt);
+			if (!opt) { console.log('==opt=>'); }
 			console.log(Object.keys(_QALET_._newlet).length);
 			if (Object.keys(_QALET_._newlet).length) {	
 				for (var v in _QALET_._newlet) {
