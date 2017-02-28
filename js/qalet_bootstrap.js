@@ -7,26 +7,22 @@ $(document).ready(
 		}
 
 		_QALET_.callback = function() {
-			console.log('ACa');
+			console.log('A');
 			if (Object.keys(_QALET_._newlet).length) {	
-				console.log('BC');
+				console.log('B');
 				for (var v in _QALET_._newlet) {
 					var o = _QALET_.data[v];
 					if (typeof _QALET_._Q[o.module] == 'function') {
-;
-						_QALET_._Q[o.module](o);
-						delete _QALET_._newlet[v];
-						console.log(v)							
+						_QALET_._Q[o.module](o);				
 					} 
 				}
-			//		
+				_QALET_._newlet = {};	
 			}	
 
 		};
 
 		_QALET_.loadLet = function() {
 			var v = $('QALET'), r = {}; 
-			console.log(Object.keys(_QALET_._newlet).length);
 			if (Object.keys(_QALET_._newlet).length) {
 				return false;
 			}
