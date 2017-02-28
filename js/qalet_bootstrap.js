@@ -13,7 +13,7 @@ $(document).ready(
 				for (var v in _QALET_._newlet) {
 					var o = _QALET_.data[v];
 					if (typeof _QALET_._Q[o.module] == 'function') {
-						delete _QALET_._newlet[o.id];
+						delete _QALET_._newlet[v];
 						_QALET_._Q[o.module](o);
 							
 					} 
