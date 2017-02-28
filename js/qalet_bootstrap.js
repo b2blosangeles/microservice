@@ -7,16 +7,16 @@ $(document).ready(
 		}
 
 		_QALET_.callback = function() {
-			console.log('AC');
+			console.log('ACa');
 			if (Object.keys(_QALET_._newlet).length) {	
 				console.log('BC');
 				for (var v in _QALET_._newlet) {
 					var o = _QALET_.data[v];
 					if (typeof _QALET_._Q[o.module] == 'function') {
-						delete _QALET_._newlet[v];
-						console.log(v);
+;
 						_QALET_._Q[o.module](o);
-							
+						delete _QALET_._newlet[v];
+						console.log(v)							
 					} 
 				}
 			//		
