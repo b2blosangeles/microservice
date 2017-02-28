@@ -7,6 +7,7 @@ $(document).ready(
 		}
 
 		_QALET_.callback = function() {
+			alert(1);
 			if (Object.keys(this.rid).length) {	
 				for (var v in this.rid) {
 					var o = _QALET_.data[v];
