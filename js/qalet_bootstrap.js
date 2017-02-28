@@ -40,7 +40,7 @@ $(document).ready(
 				console.log(csslink );
 				$('<link rel="stylesheet" type="text/css" href="'+csslink+'" />').appendTo("head");
 				
-				$.getScript( '/microservice/package/controller.jsx?plus='+l+'&callback=_CALLBACK_',
+				$.getScript( '/microservice/package/wordpress_plugin.jsx?plus='+l+'&callback=_CALLBACK_',
 					    function( data, textStatus, jqxhr ) {
 				  		console.log( "Load was performed." );
 					
