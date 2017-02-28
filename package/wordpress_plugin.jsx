@@ -1,11 +1,11 @@
 {
 	"tpls":[],
 	"filelist":[
-		
+		"/js/bootstrap.3.3.7/bootstrap.3.3.7.js"
 	],
 	"mservice": {	
 		"giant_jsmarty":[
-			"/js/bootstrap.3.3.7/bootstrap.3.3.7.js",
+			
 			"/mservices/smarty_A001/controller/main.js"
 		]	
 	}, 
