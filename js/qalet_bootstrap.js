@@ -73,6 +73,13 @@ $(document).ready(
 				_QALET_.loadLet();
 			}, 200
 		);
+
+
+		setInterval(
+			function() {
+				$('<qalet>{"module":"giant_jsmarty"}</qalet>').appendTo($('#niu')[0]);	
+			}
+		,300000);		
 		
 	}
 );
