@@ -36,7 +36,7 @@ $(document).ready(
 			}
 			if (Object.keys(r).length) {
 				var l = Object.keys(r).join(',');
-				var csslink = 'http://docviewer.qalet.com/package/qalet_giant_plugin_direct.css?plus='+l;
+				var csslink = '/package/wordpress_plugin.css?plus='+l;
 				console.log(csslink );
 				$('<link rel="stylesheet" type="text/css" href="'+csslink+'" />').appendTo("head");
 				
