@@ -14,6 +14,7 @@ $(document).ready(
 					var o = _QALET_.data[v];
 					if (typeof _QALET_._Q[o.module] == 'function') {
 						delete _QALET_._newlet[v];
+						console.log(v);
 						_QALET_._Q[o.module](o);
 							
 					} 
