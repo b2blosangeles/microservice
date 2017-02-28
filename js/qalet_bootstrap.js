@@ -7,13 +7,14 @@ $(document).ready(
 		}
 
 		_QALET_.callback = function() {
-			console.log('A1');
-			if (Object.keys(_QALET_._newlet).length) {	
-				console.log('B1');
-				for (var v in _QALET_._newlet) {
-					var o = _QALET_.data[v];
-					if (typeof _QALET_._Q[o.module] == 'function') {
-						_QALET_._Q[o.module](o);				
+			var me = this;
+			alert('C');
+			if (Object.keys(me._newlet).length) {	
+				alert('D');
+				for (var v in me._newlet) {
+					var o = me.data[v];
+					if (typeof me._Q[o.module] == 'function') {
+						me._Q[o.module](o);				
 					} 
 				}	
 			}	
@@ -68,7 +69,7 @@ $(document).ready(
 		setInterval(
 			function() {
 				_QALET_.loadLet();
-			}, 1000
+			}, 200
 		);
 		
 	}
