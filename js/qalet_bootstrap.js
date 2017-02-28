@@ -52,7 +52,6 @@ $(document).ready(
 						
 					});
 			} else if (Object.keys(rid).length) {	
-				console.log(rid)
 				for (var v in rid) {
 					var o = _QALET_.data[v];
 					if (typeof _QALET_._Q[o.module] == 'function') {
@@ -69,11 +68,5 @@ $(document).ready(
 			}, 200
 		);
 		
-		setInterval(
-			function() {
-				$('<qalet>{"module":"giant_jsmarty"}</qalet>').appendTo($('#niu')[0]);	
-			}
-		,300000);
-		console.log(_QALET_.data);
 	}
 );
