@@ -7,8 +7,6 @@ $(document).ready(
 		}
 
 		_QALET_.callback = function(opt) {
-			if (!opt) { console.log('==optdg=>'); }
-			console.log(Object.keys(_QALET_._newlet).length);
 			if (Object.keys(_QALET_._newlet).length) {	
 				for (var v in _QALET_._newlet) {
 					delete _QALET_._newlet[v];
@@ -75,11 +73,6 @@ $(document).ready(
 			function() {
 				_QALET_.loadLet();
 			}, 200
-		);		
-		setInterval(
-			function() {
-				$('<qalet>{"module":"giant_jsmarty"}</qalet>').appendTo($('#niu')[0]);	
-			}
-		,20000)		
+		);			
 	}
 );
