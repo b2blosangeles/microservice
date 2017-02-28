@@ -31,15 +31,12 @@ $(document).ready(
 				o.id = o.module + '_plugin_' + _QALET_._p;
 				_QALET_.data[o.id] = o;
 				rid[o.id] = o;
-				$(v[i]).replaceWith('<div class="class_' + o.module +' '+o.id+'"></div>').hide();
-				console.log(o);
+				$(v[i]).replaceWith('<div class="class_' + o.module +' '+o.id+'"></div>');
+				$('.'+o.id).hide();
 			}
 			if (Object.keys(r).length) {
 				var l = Object.keys(r).join(',');
-				var csslink = '/package/wordpress_plugin.css?plus='+l;
-				console.log(csslink );
-				
-				
+				var csslink = '/package/wordpress_plugin.css?plus='+l;	
 				$.getScript( '/package/wordpress_plugin.jsx?plus='+l+'&callback=_CALLBACK_',
 					    function( data, textStatus, jqxhr ) {
 				  		console.log( "Load was performed." );
@@ -47,12 +44,8 @@ $(document).ready(
 						for (var v in _QALET_.data) {
 							var o = _QALET_.data[v];
 							if (typeof _QALET_._Q[o.module] == 'function') {
-								console.log(1);
 								_QALET_._Q[o.module](o);				
-							} else {
-								console.log(2);
-								console.log('=='+o.module+'==');
-							}
+							} 
 						}
 					
 						$('<link rel="stylesheet" type="text/css" href="'+csslink+'" />').appendTo("head");
@@ -62,12 +55,8 @@ $(document).ready(
 				for (var v in rid) {
 					var o = _QALET_.data[v];
 					if (typeof _QALET_._Q[o.module] == 'function') {
-						console.log(1);
 						_QALET_._Q[o.module](o);				
-					} else {
-						console.log(2);
-						console.log('=='+o.module+'==');
-					}
+					} 
 				}			
 			}
 		}
