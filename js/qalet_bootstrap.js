@@ -6,7 +6,7 @@ $(document).ready(
 			return JSON.parse(t);
 		}
 
-		_QALET_.callback = function(rid) {
+		_QALET_.callback = function() {
 			if (Object.keys(rid).length) {	
 				for (var v in rid) {
 					var o = _QALET_.data[v];
@@ -51,11 +51,24 @@ $(document).ready(
 				$('<link rel="stylesheet" type="text/css" href="'+csslink+'" />').appendTo("head");
 				$.getScript( '/package/wordpress_plugin.jsx?plus='+l+'&callback=_CALLBACK_',
 					    function( data, textStatus, jqxhr ) {
-				  		console.log( "Load was performed." );	
-						_QALET_.callback(rid);
+				  		console.log( "Load was performed." );
+					
+						for (var v in _QALET_.data) {
+							var o = _QALET_.data[v];
+							if (typeof _QALET_._Q[o.module] == 'function') {
+								_QALET_._Q[o.module](o);				
+							} 
+						}
+					
+						
 					});
-			} else  {	
-				_QALET_.callback(rid);
+			} else if (Object.keys(rid).length) {	
+				for (var v in rid) {
+					var o = _QALET_.data[v];
+					if (typeof _QALET_._Q[o.module] == 'function') {
+						_QALET_._Q[o.module](o);				
+					} 
+				}			
 			}
 		}
 		
