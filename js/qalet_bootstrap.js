@@ -17,6 +17,7 @@ $(document).ready(
 							try {
 								var v = UIQALET.css.parse(data.replace(/\}([\;|\s]*)/g, '} '));
 								UIQALET.css.ruleSelect(v.stylesheet,'.'+o.id);
+								console.log(UIQALET.css.stringify(v));
 								$('head').append('<style>'+UIQALET.css.stringify(v)+'</style>');
 							} catch (err) {
 								console.log(err.message);
