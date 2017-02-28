@@ -11,6 +11,17 @@ $(document).ready(
 				for (var v in _QALET_._newlet) {
 					delete _QALET_._newlet[v];
 					var o = _QALET_.data[v];
+					if (o.css) {
+						$.get(o.css, function( data ) { 
+							try {
+								var v = UIQALET.css.parse(data.replace(/\}([\;|\s]*)/g, '} '));
+								UIQALET.css.ruleSelect(v.stylesheet,'.'+o.id);
+								$('head').append('<style>'+UIQALET.css.stringify(v)+'</style>');
+							} catch (err) {
+								console.log(err.message);
+							}			
+						});
+					}			
 					if (typeof _QALET_._Q[o.module] == 'function') {
 						_QALET_._Q[o.module](o);				
 					}
