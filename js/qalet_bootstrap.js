@@ -40,7 +40,7 @@ $(document).ready(
 				console.log(csslink );
 				$('<link rel="stylesheet" type="text/css" href="'+csslink+'" />').appendTo("head");
 				
-				$.getScript( 'http://docviewer.qalet.com/package/qalet_giant_plugin_direct.jsx?plus='+l+'&callback=_CALLBACK_',
+				$.getScript( '/microservice/package/controller.jsx?plus='+l+'&callback=_CALLBACK_',
 					    function( data, textStatus, jqxhr ) {
 				  		console.log( "Load was performed." );
 					
