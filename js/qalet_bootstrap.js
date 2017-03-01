@@ -81,7 +81,7 @@ $(document).ready(
 				}
 				
 				if (!_QALET_.lets[o.module]) {
-					_sobj[(!o.server)?_QALET_.cfg.app:o.server][o.module] = true;
+					_sobj[(!o.server)?_QALET_.cfg.app:o.server][o.module] = o;
 					_QALET_.lets[o.module] = o;
 				}
 				o.id = o.module + '_plugin_' + _QALET_._p;
