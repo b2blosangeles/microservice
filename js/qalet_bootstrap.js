@@ -110,10 +110,10 @@ $(document).ready(
 					});
 				*/
 			} else  {	
-				// _QALET_.callback();		
+				_QALET_.callback();		
 			}			
 			
-			
+			/*
 			if (Object.keys(r).length) {
 				var l = Object.keys(r).join(',');
 				r = {};	
@@ -130,6 +130,7 @@ $(document).ready(
 			} else  {	
 				_QALET_.callback();		
 			}
+			*/
 		}
 		
 		_QALET_.loadLet();
