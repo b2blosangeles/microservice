@@ -41,7 +41,7 @@ $(document).ready(
 		};
 
 		_QALET_.loadLet = function() {
-			var v = $('QALET'), r = {}, _sobj; 
+			var v = $('QALET'), r = {}, _sobj = {}; 
 			if (Object.keys(_QALET_._newlet).length) {
 				return false;
 			}
