@@ -5,8 +5,9 @@ console.log(__svr);
 
 $(document).ready(	
 	function() {	
-		var path = $("script[src$='/qalet_bootstrap.js']").attr('src');
-		console.log($("script[src$='/qalet_bootstrap.js']")[0].src.replace(path, ''));
+		var _p= $("script[src$='/qalet_bootstrap.js']");
+		__svr = _p[0].src.replace(_p.attr('src'), '');
+		console.log(__svr);
 		
 		function parse(v) {
 			var t = v.replace(/(“|”)/ig, '"');
