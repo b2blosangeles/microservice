@@ -100,8 +100,7 @@ $(document).ready(
 					var l = Object.keys(osr).join(',');
 					var csslink = _QALET_.cfg.css +'?plus='+l;
 					var jslink = _QALET_.cfg.app +'?plus='+l;
-					//console.log(csslink);
-					$('<link rel="stylesheet" type="text/css" href="'+ os + csslink +'" />').appendTo("head");
+					$('<link rel="stylesheet" type="text/css" href="'+ csslink +'" />').appendTo("head");
 					$.getScript( jslink + '?plus='+l,
 						function( data, textStatus, jqxhr ) {
 							_QALET_.callback();
