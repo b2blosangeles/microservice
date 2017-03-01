@@ -8,17 +8,16 @@ $(document).ready(
 		_QALET_.customStyle = function (o) {
 			return function(data){
 				try {
-					var v = UIQALET.css.parse(data.replace(/\}([\;|\s]*)/g, '} '));
-					UIQALET.css.ruleSelect(v.stylesheet,'.'+o.id);
-
 					if (o.css_data) {
 						jSmart.prototype.left_delimiter = '[';
 						jSmart.prototype.right_delimiter = ']';														
-						var tpl = new jSmart(UIQALET.css.stringify(v));
-						$('head').append('<style>'+tpl.fetch(o.css_data)+'</style>');
-					} else {
-						$('head').append('<style>'+UIQALET.css.stringify(v)+'</style>');
-					}
+						var tpl = new jSmart(data);
+						data = tpl.fetch(o.css_data);
+					} 	
+					
+					var v = UIQALET.css.parse(data.replace(/\}([\;|\s]*)/g, '} '));	
+					UIQALET.css.ruleSelect(v.stylesheet,'.'+o.id);
+					$('head').append('<style>'+UIQALET.css.stringify(v)+'</style>');
 						
 				} catch (err) {
 					console.log(err.message);
