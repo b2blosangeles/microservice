@@ -67,9 +67,9 @@ $(document).ready(
 				}
 				
 				if (!o.server) {
-					if (!_sobj[__svr]) _sobj[__svr] = [];
+					if (!_sobj[__svr]) _sobj[__svr] = {};
 				} else {
-					if (!_sobj[o.server]) _sobj[o.server] = [];
+					if (!_sobj[o.server]) _sobj[o.server] = {};
 				}
 				
 				if (!_QALET_.lets[o.module]) {
