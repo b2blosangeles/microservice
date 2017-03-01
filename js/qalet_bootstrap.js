@@ -96,12 +96,12 @@ $(document).ready(
 				for(var os in _sobj) {
 					console.log(os);
 					var osr = _sobj[os];
-					var l = Object.keys(osr).join(',');
-					var csslink = '?plus='+l;
-					
+
+					var csslink = _QALET_.cfg.css +'?plus='+l;
+					var jslink = _QALET_.cfg.app +'?plus='+l;
 					//console.log(csslink);
-					$('<link rel="stylesheet" type="text/css" href="'+ os + csslink+'" />').appendTo("head");
-					$.getScript( os + '?plus='+l,
+					$('<link rel="stylesheet" type="text/css" href="'+ os + csslink +'" />').appendTo("head");
+					$.getScript( jslink + '?plus='+l,
 						function( data, textStatus, jqxhr ) {
 							_QALET_.callback();
 				  	//	console.log( "Load was performed." );
