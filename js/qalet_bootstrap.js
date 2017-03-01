@@ -6,8 +6,9 @@ _QALET_.cfg = {};
 $(document).ready(	
 	function() {	
 		var _p= $("script[src$='/qalet_bootstrap.js']");
-		_QALET_.cfg.svr = _p[0].src.replace(_p.attr('src'), '');
-		console.log(_QALET_.cfg.svr);
+		_QALET_.cfg.app = _p[0].src.replace(_p.attr('src'), '') + '/package/wordpress_plugin.css';
+		_QALET_.cfg.src = _p[0].src.replace(_p.attr('src'), '') + '/package/wordpress_plugin.jsx';
+		console.log(_QALET_.cfg);
 		
 		function parse(v) {
 			var t = v.replace(/(“|”)/ig, '"');
