@@ -8,8 +8,7 @@ $(document).ready(
 		var _p= $("script[src$='/qalet_bootstrap.js']");
 		_QALET_.cfg.app = _p[0].src.replace(_p.attr('src'), '') + '/package/wordpress_plugin.jsx';
 		_QALET_.cfg.css = _p[0].src.replace(_p.attr('src'), '') + '/package/wordpress_plugin.css';
-		console.log(_QALET_.cfg);
-		
+	
 		function parse(v) {
 			var t = v.replace(/(“|”)/ig, '"');
 			return JSON.parse(t);
@@ -23,7 +22,6 @@ $(document).ready(
 						var tpl = new jSmart(data);
 						data = tpl.fetch(o.css.data);
 					} 	
-				//	console.log(data);
 					var v = UIQALET.css.parse(data.replace(/\}([\;|\s]*)/g, '} '));	
 					UIQALET.css.ruleSelect(v.stylesheet,'.'+o.id);
 					$('head').append('<style>'+UIQALET.css.stringify(v)+'</style>');
