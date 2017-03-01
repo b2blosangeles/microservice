@@ -77,7 +77,6 @@ $(document).ready(
 					r[o.module] = true;
 					_QALET_.lets[o.module] = true;
 				}
-				console.log(_sobj);
 				o.id = o.module + '_plugin_' + _QALET_._p;
 				_QALET_.data[o.id] = o;
 				_QALET_._newlet[o.id] = o;
