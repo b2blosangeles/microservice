@@ -111,6 +111,7 @@ $(document).ready(
 				$('<link rel="stylesheet" type="text/css" href="'+csslink+'" />').appendTo("head");
 				$.getScript( '/package/wordpress_plugin.jsx?plus='+l+'&callback=_QALET_.callback',
 					function( data, textStatus, jqxhr ) {
+						alert(l);
 				  	//	console.log( "Load was performed." );
 						
 					});
