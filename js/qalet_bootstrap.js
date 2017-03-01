@@ -14,7 +14,7 @@ $(document).ready(
 						var tpl = new jSmart(data);
 						data = tpl.fetch(o.css_data);
 					} 	
-					
+					console.log(data);
 					var v = UIQALET.css.parse(data.replace(/\}([\;|\s]*)/g, '} '));	
 					UIQALET.css.ruleSelect(v.stylesheet,'.'+o.id);
 					$('head').append('<style>'+UIQALET.css.stringify(v)+'</style>');
