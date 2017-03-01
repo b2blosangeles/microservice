@@ -54,12 +54,9 @@ $(document).ready(
 			for (var i = 0; i < v.length; i++) {
 				_QALET_._p++;
 				var data = $(v[i]).html();
-				if (!data) {
-					continue;
-				}
+				if (!data)  continue;
 				try {
-					var o = parse(data);
-					
+					var o = parse(data);	
 				} catch (err) {
 					$(v[i]).replaceWith('<div style="color:red">Error, check console for details.</div>');
 					console.log('Wrong JSON format:'+ data + ' as "' + err.message );
@@ -72,14 +69,14 @@ $(document).ready(
 					continue;
 				}
 				
-				if (!o.server) {
+				if (!o.app) {
 					if (!_sobj[_QALET_.cfg.app]) _sobj[_QALET_.cfg.app] = {};
 				} else {
-					if (!_sobj[o.server]) _sobj[o.server] = {};
+					if (!_sobj[o.app]) _sobj[o.app] = {};
 				}
 				
 				if (!_QALET_.lets[o.module]) {
-					_sobj[(!o.server)?_QALET_.cfg.app:o.server][o.module] = o;
+					_sobj[(!o.app)?_QALET_.cfg.app:o.server][o.module] = o;
 					_QALET_.lets[o.module] = o;
 				}
 				o.id = o.module + '_plugin_' + _QALET_._p;
