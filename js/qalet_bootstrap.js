@@ -84,9 +84,9 @@ $(document).ready(
 				$(v[i]).replaceWith('<div class="class_' + o.module +' '+o.id+'"></div>');
 				$('.'+o.id).hide();
 			}
-
+			console.log(_sobj);
 			if (Object.keys(_sobj).length) {
-				console.log(_sobj);
+				
 				/*
 				var l = Object.keys(r).join(',');
 				r = {};	
@@ -125,7 +125,7 @@ $(document).ready(
 		setInterval(
 			function() {
 		//		_QALET_.loadLet();
-			}, 500
+			}, 100
 		);			
 	}
 );
