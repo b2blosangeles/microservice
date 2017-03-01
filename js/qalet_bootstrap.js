@@ -67,7 +67,7 @@ $(document).ready(
 				}
 				
 				if (!o.server) {
-					if (!_sobj[_svr]) _sobj[_svr] = [];
+					if (!_sobj[__svr]) _sobj[__svr] = [];
 				} else {
 					if (!_sobj[o.server]) _sobj[o.server] = [];
 				}

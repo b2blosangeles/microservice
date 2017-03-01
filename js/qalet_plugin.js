@@ -77,9 +77,9 @@ $(document).ready(
 			if (Object.keys(r).length) {
 				var l = Object.keys(r).join(',');
 				r = {};	
-				var csslink = '/package/wordpress_plugin.css?plus='+l;	
+				var csslink = _svr + '/package/wordpress_plugin.css?plus='+l;	
 				$('<link rel="stylesheet" type="text/css" href="'+csslink+'" />').appendTo("head");
-				$.getScript( '/package/wordpress_plugin.jsx?plus='+l+'&callback=_QALET_.callback',
+				$.getScript( _svr + '/package/wordpress_plugin.jsx?plus='+l+'&callback=_QALET_.callback',
 					function( data, textStatus, jqxhr ) {
 				  		console.log( "Load was performed." );
 						
