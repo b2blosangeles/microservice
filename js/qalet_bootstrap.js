@@ -49,7 +49,7 @@ $(document).ready(
 		};
 
 		_QALET_.loadLet = function() {
-			var v = $('QALET'), r = {}, _sobj = {}; 
+			var v = $('QALET'), _sobj = {}; 
 			if (Object.keys(_QALET_._newlet).length) {
 				return false;
 			}
@@ -107,40 +107,9 @@ $(document).ready(
 				  	//	console.log( "Load was performed." );
 						});
 				}
-				/*
-				var l = Object.keys(r).join(',');
-				r = {};	
-				
-				var csslink = '/package/wordpress_plugin.css?plus='+l;	
-				$('<link rel="stylesheet" type="text/css" href="'+csslink+'" />').appendTo("head");
-				$.getScript( '/package/wordpress_plugin.jsx?plus='+l+'&callback=_QALET_.callback',
-					function( data, textStatus, jqxhr ) {
-				  	//	console.log( "Load was performed." );
-						
-					});
-				*/
 			} else  {	
 				_QALET_.callback();		
 			}			
-			
-			/*
-			if (Object.keys(r).length) {
-				var l = Object.keys(r).join(',');
-				r = {};	
-				
-				var csslink = '/package/wordpress_plugin.css?plus='+l;	
-				$('<link rel="stylesheet" type="text/css" href="'+csslink+'" />').appendTo("head");
-				$.getScript( '/package/wordpress_plugin.jsx?plus='+l+'&callback=',
-					function( data, textStatus, jqxhr ) {
-						_QALET_.callback();
-				  	//	console.log( "Load was performed." );
-						
-					});
-				
-			} else  {	
-				_QALET_.callback();		
-			}
-			*/
 		}
 		
 		_QALET_.loadLet();
