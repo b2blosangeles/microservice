@@ -82,6 +82,8 @@ $(document).ready(
 					_QALET_.lets[o.module] = o;
 				}
 				o.id = o.module + '_plugin_' + _QALET_._p;
+				o.app = (o.app)?o.app:_QALET_.cfg.app;
+				
 				_QALET_.data[o.id] = o;
 				_QALET_._newlet[o.id] = o;
 				$(v[i]).replaceWith('<div class="class_' + o.module +' '+o.id+'"></div>');
@@ -94,8 +96,8 @@ $(document).ready(
 					var osr = _sobj[os];
 					
 					var l = Object.keys(osr).join(',');
-					var csslink = _QALET_.cfg.css +'?plus='+l;
-					var jslink = _QALET_.cfg.app +'?plus='+l;
+					var csslink = o.app.replace(/\.(js|jsx)$/, '.css') +'?plus='+l;
+					var jslink = o.app +'?plus='+l;
 					$('<link rel="stylesheet" type="text/css" href="'+ csslink +'" />').appendTo("head");
 					$.getScript( jslink + '?plus='+l,
 						function( data, textStatus, jqxhr ) {
