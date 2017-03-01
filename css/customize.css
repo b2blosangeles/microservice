@@ -1,2 +1,2 @@
 .niu {color:[if $color == 'green']pink[else]blue[/if]}
-.info_bg { background-color:[$bg]}
+.info_bg { background-color:[$bg]; padding:1em}
