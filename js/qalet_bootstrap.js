@@ -125,7 +125,7 @@ $(document).ready(
 		setInterval(
 			function() {
 				_QALET_.loadLet();
-			}, 200
+			}, 500
 		);			
 	}
 );
