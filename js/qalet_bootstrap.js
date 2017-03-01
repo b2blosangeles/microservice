@@ -1,4 +1,5 @@
 if (!_QALET_) var _QALET_={lets:{}, _p:0, data:{}, _file:{}, _Q:{}, _newlet:{}};
+
 $(document).ready(	
 	function() {		
 		function parse(v) {
@@ -54,12 +55,14 @@ $(document).ready(
 					var o = parse(data);
 					
 				} catch (err) {
-					$(v[i]).replaceWith('<div style="color:red">Wrong JSON format:'+ data + ' as "' + err.message + '"</div>');
+					$(v[i]).replaceWith('<div style="color:red">Error, check console for details.</div>');
+					console.log('Wrong JSON format:'+ data + ' as "' + err.message );
 					continue;
 				}
 				
 				if (!o.module) {
-					$(v[i]).replaceWith('<div style="color:red">Miss module on '+ data + '</div>');
+					$(v[i]).replaceWith('<div style="color:red">Error, check console for details.</div>');
+					console.log('Miss module on '+ data);
 					continue;
 				}
 				if (!_QALET_.lets[o.module]) {
@@ -76,6 +79,7 @@ $(document).ready(
 			if (Object.keys(r).length) {
 				var l = Object.keys(r).join(',');
 				r = {};	
+				
 				var csslink = '/package/wordpress_plugin.css?plus='+l;	
 				$('<link rel="stylesheet" type="text/css" href="'+csslink+'" />').appendTo("head");
 				$.getScript( '/package/wordpress_plugin.jsx?plus='+l+'&callback=_QALET_.callback',
