@@ -7,3 +7,6 @@
 [if $solution == 3]
 .info_bg { background-color:lightblue; padding:1em}
 [/if]
+[if $solution == 4]
+.info_bg { background-color:pink; padding:1em}
+[/if]
