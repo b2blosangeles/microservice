@@ -7,7 +7,7 @@ $(document).ready(
 	function() {	
 		var _p= $("script[src$='/qalet_bootstrap.js']");
 		_QALET_.cfg.app = _p[0].src.replace(_p.attr('src'), '') + '/package/wordpress_plugin.css';
-		_QALET_.cfg.src = _p[0].src.replace(_p.attr('src'), '') + '/package/wordpress_plugin.jsx';
+		_QALET_.cfg.css = _p[0].src.replace(_p.attr('src'), '') + '/package/wordpress_plugin.jsx';
 		console.log(_QALET_.cfg);
 		
 		function parse(v) {
@@ -75,13 +75,13 @@ $(document).ready(
 				}
 				
 				if (!o.server) {
-					if (!_sobj[__svr]) _sobj[__svr] = {};
+					if (!_sobj[_QALET_.cfg.app]) _sobj[_QALET_.cfg.app] = {};
 				} else {
 					if (!_sobj[o.server]) _sobj[o.server] = {};
 				}
 				
 				if (!_QALET_.lets[o.module]) {
-					_sobj[(!o.server)?__svr:o.server][o.module] = true;
+					_sobj[(!o.server)?_QALET_.cfg.app:o.server][o.module] = true;
 					r[o.module] = true;
 					_QALET_.lets[o.module] = true;
 				}
