@@ -8,11 +8,11 @@ $(document).ready(
 		_QALET_.customStyle = function (o) {
 			return function(data){
 				try {
-					if (o.css_data) {
+					if (o.css.data) {
 						jSmart.prototype.left_delimiter = '[';
 						jSmart.prototype.right_delimiter = ']';														
 						var tpl = new jSmart(data);
-						data = tpl.fetch(o.css_data);
+						data = tpl.fetch(o.css.data);
 					} 	
 					console.log(data);
 					var v = UIQALET.css.parse(data.replace(/\}([\;|\s]*)/g, '} '));	
@@ -29,8 +29,8 @@ $(document).ready(
 				for (var v in _QALET_._newlet) {
 					delete _QALET_._newlet[v];
 					var o = _QALET_.data[v];
-					if (o.css) {
-						$.get(o.css, _QALET_.customStyle(o));
+					if ((o.css) && (o.css.link)) {
+						$.get(o.css.link, _QALET_.customStyle(o));
 					}			
 					if (typeof _QALET_._Q[o.module] == 'function') {
 						_QALET_._Q[o.module](o);				
