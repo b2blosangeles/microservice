@@ -41,7 +41,7 @@ $(document).ready(
 		};
 
 		_QALET_.loadLet = function() {
-			var v = $('QALET'), r = {}; 
+			var v = $('QALET'), r = {}, _sobj; 
 			if (Object.keys(_QALET_._newlet).length) {
 				return false;
 			}
@@ -65,7 +65,15 @@ $(document).ready(
 					console.log('Miss module on '+ data);
 					continue;
 				}
+				
+				if (!o.server) {
+					if (!_sobj[_svr]) _sobj[_svr] = {};
+				} else {
+					if (!_sobj[o.server]) _sobj[o.server] = {};
+				}
+				
 				if (!_QALET_.lets[o.module]) {
+					
 					r[o.module] = true;
 					_QALET_.lets[o.module] = true;
 				}
@@ -76,6 +84,7 @@ $(document).ready(
 				$(v[i]).replaceWith('<div class="class_' + o.module +' '+o.id+'"></div>');
 				$('.'+o.id).hide();
 			}
+			console.log(_sobj);
 			if (Object.keys(r).length) {
 				var l = Object.keys(r).join(',');
 				r = {};	
