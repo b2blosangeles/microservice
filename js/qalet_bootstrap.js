@@ -1,13 +1,13 @@
 if (!_QALET_) var _QALET_={lets:{}, _p:0, data:{}, _file:{}, _Q:{}, _newlet:{}};
-console.log(__svr);
+_QALET_.cfg = {};
 
 
 
 $(document).ready(	
 	function() {	
 		var _p= $("script[src$='/qalet_bootstrap.js']");
-		__svr = _p[0].src.replace(_p.attr('src'), '');
-		console.log(__svr);
+		_QALET_.cfg.svr = _p[0].src.replace(_p.attr('src'), '');
+		console.log(_QALET_.cfg.svr);
 		
 		function parse(v) {
 			var t = v.replace(/(“|”)/ig, '"');
