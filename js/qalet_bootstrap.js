@@ -96,10 +96,10 @@ $(document).ready(
 				for(var os in _sobj) {
 					var osr = _sobj[os];
 					var l = Object.keys(osr).join(',');
-					var csslink = '/package/wordpress_plugin.css?plus='+l;	
+					var csslink = '?plus='+l;	
 					console.log(csslink);
 					$('<link rel="stylesheet" type="text/css" href="'+ os + csslink+'" />').appendTo("head");
-					$.getScript( os + '/package/wordpress_plugin.jsx?plus='+l,
+					$.getScript( os + '?plus='+l,
 						function( data, textStatus, jqxhr ) {
 							_QALET_.callback();
 				  	//	console.log( "Load was performed." );
