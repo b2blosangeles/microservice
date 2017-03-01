@@ -1,7 +1,13 @@
 if (!_QALET_) var _QALET_={lets:{}, _p:0, data:{}, _file:{}, _Q:{}, _newlet:{}};
 console.log(__svr);
+
+
+
 $(document).ready(	
-	function() {		
+	function() {	
+		
+		console.log($('script').attr('src'));
+		
 		function parse(v) {
 			var t = v.replace(/(“|”)/ig, '"');
 			return JSON.parse(t);
