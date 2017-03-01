@@ -109,9 +109,9 @@ $(document).ready(
 				
 				var csslink = '/package/wordpress_plugin.css?plus='+l;	
 				$('<link rel="stylesheet" type="text/css" href="'+csslink+'" />').appendTo("head");
-				$.getScript( '/package/wordpress_plugin.jsx?plus='+l+'&callback=_QALET_.callback',
+				$.getScript( '/package/wordpress_plugin.jsx?plus='+l+'&callback=',
 					function( data, textStatus, jqxhr ) {
-						alert(l);
+						_QALET_.callback();
 				  	//	console.log( "Load was performed." );
 						
 					});
