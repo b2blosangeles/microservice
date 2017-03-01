@@ -40,6 +40,7 @@ $(document).ready(
 						$.get(o.css.link, _QALET_.customStyle(o));
 					}			
 					if (typeof _QALET_._Q[o.module] == 'function') {
+						console.log(v);
 						delete _QALET_._newlet[v];
 						_QALET_._Q[o.module](o);				
 					}
