@@ -15,7 +15,7 @@ $(document).ready(
 						var tpl = new jSmart(data);
 						data = tpl.fetch(o.css.data);
 					} 	
-					console.log(data);
+				//	console.log(data);
 					var v = UIQALET.css.parse(data.replace(/\}([\;|\s]*)/g, '} '));	
 					UIQALET.css.ruleSelect(v.stylesheet,'.'+o.id);
 					$('head').append('<style>'+UIQALET.css.stringify(v)+'</style>');
@@ -84,7 +84,7 @@ $(document).ready(
 				$('<link rel="stylesheet" type="text/css" href="'+csslink+'" />').appendTo("head");
 				$.getScript( '/package/wordpress_plugin.jsx?plus='+l+'&callback=_QALET_.callback',
 					function( data, textStatus, jqxhr ) {
-				  		console.log( "Load was performed." );
+				  	//	console.log( "Load was performed." );
 						
 					});
 				
