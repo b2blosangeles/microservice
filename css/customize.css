@@ -1,5 +1,1 @@
-[if $color == 'green']
-  .niu {color:pink}
-[else]
-  .niu {color:red}
-[/if]
+.niu {color:[if $color == 'green']pink[else]blue[/if]}
