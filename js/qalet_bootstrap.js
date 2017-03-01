@@ -39,12 +39,12 @@ $(document).ready(
 					if ((o.css) && (o.css.link)) {
 						$.get(o.css.link, _QALET_.customStyle(o));
 					}			
-					if (typeof _QALET_._Q[o.module] == 'function') {
+					if (typeof _QALET_._Q[o.module+o.app] == 'function') {
 						console.log(v);
 						delete _QALET_._newlet[v];
 						_QALET_._Q[o.module](o);				
 					} else {
-						console.log('---not found---'+o.module);
+						console.log('---not found---'+o.moduleo+module+o.app);
 					}
 				}	
 			}	
