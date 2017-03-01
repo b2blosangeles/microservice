@@ -124,7 +124,7 @@ $(document).ready(
 		_QALET_.loadLet();
 		setInterval(
 			function() {
-				_QALET_.loadLet();
+		//		_QALET_.loadLet();
 			}, 500
 		);			
 	}
