@@ -94,6 +94,7 @@ $(document).ready(
 			console.log(_sobj);
 			if (Object.keys(_sobj).length) {
 				for(var os in _sobj) {
+					console.log(os);
 					var osr = _sobj[os];
 					var l = Object.keys(osr).join(',');
 					var csslink = '?plus='+l;	
