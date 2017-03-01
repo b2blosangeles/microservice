@@ -96,7 +96,8 @@ $(document).ready(
 				for(var os in _sobj) {
 					console.log(os);
 					var osr = _sobj[os];
-
+					
+					var l = Object.keys(osr).join(',');
 					var csslink = _QALET_.cfg.css +'?plus='+l;
 					var jslink = _QALET_.cfg.app +'?plus='+l;
 					//console.log(csslink);
