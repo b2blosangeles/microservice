@@ -86,9 +86,15 @@ $(document).ready(
 			console.log(_sobj);
 			if (Object.keys(_sobj).length) {
 				for(var os in _sobj) {
-					console.log(os);
-					
-					
+					var osr = _sobj[os];
+					var l = Object.keys(osr).join(',');
+					var csslink = '/package/wordpress_plugin.css?plus='+l;	
+					console.log(csslink);
+					$('<link rel="stylesheet" type="text/css" href="'+csslink+'" />').appendTo("head");
+					$.getScript( '/package/wordpress_plugin.jsx?plus='+l,
+						function( data, textStatus, jqxhr ) {
+				  	//	console.log( "Load was performed." );
+						});
 				}
 				/*
 				var l = Object.keys(r).join(',');
