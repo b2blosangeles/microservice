@@ -84,7 +84,26 @@ $(document).ready(
 				$(v[i]).replaceWith('<div class="class_' + o.module +' '+o.id+'"></div>');
 				$('.'+o.id).hide();
 			}
-			console.log(_sobj);
+
+			if (Object.keys(_sobj).length) {
+				console.log(_sobj);
+				/*
+				var l = Object.keys(r).join(',');
+				r = {};	
+				
+				var csslink = '/package/wordpress_plugin.css?plus='+l;	
+				$('<link rel="stylesheet" type="text/css" href="'+csslink+'" />').appendTo("head");
+				$.getScript( '/package/wordpress_plugin.jsx?plus='+l+'&callback=_QALET_.callback',
+					function( data, textStatus, jqxhr ) {
+				  	//	console.log( "Load was performed." );
+						
+					});
+				*/
+			} else  {	
+				// _QALET_.callback();		
+			}			
+			
+			
 			if (Object.keys(r).length) {
 				var l = Object.keys(r).join(',');
 				r = {};	
