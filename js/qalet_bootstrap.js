@@ -57,7 +57,7 @@ $(document).ready(
 			if (Object.keys(_QALET_._newlet).length) {
 				return false;
 			}
-			console.log('-----_QALET_.loadLet()2;----');
+			console.log('-----_QALET_.loadLet()2;----' + v.length);
 			for (var i = 0; i < v.length; i++) {
 				_QALET_._p++;
 				var data = $(v[i]).html();
