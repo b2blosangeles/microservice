@@ -3,7 +3,7 @@ _QALET_.cfg = {};
 $(document).ready(	
 	function() {	
 		var _p = $("script[src$='/qalet_bootstrap.min.js']");
-		if (!_p) _p = $("script[src$='/qalet_bootstrap.js']");
+		if (!_p[0]) _p = $("script[src$='/qalet_bootstrap.js']");
 		_QALET_.cfg.app = _p[0].src.replace(/\/qalet\_bootstrap(|\.min)\.js/, '/wordpress_plugin.jsx');
 		_QALET_.cfg.css = _p[0].src.replace(/\/qalet\_bootstrap(|\.min)\.js/, '/wordpress_plugin.css');
 		_QALET_.customStyle = function (o) {
