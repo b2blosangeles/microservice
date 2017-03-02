@@ -104,6 +104,7 @@ $(document).ready(
 				}
 			} else  _QALET_.callback();		
 		};
+		console.log('-----_QALET_.loadLet();----');
 		_QALET_.loadLet();
 		setInterval(_QALET_.loadLet, 200);			
 	}
