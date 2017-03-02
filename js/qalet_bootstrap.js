@@ -107,7 +107,8 @@ $(document).ready(
 
 					$.getScript( jslink + '?plus='+l,
 						function( data, textStatus, jqxhr ) {
-						console.log(textStatus);
+							console.log('textStatus--->');
+							console.log(textStatus);
 							_QALET_.callback();
 				  			// alert(9);
 						//	console.log( "Load was performed." );
