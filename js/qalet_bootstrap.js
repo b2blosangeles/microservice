@@ -104,6 +104,7 @@ $(document).ready(
 					var osr = _sobj[os];
 					console.log(osr);
 					console.log(_QALET_._newlet);
+					console.log(_QALET_.data);
 					
 					var l = Object.keys(osr).join(',');
 					var csslink = os.replace(/\.(js|jsx)$/, '.css') +'?plus='+l;
