@@ -1,4 +1,4 @@
-if (!_QALET_) var _QALET_={lets:{}, _p:0, data:{}, _file:{}, _Q:{}, _newlet:{}};
+if (!_QALET_) var _QALET_={_p:0, data:{}, _Q:{}, _newlet:{}};
 _QALET_.cfg = {};
 
 
@@ -34,7 +34,6 @@ $(document).ready(
 		_QALET_.callback = function() {
 			console.log('_QALET_._newlet===>');
 			console.log(_QALET_._newlet);
-			console.log(_QALET_.lets);
 			
 			if (Object.keys(_QALET_._newlet).length) {	
 				for (var v in _QALET_._newlet) {
@@ -82,12 +81,8 @@ $(document).ready(
 					if (!_sobj[o.app]) _sobj[o.app] = {};
 				}
 				_sobj[(!o.app)?_QALET_.cfg.app:o.app][o.module] = o;
-				//if (!_QALET_.lets[o.module]) {
-					
-				//	_QALET_.lets[o.module] = o;
-				//}
+				
 				o.id = o.module + '_plugin_' + _QALET_._p;
-			//	o.app = (o.app)?o.app:_QALET_.cfg.app;
 				
 				_QALET_.data[o.id] = o;
 				_QALET_._newlet[o.id] = new Date().getTime();
