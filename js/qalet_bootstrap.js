@@ -84,7 +84,7 @@ $(document).ready(
 					_QALET_.lets[o.module] = o;
 				}
 				o.id = o.module + '_plugin_' + _QALET_._p;
-				o.app = (o.app)?o.app:_QALET_.cfg.app;
+			//	o.app = (o.app)?o.app:_QALET_.cfg.app;
 				
 				_QALET_.data[o.id] = o;
 				_QALET_._newlet[o.id] = o;
@@ -98,8 +98,8 @@ $(document).ready(
 					var osr = _sobj[os];
 					
 					var l = Object.keys(osr).join(',');
-					var csslink = o.app.replace(/\.(js|jsx)$/, '.css') +'?plus='+l;
-					var jslink = o.app +'?plus='+l;
+					var csslink = os.replace(/\.(js|jsx)$/, '.css') +'?plus='+l;
+					var jslink = os +'?plus='+l;
 					console.log('---o---');
 					console.log(o);
 					$('<link rel="stylesheet" type="text/css" href="'+ csslink +'" />').appendTo("head");
