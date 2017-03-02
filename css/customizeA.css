@@ -1,3 +1,4 @@
+all: default;
 [if $solution == 1]
 .info_bg { background-color:#ccc; padding:1em;  font-size:15px;}
 [/if]
@@ -8,5 +9,5 @@
 .info_bg { background-color:lightblue; padding:1em;  font-size:15px; }
 [/if]
 [if $solution == 4]
-.info_bg { background-color:pink; padding:1em; font-size:15px;}
+.info_bg { background-color:pink; padding:1em; }
 [/if]
