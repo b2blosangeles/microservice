@@ -100,7 +100,7 @@ $(document).ready(
 						});
 				}
 			} else  _QALET_.callback();		
-		}
+		};
 		_QALET_.loadLet();
 		setInterval(_QALET_.loadLet, 200);			
 	}
