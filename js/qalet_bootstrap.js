@@ -66,6 +66,8 @@ $(document).ready(
 				console.log('B');
 				return false;
 			}
+			console.log('==='+v.length+"====");
+			
 			for (var i = 0; i < v.length; i++) {
 				_QALET_._p++;
 				var data = $(v[i]).html();
