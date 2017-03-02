@@ -102,9 +102,10 @@ $(document).ready(
 					var jslink = o.app +'?plus='+l;
 					$('<link rel="stylesheet" type="text/css" href="'+ csslink +'" />').appendTo("head");
 					
-					 $('<script type="text/javascript"> alert(123); </script>').appendTo("head");
+					
 					
 					 $.get(jslink + '?plus='+l, function(data, status){
+						$('<script type="text/javascript"> '+data+' </script>').appendTo("head");
 						console.log(data);
 					 });
 					/*
