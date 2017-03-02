@@ -47,9 +47,6 @@ $(document).ready(
 			}	
 		};
 		_QALET_.loadLet = function() {
-			console.log('-----_QALET_.loadLet()1;----');
-			console.log(_QALET_._newlet);
-			
 			var v = $('QALET'), _sobj = {}; 
 			for (var o in _QALET_._newlet) {
 				if (new Date().getTime() - _QALET_._newlet[o][0] > 6000) {
@@ -60,6 +57,7 @@ $(document).ready(
 			if (Object.keys(_QALET_._newlet).length) {
 				return false;
 			}
+			console.log('-----_QALET_.loadLet()2;----');
 			for (var i = 0; i < v.length; i++) {
 				_QALET_._p++;
 				var data = $(v[i]).html();
