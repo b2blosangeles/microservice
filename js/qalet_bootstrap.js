@@ -1,4 +1,4 @@
-if (!_QALET_) var _QALET_={_p:0, data:{}, _Q:{}, _newlet:{}};
+if (!_QALET_) var _QALET_={_p:0, data:{}, _Q:{}, _newlet:{}, _done:{}};
 _QALET_.cfg = {};
 
 
@@ -37,7 +37,8 @@ $(document).ready(
 					var o = _QALET_.data[v];
 					if ((o.css) && (o.css.link)) {
 						$.get(o.css.link, _QALET_.customStyle(o));
-					}			
+					}
+					_QALET_._d[_QALET_._newlet[3]] = true;	
 					if (typeof _QALET_._Q[o.module] == 'function') {
 						delete _QALET_._newlet[v];
 						_QALET_._Q[o.module](o);				
@@ -45,6 +46,7 @@ $(document).ready(
 						console.log('---not found---'+o.module+o.app);
 						console.log(_QALET_._newlet);
 					}
+					console.log(_QALET_._d);
 				}	
 			}	
 		};
