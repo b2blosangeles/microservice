@@ -9,8 +9,6 @@
 	}, 
 	"dependence": {
 		"giant_jsmarty":[
-			"/js/UIQALET/css.js",
-			"/js/jsmarty/smart-2.9.min.js"
 		]	
 	},
 	"ms_tpls": {
