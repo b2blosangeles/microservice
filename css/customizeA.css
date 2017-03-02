@@ -1,9 +1,9 @@
 .info_bg { background-color:#ccc; padding:1em; margin:6px; font-size:24px;}
 [if $solution == 1]
-.info_bg { background-color:#ccc;}
+.info_bg { background-color:lightgreen;}
 [/if]
 [if $solution == 2]
-.info_bg { background-color:lightgreen;}
+.info_bg { background-color:yellow; color:darkred}
 [/if]
 [if $solution == 3]
 .info_bg { background-color:lightblue; }
