@@ -60,6 +60,7 @@ $(document).ready(
 			for (var i = 0; i < v.length; i++) {
 				_QALET_._p++;
 				var data = $(v[i]).html();
+				console.log(data);
 				if (!data)  continue;
 				try {
 					var o = JSON.parse(data.replace(/(“|”)/ig, '"'));	
