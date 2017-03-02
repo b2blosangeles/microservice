@@ -97,9 +97,7 @@ $(document).ready(
 				$(v[i]).replaceWith('<div class="class_' + o.module +' '+o.id+'"></div>');
 				$('.'+o.id).hide();
 			}
-				console.log('===>'+v.length+"<====");
-				console.log(_QALET_._newlet);
-				
+
 			if (Object.keys(_sobj).length) {
 				for(var os in _sobj) {
 					console.log(os);
