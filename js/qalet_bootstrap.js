@@ -81,11 +81,11 @@ $(document).ready(
 				} else {
 					if (!_sobj[o.app]) _sobj[o.app] = {};
 				}
-				
-				if (!_QALET_.lets[o.module]) {
-					_sobj[(!o.app)?_QALET_.cfg.app:o.app][o.module] = o;
-					_QALET_.lets[o.module] = o;
-				}
+				_sobj[(!o.app)?_QALET_.cfg.app:o.app][o.module] = o;
+				//if (!_QALET_.lets[o.module]) {
+					
+				//	_QALET_.lets[o.module] = o;
+				//}
 				o.id = o.module + '_plugin_' + _QALET_._p;
 			//	o.app = (o.app)?o.app:_QALET_.cfg.app;
 				
