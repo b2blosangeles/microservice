@@ -61,7 +61,7 @@ $(document).ready(
 				}
 			}
 			
-			
+			console.log(Object.keys(_QALET_._newlet).length);
 			if (Object.keys(_QALET_._newlet).length) {
 				console.log('B');
 				return false;
