@@ -48,6 +48,8 @@ $(document).ready(
 		};
 		_QALET_.loadLet = function() {
 			console.log('-----_QALET_.loadLet()1;----');
+			console.log(_QALET_._newlet);
+			
 			var v = $('QALET'), _sobj = {}; 
 			for (var o in _QALET_._newlet) {
 				if (new Date().getTime() - _QALET_._newlet[o][0] > 6000) {
