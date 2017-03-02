@@ -56,7 +56,7 @@ $(document).ready(
 		_QALET_.loadLet = function() {
 			var v = $('QALET'), _sobj = {}; 
 			for (var o in _QALET_._newlet) {
-				if (new Date().getTime() - _QALET_._newlet[o] > 3000) {
+				if (new Date().getTime() - _QALET_._newlet[o] > 6000) {
 					console.log('remove ' + o);
 					delete  _QALET_._newlet[o];
 				}
