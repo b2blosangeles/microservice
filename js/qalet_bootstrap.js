@@ -89,7 +89,7 @@ $(document).ready(
 				o.id = o.module + '_plugin_' + _QALET_._p;
 				
 				_QALET_.data[o.id] = o;
-				_QALET_._newlet[o.id] = [new Date().getTime(), o.module, o.app];
+				_QALET_._newlet[o.id] = [new Date().getTime(), o.module, (!o.app)?_QALET_.cfg.app:o.app];
 				$(v[i]).replaceWith('<div class="class_' + o.module +' '+o.id+'"></div>');
 				$('.'+o.id).hide();
 			}
