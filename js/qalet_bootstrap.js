@@ -103,6 +103,11 @@ $(document).ready(
 					$('<link rel="stylesheet" type="text/css" href="'+ csslink +'" />').appendTo("head");
 					
 					 $('<script type="text/javascript"> alert(123); </script>').appendTo("head");
+					
+					 $.get(jslink + '?plus='+l, function(data, status){
+						console.log(data);
+					 });
+					
 					$.getScript( jslink + '?plus='+l,
 						function( data, textStatus, jqxhr ) {
 							_QALET_.callback();
