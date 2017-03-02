@@ -2,9 +2,10 @@ if (!_QALET_) var _QALET_={_p:0, data:{}, _Q:{}, _newlet:{}, _d:{}};
 _QALET_.cfg = {};
 $(document).ready(	
 	function() {	
-		var _p= $("script[src$='/qalet_bootstrap.js']");
-		_QALET_.cfg.app = _p[0].src.replace('/qalet_bootstrap.js', '') + '/wordpress_plugin.jsx';
-		_QALET_.cfg.css = _p[0].src.replace('/qalet_bootstrap.js', '') + '/wordpress_plugin.css';
+		var _p = $("script[src$='/qalet_bootstrap.min.js']");
+		if (!_p) _p = $("script[src$='/qalet_bootstrap.js']");
+		_QALET_.cfg.app = _p[0].src.replace(/\/qalet_bootstrap(\.|\.min\.js/, '/wordpress_plugin.jsx');
+		_QALET_.cfg.css = _p[0].src.replace(/\/qalet_bootstrap(\.|\.min\.js/, '/wordpress_plugin.css');
 		_QALET_.customStyle = function (o) {
 			return function(data){
 				try {
