@@ -38,7 +38,6 @@ $(document).ready(
 					if ((o.css) && (o.css.link)) {
 						$.get(o.css.link, _QALET_.customStyle(o));
 					}
-					
 					if (typeof _QALET_._Q[o.module] == 'function') {
 						_QALET_._d[_QALET_._newlet[v][2]] = true;	
 						delete _QALET_._newlet[v];
@@ -50,8 +49,7 @@ $(document).ready(
 					}
 				}	
 				for (var v in _QALET_._newlet) {
-					var o = _QALET_.data[v];
-					if (typeof _QALET_._Q[o.module] != 'function') {
+					if (typeof _QALET_._Q[_QALET_._newlet[v][1]] != 'function') {
 						if (_QALET_._d[_QALET_._newlet[v][2]]) {
 							delete _QALET_._newlet[v];
 						}
