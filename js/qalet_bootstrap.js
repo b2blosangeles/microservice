@@ -9,8 +9,7 @@ $(document).ready(
 		_QALET_.cfg.app = _p[0].src.replace('/qalet_bootstrap.js', '') + '/wordpress_plugin.jsx';
 		_QALET_.cfg.css = _p[0].src.replace('/qalet_bootstrap.js', '') + '/wordpress_plugin.css';
 		function parse(v) {
-			var t = v.replace(/(“|”)/ig, '"');
-			return JSON.parse(t);
+			return JSON.parse(v.replace(/(“|”)/ig, '"'));
 		}
 		_QALET_.customStyle = function (o) {
 			return function(data){
@@ -41,11 +40,7 @@ $(document).ready(
 						_QALET_._d[_QALET_._newlet[v][2]] = true;	
 						delete _QALET_._newlet[v];
 						_QALET_._Q[o.module](o);				
-					} else {
-						if (_QALET_._d[_QALET_._newlet[v][2]]) {
-							delete _QALET_._newlet[v];
-						}
-					}
+					} 
 				}	
 				for (var v in _QALET_._newlet) {
 					if (typeof _QALET_._Q[_QALET_._newlet[v][1]] != 'function') {
@@ -56,7 +51,6 @@ $(document).ready(
 				}
 			}	
 		};
-
 		_QALET_.loadLet = function() {
 			var v = $('QALET'), _sobj = {}; 
 			for (var o in _QALET_._newlet) {
@@ -68,7 +62,6 @@ $(document).ready(
 			if (Object.keys(_QALET_._newlet).length) {
 				return false;
 			}
-		
 			for (var i = 0; i < v.length; i++) {
 				_QALET_._p++;
 				var data = $(v[i]).html();
@@ -109,7 +102,6 @@ $(document).ready(
 					var csslink = os.replace(/\.(js|jsx)$/, '.css') +'?plus='+l;
 					var jslink = os +'?plus='+l;
 					$('<link rel="stylesheet" type="text/css" href="'+ csslink +'" />').appendTo("head");
-
 					$.getScript( jslink + '?plus='+l,
 						function( data, textStatus, jqxhr ) {
 							_QALET_.callback();
