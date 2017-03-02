@@ -47,11 +47,16 @@ $(document).ready(
 						if (_QALET_._d[_QALET_._newlet[v][2]]) {
 							delete _QALET_._newlet[v];
 						}
-						console.log('---not found---'+o.module+o.app);
-						console.log(_QALET_._newlet);
 					}
-					console.log(_QALET_._d);
 				}	
+				for (var v in _QALET_._newlet) {
+					var o = _QALET_.data[v];
+					if (typeof _QALET_._Q[o.module] != 'function') {
+						if (_QALET_._d[_QALET_._newlet[v][2]]) {
+							delete _QALET_._newlet[v];
+						}
+					}
+				}
 			}	
 		};
 
