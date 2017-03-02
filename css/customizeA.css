@@ -1,4 +1,4 @@
-all: default;
+ all: revert;
 [if $solution == 1]
 .info_bg { background-color:#ccc; padding:1em; }
 [/if]
