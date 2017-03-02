@@ -34,6 +34,8 @@ $(document).ready(
 		_QALET_.callback = function() {
 			console.log('_QALET_._newlet===>');
 			console.log(_QALET_._newlet);
+			console.log(_QALET_.lets);
+			
 			if (Object.keys(_QALET_._newlet).length) {	
 				for (var v in _QALET_._newlet) {
 					var o = _QALET_.data[v];
@@ -88,11 +90,11 @@ $(document).ready(
 			//	o.app = (o.app)?o.app:_QALET_.cfg.app;
 				
 				_QALET_.data[o.id] = o;
-				_QALET_._newlet[o.id] = o;
+				_QALET_._newlet[o.id] = new Date().getTime();
 				$(v[i]).replaceWith('<div class="class_' + o.module +' '+o.id+'"></div>');
 				$('.'+o.id).hide();
 			}
-			console.log(_sobj);
+		
 			if (Object.keys(_sobj).length) {
 				for(var os in _sobj) {
 					console.log(os);
