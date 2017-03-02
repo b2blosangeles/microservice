@@ -3,7 +3,7 @@
 .info_bg { background-color:lightgreen;}
 [/if]
 [if $solution == 2]
-.info_bg { background-color:lightyellow; color:darkred}
+.info_bg { background-color:lightyellow; color:darkgreen}
 [/if]
 [if $solution == 3]
 .info_bg { background-color:lightblue; }
