@@ -8,8 +8,8 @@ var res = tpl.fetch( data );
 $('.'+mapping_data.id).html(res);
 setTimeout(
 	function() {
-		$('.'+mapping_data.id).find('.dropdown-toggle').dropdown();
-		console.log('==try it =');
+		$('.'+mapping_data.id).find('.dropdown-toggle').width(120).dropdown();
+		console.log('==try it 2 =');
 	},1000
 );	
 
