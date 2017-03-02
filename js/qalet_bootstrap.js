@@ -1,4 +1,4 @@
-if (!_QALET_) var _QALET_={_p:0, data:{}, _Q:{}, _newlet:{}, _done:{}};
+if (!_QALET_) var _QALET_={_p:0, data:{}, _Q:{}, _newlet:{}, _d:{}};
 _QALET_.cfg = {};
 
 
