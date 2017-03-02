@@ -63,8 +63,7 @@ $(document).ready(
 			if (Object.keys(_QALET_._newlet).length) {
 				return false;
 			}
-			console.log('==='+v.length+"====");
-			
+		
 			for (var i = 0; i < v.length; i++) {
 				_QALET_._p++;
 				var data = $(v[i]).html();
@@ -97,7 +96,8 @@ $(document).ready(
 				$(v[i]).replaceWith('<div class="class_' + o.module +' '+o.id+'"></div>');
 				$('.'+o.id).hide();
 			}
-		
+				console.log('===>'+v.length+"<====");
+				
 			if (Object.keys(_sobj).length) {
 				for(var os in _sobj) {
 					console.log(os);
