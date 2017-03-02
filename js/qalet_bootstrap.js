@@ -44,6 +44,9 @@ $(document).ready(
 						delete _QALET_._newlet[v];
 						_QALET_._Q[o.module](o);				
 					} else {
+						if (_QALET_._d[_QALET_._newlet[v][2]]) {
+							delete _QALET_._newlet[v];
+						}
 						console.log('---not found---'+o.module+o.app);
 						console.log(_QALET_._newlet);
 					}
