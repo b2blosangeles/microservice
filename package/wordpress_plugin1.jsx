@@ -4,7 +4,7 @@
 	],
 	"mservice": {	
 		"giant_jsmartyA":[
-			"/mservices/smarty_A001/controller/main.js"
+			"/mservices/smarty_A001/controller/mainA.js"
 		]	
 	}, 
 	"dependence": {
