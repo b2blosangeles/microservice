@@ -100,7 +100,7 @@ $(document).ready(
 
 			if (Object.keys(_sobj).length) {
 				for(var os in _sobj) {
-					console.log(os);
+					console.log('call ---'+os);
 					var osr = _sobj[os];
 					
 					var l = Object.keys(osr).join(',');
