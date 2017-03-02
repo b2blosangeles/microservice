@@ -100,18 +100,12 @@ $(document).ready(
 					var l = Object.keys(osr).join(',');
 					var csslink = os.replace(/\.(js|jsx)$/, '.css') +'?plus='+l;
 					var jslink = os +'?plus='+l;
-					console.log('---o---');
-					console.log(o);
 					$('<link rel="stylesheet" type="text/css" href="'+ csslink +'" />').appendTo("head");
 					
 
 					$.getScript( jslink + '?plus='+l,
 						function( data, textStatus, jqxhr ) {
-							console.log('textStatus--->');
-							console.log(textStatus);
 							_QALET_.callback();
-				  			// alert(9);
-						//	console.log( "Load was performed." );
 						});
 						
 				}
