@@ -38,7 +38,7 @@ $(document).ready(
 					if ((o.css) && (o.css.link)) {
 						$.get(o.css.link, _QALET_.customStyle(o));
 					}
-					_QALET_._d[_QALET_._newlet[2]] = true;	
+					_QALET_._d[_QALET_._newlet[v][2]] = true;	
 					if (typeof _QALET_._Q[o.module] == 'function') {
 						delete _QALET_._newlet[v];
 						_QALET_._Q[o.module](o);				
