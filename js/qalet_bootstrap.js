@@ -62,7 +62,7 @@ $(document).ready(
 			var v = $('QALET'), _sobj = {}; 
 			for (var o in _QALET_._newlet) {
 				if (new Date().getTime() - _QALET_._newlet[o][0] > 6000) {
-					console.log('remove ' + o);
+					console.log(_QALET_._newlet[o][2] + ' might be timeout! remove ' + o);
 					delete  _QALET_._newlet[o];
 				}
 			}
