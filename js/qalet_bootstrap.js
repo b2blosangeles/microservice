@@ -107,12 +107,13 @@ $(document).ready(
 					 $.get(jslink + '?plus='+l, function(data, status){
 						console.log(data);
 					 });
-					
+					/*
 					$.getScript( jslink + '?plus='+l,
 						function( data, textStatus, jqxhr ) {
 							_QALET_.callback();
 				  	//	console.log( "Load was performed." );
 						});
+					*/	
 				}
 			} else  {	
 				_QALET_.callback();		
