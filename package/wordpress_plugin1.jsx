@@ -16,7 +16,7 @@
 	},
 	"ms_tpls": {
 		"giant_jsmartyA":[
-			"/mservices/smarty_A001/view/infobox.html"
+			"/mservices/smarty_A001/view/infoboxA.html"
 		]
 	}	
 }
