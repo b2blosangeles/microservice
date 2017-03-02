@@ -54,7 +54,9 @@ $(document).ready(
 
 		_QALET_.loadLet = function() {
 			var v = $('QALET'), _sobj = {}; 
+			console.log('A');
 			if (Object.keys(_QALET_._newlet).length) {
+				console.log('B');
 				return false;
 			}
 			for (var i = 0; i < v.length; i++) {
