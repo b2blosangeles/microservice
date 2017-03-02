@@ -1,16 +1,10 @@
 if (!_QALET_) var _QALET_={_p:0, data:{}, _Q:{}, _newlet:{}, _d:{}};
 _QALET_.cfg = {};
-
-
-
 $(document).ready(	
 	function() {	
 		var _p= $("script[src$='/qalet_bootstrap.js']");
 		_QALET_.cfg.app = _p[0].src.replace('/qalet_bootstrap.js', '') + '/wordpress_plugin.jsx';
 		_QALET_.cfg.css = _p[0].src.replace('/qalet_bootstrap.js', '') + '/wordpress_plugin.css';
-		function parse(v) {
-			return JSON.parse(v.replace(/(“|”)/ig, '"'));
-		}
 		_QALET_.customStyle = function (o) {
 			return function(data){
 				try {
@@ -22,8 +16,7 @@ $(document).ready(
 					} 	
 					var v = UIQALET.css.parse(data.replace(/\}([\;|\s]*)/g, '} '));	
 					UIQALET.css.ruleSelect(v.stylesheet,'.'+o.id);
-					$('head').append('<style>'+UIQALET.css.stringify(v)+'</style>');
-						
+					$('head').append('<style>'+UIQALET.css.stringify(v)+'</style>');	
 				} catch (err) {
 					console.log(err.message);
 				}							
@@ -67,7 +60,7 @@ $(document).ready(
 				var data = $(v[i]).html();
 				if (!data)  continue;
 				try {
-					var o = parse(data);	
+					var o = JSON.parse(data.replace(/(“|”)/ig, '"'));	
 				} catch (err) {
 					$(v[i]).replaceWith('<div style="color:red">Error, check console for details.</div>');
 					console.log('Wrong JSON format:'+ data + ' as "' + err.message );
@@ -86,7 +79,6 @@ $(document).ready(
 					if (!_sobj[o.app]) _sobj[o.app] = {};
 				}
 				_sobj[(!o.app)?_QALET_.cfg.app:o.app][o.module] = o;
-				
 				o.id = o.module + '_plugin_' + _QALET_._p;
 				
 				_QALET_.data[o.id] = o;
@@ -94,7 +86,6 @@ $(document).ready(
 				$(v[i]).replaceWith('<div class="class_' + o.module +' '+o.id+'"></div>');
 				$('.'+o.id).hide();
 			}
-
 			if (Object.keys(_sobj).length) {
 				for(var os in _sobj) {
 					var osr = _sobj[os];
@@ -107,9 +98,7 @@ $(document).ready(
 							_QALET_.callback();
 						});
 				}
-			} else  {	
-				_QALET_.callback();		
-			}			
+			} else  _QALET_.callback();		
 		}
 		_QALET_.loadLet();
 		setInterval(_QALET_.loadLet, 200);			
