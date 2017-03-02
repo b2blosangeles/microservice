@@ -95,7 +95,7 @@ $(document).ready(
 					var csslink = os.replace(/\.(js|jsx)$/, '.css') +'?plus='+l;
 					var jslink = os +'?plus='+l;
 					$('<link rel="stylesheet" type="text/css" href="'+ csslink +'" />').appendTo("head");
-					$.getScript( jslink + '?plus='+l,
+					$.getScript( jslink,
 						function( data, textStatus, jqxhr ) {
 							_QALET_.callback();
 						});
