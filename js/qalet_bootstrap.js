@@ -120,12 +120,7 @@ $(document).ready(
 				_QALET_.callback();		
 			}			
 		}
-		
 		_QALET_.loadLet();
-		setInterval(
-			function() {
-				_QALET_.loadLet();
-			}, 100
-		);			
+		setInterval(_QALET_.loadLet, 200);			
 	}
 );
