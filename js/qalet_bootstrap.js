@@ -102,7 +102,7 @@ $(document).ready(
 				for(var os in _sobj) {
 					console.log('call ---'+os);
 					var osr = _sobj[os];
-					
+					console.log(osr);
 					var l = Object.keys(osr).join(',');
 					var csslink = os.replace(/\.(js|jsx)$/, '.css') +'?plus='+l;
 					var jslink = os +'?plus='+l;
