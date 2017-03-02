@@ -51,7 +51,7 @@ $(document).ready(
 		_QALET_.loadLet = function() {
 			var v = $('QALET'), _sobj = {}; 
 			for (var o in _QALET_._newlet) {
-				if (new Date().getTime() - _QALET_._newlet[o] > 6000) {
+				if (new Date().getTime() - _QALET_._newlet[o][0] > 6000) {
 					console.log('remove ' + o);
 					delete  _QALET_._newlet[o];
 				}
@@ -88,7 +88,7 @@ $(document).ready(
 				o.id = o.module + '_plugin_' + _QALET_._p;
 				
 				_QALET_.data[o.id] = o;
-				_QALET_._newlet[o.id] = new Date().getTime();
+				_QALET_._newlet[o.id] = [new Date().getTime(), o.module, o.app];
 				$(v[i]).replaceWith('<div class="class_' + o.module +' '+o.id+'"></div>');
 				$('.'+o.id).hide();
 			}
