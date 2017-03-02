@@ -105,8 +105,10 @@ $(document).ready(
 
 					$.getScript( jslink + '?plus='+l,
 						function( data, textStatus, jqxhr ) {
+						
 							_QALET_.callback();
-				  	//	console.log( "Load was performed." );
+				  			alert(9);
+						//	console.log( "Load was performed." );
 						});
 						
 				}
