@@ -32,6 +32,7 @@ $(document).ready(
 			}
 		}; 
 		_QALET_.callback = function() {
+			console.log('_QALET_._newlet===>');
 			console.log(_QALET_._newlet);
 			if (Object.keys(_QALET_._newlet).length) {	
 				for (var v in _QALET_._newlet) {
