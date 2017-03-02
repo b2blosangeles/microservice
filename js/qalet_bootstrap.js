@@ -97,6 +97,7 @@ $(document).ready(
 				$('.'+o.id).hide();
 			}
 				console.log('===>'+v.length+"<====");
+				console.log(_QALET_._newlet);
 				
 			if (Object.keys(_sobj).length) {
 				for(var os in _sobj) {
