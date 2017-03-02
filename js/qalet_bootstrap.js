@@ -44,7 +44,7 @@ $(document).ready(
 						delete _QALET_._newlet[v];
 						_QALET_._Q[o.module](o);				
 					} else {
-						console.log('---not found---'+o.module+o.app);
+					//	console.log('---not found---'+o.module+o.app);
 					}
 				}	
 			}	
