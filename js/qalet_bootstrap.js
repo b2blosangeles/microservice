@@ -100,6 +100,7 @@ $(document).ready(
 					var l = Object.keys(osr).join(',');
 					var csslink = o.app.replace(/\.(js|jsx)$/, '.css') +'?plus='+l;
 					var jslink = o.app +'?plus='+l;
+					console.log('---o---');
 					console.log(o);
 					$('<link rel="stylesheet" type="text/css" href="'+ csslink +'" />').appendTo("head");
 					
@@ -108,7 +109,7 @@ $(document).ready(
 						function( data, textStatus, jqxhr ) {
 						console.log(textStatus);
 							_QALET_.callback();
-				  			alert(9);
+				  			// alert(9);
 						//	console.log( "Load was performed." );
 						});
 						
