@@ -1,4 +1,4 @@
-.info_bg { background-color:#ccc; padding:1em; margin:6px; font-size:24px;}
+.info_bg { background-color:#ccc; padding:1em; margin-top:6px; margin-bottom:6px; font-size:24px;}
 [if $solution == 1]
 .info_bg { background-color:lightgreen;}
 [/if]
