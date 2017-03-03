@@ -23,7 +23,7 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 			for (var i = 0; i < objs.length; i++) {
 				var href = $(objs[i]).attr('href');
 				var p = url.parse(href); 
-				if (!p['protocol']) href = p0.protocol + '://' + p0.host + href.replace(/^\//, '/');
+				if (!p['protocol']) href = p0.protocol + '//' + p0.host + href.replace(/^\//, '/');
 				result[result.length] = {href:href, text:$(objs[i]).html()};
 			}
 			res.send(result);
