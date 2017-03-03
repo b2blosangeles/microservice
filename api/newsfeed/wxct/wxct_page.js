@@ -21,7 +21,7 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 		
 		objs = $('.mainwrapper').html();
 		var o = $(objs).find('H3');
-		res.send(objs).html();
+		res.send(o).html();
 		/*
 			var result = [];		  
 			for (var i = 0; i < objs.length; i++) {
