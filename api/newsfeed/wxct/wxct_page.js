@@ -18,13 +18,11 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
           res.send('errrr');
         } else {  
 		var $ = window.jQuery;
-		
-		var objs = $('.mainwrapper').html();
 		var result = {};
-		result.title = $(objs).find('h3').html();
-		result.author = $(objs).find('span[itemprop="author"]').html();
-		result.time = $(objs).find('time[itemprop="datePublished"]').html();
-		result.body = $('div[id="articleContent"]').html().replace(/(\n\r\t)/ig, '');
+		result.title = $('h3').html();
+		result.author = $('span[itemprop="author"]').html();
+		result.time = $('time[itemprop="datePublished"]').html();
+		result.body = $('div[id="articleContent"]').html().replace(/(\n|\r|\t)/ig, '');
 		res.send(result);
 		/*
 			var result = [];		  
