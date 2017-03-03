@@ -24,7 +24,7 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 		result.title = $(objs).find('h3').html();
 		result.author = $(objs).find('span[itemprop="author"]').html();
 		result.time = $(objs).find('time[itemprop="datePublished"]').html();
-		result.body = $('div[id="articleContent"]').html();
+		result.body = $('div[id="articleContent"]').html().replace(/(\n\r\t)/ig, '');
 		res.send(result);
 		/*
 			var result = [];		  
