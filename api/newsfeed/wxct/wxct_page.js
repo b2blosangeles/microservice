@@ -20,7 +20,7 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 		var $ = window.jQuery;
 		
 		var objs = $('.mainwrapper').html();
-		var o = $('<div>'+objs+'</div>').find('h3');
+		var o = $('<div></div>').html(objs).find('h3');
 		res.send(o).html();
 		/*
 			var result = [];		  
