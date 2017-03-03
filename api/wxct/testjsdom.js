@@ -1,4 +1,4 @@
-pkg.request({ uri:'http://www.google.com' }, function (error, response, body) {  
+pkg.request({ uri:'www.wenxuecity.com' }, function (error, response, body) {  
   var jsdom = require(env.space_path + '/api/pkg/jsdom/node_modules/jsdom');
 
   if (error && response.statusCode !== 200) {
@@ -14,7 +14,7 @@ pkg.request({ uri:'http://www.google.com' }, function (error, response, body) {
           res.send('errrr');
         } else {  
           var $ = window.jQuery;
-          res.send($('body').html());
+          res.send($('maincontent').html());
         }
       }
   });
