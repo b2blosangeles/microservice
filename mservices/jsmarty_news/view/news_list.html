@@ -1,7 +1,8 @@
 <div class="container-fluid">
 	<div class = "row info_bg">
           [foreach from=$data item=item]
-               <div class="col-lg-6 col-md-6 col-sm-12 col-sx-12">[$item]</div>
+               <div class="col-lg-6 col-md-6 col-sm-12 col-sx-12">
+		       <a href="[$item.href]">[$item.title]</a></div>
           [/foreach]
      </div>          
 </div>  
