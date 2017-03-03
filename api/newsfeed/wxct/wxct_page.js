@@ -1,5 +1,5 @@
 var url = require("url");
-var url_src = 'http://www.wenxuecity.com';
+var url_src = 'http://www.wenxuecity.com/news/2017/03/03/6068296.html';
 var p0 = url.parse( url_src); 
 
 pkg.request({ uri:url_src  }, function (error, response, body) {  
@@ -18,7 +18,10 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
           res.send('errrr');
         } else {  
 			var $ = window.jQuery;
-			var objs = $('.maincontent').find('.col').find('li').find('a');
+		
+			var objs = $('mainwrapper').html();
+		res.send(objs);
+		/*
 			var result = [];		  
 			for (var i = 0; i < objs.length; i++) {
 				var href = $(objs[i]).attr('href');
@@ -27,6 +30,7 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 				result[result.length] = {href:href, text:$(objs[i]).html()};
 			}
 			res.send(result);
+		*/	
         }
       }
   });
