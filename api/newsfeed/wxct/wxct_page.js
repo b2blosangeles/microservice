@@ -17,10 +17,11 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
         if (err) {
           res.send('errrr');
         } else {  
-			var $ = window.jQuery;
+		var $ = window.jQuery;
 		
-			var objs = $('.mainwrapper').html();
-		res.send(objs);
+		objs = $('.mainwrapper').html();
+		var o = $(objs).find('H3');
+		res.send(objs).html();
 		/*
 			var result = [];		  
 			for (var i = 0; i < objs.length; i++) {
