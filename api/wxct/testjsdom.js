@@ -14,7 +14,7 @@ pkg.request({ uri:'http://www.wenxuecity.com' }, function (error, response, body
           res.send('errrr');
         } else {  
           var $ = window.jQuery;
-          res.send($('maincontent').html());
+          res.send($('.maincontent').html());
         }
       }
   });
