@@ -1,6 +1,6 @@
 var url = require("url");
 var url_src = 'http://www.wenxuecity.com';
-var p = url.parse(url_src); 
+var p = url.parse('/ass/asasa.asp'); 
 res.send(p);
 return true;
 pkg.request({ uri:url_src  }, function (error, response, body) {  
