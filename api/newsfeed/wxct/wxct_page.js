@@ -20,8 +20,10 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 		var $ = window.jQuery;
 		
 		var objs = $('.mainwrapper').html();
-		var o = $('<div></div>').html(objs).find('h3');
-		res.send(o.html());
+		var result = {};
+		result.title = $(objs).find('h3');
+		result.author = $(objs).find('span[itemprop="author"]').html();
+		res.send(result);
 		/*
 			var result = [];		  
 			for (var i = 0; i < objs.length; i++) {
