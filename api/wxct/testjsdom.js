@@ -16,7 +16,7 @@ pkg.request({ uri:'http://www.wenxuecity.com' }, function (error, response, body
 			var $ = window.jQuery;
 			var objs = $('.maincontent').find('li');
 			var result = [];		  
-			for (var i = 0; i < objs; i++) {
+			for (var i = 0; i < objs.length; i++) {
 				result[result.length] = $(objs[i]).html();
 			}
 			res.send(result);
