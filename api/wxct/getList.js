@@ -1,3 +1,3 @@
-pkg.request('http://www.google.com', function (error, response, body) {
+pkg.request('http://www.wenxuecity.com', function (error, response, body) {
 	res.send(body)
 });
