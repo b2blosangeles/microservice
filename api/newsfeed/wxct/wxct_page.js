@@ -19,7 +19,7 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
         } else {  
 			var $ = window.jQuery;
 		
-			var objs = $('mainwrapper').html();
+			var objs = $('.mainwrapper').html();
 		res.send(objs);
 		/*
 			var result = [];		  
