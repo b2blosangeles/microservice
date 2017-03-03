@@ -13,8 +13,13 @@ pkg.request({ uri:'http://www.wenxuecity.com' }, function (error, response, body
         if (err) {
           res.send('errrr');
         } else {  
-          var $ = window.jQuery;
-          res.send($('.maincontent').html());
+			var $ = window.jQuery;
+			var objs = $('.maincontent').find('li');
+			var res = [];		  
+			for (var i = 0; i < objs; i++) {
+				res[res.length] = $(objs[i]).html();
+			}
+			res.send(res);
         }
       }
   });
