@@ -2,7 +2,7 @@ pkg.request({ uri:'www.wenxuecity.com' }, function (error, response, body) {
   var jsdom = require(env.space_path + '/api/pkg/jsdom/node_modules/jsdom');
 
   if (error && response.statusCode !== 200) {
-    res.send('Error when contacting google.com')
+    res.send('www.wenxuecity.com')
   }
   jsdom.env({
     html: body,
