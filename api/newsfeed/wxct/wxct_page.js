@@ -23,7 +23,12 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 		result.author = $('span[itemprop="author"]').html();
 		result.time = $('time[itemprop="datePublished"]').html();
 		result.body = $('div[id="articleContent"]').html().replace(/(\n|\r|\t)/ig, '');
-		result.img = $(result.body).find('img').length;
+		var imgs = $(result.body).find('img');
+		for (var i = 0; i < imgs.length; i++) {
+			var src = '---'+$(result.body).find('img')[i].src;
+			$(result.body).find('img')[i].attr('src', src);
+		}
+		result.body = $('div[id="articleContent"]').html()+'===';
 		res.send(result);
 		/*
 			var result = [];		  
