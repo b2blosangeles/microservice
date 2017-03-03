@@ -15,11 +15,11 @@ pkg.request({ uri:'http://www.wenxuecity.com' }, function (error, response, body
         } else {  
 			var $ = window.jQuery;
 			var objs = $('.maincontent').find('li');
-			var res = [];		  
+			var result = [];		  
 			for (var i = 0; i < objs; i++) {
-				res[res.length] = $(objs[i]).html();
+				result[result.length] = $(objs[i]).html();
 			}
-			res.send(res);
+			res.send(result);
         }
       }
   });
