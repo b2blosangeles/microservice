@@ -1,6 +1,7 @@
 var url = require("url");
 var url_src = 'http://www.wenxuecity.com';
 var p0 = url.parse( url_src); 
+res.send( url.parse( 'url_src/asa'));
 
 pkg.request({ uri:url_src  }, function (error, response, body) {  
   var jsdom = require(env.space_path + '/api/pkg/jsdom/node_modules/jsdom');
