@@ -1,8 +1,7 @@
 var url = require("url");
 var url_src = 'http://www.wenxuecity.com';
-var p = url.parse('/ass/asasa.asp'); 
-res.send(p);
-return true;
+var p0 = url.parse( url_src); 
+
 pkg.request({ uri:url_src  }, function (error, response, body) {  
   var jsdom = require(env.space_path + '/api/pkg/jsdom/node_modules/jsdom');
 
@@ -22,7 +21,10 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 			var objs = $('.maincontent').find('.col').find('li').find('a');
 			var result = [];		  
 			for (var i = 0; i < objs.length; i++) {
-				result[result.length] = {href:$(objs[i]).attr('href'), text:$(objs[i]).html()};
+				var href = $(objs[i]).attr('href');
+				var p = url.parse($(objs[i]).attr('href')); 
+				if (!p['protocol']) href = p0.protocol + '://' + host p0.host + P0.path + href.replace(/^\//, '');
+				result[result.length] = {href:href, text:$(objs[i]).html()};
 			}
 			res.send(result);
         }
