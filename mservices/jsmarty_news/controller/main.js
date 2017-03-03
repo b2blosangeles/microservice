@@ -1,6 +1,11 @@
 var data = {
 	lang:'en'
 };
+$.ajax({url: 'http://m.qalet.com/api/wxct/testjsdom.js', dataType:'json', success: function(result,status,xhr){
+	console.log(result);
+}});
+
+
 jSmart.prototype.left_delimiter = '[';
 jSmart.prototype.right_delimiter = ']';
 var tpl = new jSmart(_TPL_['/mservices/jsmarty_news/view/news_list.html']);
