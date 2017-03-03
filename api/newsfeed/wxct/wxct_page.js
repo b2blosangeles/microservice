@@ -23,6 +23,7 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 		result.author = $('span[itemprop="author"]').html();
 		result.time = $('time[itemprop="datePublished"]').html();
 		result.body = $('div[id="articleContent"]').html().replace(/(\n|\r|\t)/ig, '');
+		result.img = $(result.body).find('img').length;
 		res.send(result);
 		/*
 			var result = [];		  
