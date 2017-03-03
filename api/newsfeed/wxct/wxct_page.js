@@ -19,8 +19,8 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
         } else {  
 		var $ = window.jQuery;
 		
-		objs = $('.mainwrapper').html();
-		var o = $(objs).find('h3');
+		var objs = $('.mainwrapper').html();
+		var o = $('<div>'+objs+'</div>').find('h3');
 		res.send(o).html();
 		/*
 			var result = [];		  
