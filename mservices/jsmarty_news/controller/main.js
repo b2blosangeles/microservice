@@ -12,7 +12,7 @@ var showData = function(list, doc) {
 	$('.'+mapping_data.id).find("a").bind("click", function() {
                 showDoc($(this).attr('data'), list);
         });
-	$('.'+mapping_data.id).find("a")[0].click();		
+	// $('.'+mapping_data.id).find("a")[0].click();		
 };
 
 var showDoc = function(v, list) {
