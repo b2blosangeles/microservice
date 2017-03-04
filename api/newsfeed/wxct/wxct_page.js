@@ -41,8 +41,8 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 								if(err == null) {
 									cbk(true);
 								} else {
-									pkg.request({ uri:url  }, function (error, response, body) { 
-										pkg.fs.writeFile(fn, body, function(err) {
+									pkg.request(url, {encoding: 'binary'}, function (error, response, body) { 
+										pkg.fs.writeFile(fn, body, 'binary', function(err) {
 											if(err) {
 												return cbk('k'+err.message);
 											}
