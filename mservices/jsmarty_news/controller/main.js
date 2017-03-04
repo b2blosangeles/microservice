@@ -2,9 +2,12 @@ var data = {
 	lang:'en'
 };
 
-var niu = function(v) {
-	alert(v);
-}
+var openUrl = function(v) {
+	$.ajax({url: 'http://m.qalet.com/api/newsfeed/wxct/wxct_page.js', dataType:'html', success: function(data,status,xhr){
+		$('.'+mapping_data.id).find('.doc_show').html(data);
+	}
+};
+
 $.ajax({url: 'http://m.qalet.com/api/newsfeed/wxct/wxct_list.js', dataType:'json', success: function(data,status,xhr){
 	jSmart.prototype.left_delimiter = '[';
 	jSmart.prototype.right_delimiter = ']';
@@ -14,7 +17,7 @@ $.ajax({url: 'http://m.qalet.com/api/newsfeed/wxct/wxct_list.js', dataType:'json
 	$('.'+mapping_data.id).show(0);
 	
 	$('.'+mapping_data.id).find("a").bind("click", function() {
-                niu($(this).attr('data'));
+                openUrl($(this).attr('data'));
         });	
 	
 }});
