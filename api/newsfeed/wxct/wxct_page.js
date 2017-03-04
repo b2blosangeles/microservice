@@ -60,7 +60,7 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 				cp.serial(
 					_f,
 					function(data) {
-						res.send(result);
+						res.send(result.body);
 					},
 					30000
 				);		
