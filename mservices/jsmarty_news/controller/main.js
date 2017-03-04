@@ -11,21 +11,17 @@ var showData = function(list, doc) {
 	$('.'+mapping_data.id).show(0);
 	$('.'+mapping_data.id).find("a").bind("click", function() {
                 showDoc($(this).attr('data'), list);
-        });		
+        });
+	$('.'+mapping_data.id).find("a")[0].click();		
 };
 
 var showDoc = function(v, list) {
 	$.ajax({url: 'http://m.qalet.com/api/newsfeed/wxct/wxct_page.js', data:{url:v},
 		dataType:'json', success: function(data,status,xhr){	
 		showData(list, data);
-/*		$('.'+mapping_data.id).find('.doc_show').html(data.title + '<br/>' + data.body);
-		console.log(list);*/
 	}});
 };
 
 $.ajax({url: 'http://m.qalet.com/api/newsfeed/wxct/wxct_list.js', dataType:'json', success: function(data,status,xhr){
 	showData(data,{});
-
-		
-//	$($('.'+mapping_data.id).find("a")[0]).click();
 }});
