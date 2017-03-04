@@ -4,8 +4,7 @@ var url_src = req.query.url;
 var p0 = url.parse( url_src);
 var cp = new pkg.crowdProcess();
 
-res.send(url_src);
-return true;
+
 pkg.request({ uri:url_src  }, function (error, response, body) {  
 	var jsdom = require(env.space_path + '/api/pkg/jsdom/node_modules/jsdom');
 	
@@ -18,6 +17,8 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 		  'http://code.jquery.com/jquery-1.5.min.js'
 		],
 		done:function (err, window) {
+			res.send('1--->' + url_src);
+			return true;			
 			if (err) {
 			  res.send(err.message);
 			} else {  
