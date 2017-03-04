@@ -33,7 +33,7 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 			// $(imgs).attr('src', src);
 		}
 		// result.body = $('div[id="articleContent"]').html()+'===';
-		res.send(result.body);
+		res.send(result);
 		/*
 			var result = [];		  
 			for (var i = 0; i < objs.length; i++) {
