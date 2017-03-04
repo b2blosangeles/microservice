@@ -1,7 +1,7 @@
 var data = {
 	lang:'en'
 };
-$.ajax({url: 'http://m.qalet.com/api/newsfeed/wxct.js', dataType:'json', success: function(data,status,xhr){
+$.ajax({url: 'http://m.qalet.com/api/newsfeed/wxct/wxct_list.js', dataType:'json', success: function(data,status,xhr){
 	jSmart.prototype.left_delimiter = '[';
 	jSmart.prototype.right_delimiter = ']';
 	var tpl = new jSmart(_TPL_['/mservices/jsmarty_news/view/news_list.html']);
