@@ -31,8 +31,8 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 					
 					var p = url.parse(imgs[i].src), u = imgs[i].src; 
 					if (!p['protocol']) {
-						u = '[' + p0.protocol + '//' + p0.host + imgs[i].src + ']';
-						result.body = result.body.replace(imgs[i].src, u);
+						u = p0.protocol + '//' + p0.host + imgs[i].src;
+						result.body = result.body.replace(imgs[i].src, '[' + u + ']');
 					} 
 					var fn = env.space_path + '/mservice/images/' + encodeURIComponent(u);
 					_f[i] = (function(url, fn) {
