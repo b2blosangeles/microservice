@@ -41,9 +41,9 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 								if(err == null) {
 									cbk(true);
 								} else {
-									pkg.request({ uri:url  }, function (error, response, body) {  
+								//	pkg.request({ uri:url  }, function (error, response, body) {  
 										cbk(fn);
-									});
+								//	});
 								}
 							});
 						}
