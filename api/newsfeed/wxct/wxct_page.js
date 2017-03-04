@@ -48,7 +48,7 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 							});
 							
 						}
-					})(u, encodeURIComponent(u));
+					})(u, env.space_path + encodeURIComponent(u));
 					result.imgs[i]  = u;
 					//encodeURIComponent([imgs[i].src]);
 					// var src = '---'+imgs[i].src;
