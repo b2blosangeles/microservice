@@ -19,11 +19,11 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 		done:function (err, window) {
 		
 			if (err) {
-							res.send('1--->' + url_src);
+							res.send('1a--->' + url_src);
 			return true;	
 			  res.send(err.message);
 			} else {  
-						res.send('2--->' + url_src);
+						res.send('2a--->' + url_src);
 			return true;	
 				var $ = window.jQuery;
 				var result = {};
