@@ -44,7 +44,7 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 									pkg.request({ uri:url  }, function (error, response, body) { 
 										fs.writeFile(fn, body, function(err) {
 											if(err) {
-												return res.send(err.message);
+												return cbk(err.message);
 											}
 											cbk(fn);
 										}); 
