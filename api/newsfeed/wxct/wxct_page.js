@@ -26,7 +26,7 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 		var imgs = $(result.body).find('img');
 		result.body.images = [];
 		for (var i = 0; i < imgs.length; i++) {
-			result.body.images[i] = imgs[i].src;
+			result.images[i] = imgs[i].src;
 			result.body.replace(imgs[i].src, '====');
 			// var src = '---'+imgs[i].src;
 			// $(imgs).attr('src', src);
