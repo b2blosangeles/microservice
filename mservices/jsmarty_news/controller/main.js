@@ -2,7 +2,9 @@ var data = {
 	lang:'en'
 };
 
-
+var niu = function(v) {
+	alert(v);
+}
 $.ajax({url: 'http://m.qalet.com/api/newsfeed/wxct/wxct_list.js', dataType:'json', success: function(data,status,xhr){
 	jSmart.prototype.left_delimiter = '[';
 	jSmart.prototype.right_delimiter = ']';
@@ -12,7 +14,7 @@ $.ajax({url: 'http://m.qalet.com/api/newsfeed/wxct/wxct_list.js', dataType:'json
 	$('.'+mapping_data.id).show(0);
 	
 	$('.'+mapping_data.id).find("a").bind("click", function() {
-                alert($(this).attr('data'));
+                niu($(this).attr('data'));
         });	
 	
 }});
