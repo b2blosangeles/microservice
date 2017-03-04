@@ -24,6 +24,7 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 				var $ = window.jQuery;
 				var result = {};
 				result.title = $('h3').html();
+				result.link = url_src;
 				result.author = $('span[itemprop="author"]').html();
 				result.time = $('time[itemprop="datePublished"]').html();
 				
