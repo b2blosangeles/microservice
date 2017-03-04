@@ -3,7 +3,8 @@ var data = {
 };
 
 var openUrl = function(v) {
-	$.ajax({url: 'http://m.qalet.com/api/newsfeed/wxct/wxct_page.js', dataType:'html', success: function(data,status,xhr){
+	$.ajax({url: 'http://m.qalet.com/api/newsfeed/wxct/wxct_page.js', data:{url:v},
+		dataType:'html', success: function(data,status,xhr){
 		$('.'+mapping_data.id).find('.doc_show').html(data);
 	}});
 };
