@@ -11,18 +11,18 @@ var showData = function(list) {
 	$('.'+mapping_data.id).show(0);
 };
 
-var openUrl = function(v) {
+var showDoc = function(v, list) {
 	$.ajax({url: 'http://m.qalet.com/api/newsfeed/wxct/wxct_page.js', data:{url:v},
-		dataType:'json', success: function(data,status,xhr){
-				
+		dataType:'json', success: function(data,status,xhr){	
 		$('.'+mapping_data.id).find('.doc_show').html(data.title + '<br/>' + data.body);
+		console.log(list);
 	}});
 };
 
 $.ajax({url: 'http://m.qalet.com/api/newsfeed/wxct/wxct_list.js', dataType:'json', success: function(data,status,xhr){
 	showData(data);
 	$('.'+mapping_data.id).find("a").bind("click", function() {
-                openUrl($(this).attr('data'));
+                showDoc($(this).attr('data'), list);
         });	
 	
 }});
