@@ -28,10 +28,12 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 				result.author = $('span[itemprop="author"]').html();
 				result.time = $('time[itemprop="datePublished"]').html();
 				
-				res.send('3a--->' + url_src);
-				return true;
-				result.body = $('div[id="articleContent"]').html().replace(/(\n|\r|\t)/ig, '');
-				
+				result.body = $('div[id="articleContent"]').html();
+				if (result.body) result.body = result.body.replace(/(\n|\r|\t)/ig, '');
+				else {
+					res.send("$ no ('div[id="articleContent"]')");
+					return true;
+				}
 					
 				var imgs = $(result.body).find('img'), _f = {};
 				for (var i = 0; i < imgs.length; i++) {
