@@ -34,21 +34,27 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 						u = '[' + p0.protocol + '//' + p0.host + imgs[i].src + ']';
 						result.body = result.body.replace(imgs[i].src, u);
 					} 
-					
+					var fn = env.space_path + '/mservice/images/' + encodeURIComponent(u);
 					_f[i] = (function(url, fn) {
 						return function(cbk) {
 							pkg.fs.stat(fn, function(err, stats) {
 								if(err == null) {
 									cbk(true);
 								} else {
-									pkg.request({ uri:url  }, function (error, response, body) {  
-										cbk(fn);
+									pkg.request({ uri:url  }, function (error, response, body) { 
+										fs.writeFile(fn, body, function(err) {
+											if(err) {
+												return res.send(err.message);
+											}
+											cbk(fn);
+										}); 
+										
 									});
 								}
 							});
 							
 						}
-					})(u, env.space_path + '/mservice/images/' + encodeURIComponent(u));
+					})(u, fn);
 					result.imgs[i]  = u;
 					//encodeURIComponent([imgs[i].src]);
 					// var src = '---'+imgs[i].src;
