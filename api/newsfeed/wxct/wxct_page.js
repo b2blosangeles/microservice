@@ -24,7 +24,9 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 		result.time = $('time[itemprop="datePublished"]').html();
 		result.body = $('div[id="articleContent"]').html().replace(/(\n|\r|\t)/ig, '');
 		var imgs = $(result.body).find('img');
+		result.body.images = [];
 		for (var i = 0; i < imgs.length; i++) {
+			result.body.images[i] = imgs[i].src;
 			result.body.replace(imgs[i].src, '====');
 			// var src = '---'+imgs[i].src;
 			// $(imgs).attr('src', src);
