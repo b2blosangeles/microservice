@@ -1,6 +1,5 @@
 var url = require("url");
 var url_src = req.query.url;
-// 'http://www.wenxuecity.com/news/2017/03/03/6068296.html';
 var p0 = url.parse( url_src);
 var cp = new pkg.crowdProcess();
 
@@ -9,7 +8,7 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 	var jsdom = require(env.space_path + '/api/pkg/jsdom/node_modules/jsdom');
 	
 	if (error && response.statusCode !== 200) {
-		res.send(error.message);
+		res.send({error:error.message});
 	}
 	jsdom.env({
 		html: body,
@@ -19,7 +18,7 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 		done:function (err, window) {
 		
 			if (err) {
-			  res.send(err.message);
+			  res.send({error:err.message});
 			} else {  
 
 				var $ = window.jQuery;
@@ -31,7 +30,7 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 				result.body = $('div[id="articleContent"]').html();
 				if (result.body) result.body = result.body.replace(/(\n|\r|\t)/ig, '');
 				else {
-					res.send("$ no ('div[id=\"articleContent\"]')");
+					res.send({error:"Wrong data format!!"});
 					return true;
 				}
 					
