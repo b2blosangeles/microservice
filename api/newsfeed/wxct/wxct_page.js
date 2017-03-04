@@ -34,6 +34,10 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 						u = p0.protocol + '//' + p0.host + imgs[i].src;
 						fn = '/mservices/images/' + u.replace(/(\/|\:)/ig, '_');
 						result.body = result.body.replace(imgs[i].src, req.protocol + '://' + req.header('host')  + fn);
+					} else {
+						u = imgs[i].src;
+						fn = '/mservices/images/' + u.replace(/(\/|\:)/ig, '_');
+						//result.body = result.body.replace(imgs[i].src, req.protocol + '://' + req.header('host')  + fn);						
 					} 
 					_f[i] = (function(url, fn) {
 						return function(cbk) {
