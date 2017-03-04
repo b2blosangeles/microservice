@@ -27,9 +27,12 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 				result.title = $('h3').html();
 				result.author = $('span[itemprop="author"]').html();
 				result.time = $('time[itemprop="datePublished"]').html();
-				result.body = $('div[id="articleContent"]').html().replace(/(\n|\r|\t)/ig, '');
+				
 				res.send('3a--->' + url_src);
-				return true;	
+				return true;
+				result.body = $('div[id="articleContent"]').html().replace(/(\n|\r|\t)/ig, '');
+				
+					
 				var imgs = $(result.body).find('img'), _f = {};
 				for (var i = 0; i < imgs.length; i++) {
 					
