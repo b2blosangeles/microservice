@@ -37,18 +37,14 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 					
 					_f[i] = (function(url, fn) {
 						return function(cbk) {
-							
-							
 							pkg.fs.stat(fn, function(err, stats) {
-								cbk(6);
-								/*
 								if(err == null) {
 									cbk(true);
 								} else {
-								//	pkg.request({ uri:url  }, function (error, response, body) {  
+									pkg.request({ uri:url  }, function (error, response, body) {  
 										cbk(fn);
-								//	});
-								}*/
+									});
+								}
 							});
 							
 						}
