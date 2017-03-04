@@ -32,7 +32,7 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 					var p = url.parse(imgs[i].src), u = imgs[i].src, fn=''; 
 					if (!p['protocol']) {
 						u = p0.protocol + '//' + p0.host + imgs[i].src;
-						fn = '/mservices/images/' + encodeURIComponent(u);
+						fn = '/mservices/images/' + u.replace(/(\/|\:)/ig, '_');
 						result.body = result.body.replace(imgs[i].src, p0.protocol + '//' + p0.host  + u);
 					} 
 					_f[i] = (function(url, fn) {
