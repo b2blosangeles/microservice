@@ -26,6 +26,8 @@ var showDoc = function(v, list) {
 		},
 		error: function(xhr,status,error){
 			alert('error');
+			showData(list, {});
+			
 		}
 	});
 };
