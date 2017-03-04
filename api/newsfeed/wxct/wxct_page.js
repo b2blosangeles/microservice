@@ -17,11 +17,14 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 		  'http://code.jquery.com/jquery-1.5.min.js'
 		],
 		done:function (err, window) {
-			res.send('1--->' + url_src);
-			return true;			
+		
 			if (err) {
+							res.send('1--->' + url_src);
+			return true;	
 			  res.send(err.message);
 			} else {  
+						res.send('2--->' + url_src);
+			return true;	
 				var $ = window.jQuery;
 				var result = {};
 				result.title = $('h3').html();
