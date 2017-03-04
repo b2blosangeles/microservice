@@ -36,8 +36,10 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 			} 
 			
 			_f[i] = (function(v) {
-				return function(cbk) {	}
-				})(u);
+				return function(cbk) {	
+					cbk(v);
+				}
+			})(u);
 					
 			
 			result.imgs[i]  = u;
@@ -45,8 +47,15 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 			// var src = '---'+imgs[i].src;
 			// $(imgs).attr('src', src);
 		}
+			cp.serial(
+				_f,
+				function(data) {
+					res.send(result);
+				},
+				30000
+			);		
 		// result.body = $('div[id="articleContent"]').html()+'===';
-		res.send(result);
+		// res.send(result);
 		/*
 			var result = [];		  
 			for (var i = 0; i < objs.length; i++) {
