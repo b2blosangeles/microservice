@@ -8,7 +8,7 @@
 </div>  
 <div class="container-fluid">
 	
-	<div class = "row doc_show" [if (!$doc)]style="display:none"[/if]>
+	<div class = "row doc_show" [if !$doc.title && !$doc.error]style="display:none"[/if]>
 		<div class="col-lg-6 col-md-6 col-sm-12 col-sx-12">
           [foreach from=$list item=item]
 		       <a href="JavaScript:void(0)" data="[$item.href]" target="_blank">[$item.text]</a>
