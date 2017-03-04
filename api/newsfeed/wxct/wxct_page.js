@@ -29,12 +29,12 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 				var imgs = $(result.body).find('img'), _f = {};
 				for (var i = 0; i < imgs.length; i++) {
 					
-					var p = url.parse(imgs[i].src), u = imgs[i].src; 
+					var p = url.parse(imgs[i].src), u = imgs[i].src, fn=''; 
 					if (!p['protocol']) {
 						u = p0.protocol + '//' + p0.host + imgs[i].src;
+						fn = env.space_path + '/mservices/images/' + encodeURIComponent(u);
 						result.body = result.body.replace(imgs[i].src, '[' + u + ']');
 					} 
-					var fn = env.space_path + '/mservice/images/' + encodeURIComponent(u);
 					_f[i] = (function(url, fn) {
 						return function(cbk) {
 							pkg.fs.stat(fn, function(err, stats) {
@@ -54,7 +54,7 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 							});
 							
 						}
-					})(u, fn);
+					})(u, env.space_path + fn);
 					result.imgs[i]  = u;
 					//encodeURIComponent([imgs[i].src]);
 					// var src = '---'+imgs[i].src;
