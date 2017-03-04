@@ -12,7 +12,7 @@ $.ajax({url: 'http://m.qalet.com/api/newsfeed/wxct/wxct_list.js', dataType:'json
 	$('.'+mapping_data.id).show(0);
 	
 	$('.'+mapping_data.id).find("a").bind("click", function() {
-                alert($(this).html());
+                alert($(this).attr('data'));
         });	
 	
 }});
