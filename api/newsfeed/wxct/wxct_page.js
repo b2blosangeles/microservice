@@ -22,7 +22,7 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 		result.title = $('h3').html();
 		result.author = $('span[itemprop="author"]').html();
 		result.time = $('time[itemprop="datePublished"]').html();
-		result.body = $('div[id="articleContent"]').html().replace(/(\n|\r|\t|\\)/ig, '');
+		result.body = $('div[id="articleContent"]').html().replace(/(\n|\r|\t)/ig, '');
 		var imgs = $(result.body).find('img');
 		for (var i = 0; i < imgs.length; i++) {
 			result.body = result.body.replace(imgs[i].src, '====');
@@ -30,7 +30,7 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 			// $(imgs).attr('src', src);
 		}
 		// result.body = $('div[id="articleContent"]').html()+'===';
-		res.send(result);
+		res.send(result.body);
 		/*
 			var result = [];		  
 			for (var i = 0; i < objs.length; i++) {
