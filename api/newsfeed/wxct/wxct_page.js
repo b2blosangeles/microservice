@@ -39,7 +39,7 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 						return function(cbk) {
 							
 							
-							pkg.fs.stat(v, function(err, stats) {
+							pkg.fs.stat(fn, function(err, stats) {
 								cbk(6);
 								/*
 								if(err == null) {
