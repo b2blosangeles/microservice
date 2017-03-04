@@ -15,7 +15,7 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
     ],
     done:function (err, window) {
         if (err) {
-          res.send('errrr');
+          res.send(err.message);
         } else {  
 			var $ = window.jQuery;
 			var objs = $('.maincontent').find('.col').find('li').find('a');

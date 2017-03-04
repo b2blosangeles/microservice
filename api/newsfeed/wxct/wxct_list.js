@@ -6,7 +6,7 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
   var jsdom = require(env.space_path + '/api/pkg/jsdom/node_modules/jsdom');
 
   if (error && response.statusCode !== 200) {
-    res.send('www.wenxuecity.com')
+    res.send(error.message);
   }
   jsdom.env({
     html: body,
@@ -15,7 +15,7 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
     ],
     done:function (err, window) {
         if (err) {
-          res.send('errrr');
+          res.send(err.message);
         } else {  
 			var $ = window.jQuery;
 			var objs = $('.maincontent').find('.col').find('li').find('a');
