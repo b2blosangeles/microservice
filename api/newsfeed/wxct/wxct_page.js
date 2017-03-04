@@ -24,7 +24,6 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 				result.author = $('span[itemprop="author"]').html();
 				result.time = $('time[itemprop="datePublished"]').html();
 				result.body = $('div[id="articleContent"]').html().replace(/(\n|\r|\t)/ig, '');
-				result.imgs = [];
 
 				var imgs = $(result.body).find('img'), _f = {};
 				for (var i = 0; i < imgs.length; i++) {
@@ -55,7 +54,6 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 							
 						}
 					})(u, env.space_path + fn);
-					result.imgs[i]  = u;
 				}
 				cp.serial(
 					_f,
