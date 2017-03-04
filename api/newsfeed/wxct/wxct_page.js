@@ -26,7 +26,7 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 		result.body = $('div[id="articleContent"]').html().replace(/(\n|\r|\t)/ig, '');
 		result.imgs = [];
 
-		var imgs = $(result.body).find('img');
+		var imgs = $(result.body).find('img'), _f = {};
 		for (var i = 0; i < imgs.length; i++) {
 			
 			var p = url.parse(imgs[i].src), u = imgs[i].src; 
@@ -34,6 +34,12 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 				u = '[' + p0.protocol + '//' + p0.host + imgs[i].src + ']';
 				result.body = result.body.replace(imgs[i].src, u);
 			} 
+			
+			_f[i] = (function(v) {
+				return function(cbk) {	}
+				})(u);
+					
+			
 			result.imgs[i]  = u;
 			//encodeURIComponent([imgs[i].src]);
 			// var src = '---'+imgs[i].src;
