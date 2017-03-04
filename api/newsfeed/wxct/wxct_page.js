@@ -18,7 +18,7 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 		done:function (err, window) {
 		
 			if (err) {
-			  res.send({error:err.message});
+			  res.send({error:err.message, link:url_src});
 			} else {  
 
 				var $ = window.jQuery;
