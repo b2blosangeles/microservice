@@ -56,29 +56,14 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 						}
 					})(u, env.space_path + fn);
 					result.imgs[i]  = u;
-					//encodeURIComponent([imgs[i].src]);
-					// var src = '---'+imgs[i].src;
-					// $(imgs).attr('src', src);
 				}
 				cp.serial(
 					_f,
 					function(data) {
-						res.send(data);
+						res.send(result);
 					},
 					30000
 				);		
-				// result.body = $('div[id="articleContent"]').html()+'===';
-				// res.send(result);
-				/*
-					var result = [];		  
-					for (var i = 0; i < objs.length; i++) {
-						var href = $(objs[i]).attr('href');
-						var p = url.parse(href); 
-						if (!p['protocol']) href = p0.protocol + '//' + p0.host  + '/' + href.replace(/^\//,'');
-						result[result.length] = {href:href, text:$(objs[i]).html()};
-					}
-					res.send(result);
-				*/	
 			}
 		}	
 	});
