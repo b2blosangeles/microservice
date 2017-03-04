@@ -4,7 +4,7 @@ var data = {
 
 var openUrl = function(v) {
 	$.ajax({url: 'http://m.qalet.com/api/newsfeed/wxct/wxct_page.js', data:{url:v},
-		dataType:'html', success: function(data,status,xhr){
+		dataType:'json', success: function(data,status,xhr){
 				
 		$('.'+mapping_data.id).find('.doc_show').html(data.title + '<br/>' + data.body);
 	}});
