@@ -19,6 +19,8 @@ var showDoc = function(v, list) {
 	$.ajax({url: 'http://m.qalet.com/api/newsfeed/wxct/wxct_page.js', data:{url:v},
 		dataType:'json', 
 		success: function(data,status,xhr){
+			console.log('data--->');
+			console.log(data);
 			showData(list, data);
 			//	$('.'+mapping_data.id).find('.doc_show').html(data.title + '<br/>' + data.body);
 		},
