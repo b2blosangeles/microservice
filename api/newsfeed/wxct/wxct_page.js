@@ -38,12 +38,11 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 			_f[i] = (function(v) {
 				return function(cbk) {
 					pkg.stat(v, function(err, stats) {
-						//if (err && err.errno === 34) {
-\
-						//} else {
-						 // callback(err)
-						//}
-						cbk(true);
+						if(err == null) {
+							cbk(true);
+						} else {
+							cbk(false);
+						}
 					)
 				}
 			})(u);
