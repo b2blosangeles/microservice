@@ -35,17 +35,19 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 						result.body = result.body.replace(imgs[i].src, u);
 					} 
 					
-					_f[i] = (function(v) {
+					_f[i] = (function(url, fn) {
 						return function(cbk) {
 							pkg.fs.stat(v, function(err, stats) {
 								if(err == null) {
 									cbk(true);
 								} else {
-									cbk(false);
+									pkg.request({ uri:url  }, function (error, response, body) {  
+										cbk(fn);
+									});
 								}
 							});
 						}
-					})(u);
+					})(u, encodeURIComponent(u));
 					result.imgs[i]  = u;
 					//encodeURIComponent([imgs[i].src]);
 					// var src = '---'+imgs[i].src;
