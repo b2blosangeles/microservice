@@ -1,6 +1,7 @@
 var url = require("url");
 var url_src = 'http://www.wenxuecity.com/news/2017/03/03/6068296.html';
-var p0 = url.parse( url_src); 
+var p0 = url.parse( url_src);
+var cp = new pkg.crowdProcess();
 
 pkg.request({ uri:url_src  }, function (error, response, body) {  
   var jsdom = require(env.space_path + '/api/pkg/jsdom/node_modules/jsdom');
