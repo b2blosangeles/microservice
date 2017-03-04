@@ -25,10 +25,11 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 		result.body = $('div[id="articleContent"]').html().replace(/(\n|\r|\t)/ig, '');
 		var imgs = $(result.body).find('img');
 		for (var i = 0; i < imgs.length; i++) {
-			var src = '---'+imgs[i].src;
-			$(imgs).attr('src', src);
+			result.body.replace(imgs[i].src, '====');
+			// var src = '---'+imgs[i].src;
+			// $(imgs).attr('src', src);
 		}
-		result.body = $('div[id="articleContent"]').html()+'===';
+		// result.body = $('div[id="articleContent"]').html()+'===';
 		res.send(result);
 		/*
 			var result = [];		  
