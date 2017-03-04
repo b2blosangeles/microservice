@@ -37,6 +37,8 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 					
 					_f[i] = (function(url, fn) {
 						return function(cbk) {
+							cbk(6);
+							/*
 							pkg.fs.stat(v, function(err, stats) {
 								if(err == null) {
 									cbk(true);
@@ -46,6 +48,7 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 								//	});
 								}
 							});
+							*/
 						}
 					})(u, u);
 					result.imgs[i]  = u;
