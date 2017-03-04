@@ -31,7 +31,7 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 				result.body = $('div[id="articleContent"]').html();
 				if (result.body) result.body = result.body.replace(/(\n|\r|\t)/ig, '');
 				else {
-					res.send({error:"Wrong data format!!"});
+					res.send({error:"Wrong data format!!", link:url_src});
 					return true;
 				}
 					
