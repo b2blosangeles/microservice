@@ -7,7 +7,7 @@
      </div>          
 </div>  
 <div class="container-fluid">
-	<a class="btn btn-success pull-right" href="JavaScript:void(0)">返回</a>
+	
 	<div class = "row doc_show" [if (!$doc)]style="display:none"[/if]>
 		<div class="col-lg-6 col-md-6 col-sm-12 col-sx-12">
           [foreach from=$list item=item]
@@ -16,6 +16,7 @@
           [/foreach]		
 		</div>
 		<div class="col-lg-6 col-md-6 col-sm-12 col-sx-12">
+			<a class="btn btn-success pull-right" href="JavaScript:void(0)">返回</a>
 			[if $doc.error]
 				[$doc.error]
 			[else]
