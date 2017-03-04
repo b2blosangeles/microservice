@@ -21,8 +21,10 @@ var showDoc = function(v, list) {
 };
 
 $.ajax({url: 'http://m.qalet.com/api/newsfeed/wxct/wxct_list.js', dataType:'json', success: function(data,status,xhr){
+	showData(data,{});
 	$('.'+mapping_data.id).find("a").bind("click", function() {
                 showDoc($(this).attr('data'), data);
         });	
-	$($('.'+mapping_data.id).find("a")[0]).click();
+		
+//	$($('.'+mapping_data.id).find("a")[0]).click();
 }});
