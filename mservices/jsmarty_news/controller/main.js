@@ -17,10 +17,15 @@ var showData = function(list, doc) {
 var showDoc = function(v, list) {
 	$('.'+mapping_data.id).find("a").unbind("click");
 	$.ajax({url: 'http://m.qalet.com/api/newsfeed/wxct/wxct_page.js', data:{url:v},
-		dataType:'json', success: function(data,status,xhr){
-		showData(list, data);
-	//	$('.'+mapping_data.id).find('.doc_show').html(data.title + '<br/>' + data.body);
-	}});
+		dataType:'json', 
+		success: function(data,status,xhr){
+			showData(list, data);
+			//	$('.'+mapping_data.id).find('.doc_show').html(data.title + '<br/>' + data.body);
+		},
+		error: function(xhr,status,error){
+			alert('error');
+		}
+	});
 };
 
 $.ajax({url: 'http://m.qalet.com/api/newsfeed/wxct/wxct_list.js', dataType:'json', success: function(data,status,xhr){
