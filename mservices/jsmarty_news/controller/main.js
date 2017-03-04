@@ -1,6 +1,11 @@
 var data = {
 	lang:'en'
 };
+
+function niu() {
+	alert(6);
+}
+
 $.ajax({url: 'http://m.qalet.com/api/newsfeed/wxct/wxct_list.js', dataType:'json', success: function(data,status,xhr){
 	jSmart.prototype.left_delimiter = '[';
 	jSmart.prototype.right_delimiter = ']';
