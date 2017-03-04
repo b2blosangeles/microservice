@@ -10,4 +10,4 @@
 [if $solution == 4]
 .info_bg { background-color:pink; padding:1em; font-size:1.5em;}
 [/if]
-img { max-width:400px;}
+img { max-width:500px;}
