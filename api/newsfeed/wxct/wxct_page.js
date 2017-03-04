@@ -42,7 +42,7 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 									cbk(true);
 								} else {
 									pkg.request({ uri:url  }, function (error, response, body) { 
-										fs.writeFile(fn, body, function(err) {
+										pkg.fs.writeFile(fn, body, function(err) {
 											if(err) {
 												return cbk(err.message);
 											}
