@@ -43,7 +43,7 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 						} else {
 							cbk(false);
 						}
-					)
+					});
 				}
 			})(u);
 					
