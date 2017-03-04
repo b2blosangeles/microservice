@@ -47,13 +47,13 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 			// var src = '---'+imgs[i].src;
 			// $(imgs).attr('src', src);
 		}
-			cp.serial(
-				_f,
-				function(data) {
-					res.send(result);
-				},
-				30000
-			);		
+		cp.serial(
+			_f,
+			function(data) {
+				res.send(result);
+			},
+			30000
+		);		
 		// result.body = $('div[id="articleContent"]').html()+'===';
 		// res.send(result);
 		/*
