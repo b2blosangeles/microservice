@@ -9,15 +9,15 @@
 <div class="container-fluid">
 	
 	<div class = "row doc_show" [if !$doc.title && !$doc.error]style="display:none"[/if]>
-		<div class="col-lg-4 col-md-4 col-sm-12 col-sx-12">
-          [foreach from=$list item=item]
+		<div class="col-lg-4 col-md-4 hidden-xs hidden-sm" style="display:none">
+          [foreach from=$list item=item] 
 		       <a href="JavaScript:void(0)" data="[$item.href]" target="_blank">[$item.text]</a>
 			   <br/>
           [/foreach]		
 		</div>
 		<div class="col-lg-8 col-md-8 col-sm-12 col-sx-12">
-			<div class="text-right" style="padding:6px;">
-				文章来源：[$doc.author] <a class="btn btn-success" href="JavaScript:void(0)">返回</a><br>
+			<div class="text-right" style="padding-bottom:6px;">
+				文章来源： [$doc.author] <a class="btn btn-success" href="JavaScript:void(0)">返回</a><br>
 				[$doc.link]<hr/>
 			</div>	
 			[if $doc.error]
