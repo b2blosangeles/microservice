@@ -31,7 +31,7 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 				var result = {};
 				if (tp =='bbs') {
 					result.title = $('.title').html();
-					result.body = $('.msgbodyContent').html();
+					result.body = $('#msgbodyContent').html();
 				} else {
 					result.title = $('h3').html();
 					result.link = url_src;
