@@ -21,15 +21,23 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 			var objs = $('.maincontent').find('.col').find('li').find('a');
 			var result = [];		  
 			for (var i = 0; i < objs.length; i++) {
-				var href = $(objs[i]).attr('href');
+				var href = $(objs[i]).attr('href'), tp = '';
 				var p = url.parse(href); 
 				
 				if (!p['protocol']) {
 					href = p0.protocol + '//' + p0.host  + '/' + href.replace(/^\//,'');
 				} else {
 					if (!p.host.match(/wenxuecity\.com/ig)) continue;
+					else {
+						if p.host.match(/bbs\.wenxuecity\.com/ig) {
+							tp = 'bbs';
+						}
+						if p.host.match(/www\.wenxuecity\.com/ig) {
+							tp = 'www';
+						}						
+					}
 				}
-				result[result.length] = {href:href, text:$(objs[i]).html()+'--'+href};
+				result[result.length] = {href:href, text:$(objs[i]).html()+'--'+href, type:tp};
 			}
 			res.send(result);
         }
