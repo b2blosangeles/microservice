@@ -34,7 +34,8 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 						}
 						if (p.host.match(/www\.wenxuecity\.com/ig)) {
 							tp = 'www';
-						}						
+						}	
+						if (!tp) continue;	
 					}
 				}
 				result[result.length] = {href:href, text:$(objs[i]).html()+'--'+href, type:tp};
