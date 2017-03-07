@@ -24,7 +24,7 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 				var href = $(objs[i]).attr('href');
 				var p = url.parse(href); 
 				if (!p['protocol']) href = p0.protocol + '//' + p0.host  + '/' + href.replace(/^\//,'');
-				result[result.length] = {href:href, text:$(objs[i]).html()};
+				result[result.length] = {href:href, text:$(objs[i]).html()+'--'+href};
 			}
 			res.send(result);
         }
