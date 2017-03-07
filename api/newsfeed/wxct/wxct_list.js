@@ -38,7 +38,7 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 						if (!tp) continue;	
 					}
 				}
-				result[result.length] = {href:href, text:$(objs[i]).html()+'--'+href, type:tp};
+				result[result.length] = {href:href, text:$(objs[i]).html(), type:tp};
 			}
 			res.send(result);
         }
