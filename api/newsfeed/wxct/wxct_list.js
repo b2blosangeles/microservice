@@ -22,6 +22,9 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 			var result = [];		  
 			for (var i = 0; i < objs.length; i++) {
 				var href = $(objs[i]).attr('href');
+				if (p0.protocol.match(/wenxuecity\.com/)) {
+					continue;
+				}
 				var p = url.parse(href); 
 				if (!p['protocol']) href = p0.protocol + '//' + p0.host  + '/' + href.replace(/^\//,'');
 				result[result.length] = {href:href, text:$(objs[i]).html()+'--'+href};
