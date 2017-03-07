@@ -29,10 +29,10 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 				} else {
 					if (!p.host.match(/wenxuecity\.com/ig)) continue;
 					else {
-						if p.host.match(/bbs\.wenxuecity\.com/ig) {
+						if (p.host.match(/bbs\.wenxuecity\.com/ig)) {
 							tp = 'bbs';
 						}
-						if p.host.match(/www\.wenxuecity\.com/ig) {
+						if (p.host.match(/www\.wenxuecity\.com/ig)) {
 							tp = 'www';
 						}						
 					}
