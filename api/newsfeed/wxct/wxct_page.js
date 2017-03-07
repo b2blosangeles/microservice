@@ -1,8 +1,14 @@
 var url = require("url");
 var url_src = req.query.url;
-var p0 = url.parse( url_src);
+var p0 = url.parse( url_src), tp='';
 var cp = new pkg.crowdProcess();
 
+if (p0.host.match(/bbs\.wenxuecity\.com/ig)) {
+	tp = 'bbs';
+}
+if (p0.host.match(/www\.wenxuecity\.com/ig)) {
+	tp = 'www';
+}	
 
 pkg.request({ uri:url_src  }, function (error, response, body) {  
 	var jsdom = require(env.space_path + '/api/pkg/jsdom/node_modules/jsdom');
@@ -23,6 +29,10 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 
 				var $ = window.jQuery;
 				var result = {};
+				if (tp =='bbs') {
+					res.send({error:"Wrong data format!!", link:url_src});
+					return true;
+				}
 				result.title = $('h3').html();
 				result.link = url_src;
 				result.author = $('span[itemprop="author"]').html();
