@@ -30,21 +30,21 @@ pkg.request({ uri:url_src  }, function (error, response, body) {
 				var $ = window.jQuery;
 				var result = {};
 				if (tp =='bbs') {
-					res.send({error:"Wrong data format!!", link:url_src});
-					return true;
-				}
-				result.title = $('h3').html();
-				result.link = url_src;
-				result.author = $('span[itemprop="author"]').html();
-				result.time = $('time[itemprop="datePublished"]').html();
-				
-				result.body = $('div[id="articleContent"]').html();
-				if (result.body) result.body = result.body.replace(/(\n|\r|\t)/ig, '');
-				else {
-					res.send({error:"Wrong data format!!", link:url_src});
-					return true;
-				}
+					result.title = 'aaa';
+					result.body = 'bbb';
+				} else {
+					result.title = $('h3').html();
+					result.link = url_src;
+					result.author = $('span[itemprop="author"]').html();
+					result.time = $('time[itemprop="datePublished"]').html();
 					
+					result.body = $('div[id="articleContent"]').html();
+					if (result.body) result.body = result.body.replace(/(\n|\r|\t)/ig, '');
+					else {
+						res.send({error:"Wrong data format!!", link:url_src});
+						return true;
+					}
+				}	
 				var imgs = $(result.body).find('img'), _f = {};
 				for (var i = 0; i < imgs.length; i++) {
 					
