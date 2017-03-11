@@ -7,7 +7,7 @@ cachedRequest.setValue('ttl', 300000);
 
 cachedRequest({url: 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png'}, 
 	function(err, data, body) {
-		res.end(body.toString("binary"));
+		res.end(Buffer.from(body, 'utf8'));
 	}
 ); 
 
