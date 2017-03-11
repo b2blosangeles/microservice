@@ -31,7 +31,7 @@ var code_process = function (error, response, body) {
 		html: body,
 		scripts: [
 		  'http://code.jquery.com/jquery-1.5.min.js'
-		  ,' var ss = "2222";} '
+		  ,' var ss = "2222"; '
 		],
 		done:function (err, window) {
 			if (err) {
