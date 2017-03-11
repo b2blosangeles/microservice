@@ -105,7 +105,7 @@ var code_process = function (error, response, body) {
 if (pipe) {
 	cache({url: url_src}).pipe(res);
 } else {
-	cache({url: url_src, encoding: 'binary'}, 
+	cache({url: url_src, encoding: 'utf8'}, 
 		code_process
 	); 	
 }
