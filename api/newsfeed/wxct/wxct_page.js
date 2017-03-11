@@ -29,7 +29,7 @@ var code_process = function (error, response, body) {
 	}
 	jsdom.env({
 		html: body,
-		scripts: [
+		src: [
 		  'http://code.jquery.com/jquery-1.5.min.js'
 		  ,' window.ss = "2222"; '
 		],
