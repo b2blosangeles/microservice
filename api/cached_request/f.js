@@ -10,7 +10,7 @@ cache.setValue('ttl', 60000);
 if (pipe) {
 	cache({url: url}).pipe(res);
 } else {
-	cache({url: url, encoding: 'binary'}, 
+	cache({url: url}, 
 		function(err, data, body) {
 			if (err) {
 				res.send(err.message);
