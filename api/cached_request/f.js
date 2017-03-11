@@ -1,7 +1,23 @@
-﻿var request = pkg.request;
+﻿var cache = pkg.cachedRequest(pkg.request);
+var url = req.query.url, pipe = req.query.pipe;
+if (!url) {
+	res.send('Miss url');
+	return true;
+}
+cache.setCacheDirectory('/tmp/cache');
+cache.setValue('ttl', 60000);
 
-var url = 'https://www.google.com';
-pkg.request.get(url).pipe(res); 
-/*
-res.writeHead(200, {'Content-Type': 'image/jpeg'});
-cachedRequest({url: 'https://www.google.com'}).pipe(res); */
+if (pipe) {
+	cache({url: url}).pipe(res);
+} else {
+	cache({url: url, encoding: 'binary'}, 
+		function(err, data, body) {
+			if (err) {
+				res.send(err.message);
+			} else {
+				res.send(body);
+			}
+			
+		}
+	); 	
+}
