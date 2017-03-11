@@ -103,7 +103,12 @@ var code_process = function (error, response, body) {
 		}	
 	});
 };
-
+cache({url: 'http://code.jquery.com/jquery-1.5.min.js'}, 
+	function(error, response, body) {
+		res.send(body);
+	}
+); 	
+/*
 if (pipe) {
 	cache({url: url_src}).pipe(res);
 } else {
@@ -111,3 +116,4 @@ if (pipe) {
 		code_process
 	); 	
 }
+*/
