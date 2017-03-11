@@ -44,7 +44,7 @@ var code_process = function (error, response, body) {
 					result.title = $('.title').html();
 					result.body = $('#msgbodyContent').html();
 				} else {
-					result.title = $('h3').html();
+					result.title = $('h3').html()+'==='+niu();
 					result.link = url_src;
 					result.author = $('span[itemprop="author"]').html();
 					result.time = $('time[itemprop="datePublished"]').html();
