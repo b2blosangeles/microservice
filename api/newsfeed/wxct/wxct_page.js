@@ -30,10 +30,10 @@ var code_process = function (error, response, body) {
 	jsdom.env({
 		html: body,
 		scripts: [
-		  'http://code.jquery.com/jquery-1.5.min.js'
+		  'http://code.jquery.com/jquery-1.5.min.js',
+		  'function niu() {return "==pp";}'
 		],
 		done:function (err, window) {
-		
 			if (err) {
 			  res.send({error:err.message, link:url_src});
 			} else {  
@@ -44,7 +44,7 @@ var code_process = function (error, response, body) {
 					result.title = $('.title').html();
 					result.body = $('#msgbodyContent').html();
 				} else {
-					result.title = $('h3').html();
+					result.title = $('h3').html()+niu();
 					result.link = url_src;
 					result.author = $('span[itemprop="author"]').html();
 					result.time = $('time[itemprop="datePublished"]').html();
