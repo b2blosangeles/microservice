@@ -15,7 +15,7 @@ cachedRequest({url: 'https://www.google.com/images/branding/googlelogo/2x/google
 */
 cachedRequest({url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Schematic_of_lymph_node_showing_lymph_sinuses.svg/610px-Schematic_of_lymph_node_showing_lymph_sinuses.svg.png'}, 
 	function(err, data, body) {
-		res.send(Buffer.from(body, 'utf8'));
+		res.end(Buffer.from(body, 'utf8'));
 	}
 ); 
 
