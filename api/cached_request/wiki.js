@@ -1,10 +1,10 @@
 ﻿var request = pkg.request
-,   cachedRequest = pkg.cacheRequest
+,   cachedRequest = pkg.cacheRequest(request)
 ,   cacheDirectory = "/tmp/cache";
 
-pkg.cachedRequest.setCacheDirectory(cacheDirectory);
-pkg.cacheRequest.setValue('ttl', 1000);
-pkg.cachedRequest({url: 'https://www.google.com'}, 
+cachedRequest.setCacheDirectory(cacheDirectory);
+cacheRequest.setValue('ttl', 1000);
+cachedRequest({url: 'https://www.google.com'}, 
 	function(err, data) {
 		res.send(data.body);
 	}
