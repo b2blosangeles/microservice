@@ -11,9 +11,9 @@ cachedRequest({url: 'https://www.google.com/images/branding/googlelogo/2x/google
 		res.writeHead(200, {'Content-Type': 'image/jpeg'});
 		res.end(body.toString('base64'));
 	}
-); 
+); , encoding: 'binary'
 */
-cachedRequest({url: 'https://www.google.com', encoding: 'binary'}, 
+cachedRequest({url: 'https://www.google.com'}, 
 	function(err, data, body) {
 		res.send(data);
 	//	res.end(Buffer.from(body, 'utf8'));
