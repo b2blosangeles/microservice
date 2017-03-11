@@ -25,7 +25,7 @@ cachedRequest({url: 'https://www.google.com/images/branding/googlelogo/2x/google
 if (pipe) {
 	cache({url: url}).pipe(res);
 } else {
-	cache({url: url}, 
+	cache({url: url, encoding: 'binary'}, 
 		function(err, data, body) {
 			if (err) {
 				res.send(err.message);
