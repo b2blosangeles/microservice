@@ -4,7 +4,7 @@
 
 cachedRequest.setCacheDirectory(cacheDirectory);
 cachedRequest.setValue('ttl', 1000);
-cachedRequest({url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Schematic_of_lymph_node_showing_lymph_sinuses.svg/610px-Schematic_of_lymph_node_showing_lymph_sinuses.svg.png'}, 
+cachedRequest({url: 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png'}, 
 	function(err, data) {
 		res.writeHead(200, {'Content-Type': 'image/jpeg'});
 		res.send(data.body);
