@@ -44,7 +44,7 @@ var code_process = function (error, response, body) {
 					result.title = $('.title').html();
 					result.body = $('#msgbodyContent').html();
 				} else {
-					result.title = $('h3').html().toString('utf8');
+					result.title = $('h3').html()+'---';
 					result.link = url_src;
 					result.author = $('span[itemprop="author"]').html();
 					result.time = $('time[itemprop="datePublished"]').html();
@@ -105,7 +105,7 @@ var code_process = function (error, response, body) {
 if (pipe) {
 	cache({url: url_src}).pipe(res);
 } else {
-	cache({url: url_src, encoding: 'utf8'}, 
+	cache({url: url_src}, 
 		code_process
 	); 	
 }
