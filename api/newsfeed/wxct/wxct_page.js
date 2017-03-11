@@ -31,7 +31,7 @@ var code_process = function (error, response, body) {
 		html: body,
 		scripts: [
 		  'http://code.jquery.com/jquery-1.5.min.js'
-		  ,' function niu() {return "==pp";} '
+		  ,' var ss = "2222";} '
 		],
 		done:function (err, window) {
 			if (err) {
@@ -44,7 +44,7 @@ var code_process = function (error, response, body) {
 					result.title = $('.title').html();
 					result.body = $('#msgbodyContent').html();
 				} else {
-					result.title = $('h3').html()+'=--='+window.niu();
+					result.title = $('h3').html()+'=--='+ss;
 					result.link = url_src;
 					result.author = $('span[itemprop="author"]').html();
 					result.time = $('time[itemprop="datePublished"]').html();
