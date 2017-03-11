@@ -12,5 +12,6 @@ cachedRequest({url: 'https://www.google.com/images/branding/googlelogo/2x/google
 	}
 ); 
 */
+res.writeHead(200, {'Content-Type': 'image/jpeg'});
 cachedRequest({url: 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png', 
 encoding: 'binary'}).pipe(res); 
