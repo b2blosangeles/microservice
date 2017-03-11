@@ -30,6 +30,7 @@ if (pipe) {
 			if (err) {
 				res.send(err.message);
 			} else {
+				res.writeHead(200, {'Content-Type': 'image/jpeg'});
 				res.end(Buffer.from(body, 'utf8'))
 			//	res.send(body);
 			}
