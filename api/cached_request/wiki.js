@@ -1,5 +1,5 @@
 ﻿var request = pkg.request
-,   cachedRequest = pkg.cacheRequest(request)
+,   cachedRequest = pkg.cachedRequest(request)
 ,   cacheDirectory = "/tmp/cache";
 
 cachedRequest.setCacheDirectory(cacheDirectory);
