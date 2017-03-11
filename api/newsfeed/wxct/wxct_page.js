@@ -29,10 +29,12 @@ var code_process = function (error, response, body) {
 	}
 	jsdom.env({
 		html: body,
-		src: [
+		scripts: [
 		  'http://code.jquery.com/jquery-1.5.min.js'
-		  ,' window.ss = "2222"; '
 		],
+		src: [
+		  ' var ss = "2222"; '
+		],		
 		done:function (err, window) {
 			if (err) {
 			  res.send({error:err.message, link:url_src});
@@ -44,7 +46,7 @@ var code_process = function (error, response, body) {
 					result.title = $('.title').html();
 					result.body = $('#msgbodyContent').html();
 				} else {
-					result.title = $('h3').html()+'=--='+window.ss;
+					result.title = $('h3').html()+'=-*-='+window.ss;
 					result.link = url_src;
 					result.author = $('span[itemprop="author"]').html();
 					result.time = $('time[itemprop="datePublished"]').html();
