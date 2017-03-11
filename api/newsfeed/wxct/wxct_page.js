@@ -31,7 +31,7 @@ var code_process = function (error, response, body) {
 		html: body,
 		scripts: [
 		  'http://code.jquery.com/jquery-1.5.min.js',
-		  'function niu() {return "==pp";}'
+		  ' function niu() {return "==pp";} '
 		],
 		done:function (err, window) {
 			if (err) {
