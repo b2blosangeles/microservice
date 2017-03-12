@@ -14,7 +14,7 @@ wikipedia.page.data("上海", { content: true, lang:'zh'}, function(a, b, c, d) 
 			if (err) {
 				res.send(err.message);
 			} else {
-				res.send(JSON.parse(body));
+				res.send(JSON.parse(body),text['*']);
 			}
 			
 		}
