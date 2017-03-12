@@ -1,7 +1,7 @@
 ﻿var wikipedia = require(env.space_path + '/api/pkg/wikipedia/node_modules/node-wikipedia');
 
 wikipedia.page.data("shanghai", { content: true, lang:'en'}, function(a, b, c) {
-	res.send(b);
+	res.send(c);
 });
 /*
 wikipedia.categories.tree(
