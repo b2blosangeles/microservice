@@ -1,7 +1,22 @@
 ﻿var wikipedia = require(env.space_path + '/api/pkg/wikipedia/node_modules/node-wikipedia');
 
+var cache = pkg.cachedRequest(pkg.request);
+cache.setCacheDirectory('/tmp/cache/uii');
+cache.setValue('ttl', 1000);
+
+
+
 wikipedia.page.data("shanghai", { content: true, lang:'en'}, function(a, b, c, d) {
-	res.send(c);
+	cache({url: c, encoding: 'binary'}, 
+		function(err, data, body) {
+			if (err) {
+				res.send(err.message);
+			} else {
+				res.send(body);
+			}
+			
+		}
+	); 		
 });
 /*
 wikipedia.categories.tree(
