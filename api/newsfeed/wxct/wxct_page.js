@@ -59,53 +59,10 @@ var code_process = function(jslib) {
 				}	
 				var imgs = $(result.body).find('img'), _f = {};
 				for (var i = 0; i < imgs.length; i++) {
-					
-					var p = url.parse(imgs[i].src), u = imgs[i].src, fn=''; 
-					var fk = 'http://m.qalet.com/api/cached_request/wiki.js?pipe=1&url='+url.resolve(url_src, imgs[i].src)
-						result.body = result.body.replace(imgs[i].src, fk);
-					/*
-					if (!p['protocol']) {
-						u = p0.protocol + '//' + p0.host + imgs[i].src;
-						fn = '/mservices/images/' + u.replace(/(\/|\:)/ig, '_');
-						
-						
-						// result.body = result.body.replace(imgs[i].src, req.protocol + '://' + req.header('host')  + fn);
-					} else {
-						u = imgs[i].src;
-						fn = '/mservices/images/' + u.replace(/(\/|\:)/ig, '_');
-						result.body = result.body.replace(imgs[i].src, req.protocol + '://' + req.header('host')  + fn);						
-					} */
-					_f[i] = (function(url, fn) {
-						return function(cbk) {
-							pkg.fs.stat(fn, function(err, stats) {
-								if(err == null) {
-									cbk(true);
-								} else {
-									pkg.request(url, {encoding: 'binary'}, function (error, response, body) { 
-										pkg.fs.writeFile(fn, body, 'binary', function(err) {
-											if(err) {
-												return cbk('k'+err.message);
-											}
-											cbk(fn);
-										}); 
-										
-									});
-								}
-							});
-							
-						}
-					})(u, env.space_path + fn);
+					var fn = 'http://m.qalet.com/api/cached_request/wiki.js?pipe=1&url='+url.resolve(url_src, imgs[i].src);
+					result.body = result.body.replace(imgs[i].src, fn);
 				}
-				res.send(result);
-				/*
-				cp.serial(
-					_f,
-					function(data) {
-						res.send(result);
-					},
-					30000
-				);
-				*/		
+				res.send(result);	
 			}
 		}	
 	});
