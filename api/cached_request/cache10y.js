@@ -5,12 +5,12 @@ if (!url) {
 	return true;
 }
 cache.setCacheDirectory('/tmp/cache');
-cache.setValue('ttl', 360000000);
+cache.setValue('ttl', 10 * 365 * 24 * 3600 * 1000);
 
 if (pipe) {
 	cache({url: url}).pipe(res);
 } else {
-	cache({url: url}, 
+	cache({url: url, encoding: 'binary'}, 
 		function(err, data, body) {
 			if (err) {
 				res.send(err.message);

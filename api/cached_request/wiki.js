@@ -5,7 +5,7 @@ if (!url) {
 	return true;
 }
 cache.setCacheDirectory('/tmp/cache');
-cache.setValue('ttl', 60000);
+cache.setValue('ttl', 360000000);
 
 /*
 cachedRequest({url: 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_120x44dp.png', encoding: 'binary'}, 

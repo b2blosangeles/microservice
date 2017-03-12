@@ -10,7 +10,6 @@ if (!url_src) {
 }
 
 var p0 = url.parse( url_src), tp='';
-var cp = new pkg.crowdProcess();
 
 if (p0.host.match(/bbs\.wenxuecity\.com/ig)) {
 	tp = 'bbs';
