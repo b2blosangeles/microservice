@@ -4,7 +4,7 @@ if (!url) {
 	res.send('Miss url');
 	return true;
 }
-cache.setCacheDirectory('/tmp/cache' + (channel)?'/'+channel:'');
+cache.setCacheDirectory('/tmp/cache' + ((channel)?'/'+channel:''));
 cache.setValue('ttl', 10 * 365 * 24 * 3600 * 1000);
 
 if (pipe) {
