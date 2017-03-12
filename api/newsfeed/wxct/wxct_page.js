@@ -112,7 +112,7 @@ var code_process = function(jslib) {
 if (pipe) {
 	cache({url: url_src}).pipe(res);
 } else {
-	jscache({url: 'http://code.jquery.com/jquery-1.5.min.js', ttl:30000},
+	jscache({url: 'http://code.jquery.com/jquery-1.5.min.js', ttl:36000000000},
 		function(error, response, body) {
 			cache({url: url_src}, code_process(body));
 		}
