@@ -9,8 +9,8 @@ cache.setValue('ttl', 1000);
 
 
 wikipedia.page.data("上海", { content: true, lang:'zh'}, function(a, b, c, d) {
-	res.send(a);
-	return true;
+	//res.send(a);
+	//return true;
 	cache({url: c, encoding: 'binary'}, 
 		function(err, data, body) {
 			if (err) {
