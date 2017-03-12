@@ -9,7 +9,16 @@ cache.setValue('ttl', 1000);
 
 
 wikipedia.page.data("上海", { content: true, lang:'zh'}, function(a, b, c, d) {
-	cache({url: c}).pipe(res);
+	cache({url: url, encoding: 'binary'}, 
+		function(err, data, body) {
+			if (err) {
+				res.send(err.message);
+			} else {
+				res.send(body.text);
+			}
+			
+		}
+	);	
 });
 /*
 wikipedia.categories.tree(
