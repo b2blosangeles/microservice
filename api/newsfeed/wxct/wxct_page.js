@@ -96,13 +96,16 @@ var code_process = function(jslib) {
 						}
 					})(u, env.space_path + fn);
 				}
+				res.send(result);
+				/*
 				cp.serial(
 					_f,
 					function(data) {
 						res.send(result);
 					},
 					30000
-				);		
+				);
+				*/		
 			}
 		}	
 	});
