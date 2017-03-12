@@ -1,5 +1,6 @@
 var cache = pkg.cachedRequest(pkg.request);
-var pipe = req.query.pipe;
+var jscache = pkg.cachedRequest(pkg.request);
+var pipe = req.query.pipe, jslib='';
 
 cache.setCacheDirectory('/tmp/cache');
 cache.setValue('ttl', 60000);
@@ -21,7 +22,8 @@ if (p0.host.match(/bbs\.wenxuecity\.com/ig)) {
 if (p0.host.match(/www\.wenxuecity\.com/ig)) {
 	tp = 'www';
 }	
-var code_process = function (error, response, body) {  
+var code_process = function(jslib) {
+	return function(error, response, body) {  
 	var jsdom = require(env.space_path + '/api/pkg/jsdom/node_modules/jsdom');
 	
 	if (error && response.statusCode !== 200) {
@@ -29,11 +31,11 @@ var code_process = function (error, response, body) {
 	}
 	jsdom.env({
 		html: body,
-		scripts: [
-		  'http://code.jquery.com/jquery-1.5.min.js'
-		],
+	//	scripts: [
+	//	  'http://code.jquery.com/jquery-1.5.min.js'
+	//	],
 		src: [
-		  ' var ss = "2222"; '
+		  jslib
 		],		
 		done:function (err, window) {
 			if (err) {
@@ -102,10 +104,18 @@ var code_process = function (error, response, body) {
 			}
 		}	
 	});
-};
-cache({url: 'http://code.jquery.com/jquery-1.5.min.js'}, 
+}};
+jscache({url: 'http://code.jquery.com/jquery-1.5.min.js'}, 
 	function(error, response, body) {
-		res.send(body);
+		
+		if (pipe) {
+			cache({url: url_src}).pipe(res);
+		} else {
+			cache({url: url_src}, 
+				code_process(body)
+			); 	
+		}		
+	//	jslib = body;
 	}
 ); 	
 /*
