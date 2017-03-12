@@ -1,4 +1,4 @@
 ﻿var wikipedia = require(env.space_path + '/api/pkg/wikipedia/node_modules/node-wikipedia');
-wikipedia.page.data("上海", { content: true, lang:'zh' }, function(response) {
+wikipedia.page.data("上海", { content: true, lang:'zh' }, function(err, response) {
 	res.send(response);
 });
