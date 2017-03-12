@@ -28,6 +28,7 @@ var code_process = function(jslib) {
 	
 	if (error && response.statusCode !== 200) {
 		res.send({error:error.message});
+		return true;
 	}
 	jsdom.env({
 		html: body,
@@ -48,7 +49,7 @@ var code_process = function(jslib) {
 					result.title = $('.title').html();
 					result.body = $('#msgbodyContent').html();
 				} else {
-					result.title = $('h3').html()+'=-*-='+window.ss;
+					result.title = $('h3').html();
 					result.link = url_src;
 					result.author = $('span[itemprop="author"]').html();
 					result.time = $('time[itemprop="datePublished"]').html();
