@@ -1,6 +1,6 @@
 ﻿var wikipedia = require(env.space_path + '/api/pkg/wikipedia/node_modules/node-wikipedia');
 
-wikipedia.page.data("Philadelphia_Phillies", { content: true, lang:'en'}, function(response) {
+wikipedia.page.data("shanghai", { content: true, lang:'en'}, function(response) {
 	res.send(response);
 });
 /*
