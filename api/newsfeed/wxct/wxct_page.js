@@ -58,7 +58,7 @@ var code_process = function(jslib) {
 				}	
 				var imgs = $(result.body).find('img');
 				for (var i = 0; i < imgs.length; i++) {
-					var fn = 'http://m.qalet.com/api/cached_request/wiki.js?pipe=1&url='+url.resolve(url_src, imgs[i].src);
+					var fn = 'http://m.qalet.com/api/cached_request/cache10y.js?pipe=1&url='+url.resolve(url_src, imgs[i].src);
 					result.body = result.body.replace(imgs[i].src, fn);
 				}
 				res.send(result);	
