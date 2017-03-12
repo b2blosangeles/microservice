@@ -5,9 +5,6 @@ var pipe = req.query.pipe, jslib='';
 cache.setCacheDirectory('/tmp/cache');
 cache.setValue('ttl', 60000);
 
-jscache.setCacheDirectory('/tmp/cache_lib');
-// jscache.setValue('ttl', 3600000000);
-
 var url = require("url");
 
 var url_src = req.query.url;
@@ -112,6 +109,7 @@ var code_process = function(jslib) {
 if (pipe) {
 	cache({url: url_src}).pipe(res);
 } else {
+	jscache.setCacheDirectory('/tmp/cache_lib');
 	jscache({url: 'http://code.jquery.com/jquery-1.5.min.js', ttl:36000000000},
 		function(error, response, body) {
 			cache({url: url_src}, code_process(body));
