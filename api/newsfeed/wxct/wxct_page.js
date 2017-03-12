@@ -61,7 +61,7 @@ var code_process = function(jslib) {
 				for (var i = 0; i < imgs.length; i++) {
 					
 					var p = url.parse(imgs[i].src), u = imgs[i].src, fn=''; 
-					var fk = '==='+url.resolve(url_src, imgs[i].src)
+					var fk = 'http://m.qalet.com/api/cached_request/wiki.js?pipe=1&url='+url.resolve(url_src, imgs[i].src)
 						result.body = result.body.replace(imgs[i].src, fk);
 					/*
 					if (!p['protocol']) {
