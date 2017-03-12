@@ -1,4 +1,4 @@
-﻿var wikipedia = require(env.space_path + '/api/pkg/wikipedia/node_modules/node-wikipedia');
+﻿var wikipedia = require(env.space_path + '/api/pkg/wikipedia/node_modules/node-wikipedia/lib');
 wikipedia.page.data("Philadelphia_Phillies", { content: true}, function(response) {
 	res.send(response);
 });
