@@ -1,7 +1,4 @@
-var path = require('path');
-var uri = require('uri');
-var v = path.join('/a/b/c/ddd/e.html', 'ce/index.html')
-
-
+var url = require('url');
+var v  = url.resolve('http://example.com/one', '/two')
 res.send(v);
 // res.send('test1');
