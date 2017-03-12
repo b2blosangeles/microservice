@@ -5,6 +5,9 @@ var pipe = req.query.pipe, jslib='';
 cache.setCacheDirectory('/tmp/cache');
 cache.setValue('ttl', 60000);
 
+jscache.setCacheDirectory('/tmp/cache');
+jscache.setValue('ttl', 3600000000);
+
 var url = require("url");
 
 var url_src = req.query.url;
@@ -105,25 +108,13 @@ var code_process = function(jslib) {
 		}	
 	});
 }};
-jscache({url: 'http://code.jquery.com/jquery-1.5.min.js'}, 
-	function(error, response, body) {
-		
-		if (pipe) {
-			cache({url: url_src}).pipe(res);
-		} else {
-			cache({url: url_src}, 
-				code_process(body)
-			); 	
-		}		
-	//	jslib = body;
-	}
-); 	
-/*
+
 if (pipe) {
 	cache({url: url_src}).pipe(res);
 } else {
-	cache({url: url_src}, 
-		code_process
+	jscache({url: 'http://code.jquery.com/jquery-1.5.min.js'}, 
+		function(error, response, body) {
+			cache({url: url_src}, code_process(body));
+		}
 	); 	
 }
-*/
