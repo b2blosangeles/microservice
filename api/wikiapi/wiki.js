@@ -8,7 +8,7 @@ var channel = 'niu';
 var cache = pkg.cachedRequest(pkg.request);
 cache.setCacheDirectory('/tmp/cache' + ((channel)?'/'+channel:''));
 cache.setValue('ttl', 1000);
-var url = 'https://zh.wikipedia.org/w/api.php?action=parse&page=shanghai&prop=categories|externallinks|links|text&lang=zh&redirects=true&format=json';
+var url = 'https://zh.wikipedia.org/w/api.php?action=parse&page=中国&prop=categories|externallinks|links|text&lang=zh&redirects=true&format=json';
 
 cache({url: url, encoding: 'binary'}, 
 	function(err, data, body) {
