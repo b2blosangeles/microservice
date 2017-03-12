@@ -1,2 +1,4 @@
 var path = require('path');
-res.send('test1');
+var resolve = require('path').resolve
+res.send(resolve('../bb/tmp.txt'));
+// res.send('test1');
