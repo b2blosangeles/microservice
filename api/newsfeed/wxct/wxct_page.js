@@ -61,15 +61,20 @@ var code_process = function(jslib) {
 				for (var i = 0; i < imgs.length; i++) {
 					
 					var p = url.parse(imgs[i].src), u = imgs[i].src, fn=''; 
+					var fk = url.resolve(url_src, imgs[i].src)
+						result.body = result.body.replace(imgs[i].src, fk);
+					/*
 					if (!p['protocol']) {
 						u = p0.protocol + '//' + p0.host + imgs[i].src;
 						fn = '/mservices/images/' + u.replace(/(\/|\:)/ig, '_');
-						result.body = result.body.replace(imgs[i].src, req.protocol + '://' + req.header('host')  + fn);
+						
+						
+						// result.body = result.body.replace(imgs[i].src, req.protocol + '://' + req.header('host')  + fn);
 					} else {
 						u = imgs[i].src;
 						fn = '/mservices/images/' + u.replace(/(\/|\:)/ig, '_');
 						result.body = result.body.replace(imgs[i].src, req.protocol + '://' + req.header('host')  + fn);						
-					} 
+					} */
 					_f[i] = (function(url, fn) {
 						return function(cbk) {
 							pkg.fs.stat(fn, function(err, stats) {
