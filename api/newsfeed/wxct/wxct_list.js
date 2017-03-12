@@ -54,7 +54,7 @@ var code_process = function(jslib) {
 }};
 
 if (pipe) {
-	cache.setCacheDirectory('/tmp/cache');
+	cache.setCacheDirectory('/tmp/cache/wxct_list');
 	cache.setValue('ttl', 3000000);	
 	cache({url: url_src}).pipe(res);
 } else {
@@ -62,7 +62,7 @@ if (pipe) {
 	jscache.setCacheDirectory('/tmp/cache_lib');
 	jscache({url: 'http://code.jquery.com/jquery-1.5.min.js', ttl:36000000000},
 		function(error, response, body) {
-			cache.setCacheDirectory('/tmp/cache');
+			cache.setCacheDirectory('/tmp/cache/wxct_list');
 			cache.setValue('ttl', 3000000);			
 			cache({url: url_src}, code_process(body));
 		}
