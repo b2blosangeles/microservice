@@ -1,9 +1,9 @@
 ﻿var wikipedia = require(env.space_path + '/api/pkg/wikipedia/node_modules/node-wikipedia');
-/*
-wikipedia.page.data("Philadelphia_Phillies", { content: true}, function(response) {
+
+wikipedia.page.data("Philadelphia_Phillies", { content: true, lang:'en'}, function(response) {
 	res.send(response);
 });
-*/
+/*
 wikipedia.categories.tree(
 	"Philadelphia_Phillies",
 	function(tree) {
@@ -11,3 +11,4 @@ wikipedia.categories.tree(
 		//nested data on the category page for all Phillies players
 	}
 );
+*/
