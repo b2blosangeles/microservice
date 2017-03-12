@@ -5,18 +5,11 @@ cache.setCacheDirectory('/tmp/cache/uii');
 cache.setValue('ttl', 1000);
 
 
+	
+
 
 wikipedia.page.data("shanghai", { content: true, lang:'en'}, function(a, b, c, d) {
-	cache({url: c}, 
-		function(err, data, body) {
-			if (err) {
-				res.send(err.message);
-			} else {
-				res.send(body);
-			}
-			
-		}
-	); 		
+	cache({url: c}).pipe(res);
 });
 /*
 wikipedia.categories.tree(
