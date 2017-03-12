@@ -44,7 +44,7 @@ var code_process = function(jslib) {
 								if (!tp) continue;	
 							}
 						}
-						result[result.length] = {href:href, text:$(objs[i]).html()+'==', type:tp};
+						result[result.length] = {href:href, text:$(objs[i]).html(), type:tp};
 					}
 					res.send(result);
 				}
