@@ -1,4 +1,7 @@
 var path = require('path');
-var resolve = require('path').resolve
-res.send(resolve('../bb/tmp.txt'));
+
+var v = path.join('/a/b/c', '../ce/index.html')
+
+
+res.send(v);
 // res.send('test1');
