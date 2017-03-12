@@ -1,10 +1,10 @@
 ﻿var cache = pkg.cachedRequest(pkg.request);
-var url = req.query.url, pipe = req.query.pipe;
+var url = req.query.url, pipe = req.query.pipe, channel = req.query.channel;
 if (!url) {
 	res.send('Miss url');
 	return true;
 }
-cache.setCacheDirectory('/tmp/cache');
+cache.setCacheDirectory('/tmp/cache' + ((channel)?'/'+channel:''));
 cache.setValue('ttl', 60 * 1000);
 
 if (pipe) {
