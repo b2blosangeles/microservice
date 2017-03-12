@@ -5,6 +5,7 @@ if (!url) {
 	return true;
 }
 cache.setCacheDirectory('/tmp/cache' + ((channel)?'/'+channel:''));
+cache.setValue('ttl', 1000);
 
 if (pipe) {
 	cache({url: url}).pipe(res);
