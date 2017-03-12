@@ -2,8 +2,7 @@ var cache = pkg.cachedRequest(pkg.request);
 var jscache = pkg.cachedRequest(pkg.request);
 var pipe = req.query.pipe, jslib='';
 
-cache.setCacheDirectory('/tmp/cache');
-cache.setValue('ttl', 60000);
+
 
 var url = require("url");
 
@@ -108,11 +107,16 @@ var code_process = function(jslib) {
 }};
 
 if (pipe) {
+	cache.setCacheDirectory('/tmp/cache');
+	cache.setValue('ttl', 3000000);	
 	cache({url: url_src}).pipe(res);
 } else {
+	
 	jscache.setCacheDirectory('/tmp/cache_lib');
 	jscache({url: 'http://code.jquery.com/jquery-1.5.min.js', ttl:36000000000},
 		function(error, response, body) {
+			cache.setCacheDirectory('/tmp/cache');
+			cache.setValue('ttl', 3000000);			
 			cache({url: url_src}, code_process(body));
 		}
 	); 	
