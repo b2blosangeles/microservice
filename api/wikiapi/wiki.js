@@ -8,7 +8,7 @@ cache.setValue('ttl', 1000);
 	
 
 
-wikipedia.page.data("shanghai", { content: true, lang:'en'}, function(a, b, c, d) {
+wikipedia.page.data("上海", { content: true, lang:'zh'}, function(a, b, c, d) {
 	cache({url: c}).pipe(res);
 });
 /*
