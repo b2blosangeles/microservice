@@ -17,7 +17,7 @@ cache({url: url, encoding: 'binary'},
 		} else {
 			var v = JSON.parse(body).query;
 			v = v.pages;
-			v = v[Object.keys(v)[0]].revisions;
+			v = v[Object.keys(v)[0]].revisions[0];
 			v = v['*'];
 			res.send(v);
 		}
