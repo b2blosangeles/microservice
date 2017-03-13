@@ -1,14 +1,14 @@
 [if $solution == 1]
-.info_bg { background-color:#ccc; padding:1em; font-size:1.2em;}
+.info_bg { background-color:#ccc; padding:1em; font-size:2em;}
 [/if]
 [if $solution == 2]
-.info_bg { background-color:lightgreen; padding:1em; font-size:1.5em;}
+.info_bg { background-color:lightgreen; padding:1em; font-size:2em;}
 [/if]
 [if $solution == 3]
-.info_bg { background-color:lightblue; padding:1em; font-size:1.5em;}
+.info_bg { background-color:lightblue; padding:1em; font-size:2em;}
 [/if]
 [if $solution == 4]
-.info_bg { background-color:pink; padding:1em; font-size:1.5em;}
+.info_bg { background-color:pink; padding:1em; font-size:2em;}
 [/if]
 img { max-width:580px;}
 .col-sm-12 .col-sx-12 { font-size:2em}
