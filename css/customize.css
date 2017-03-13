@@ -1,3 +1,4 @@
+  /*
     [if $solution == 1]
     .info_bg { background-color:#ccc; padding:1em; font-size:1em;}
     [/if]
@@ -10,12 +11,8 @@
     [if $solution == 4]
     .info_bg { background-color:pink; padding:1em; font-size:1em;}
     [/if]
-@media only screen 
-    and (min-device-width : 375px) // or 213.4375em
-    and (max-device-width : 667px) // or 41.6875em
-    and (width : 375px) // or 23.4375em
-    and (height : 559px) // or 34.9375em
-{
+*/
+
     [if $solution == 1]
     .info_bg { background-color:#ccc; padding:1em; font-size:3em;}
     [/if]
@@ -28,6 +25,6 @@
     [if $solution == 4]
     .info_bg { background-color:pink; padding:1em; font-size:3em;}
     [/if]
-}
+
 img { max-width:580px;}
 .col-sm-12 .col-sx-12 { font-size:2em}
