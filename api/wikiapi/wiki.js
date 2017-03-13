@@ -15,7 +15,8 @@ cache({url: url, encoding: 'binary'},
 		if (err) {
 			res.send(err.message);
 		} else {
-			res.send(JSON.parse(body));
+			var v = JSON.parse(body).query;
+			res.send(v);
 		}
 		
 	}
