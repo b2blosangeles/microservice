@@ -25,13 +25,11 @@ var code_process = function(jslib) {
 				} else {  
 					var $ = window.jQuery;
 					var objs = $('#newsList').find('a');
-					res.send('=='+objs.length); 
-					return true;
 					var result = [];		  
 					for (var i = 0; i < objs.length; i++) {
 						var href = $(objs[i]).attr('href'), tp = '';
 						var p = url.parse(href); 
-						
+						/*
 						if (!p['protocol']) {
 							href = p0.protocol + '//' + p0.host  + '/' + href.replace(/^\//,'');
 						} else {
@@ -46,6 +44,7 @@ var code_process = function(jslib) {
 								if (!tp) continue;	
 							}
 						}
+						*/
 						result[result.length] = {href:href, text:$(objs[i]).html(), type:tp};
 					}
 					res.send(result);
