@@ -3,7 +3,9 @@ var jscache = pkg.cachedRequest(pkg.request);
 var pipe = req.query.pipe;
 
 var url = require("url");
+
 var url_src = req.query.url;
+url_src = 'http://news.creaders.net/immigration/2017/03/16/1799109.html';
 if (!url_src) {
 	res.send('Miss url');
 	return true;
@@ -42,7 +44,7 @@ var code_process = function(jslib) {
 				var result = {};
 				if (tp =='bbs') {
 					result.title = $('.title').html();
-					result.body = $('#msgbodyContent').html();
+					result.body = $('#newsContent').html();
 				} else {
 					result.title = $('h3').html();
 					result.link = url_src;
@@ -58,7 +60,7 @@ var code_process = function(jslib) {
 				}	
 				var imgs = $(result.body).find('img');
 				for (var i = 0; i < imgs.length; i++) {
-					var fn = 'http://m.qalet.com/api/cached_request/cache10y.js?pipe=1&channel=wxct_img&url='+url.resolve(url_src, imgs[i].src);
+					var fn = 'http://m.qalet.com/api/cached_request/cache10y.js?pipe=1&channel=wanwei_img&url='+url.resolve(url_src, imgs[i].src);
 					result.body = result.body.replace(imgs[i].src, fn);
 				}
 				res.send(result);	
@@ -68,8 +70,8 @@ var code_process = function(jslib) {
 }};
 
 if (pipe) {
-	cache.setCacheDirectory('/tmp/cache/wxct_page');
-	cache.setValue('ttl', 360000000);	
+	cache.setCacheDirectory('/tmp/cache/wanwei_page');
+	cache.setValue('ttl', 1000);	
 	cache({url: url_src}).pipe(res);
 } else {
 	
