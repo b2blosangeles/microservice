@@ -8,7 +8,7 @@ var url_src = req.query.url;
 url_src = (!url_src)?'http://news.creaders.net/immigration/2017/03/16/1799109.html':url_src;
 
 var vv = {url: url_src};
-var key = JSON.stringify(pkg.cachedRequest.normalizeOptions(vv));
+var key = JSON.stringify(cache.prototype.normalizeOptions(vv));
 key = cache.hashKey(key);
 res.send(key);
 return false;
