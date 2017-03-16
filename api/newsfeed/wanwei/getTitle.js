@@ -25,7 +25,7 @@ var code_process = function(jslib) {
 				} else {  
 					var $ = window.jQuery;
 					var objs = $('#newsList');
-					res.send(objs.length); return true;
+					res.send('objs.length'); return true;
 					var result = [];		  
 					for (var i = 0; i < objs.length; i++) {
 						var href = $(objs[i]).attr('href'), tp = '';
