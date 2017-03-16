@@ -8,7 +8,7 @@ var p0 = url.parse( url_src);
 
 var code_process = function(jslib) {
 	return function(error, response, body) { 
-		pkg.request({ uri:url_src  }, function (error, response, body) {  
+		pkg.request({ uri:url_src  }, {encoding:'gb2312'}, function (error, response, body) {  
 		  var jsdom = require(env.space_path + '/api/pkg/jsdom/node_modules/jsdom');
 
 		  if (error && response.statusCode !== 200) {
