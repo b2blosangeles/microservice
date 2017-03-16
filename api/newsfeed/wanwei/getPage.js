@@ -5,7 +5,7 @@ var pipe = req.query.pipe;
 var url = require("url");
 
 var url_src = req.query.url;
-url_src = 'http://news.creaders.net/immigration/2017/03/16/1799109.html';
+url_src = (!url_src)?'http://news.creaders.net/immigration/2017/03/16/1799109.html':url_src;
 if (!url_src) {
 	res.send('Miss url');
 	return true;
