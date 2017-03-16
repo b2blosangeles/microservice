@@ -24,7 +24,7 @@ var code_process = function(jslib) {
 				  res.send(err.message);
 				} else {  
 					var $ = window.jQuery;
-					var objs = $('#newsList');
+					var objs = $('#newsList').find('a');
 					res.send('=='+objs.length); 
 					return true;
 					var result = [];		  
