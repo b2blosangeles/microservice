@@ -51,7 +51,7 @@ var code_process = function(jslib) {
 					result.author = $('span[itemprop="author"]').html();
 					result.time = $('time[itemprop="datePublished"]').html();
 					
-					result.body = $('div[id="articleContent"]').html();
+					result.body = $('#newsContent').html();
 					if (result.body) result.body = result.body.replace(/(\n|\r|\t)/ig, '');
 					else {
 						res.send({error:"Wrong data format!!", link:url_src});
