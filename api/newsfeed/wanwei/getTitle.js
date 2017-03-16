@@ -24,7 +24,7 @@ var code_process = function(jslib) {
 				  res.send(err.message);
 				} else {  
 					var $ = window.jQuery;
-					var objs = $('.maincontent').find('.col').find('li').find('a');
+					var objs = $('#newsList').find('a');
 					var result = [];		  
 					for (var i = 0; i < objs.length; i++) {
 						var href = $(objs[i]).attr('href'), tp = '';
