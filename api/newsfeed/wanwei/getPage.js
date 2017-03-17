@@ -1,6 +1,7 @@
 var cache = pkg.cachedRequest(pkg.request);
 var jscache = pkg.cachedRequest(pkg.request);
 var pipe = req.query.pipe;
+var iconv_lite = require(env.space_path + '/api/pkg/iconv-lite/node_modules/iconv-lite');
 
 var url = require("url");
 
@@ -29,7 +30,7 @@ var code_process = function(jslib) {
 		return true;
 	}
 	jsdom.env({
-		html: body,
+		html: iconv_lite.decode(body, 'gb2312'),
 	//	scripts: [
 	//	  'http://code.jquery.com/jquery-1.5.min.js'
 	//	],
