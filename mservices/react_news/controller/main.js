@@ -19,7 +19,7 @@ var showDoc = function(v, list) {
 	if (!v) {
 		showData(list, {});
 	} else {
-		$.ajax({url: 'http://m.qalet.com/api/newsfeed/wxct/wxct_page.js', data:{url:v},
+		$.ajax({url: 'http://m.qalet.com/api/newsfeed/wanwei/getPage.js', data:{url:v},
 			dataType:'json', 
 			success: function(data,status,xhr){
 				console.log('data--->');
