@@ -9,6 +9,10 @@ var showData = function(list, doc) {
 	jSmart.prototype.right_delimiter = ']';
 	var tpl = new jSmart(_TPL_['/mservices/react_news/view/news_list.html']);
 	var html = tpl.fetch( {list:list, doc:doc} );
+	
+	console.log('html===>');
+	console.log(html); 
+	
 	$('.'+mapping_data.id).html(html);
 	$('.'+mapping_data.id).show(0);
 	$('.'+mapping_data.id).find("a").bind("click", function() {
