@@ -48,7 +48,7 @@ var code_process = function(jslib) {
 					result.title = $('.title').html();
 					result.body = $('#newsContent').html();
 				} else {
-					result.title = $('h3').html();
+					result.title = $('.STYLE3').html();
 					result.link = url_src;
 					result.author = $('span[itemprop="author"]').html();
 					result.time = $('time[itemprop="datePublished"]').html();
