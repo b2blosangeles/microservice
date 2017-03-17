@@ -3,6 +3,8 @@ var data = {
 };
 
 var showData = function(list, doc) {
+	console.log('doc--->');
+	console.log(doc);
 	jSmart.prototype.left_delimiter = '[';
 	jSmart.prototype.right_delimiter = ']';
 	var tpl = new jSmart(_TPL_['/mservices/react_news/view/news_list.html']);
