@@ -5,7 +5,7 @@ var pipe = req.query.pipe;
 var iconv_lite = require(env.space_path + '/api/pkg/iconv-lite/node_modules/iconv-lite');
 
 var url = require("url");
-var url_src = 'http://news.creaders.net/headline/index.html';
+var url_src = 'http://news.creaders.net/breaking/index.html';
 var p0 = url.parse( url_src); 
 
 var code_process = function(jslib) {
