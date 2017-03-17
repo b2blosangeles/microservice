@@ -11,7 +11,7 @@ var showData = function(list, doc) {
 	var html = tpl.fetch( {list:list, doc:doc} );
 	
 	console.log('html===>');
-	console.log(html); 
+	console.log(html+'.'+mapping_data.id); 
 	
 	$('.'+mapping_data.id).html(html);
 	$('.'+mapping_data.id).show(0);
