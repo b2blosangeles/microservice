@@ -38,6 +38,6 @@ var showDoc = function(v, list) {
 
 };
 
-$.ajax({url: 'http://m.qalet.com/api/newsfeed/wxct/wxct_list.js', dataType:'json', success: function(data,status,xhr){
+$.ajax({url: 'http://m.qalet.com/api/newsfeed/wanwei/getTitle.js', dataType:'json', success: function(data,status,xhr){
 	showData(data,{});
 }});
