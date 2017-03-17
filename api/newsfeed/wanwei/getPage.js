@@ -14,13 +14,7 @@ if (!url_src) {
 }
 
 var p0 = url.parse( url_src), tp='';
-
-if (p0.host.match(/bbs\.wenxuecity\.com/ig)) {
-	tp = 'bbs';
-}
-if (p0.host.match(/www\.wenxuecity\.com/ig)) {
-	tp = 'www';
-}	
+	
 var code_process = function(jslib) {
 	return function(error, response, body) {  
 	var jsdom = require(env.space_path + '/api/pkg/jsdom/node_modules/jsdom');
@@ -44,22 +38,19 @@ var code_process = function(jslib) {
 
 				var $ = window.jQuery;
 				var result = {};
-				if (tp =='bbs') {
-					result.title = $('.title').html();
-					result.body = $('#newsContent').html();
-				} else {
-					result.title = $('.STYLE3').html();
-					result.link = url_src;
-					result.author = $('span[itemprop="author"]').html();
-					result.time = $('time[itemprop="datePublished"]').html();
-					
-					result.body = $('#newsContent').html();
-					if (result.body) result.body = result.body.replace(/(\n|\r|\t)/ig, '');
-					else {
-						res.send({error:"Wrong data format!!", link:url_src});
-						return true;
-					}
-				}	
+
+				result.title = $('.STYLE3').html();
+				result.link = url_src;
+				result.author = $('span[itemprop="author"]').html();
+				result.time = $('time[itemprop="datePublished"]').html();
+
+				result.body = $('#newsContent').html();
+				if (result.body) result.body = result.body.replace(/(\n|\r|\t)/ig, '');
+				else {
+					res.send({error:"Wrong data format!!", link:url_src});
+					return true;
+				}
+	
 				var imgs = $(result.body).find('img');
 				for (var i = 0; i < imgs.length; i++) {
 					var fn = 'http://m.qalet.com/api/cached_request/cache10y.js?pipe=1&channel=wanwei_img&url='+url.resolve(url_src, imgs[i].src);
