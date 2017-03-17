@@ -17,7 +17,7 @@ var code_process = function(jslib) {
 			res.send(error.message);
 		  }
 		  jsdom.env({
-			html: iconv_lite.encode(body, 'gb2312'),
+			html: iconv_lite.decode(body, 'gb2312'),
 			src: [
 			  jslib
 			],	
