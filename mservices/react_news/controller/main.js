@@ -25,7 +25,7 @@ var showDoc = function(v, list) {
 	if (!v) {
 		showData(list, {});
 	} else {
-		$.ajax({url: 'http://m.qalet.com/api/newsfeed/wanwei/getPage.js', data:{url:''},
+		$.ajax({url: 'http://m.qalet.com/api/newsfeed/wanwei/getPage.js', data:{url:v},
 			dataType:'json', 
 			success: function(data,status,xhr){
 				showData(list, data);
