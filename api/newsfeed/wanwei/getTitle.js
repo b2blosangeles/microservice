@@ -2,6 +2,8 @@ var cache = pkg.cachedRequest(pkg.request);
 var jscache = pkg.cachedRequest(pkg.request);
 var pipe = req.query.pipe;
 
+var iconv_lite = require(env.space_path + '/api/pkg/iconv-lite/node_modules/iconv-lite');
+
 var url = require("url");
 var url_src = 'http://news.creaders.net/headline/index.html';
 var p0 = url.parse( url_src); 
@@ -15,7 +17,7 @@ var code_process = function(jslib) {
 			res.send(error.message);
 		  }
 		  jsdom.env({
-			html: body,
+			html: iconv_lite.encode(body, 'gb2312'),
 			src: [
 			  jslib
 			],	
