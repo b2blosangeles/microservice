@@ -5,7 +5,7 @@ var data = {
 var showData = function(list, doc) {
 	jSmart.prototype.left_delimiter = '[';
 	jSmart.prototype.right_delimiter = ']';
-	var tpl = new jSmart(_TPL_['/mservices/jsmarty_news/view/news_list.html']);
+	var tpl = new jSmart(_TPL_['/mservices/react_news/view/news_list.html']);
 	var html = tpl.fetch( {list:list, doc:doc} );
 	$('.'+mapping_data.id).html(html);
 	$('.'+mapping_data.id).show(0);
