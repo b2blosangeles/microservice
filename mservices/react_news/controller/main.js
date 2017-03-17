@@ -3,7 +3,7 @@ var data = {
 };
 
 var showData = function(list, doc) {
-	console.log('doc--->');
+	console.log('doc===>');
 	console.log(doc);
 	jSmart.prototype.left_delimiter = '[';
 	jSmart.prototype.right_delimiter = ']';
@@ -24,8 +24,6 @@ var showDoc = function(v, list) {
 		$.ajax({url: 'http://m.qalet.com/api/newsfeed/wanwei/getPage.js', data:{url:''},
 			dataType:'json', 
 			success: function(data,status,xhr){
-				console.log('data--->');
-				console.log(data);
 				showData(list, data);
 				//	$('.'+mapping_data.id).find('.doc_show').html(data.title + '<br/>' + data.body);
 			},
