@@ -40,7 +40,7 @@ try {
 			return (
 				<div>Test Itemdoc {this.state.doc.title}
 					<button type="button" class="btn btn-primary btn-lg" onClick={this.props.parent.showList()}>Back</button>		
-					<div dangerouslySetInnerHTML={{this.state.doc.body}}></div>
+					<div dangerouslySetInnerHTML={{__html: this.state.doc.body}}></div>
 				</div>
 			)
 		}	
