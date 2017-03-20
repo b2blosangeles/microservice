@@ -16,6 +16,7 @@ var showData = function(list, doc) {
 	$('.'+mapping_data.id).html(html);
 	$('.'+mapping_data.id).show(0);
 	$('.'+mapping_data.id).find("a").bind("click", function() {
+		console.log('==niu=');
                 showDoc($(this).attr('data'), list);
         });	
 };
