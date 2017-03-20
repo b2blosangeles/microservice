@@ -12,10 +12,10 @@ try {
 		}
 	});
 	ReactDOM.render(
-			<Home/>	
-			,
-			 $('.'+mapping_data.id)[0]
-		);	
+		<Home/>	
+		,
+		 $('.'+mapping_data.id)[0]
+	);	
 } catch (err) {
 	alert(err.message);
 }
