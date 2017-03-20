@@ -61,8 +61,20 @@ try {
 			  );
 		}
 	});
+	var App = React.createClass({
+		getInitialState: function() {
+		},
+		render: function() {
+			var me = this;
+			return (
+				<Home/>
+			  );
+		}		
+		
+	});
+	
 	ReactDOM.render(
-		<Home/>	
+		<App/>	
 		,
 		 $('.'+mapping_data.id)[0]
 	);
