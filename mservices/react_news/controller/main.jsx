@@ -10,7 +10,6 @@ try {
 	});
 	var Itemdoc =  React.createClass({
 		getInitialState: function() {
-			console.log('niu 1');
 			var me = this;
 			$.ajax({url: 'http://m.qalet.com/api/newsfeed/wxct/wxct_page.js', data:{url:me.props.item.href},
 				dataType:'json', 
@@ -46,8 +45,12 @@ try {
 		}	
 	});
 	var Home = React.createClass({
+		
 		getInitialState: function() {
 			var me = this;
+			me.setState({ID: 1234}, function() {
+			});
+			
 			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 			{}, 
 			function (data) {
@@ -89,13 +92,13 @@ try {
 			var me = this;
 			return (
 				<div id="viewpoint">
-					Loading ... 
+					Loading ... {this.stat.ID} ...
 				</div>
 			  );
 		},
 		componentDidUpdate: function() {
 			var me = this;
-			me.showList()();
+		//	me.showList()();
 		}
 	});
 	
