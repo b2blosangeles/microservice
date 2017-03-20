@@ -22,7 +22,10 @@ try {
 			return {list:[]};
 		},
 		showDoc: function(item) {
-			console.log(item);
+			return function() {
+				console.log(item);
+			}
+			
 		},		
 		render: function() {
 			var me = this;
