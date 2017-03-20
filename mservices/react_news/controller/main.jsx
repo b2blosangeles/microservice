@@ -4,7 +4,7 @@ try {
 			return (
 				<div className="container-fluid">
 					<div className="row">
-						test
+						test 2
 					</div>	
 				</div>
 			  );
