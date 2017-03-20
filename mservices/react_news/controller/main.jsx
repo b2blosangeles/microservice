@@ -2,7 +2,7 @@ try {
 	var Textitem =  React.createClass({
 		render: function() {
 			return (
-				<div>{this.props.item.text}</div>
+				<div><a href="JavaScript:void(0)">{this.props.item.text}</a></div>
 			)
 		}	
 	});	
