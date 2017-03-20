@@ -1,4 +1,5 @@
 try {	
+	/*
 	ReactDOM.render(
 		<div className="container-fluid">
 			<div className="row">
@@ -8,7 +9,7 @@ try {
 		,
 		 $('.'+mapping_data.id)[0]
 	);
-	
+	*/
 } catch (err) {
 	alert(err.message);
 }
