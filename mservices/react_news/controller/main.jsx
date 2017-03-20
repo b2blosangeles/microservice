@@ -19,7 +19,7 @@ try {
 				<div className="container-fluid">
 					<div className="row">
 						{this.state.list.map(function(item, index) {
-							return 'test 4' 
+							return item.text + ' '; 
 						})}	
 					</div>	
 				</div>
