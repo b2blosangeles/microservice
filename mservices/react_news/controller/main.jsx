@@ -19,7 +19,7 @@ try {
 		render: function() {
 			return (
 				<div>Test Itemdoc 
-					<button type="button" class="btn btn-primary btn-lg">Back</button>		
+					<button type="button" class="btn btn-primary btn-lg" onClick={showList}>Back</button>		
 				</div>
 			)
 		}	
