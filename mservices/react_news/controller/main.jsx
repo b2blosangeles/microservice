@@ -88,12 +88,11 @@ try {
 		},		
 		render: function() {
 			var me = this;
-			me.setState({ID: 1234}, function() {
-			});
+			me._ID =  1234;
 						
 			return (
-				<div id="viewpoint">
-					Loading ... {me.state.ID} -> ...
+				<div id="viewpoint_{me.ID}">
+					Loading ... {me.ID} -> ...
 				</div>
 			  );
 		},
