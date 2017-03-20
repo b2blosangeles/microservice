@@ -11,6 +11,21 @@ try {
 	var Itemdoc =  React.createClass({
 		getInitialState: function() {
 			var me = this;
+			$.ajax({url: 'http://m.qalet.com/api/newsfeed/wxct/wxct_page.js', data:{url:this.props.item.url},
+				dataType:'json', 
+				success: function(data,status,xhr){
+					console.log('data--->');
+					console.log(data);
+				
+					//	$('.'+mapping_data.id).find('.doc_show').html(data.title + '<br/>' + data.body);
+				},
+				error: function(xhr,status,error){
+					alert('error');
+					
+
+				}
+			});			
+			
 			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 			{}, 
 			function (data) {
