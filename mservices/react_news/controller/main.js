@@ -1,12 +1,16 @@
-ReactDOM.render(
-	<div className="container-fluid">
-		<div className="row">
-			test
-		</div>	
-	</div>
-	,
-	 $('.'+mapping_data.id)[0]
-);
+try {
+	ReactDOM.render(
+		<div className="container-fluid">
+			<div className="row">
+				test
+			</div>	
+		</div>
+		,
+		 $('.'+mapping_data.id)[0]
+	);
+} catch (err) {
+	alert(err.message);
+}
 
 /*
 var data = {
