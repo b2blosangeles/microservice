@@ -1,5 +1,19 @@
 try {	
 	var Home = React.createClass({
+		getInitialState: function() {
+			var me = this;
+			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
+			{}, 
+			function (data) {
+				var d = JSON.parse(data); 
+				me.setState({list: d }, function() {
+					console.log(d);
+					//me.playVideo(d[Math.floor(Math.random()*d.length)].vid)();
+				});
+
+			},'text');
+			return {list:[]};
+		},		
 		render: function() {
 			return (
 				<div className="container-fluid">
