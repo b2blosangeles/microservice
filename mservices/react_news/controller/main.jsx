@@ -92,7 +92,7 @@ try {
 			var me = this;
 			return (
 				<div id="viewpoint">
-					Loading ... {this.stat.ID} ...
+					Loading ... {this.state.ID} ...
 				</div>
 			  );
 		},
