@@ -59,7 +59,7 @@ try {
 					</div>	
 				</div>
 				,
-				 $('#'+viewpoint)[0]
+				 $('#viewpoint')[0]
 			);
 		},		
 		render: function() {
