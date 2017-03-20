@@ -12,9 +12,7 @@ try {
 			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 			{}, 
 			function (data) {
-				var d = JSON.parse(data); 
-				me.setState({list: d }, function() {
-					console.log(d);
+				me.setState({list: data }, function() {
 					//me.playVideo(d[Math.floor(Math.random()*d.length)].vid)();
 				});
 
