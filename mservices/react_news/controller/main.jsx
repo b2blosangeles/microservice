@@ -11,7 +11,7 @@ try {
 	var Itemdoc =  React.createClass({
 		render: function() {
 			return (
-				<div>Test Itemdoc</div>
+				<div>Test Itemdoc <a onClick="this.props.parent.showDoc(this.props.item)"></div>
 			)
 		}	
 	});
@@ -29,16 +29,26 @@ try {
 			return {list:[]};
 		},
 		showDoc: function(item) {
+			var me = this;
 			return function() {
-				console.log(item);
 				ReactDOM.render(
-					<Itemdoc/>	
+					<Itemdoc item={item} parent={me} />	
 					,
 					 $('.'+mapping_data.id)[0]
 				);				
 			}
 			
-		},		
+		},
+		showList: function() {
+			var me = this;
+			return function() {
+				ReactDOM.render(
+					<Itemdoc item={item} parent={me} />	
+					,
+					 $('.'+mapping_data.id)[0]
+				);
+			}
+		},			
 		render: function() {
 			var me = this;
 			return (
@@ -52,11 +62,7 @@ try {
 			  );
 		}
 	});
-	ReactDOM.render(
-		<Home/>	
-		,
-		 $('.'+mapping_data.id)[0]
-	);
+	Home.showList()();
 	// $('.'+mapping_data.id).show(0);
 } catch (err) {
 	alert(err.message);
