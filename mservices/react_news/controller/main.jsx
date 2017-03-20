@@ -1,4 +1,11 @@
 try {	
+	var Textitem =  React.createClass({
+		render: function() {
+			return (
+				<div>{this.props.item.text}</div>
+			)
+		}	
+	});	
 	var Home = React.createClass({
 		getInitialState: function() {
 			var me = this;
@@ -13,13 +20,14 @@ try {
 
 			},'text');
 			return {list:[]};
-		},		
+		},	
 		render: function() {
+			var me = this;
 			return (
 				<div className="container-fluid">
 					<div className="row">
 						{this.state.list.map(function(item, index) {
-							return item.text + '<br/> '; 
+							return <Textitem item={item} parent={me}/>
 						})}	
 					</div>	
 				</div>
