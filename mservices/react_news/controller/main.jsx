@@ -59,13 +59,13 @@ try {
 					</div>	
 				</div>
 				,
-				 $('.'+mapping_data.id)[0]
+				 $('#'+viewpoint)[0]
 			);
 		},		
 		render: function() {
 			var me = this;
 			return (
-				<div>
+				<div id="viewpoint">
 					Loading ... 
 				</div>
 			  );
@@ -74,17 +74,6 @@ try {
 			var me = this;
 			me.showList();
 		}
-	});
-	var App = React.createClass({
-		getInitialState: function() {
-		},
-		render: function() {
-			var me = this;
-			return (
-				<Home/>
-			  );
-		}		
-		
 	});
 	
 	ReactDOM.render(
