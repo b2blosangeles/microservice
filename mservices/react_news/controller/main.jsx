@@ -18,7 +18,7 @@ try {
 					//me.playVideo(d[Math.floor(Math.random()*d.length)].vid)();
 				});
 
-			},'text');
+			},'json');
 			return {list:[]};
 		},	
 		render: function() {
