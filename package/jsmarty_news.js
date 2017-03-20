@@ -9,7 +9,7 @@
 			"/mservices/jsmarty_news/controller/main.js"
 		],
 		"react_news":[
-			"/mservices/react_news/controller/main.js"
+			"/mservices/react_news/controller/main.jsx"
 		]			
 			
 	}, 
