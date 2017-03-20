@@ -23,8 +23,9 @@ var code_process = function(jslib) {
 		res.send({error:error.message});
 		return true;
 	}
+	body = iconv_lite.decode(body, 'gb2312');
 	jsdom.env({
-		html: iconv_lite.decode(body, 'gb2312'),
+		html: body,
 	//	scripts: [
 	//	  'http://code.jquery.com/jquery-1.5.min.js'
 	//	],
