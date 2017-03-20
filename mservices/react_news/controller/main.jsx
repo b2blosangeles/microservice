@@ -74,7 +74,7 @@ try {
 	});
 	
 	ReactDOM.render(
-		<App/>	
+		<Home/>	
 		,
 		 $('.'+mapping_data.id)[0]
 	);
