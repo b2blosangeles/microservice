@@ -48,9 +48,7 @@ try {
 		
 		getInitialState: function() {
 			var me = this;
-			me.setState({ID: 1234}, function() {
-			});
-			
+
 			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 			{}, 
 			function (data) {
@@ -90,6 +88,9 @@ try {
 		},		
 		render: function() {
 			var me = this;
+			me.setState({ID: 1234}, function() {
+			});
+						
 			return (
 				<div id="viewpoint">
 					Loading ... {me.state.ID} -> ...
