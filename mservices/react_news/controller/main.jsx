@@ -11,8 +11,11 @@ try {
 			  );
 		}
 	});
-	
-	console.log(123);
+	ReactDOM.render(
+			<Home/>	
+			,
+			 $('.'+mapping_data.id)[0]
+		);	
 } catch (err) {
 	alert(err.message);
 }
