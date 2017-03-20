@@ -66,8 +66,8 @@ if (pipe) {
 	jscache({url: 'http://code.jquery.com/jquery-1.5.min.js', ttl:36000000000},
 		function(error, response, body) {
 			cache.setCacheDirectory('/tmp/cache/wanwei_list');
-			cache.setValue('ttl', 100);			
-			cache({url: url_src}, code_process(body));
+			cache.setValue('ttl', 30000);			
+			cache({url: url_src, encoding:null}, code_process(body));
 		}
 	); 	
 }
