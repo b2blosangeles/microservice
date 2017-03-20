@@ -72,6 +72,9 @@ try {
 					Loading ... 
 				</div>
 			  );
+		},
+		componentDidMount: function() {
+			console.log('after');
 		}
 	});
 	var App = React.createClass({
