@@ -1,13 +1,22 @@
 try {	
 	var Textitem =  React.createClass({
+		var me = this.props;
 		render: function() {
 			return (
-				<div><a href="JavaScript:void(0)" onClick={this.props.parent.showDoc(this.props.item)}>
+				<div><a href="JavaScript:void(0)" onClick={me.parent.showDoc(me.item)}>
 					{this.props.item.text}</a>
 				</div>
 			)
 		}	
-	});	
+	});
+	var Itemdoc =  React.createClass({
+		var me = this.props;
+		render: function() {
+			return (
+				<div>Test Itemdoc</div>
+			)
+		}	
+	});		
 	var Home = React.createClass({
 		getInitialState: function() {
 			var me = this;
@@ -24,6 +33,13 @@ try {
 		showDoc: function(item) {
 			return function() {
 				console.log(item);
+				
+				ReactDOM.render(
+					<Itemdoc/>	
+					,
+					 $('.'+mapping_data.id)[0]
+				);				
+				
 			}
 			
 		},		
