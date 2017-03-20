@@ -2,7 +2,9 @@ try {
 	var Textitem =  React.createClass({
 		render: function() {
 			return (
-				<div><a href="JavaScript:void(0)">{this.props.item.text}</a></div>
+				<div><a href="JavaScript:void(0)" onClick={this.props.parent.showDoc(this.props.item)}>
+					{this.props.item.text}</a>
+				</div>
 			)
 		}	
 	});	
@@ -18,7 +20,10 @@ try {
 
 			},'json');
 			return {list:[]};
-		},	
+		},
+		showDoc: function(item) {
+			console.log(item);
+		},		
 		render: function() {
 			var me = this;
 			return (
