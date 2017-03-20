@@ -18,7 +18,9 @@ try {
 			return (
 				<div className="container-fluid">
 					<div className="row">
-						test 3
+						{this.state.list.map(function(item, index) {
+							return {item} = 
+						})}		
 					</div>	
 				</div>
 			  );
