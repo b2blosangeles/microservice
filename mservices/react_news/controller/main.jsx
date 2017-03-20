@@ -47,16 +47,29 @@ try {
 				);				
 			}
 			
-		},			
+		},
+		showList: function(item) {
+			var me = this;
+			return function() {
+				ReactDOM.render(
+					<div className="container-fluid">
+						<div className="row">
+							{this.state.list.map(function(item, index) {
+								return <Textitem item={item} parent={me}/>
+							})}	
+						</div>	
+					</div>
+					,
+					 $('.'+mapping_data.id)[0]
+				);				
+			}
+			
+		},		
 		render: function() {
 			var me = this;
 			return (
-				<div className="container-fluid">
-					<div className="row">
-						{this.state.list.map(function(item, index) {
-							return <Textitem item={item} parent={me}/>
-						})}	
-					</div>	
+				<div>
+					Loading ... 
 				</div>
 			  );
 		}
