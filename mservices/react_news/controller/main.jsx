@@ -8,10 +8,22 @@ try {
 			)
 		}	
 	});
-	var Itemdoc =  React.createClass({		
+	var Itemdoc =  React.createClass({
+		getInitialState: function() {
+			var me = this;
+			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
+			{}, 
+			function (data) {
+				me.setState({doc: data[1] }, function() {
+					//me.playVideo(d[Math.floor(Math.random()*d.length)].vid)();
+				});
+
+			},'json');
+			return {doc:[]};
+		},		
 		render: function() {
 			return (
-				<div>Test Itemdoc 
+				<div>Test Itemdoc {this.state.doc.text}
 					<button type="button" class="btn btn-primary btn-lg" onClick={this.props.parent.showList()}>Back</button>		
 				</div>
 			)
