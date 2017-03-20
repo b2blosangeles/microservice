@@ -33,13 +33,13 @@ try {
 		showDoc: function(item) {
 			return function() {
 				console.log(item);
-				
+				/*
 				ReactDOM.render(
 					<Itemdoc/>	
 					,
 					 $('.'+mapping_data.id)[0]
 				);				
-				
+				*/
 			}
 			
 		},		
