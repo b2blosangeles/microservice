@@ -1,3 +1,14 @@
+ReactDOM.render(
+	<div className="container-fluid">
+		<div className="row">
+			test
+		</div>	
+	</div>
+	,
+	 $('.'+mapping_data.id)[0]
+);
+
+/*
 var data = {
 	lang:'en'
 };
@@ -46,3 +57,4 @@ var showDoc = function(v, list) {
 $.ajax({url: 'http://m.qalet.com/api/newsfeed/wanwei/getTitle.js', dataType:'json', success: function(data,status,xhr){
 	showData(data,{});
 }});
+*/
