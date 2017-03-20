@@ -9,9 +9,16 @@ try {
 		}	
 	});
 	var Itemdoc =  React.createClass({
+		showList: function() {
+			ReactDOM.render(
+				<Home/>	
+				,
+				 $('.'+mapping_data.id)[0]
+			);
+		},		
 		render: function() {
 			return (
-				<div>Test Itemdoc <a onClick="this.props.parent.showDoc(this.props.item)"></div>
+				<div>Test Itemdoc <a onClick="this.showList()"></div>
 			)
 		}	
 	});
@@ -38,16 +45,6 @@ try {
 				);				
 			}
 			
-		},
-		showList: function() {
-			var me = this;
-			return function() {
-				ReactDOM.render(
-					<Home/>	
-					,
-					 $('.'+mapping_data.id)[0]
-				);
-			}
 		},			
 		render: function() {
 			var me = this;
@@ -62,7 +59,11 @@ try {
 			  );
 		}
 	});
-	Home.showList()();
+	ReactDOM.render(
+		<Home/>	
+		,
+		 $('.'+mapping_data.id)[0]
+	);
 	// $('.'+mapping_data.id).show(0);
 } catch (err) {
 	alert(err.message);
