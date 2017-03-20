@@ -43,7 +43,7 @@ try {
 			var me = this;
 			return function() {
 				ReactDOM.render(
-					<Itemdoc item={item} parent={me} />	
+					<Home/>	
 					,
 					 $('.'+mapping_data.id)[0]
 				);
