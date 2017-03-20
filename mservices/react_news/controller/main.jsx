@@ -43,7 +43,7 @@ try {
 		},
 		showList: function() {
 			var me = this;
-			return function() {
+		//	return function() {
 				ReactDOM.render(
 					<div className="container-fluid">
 						<div className="row">
@@ -55,7 +55,7 @@ try {
 					,
 					 $('#viewpoint')[0]
 				);
-			}	
+		//	}	
 		},		
 		render: function() {
 			var me = this;
