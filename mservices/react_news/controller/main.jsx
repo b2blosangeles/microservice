@@ -12,7 +12,7 @@ try {
 		render: function() {
 			return (
 				<div>Test Itemdoc 
-					<button type="button" class="btn btn-primary btn-lg" onClick={this.props.parent.showList}>Back</button>		
+					<button type="button" class="btn btn-primary btn-lg" onClick={this.props.parent.showList()}>Back</button>		
 				</div>
 			)
 		}	
@@ -43,11 +43,11 @@ try {
 		},
 		showList: function() {
 			var me = this;
-		//	return function() {
+			return function() {
 				ReactDOM.render(
 					<div className="container-fluid">
 						<div className="row">
-							{this.state.list.map(function(item, index) {
+							{me.state.list.map(function(item, index) {
 								return <Textitem item={item} parent={me}/>
 							})}	
 						</div>	
@@ -55,7 +55,7 @@ try {
 					,
 					 $('#viewpoint')[0]
 				);
-		//	}	
+			}	
 		},		
 		render: function() {
 			var me = this;
@@ -67,7 +67,7 @@ try {
 		},
 		componentDidUpdate: function() {
 			var me = this;
-			me.showList();
+			me.showList()();
 			console.log('==componentDidUpdate==');
 		}
 	});
