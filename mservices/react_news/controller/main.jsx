@@ -91,8 +91,8 @@ try {
 			me._ID =  1234;
 						
 			return (
-				<div id="viewpoint_{me.ID}">
-					Loading ... {me.ID} -> ...
+				<div id="viewpoint_{me._ID}">
+					Loading ... {me._ID} -> ...
 				</div>
 			  );
 		},
