@@ -44,7 +44,6 @@ try {
 		showList: function() {
 			var me = this;
 			return function() {
-				if (!this.state) return true;
 				ReactDOM.render(
 					<div className="container-fluid">
 						<div className="row">
