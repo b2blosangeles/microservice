@@ -12,13 +12,11 @@ try {
 		getInitialState: function() {
 			console.log('niu 1');
 			var me = this;
-			$.ajax({url: 'http://m.qalet.com/api/newsfeed/wxct/wxct_page.js', data:{url:me.props.item.link},
+			$.ajax({url: 'http://m.qalet.com/api/newsfeed/wxct/wxct_page.js', data:{url:me.props.item.href},
 				dataType:'json', 
 				success: function(data,status,xhr){
-					console.log('data--->');
-					console.log(data);
-				
-					//	$('.'+mapping_data.id).find('.doc_show').html(data.title + '<br/>' + data.body);
+					me.setState({doc: data}, function() {
+					});
 				},
 				error: function(xhr,status,error){
 					alert('error');
@@ -26,7 +24,7 @@ try {
 
 				}
 			});			
-			
+			/*
 			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 			{}, 
 			function (data) {
@@ -35,6 +33,7 @@ try {
 				});
 
 			},'json');
+			*/
 			return {doc:[]};
 		},		
 		render: function() {
