@@ -66,7 +66,7 @@ if (pipe) {
 	jscache({url: 'http://code.jquery.com/jquery-1.5.min.js', ttl:36000000000},
 		function(error, response, body) {
 			cache.setCacheDirectory('/tmp/cache/wxct_list');
-			cache.setValue('ttl', 3000000);			
+			cache.setValue('ttl', 1000);			
 			cache({url: url_src}, code_process(body));
 		}
 	); 	
