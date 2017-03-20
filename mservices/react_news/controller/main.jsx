@@ -1,5 +1,5 @@
 try {	
-	/*
+
 	var Home = React.createClass({
 		render: function() {
 			return (
@@ -11,7 +11,7 @@ try {
 			  );
 		}
 	});
-	*/
+	
 	console.log(123);
 } catch (err) {
 	alert(err.message);
