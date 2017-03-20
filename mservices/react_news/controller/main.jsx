@@ -74,7 +74,8 @@ try {
 			  );
 		},
 		componentDidMount: function() {
-			console.log('after');
+			var me = this;
+			me.showList();
 		}
 	});
 	var App = React.createClass({
