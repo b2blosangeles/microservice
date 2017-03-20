@@ -18,7 +18,9 @@ try {
 		},		
 		render: function() {
 			return (
-				<div>Test Itemdoc <a onClick={this.showList}>Back</a></div>
+				<div>Test Itemdoc 
+					<button type="button" class="btn btn-primary btn-lg">Back</button>		
+				</div>
 			)
 		}	
 	});
