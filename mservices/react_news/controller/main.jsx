@@ -38,8 +38,9 @@ try {
 		},		
 		render: function() {
 			return (
-				<div>Test Itemdoc {this.state.doc.text}
+				<div>Test Itemdoc {this.state.doc.title}
 					<button type="button" class="btn btn-primary btn-lg" onClick={this.props.parent.showList()}>Back</button>		
+					<div>{this.state.doc.body}</div>
 				</div>
 			)
 		}	
