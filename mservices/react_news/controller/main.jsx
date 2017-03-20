@@ -10,8 +10,9 @@ try {
 	});
 	var Itemdoc =  React.createClass({
 		getInitialState: function() {
+			console.log('niu 1');
 			var me = this;
-			$.ajax({url: 'http://m.qalet.com/api/newsfeed/wxct/wxct_page.js', data:{url:this.props.item.link},
+			$.ajax({url: 'http://m.qalet.com/api/newsfeed/wxct/wxct_page.js', data:{url:me.props.item.link},
 				dataType:'json', 
 				success: function(data,status,xhr){
 					console.log('data--->');
