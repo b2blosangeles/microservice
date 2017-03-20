@@ -11,7 +11,7 @@ try {
 	var Itemdoc =  React.createClass({
 		getInitialState: function() {
 			var me = this;
-			$.ajax({url: 'http://m.qalet.com/api/newsfeed/wxct/wxct_page.js', data:{url:this.props.item.url},
+			$.ajax({url: 'http://m.qalet.com/api/newsfeed/wxct/wxct_page.js', data:{url:this.props.item.link},
 				dataType:'json', 
 				success: function(data,status,xhr){
 					console.log('data--->');
