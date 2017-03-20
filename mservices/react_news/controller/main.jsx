@@ -8,16 +8,13 @@ try {
 			)
 		}	
 	});
-	/*
 	var Itemdoc =  React.createClass({
-		var me = this.props;
 		render: function() {
 			return (
 				<div>Test Itemdoc</div>
 			)
 		}	
 	});
-	*/
 	var Home = React.createClass({
 		getInitialState: function() {
 			var me = this;
@@ -34,6 +31,11 @@ try {
 		showDoc: function(item) {
 			return function() {
 				console.log(item);
+				ReactDOM.render(
+					<Itemdoc/>	
+					,
+					 $('.'+mapping_data.id)[0]
+				);				
 			}
 			
 		},		
