@@ -9,6 +9,7 @@ try {
 			)
 		}	
 	});
+	/*
 	var Itemdoc =  React.createClass({
 		var me = this.props;
 		render: function() {
@@ -16,7 +17,8 @@ try {
 				<div>Test Itemdoc</div>
 			)
 		}	
-	});		
+	});
+	*/
 	var Home = React.createClass({
 		getInitialState: function() {
 			var me = this;
