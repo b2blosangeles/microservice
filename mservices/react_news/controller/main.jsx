@@ -60,7 +60,7 @@ try {
 						</div>	
 					</div>
 					,
-					me
+					 $('.'+mapping_data.id)[0]
 				);				
 			}
 			
