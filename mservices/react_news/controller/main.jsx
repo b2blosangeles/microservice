@@ -70,7 +70,7 @@ try {
 				</div>
 			  );
 		},
-		componentDidMount: function() {
+		componentDidUpdate: function() {
 			var me = this;
 			me.showList();
 		}
