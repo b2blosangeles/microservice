@@ -8,18 +8,11 @@ try {
 			)
 		}	
 	});
-	var Itemdoc =  React.createClass({
-		showList: function() {
-			ReactDOM.render(
-				<Home/>	
-				,
-				 $('.'+mapping_data.id)[0]
-			);
-		},		
+	var Itemdoc =  React.createClass({		
 		render: function() {
 			return (
 				<div>Test Itemdoc 
-					<button type="button" class="btn btn-primary btn-lg" onClick={this.showList}>Back</button>		
+					<button type="button" class="btn btn-primary btn-lg" onClick={this.props.parent.showList()}>Back</button>		
 				</div>
 			)
 		}	
@@ -43,24 +36,26 @@ try {
 				ReactDOM.render(
 					<Itemdoc item={item} parent={me} />	
 					,
-					 $('.'+mapping_data.id)[0]
+					 $('#viewpoint')[0]
 				);				
 			}
 			
 		},
-		showList: function(item) {
+		showList: function() {
 			var me = this;
-			ReactDOM.render(
-				<div className="container-fluid">
-					<div className="row">
-						{this.state.list.map(function(item, index) {
-							return <Textitem item={item} parent={me}/>
-						})}	
-					</div>	
-				</div>
-				,
-				 $('#viewpoint')[0]
-			);
+			return function() {
+				ReactDOM.render(
+					<div className="container-fluid">
+						<div className="row">
+							{this.state.list.map(function(item, index) {
+								return <Textitem item={item} parent={me}/>
+							})}	
+						</div>	
+					</div>
+					,
+					 $('#viewpoint')[0]
+				);
+			}	
 		},		
 		render: function() {
 			var me = this;
@@ -72,7 +67,7 @@ try {
 		},
 		componentDidUpdate: function() {
 			var me = this;
-			me.showList();
+			me.showList()();
 			console.log('==componentDidUpdate==');
 		}
 	});
