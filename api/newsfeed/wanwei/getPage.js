@@ -74,7 +74,7 @@ if (pipe) {
 		function(error, response, body) {
 			cache.setCacheDirectory('/tmp/cache/wxct_page');
 			cache.setValue('ttl', 360000000);			
-			cache({url: url_src}, code_process(body));
+			cache({url: url_src, encoding:null}, code_process(body));
 		}
 	); 	
 }
