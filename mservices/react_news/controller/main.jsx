@@ -5,7 +5,7 @@ try {
 			return (
 				<div><a href="JavaScript:void(0)" onClick={this.props.parent.showDoc(this.props.item)}>
 					{this.props.item.text}</a>
-					<button type="button" class="btn btn-primary btn-lg">Back</button>
+					<button type="button" class="btn btn-info">Back</button>
 				</div>
 			)
 		}	
