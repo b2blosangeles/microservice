@@ -1,9 +1,6 @@
 {
 	"tpls":[],
-	"filelist":[
-		"/js/react/react.min.js",
-		"/js/react/react-dom.min.js"		
-	],
+	"filelist":[],
 	"mservice": {	
 		"jsmarty_news":[
 			"/mservices/jsmarty_news/controller/main.js"
@@ -15,7 +12,12 @@
 	}, 
 	"dependence": {
 		"jsmarty_news":[
-		]	
+		],
+		"react_news":[
+			"/js/react/react.min.js",
+			"/js/react/react-dom.min.js",
+			"/js/react/ReactRouter/3.0.2/ReactRouter.min.js"		
+		]
 	},
 	"ms_tpls": {
 		"jsmarty_news":[
