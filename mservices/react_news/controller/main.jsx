@@ -65,7 +65,7 @@ try {
 				ReactDOM.render(
 					<Itemdoc item={item} parent={me} />	
 					,
-					 $('.'+mapping_data.id)[0]
+					 $('viewpoint')[0]
 				);				
 			}
 			
@@ -82,16 +82,16 @@ try {
 						</div>	
 					</div>
 					,
-					 $('.'+mapping_data.id)[0]
+					 $('viewpoint')[0]
 				);
 			}	
 		},		
 		render: function() {
 			var me = this;		
 			return (
-				<div>
+				<viewpoint>
 					Loading ...99
-				</div>
+				</viewpoint>
 			  );
 		},
 		componentDidUpdate: function() {
