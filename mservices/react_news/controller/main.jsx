@@ -56,7 +56,7 @@ try {
 			var me = this;
 			return function() {
 				ReactDOM.render(
-					<div className="container-fluid">
+					<div className="container-fluid info_bg">
 						<div className="row">
 							{me.state.list.map(function(item, index) {
 								return <ListItem item={item} parent={me}/>
@@ -71,10 +71,7 @@ try {
 		render: function() {
 			var me = this;		
 			return (
-				<div>
-					Loading ...
-					<button type="button" className="btn btn-info">Back</button>
-				</div>
+				<div>...</div>
 			  );
 		},
 		componentDidUpdate: function() {
