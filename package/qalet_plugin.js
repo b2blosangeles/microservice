@@ -10,7 +10,7 @@
 			"/mservices/react_news/controller/main.jsx"
 		],
 		"spotlight":[
-			"/mservices/react_app/spotlight/controller/main.js"
+			"/mservices/react_app/spotlight/controller/main.jsx"
 		]
 			
 	}, 
@@ -25,7 +25,7 @@
 		"spotlight":[
 			"/js/react/react.min.js",
 			"/js/react/react-dom.min.js",
-			"/js/react/ReactRouter/3.0.2/ReactRouter.min.jsx"
+			"/js/react/ReactRouter/3.0.2/ReactRouter.min.js"
 		]
 	},
 	"ms_tpls": {
