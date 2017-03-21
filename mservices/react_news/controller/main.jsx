@@ -1,4 +1,5 @@
 try {	
+	var viewpoint = $('.'+mapping_data.id)[0];
 	var Textitem =  React.createClass({
 		render: function() {
 			return (
@@ -65,7 +66,7 @@ try {
 				ReactDOM.render(
 					<Itemdoc item={item} parent={me} />	
 					,
-					 $('#viewpoint')[0]
+					 viewpoint
 				);				
 			}
 			
@@ -82,7 +83,7 @@ try {
 						</div>	
 					</div>
 					,
-					 $('#viewpoint')[0]
+					viewpoint
 				);
 			}	
 		},		
@@ -103,7 +104,7 @@ try {
 	ReactDOM.render(
 		<Home/>	
 		,
-		 $('.'+mapping_data.id)[0]
+		 viewpoint
 	);
 	// $('.'+mapping_data.id).show(0);
 } catch (err) {
