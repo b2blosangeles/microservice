@@ -5,7 +5,9 @@ try {
 			return (
 				<div><a href="JavaScript:void(0)" onClick={this.props.parent.showDoc(this.props.item)}>
 					{this.props.item.text}</a>
+					<div class="class_react_news">
 					<button type="button" class="btn btn-info">Back</button>
+					</div>
 				</div>
 			)
 		}	
