@@ -10,7 +10,7 @@
 			"/mservices/react_news/controller/main.jsx"
 		],
 		"spotlight":[
-			"/mservices/react_app/spotlight/controller/main.js"
+			"/mservices/react_app/spotlight/controller/main.jsx"
 		]
 			
 	}, 
