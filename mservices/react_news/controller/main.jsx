@@ -25,6 +25,8 @@ try {
 				}
 			});			
 			/*
+			wanwei/getTitle.js
+			
 			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 			{}, 
 			function (data) {
@@ -50,7 +52,7 @@ try {
 		getInitialState: function() {
 			var me = this;
 
-			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
+			$.get('http://m.qalet.com/api/newsfeed/wanwei/getTitle.js',
 			{}, 
 			function (data) {
 				me.setState({list: data }, function() {
