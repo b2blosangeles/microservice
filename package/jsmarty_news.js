@@ -6,6 +6,7 @@
 			"/mservices/jsmarty_news/controller/main.js"
 		],
 		"react_news":[
+			"/mservices/react_news/view/components.jsx",
 			"/mservices/react_news/controller/main.jsx"
 		]			
 			
@@ -22,9 +23,6 @@
 	"ms_tpls": {
 		"jsmarty_news":[
 			"/mservices/jsmarty_news/view/news_list.html"
-		],
-		"react_news":[
-			"/mservices/react_news/view/news_list.html"
-		]			
+		]		
 	}	
 }
