@@ -16,17 +16,7 @@ try {
 			},'json');
 			return {list:[]};
 		},
-		showDoc: function(item) {
-			var me = this;
-			return function() {
-				ReactDOM.render(
-					<DocItem item={item} parent={me} />	
-					,
-					 viewpoint
-				);				
-			}
-			
-		},
+
 		showList: function() {
 			var me = this;
 			return function() {
