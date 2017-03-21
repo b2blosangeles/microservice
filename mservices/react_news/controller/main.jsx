@@ -12,7 +12,7 @@ try {
 	var Itemdoc =  React.createClass({
 		getInitialState: function() {
 			var me = this;
-			$.ajax({url: 'http://m.qalet.com/api/newsfeed/wxct/wxct_page.js', data:{url:me.props.item.href},
+			$.ajax({url: 'http://m.qalet.com/api/newsfeed/wanwei/getPage.js', data:{url:me.props.item.href},
 				dataType:'json', 
 				success: function(data,status,xhr){
 					me.setState({doc: data}, function() {
