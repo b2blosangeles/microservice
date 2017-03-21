@@ -92,7 +92,7 @@ try {
 						
 			return (
 				<div>
-					Loading ... {me._ID} -> ...
+					Loading ...
 				</div>
 			  );
 		},
