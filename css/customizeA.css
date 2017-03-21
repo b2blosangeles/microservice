@@ -1,4 +1,8 @@
 .info_bg { background-color:#ccc; }
+.body-film {
+    min-height: 100%;
+    overflow-y: scroll;
+}
 .info_box { padding:6px;}
 [if $solution == 1]
 .info_bg { background-color:lightgreen;}
