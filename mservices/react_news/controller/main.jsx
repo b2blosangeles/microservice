@@ -1,6 +1,6 @@
 try {	
 	var viewpoint = $('.'+mapping_data.id)[0];
-	var Textitem =  React.createClass({
+	var List-item =  React.createClass({
 		render: function() {
 			return (
 				<div>
@@ -24,18 +24,6 @@ try {
 
 				}
 			});			
-			/*
-			wanwei/getTitle.js
-			
-			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
-			{}, 
-			function (data) {
-				me.setState({doc: data[1] }, function() {
-					//me.playVideo(d[Math.floor(Math.random()*d.length)].vid)();
-				});
-
-			},'json');
-			*/
 			return {doc:[]};
 		},		
 		render: function() {
@@ -80,7 +68,7 @@ try {
 					<div className="container-fluid">
 						<div className="row">
 							{me.state.list.map(function(item, index) {
-								return <Textitem item={item} parent={me}/>
+								return <List-item item={item} parent={me}/>
 							})}	
 						</div>	
 					</div>
