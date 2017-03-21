@@ -1,18 +1,18 @@
-.info_bg { background-color:#ccc; }
-.body-film {
-    height: 100%;
-    overflow-y: scroll;
+.qalet_box { background-color:#ccc; height: 100%; overflow-y: scroll;}
+.fill-height  {
+    ;
+    
 }
-.info_box { padding:6px;}
+
 [if $solution == 1]
-.info_bg { background-color:lightgreen;}
+.qalet_box { background-color:lightgreen;}
 [/if]
 [if $solution == 2]
-.info_bg { background-color:lightyellow; color:darkgreen; }
+.qalet_box { background-color:lightyellow; color:darkgreen; }
 [/if]
 [if $solution == 3]
-.info_bg { background-color:lightblue; }
+.qalet_box { background-color:lightblue; }
 [/if]
 [if $solution == 4]
-.info_bg { background-color:pink;}
+.qalet_box { background-color:pink;}
 [/if]
