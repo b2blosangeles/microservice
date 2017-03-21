@@ -56,8 +56,8 @@ try {
 			var me = this;
 			return function() {
 				ReactDOM.render(
-					<div className="container-fluid info_bg">
-						<div className="row">
+					<div className="container-fluid">
+						<div className="row info_bg">
 							{me.state.list.map(function(item, index) {
 								return <ListItem item={item} parent={me}/>
 							})}	
