@@ -56,7 +56,7 @@ try {
 			var me = this;
 			return function() {
 				ReactDOM.render(
-					<div className="container-fluid info_bg body-film">
+					<div className="container-fluid qalet_box">
 						<div className="row">
 							<p className="info_box">	
 							{me.state.list.map(function(item, index) {
