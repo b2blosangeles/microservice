@@ -96,6 +96,7 @@ try {
 			return (
 				<div id="viewpoint">
 					Loading ...
+					<button type="button" class="btn btn-info">Back</button>
 				</div>
 			  );
 		},
