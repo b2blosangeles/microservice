@@ -1,6 +1,6 @@
 try {	
 	var viewpoint = $('.'+mapping_data.id)[0];
-	var List-item =  React.createClass({
+	var ListItem =  React.createClass({
 		render: function() {
 			return (
 				<div>
@@ -68,7 +68,7 @@ try {
 					<div className="container-fluid">
 						<div className="row">
 							{me.state.list.map(function(item, index) {
-								return <List-item item={item} parent={me}/>
+								return <ListItem item={item} parent={me}/>
 							})}	
 						</div>	
 					</div>
