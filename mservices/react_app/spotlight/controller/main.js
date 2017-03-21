@@ -1,3 +1,5 @@
+	console.log('PPP==>');
+
 try {	
 	var viewpoint = $('.'+mapping_data.id)[0];
 
@@ -50,6 +52,7 @@ try {
 	);
 	// $('.'+mapping_data.id).show(0);
 } catch (err) {
+	console.log('err.message===>');
 	console.log(err.message);
 }
 
