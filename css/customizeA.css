@@ -1,4 +1,4 @@
-.info_bg { background-color:#ccc;  }
+.info_bg { background-color:#ccc;  height: inherit; overflow-y: scroll; }
 .info_box { padding:6px;}
 [if $solution == 1]
 .info_bg { background-color:lightgreen;}
