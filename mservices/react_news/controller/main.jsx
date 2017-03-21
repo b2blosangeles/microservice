@@ -94,7 +94,7 @@ try {
 		render: function() {
 			var me = this;		
 			return (
-				<div id="viewpoint">
+				<div>
 					Loading ...
 					<button type="button" class="btn btn-info">Back</button>
 				</div>
