@@ -91,7 +91,7 @@ try {
 			return (
 				<div id="viewpoint">
 					Loading ...
-				</viewpoint>
+				</div>
 			  );
 		},
 		componentDidUpdate: function() {
