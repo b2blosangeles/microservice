@@ -42,6 +42,7 @@ try {
 			return (
 				<div>Test Itemdoc {this.state.doc.title}
 					<button type="button" class="btn btn-primary btn-lg" onClick={this.props.parent.showList()}>Back</button>		
+					<a class="btn btn-success" href="JavaScript:void(0)" onClick={this.props.parent.showList()}>返回</a>					
 					<div dangerouslySetInnerHTML={{__html: this.state.doc.body}}></div>
 				</div>
 			)
