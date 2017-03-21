@@ -1,6 +1,31 @@
 try {	
 	var viewpoint = $('.'+mapping_data.id)[0];
+	var DocItem =  React.createClass({
+		getInitialState: function() {
+			var me = this;
+			$.ajax({url: 'http://m.qalet.com/api/newsfeed/wanwei/getPage.js', data:{url:me.props.item.href},
+				dataType:'json', 
+				success: function(data,status,xhr){
+					me.setState({doc: data}, function() {
+					});
+				},
+				error: function(xhr,status,error){
+					alert('error');
+					
 
+				}
+			});			
+			return {doc:[]};
+		},		
+		render: function() {
+			return (
+				<div>Test Itemdoc {this.state.doc.title}	
+					<a className="btn btn-success" href="JavaScript:void(0)" onClick={this.props.parent.showList()}>返回</a>					
+					<div dangerouslySetInnerHTML={{__html: this.state.doc.body}}></div>
+				</div>
+			)
+		}	
+	});
 	var Home = React.createClass({
 		
 		getInitialState: function() {
@@ -65,6 +90,6 @@ try {
 	);
 	// $('.'+mapping_data.id).show(0);
 } catch (err) {
-	alert(err.message);
+	console.log(err.message);
 }
 
