@@ -1,4 +1,4 @@
-.qalet_box { background-color:#ccc; height: 100%; overflow-y: scroll;}
+.qalet_box { background-color:#ccc; height: 100%; overflow-y: scroll; padding:6px;}
 [if $solution == 1]
 .qalet_box { background-color:lightgreen;}
 [/if]
