@@ -9,8 +9,8 @@
 			"/mservices/react_news/view/components.jsx",
 			"/mservices/react_news/controller/main.jsx"
 		],
-		"spot_light":[
-			"react_app/spotlight/controller/main.js"
+		"spotlight":[
+			"/mservices/react_app/spotlight/controller/main.js"
 		]
 			
 	}, 
@@ -22,7 +22,7 @@
 			"/js/react/react-dom.min.js",
 			"/js/react/ReactRouter/3.0.2/ReactRouter.min.js"		
 		],
-		"spot_light":[
+		"spotlight":[
 			"/js/react/react.min.js",
 			"/js/react/react-dom.min.js",
 			"/js/react/ReactRouter/3.0.2/ReactRouter.min.js"
