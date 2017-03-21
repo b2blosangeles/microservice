@@ -96,7 +96,7 @@ try {
 		},
 		componentDidUpdate: function() {
 			var me = this;
-		//	me.showList()();
+			me.showList()();
 		}
 	});
 	
