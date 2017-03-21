@@ -96,7 +96,7 @@ try {
 			return (
 				<div>
 					Loading ...
-					<button type="button" class="btn btn-info">Back</button>
+					<button type="button" className="btn btn-info">Back</button>
 				</div>
 			  );
 		},
