@@ -65,7 +65,7 @@ try {
 				ReactDOM.render(
 					<Itemdoc item={item} parent={me} />	
 					,
-					 $('viewpoint')[0]
+					 $('#viewpoint')[0]
 				);				
 			}
 			
@@ -82,14 +82,14 @@ try {
 						</div>	
 					</div>
 					,
-					 $('viewpoint')[0]
+					 $('#viewpoint')[0]
 				);
 			}	
 		},		
 		render: function() {
 			var me = this;		
 			return (
-				<viewpoint>
+				<div id="viewpoint">
 					Loading ...
 				</viewpoint>
 			  );
