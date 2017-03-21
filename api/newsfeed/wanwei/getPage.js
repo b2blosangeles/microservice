@@ -73,7 +73,7 @@ if (pipe) {
 	jscache({url: 'http://code.jquery.com/jquery-1.5.min.js', ttl:36000000000},
 		function(error, response, body) {
 			cache.setCacheDirectory('/tmp/cache/wxct_page');
-			cache.setValue('ttl', 1000);			
+			cache.setValue('ttl', 360000000);			
 			cache({url: url_src, encoding:null}, code_process(body));
 		}
 	); 	
