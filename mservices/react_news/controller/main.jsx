@@ -88,10 +88,10 @@ try {
 		},		
 		render: function() {
 			var me = this;
-			me._ID =  '.'+mapping_data.id;
+			me._ID =  '#_v_'+mapping_data.id;
 						
 			return (
-				<div>
+				<div id={me._ID}>
 					Loading ...
 				</div>
 			  );
