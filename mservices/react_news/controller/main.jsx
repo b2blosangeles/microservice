@@ -58,9 +58,11 @@ try {
 				ReactDOM.render(
 					<div className="container-fluid info_bg">
 						<div className="row">
+							<p className="info_box">	
 							{me.state.list.map(function(item, index) {
 								return <ListItem item={item} parent={me}/>
 							})}
+							</p>	
 						</div>	
 					</div>
 					,
