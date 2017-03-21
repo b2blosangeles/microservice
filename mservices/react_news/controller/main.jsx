@@ -90,7 +90,7 @@ try {
 			var me = this;		
 			return (
 				<div>
-					Loading ...
+					Loading ...99
 				</div>
 			  );
 		},
