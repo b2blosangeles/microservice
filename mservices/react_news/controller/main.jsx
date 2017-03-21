@@ -90,7 +90,7 @@ try {
 			var me = this;		
 			return (
 				<viewpoint>
-					Loading ...99
+					Loading ...
 				</viewpoint>
 			  );
 		},
