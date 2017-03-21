@@ -1,9 +1,9 @@
-.info_bg { background-color:#ccc; hight:200px; overflow-y: scroll;}
+.info_bg { background-color:#ccc; height:200px; overflow-y: scroll;}
 [if $solution == 1]
 .info_bg { background-color:lightgreen;}
 [/if]
 [if $solution == 2]
-.info_bg { background-color:lightyellow; color:darkgreen;  hight:200px; overflow-y: scroll;}
+.info_bg { background-color:lightyellow; color:darkgreen;  height:200px; overflow-y: scroll;}
 [/if]
 [if $solution == 3]
 .info_bg { background-color:lightblue; }
