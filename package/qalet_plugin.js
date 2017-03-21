@@ -25,7 +25,7 @@
 		"spotlight":[
 			"/js/react/react.min.js",
 			"/js/react/react-dom.min.js",
-			"/js/react/ReactRouter/3.0.2/ReactRouter.min.js"
+			"/js/react/ReactRouter/3.0.2/ReactRouter.min.jsx"
 		]
 	},
 	"ms_tpls": {
