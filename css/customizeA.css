@@ -1,4 +1,4 @@
-.info_bg { background-color:#ccc; height:100px; overflow-y: scroll; padding:6px;}
+.info_bg { background-color:#ccc; height:100px; overflow-y: scroll; }
 [if $solution == 1]
 .info_bg { background-color:lightgreen;}
 [/if]
