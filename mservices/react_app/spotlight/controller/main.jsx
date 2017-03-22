@@ -14,12 +14,6 @@ try {
 
 			},'json');
 			*/
-			setTimeout(
-				function() {
-					me.setState({list:88}, function() {
-					});				
-				}, 1000
-			);
 			return {list:[]};
 		},
 
@@ -55,7 +49,7 @@ try {
 		<Home/>	
 		,
 		 viewpoint
-	);
+	).showList()();
 	// $('.'+mapping_data.id).show(0);
 } catch (err) {
 	console.log('err.message===>');
