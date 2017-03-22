@@ -75,7 +75,7 @@ try {
 			return (
 				<span>
 					<div id="pp">{mapping_data.id}</div>
-					<div className='viewpoint{mapping_data.id}'>...</div>
+					<div className={'viewpoint'+mapping_data.id}>...</div>
 				</span>	
 			  );
 		},
