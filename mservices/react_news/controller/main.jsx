@@ -73,8 +73,10 @@ try {
 		render: function() {
 			var me = this;		
 			return (
-				<div id="pp"/>
-				<viewpoint>...</viewpoint>
+				<span>
+					<div id="pp"/>
+					<viewpoint>...</viewpoint>
+				</span>	
 			  );
 		},
 		componentDidMount: function() {
