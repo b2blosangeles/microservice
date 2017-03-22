@@ -5,7 +5,9 @@ try {
 		
 		getInitialState: function() {
 			var me = this;
-			
+			me.setState({list: [] }, function() {
+				me.showList()();
+			});
 			$.get('http://m.qalet.com/api/newsfeed/wanwei/getTitle.js',
 			{}, 
 			function (data) {
@@ -13,8 +15,8 @@ try {
 				});
 				me.showList()();
 			},'json');
-			me.showList()();
-			return {list:[]};
+			
+			return true;
 		},
 
 		showList: function() {
@@ -23,7 +25,7 @@ try {
 				ReactDOM.render(
 					<div className="container-fluid qalet_box">
 						<div className="row">
-							Spotlight 1	
+							Spotlight 2
 						</div>	
 					</div>
 					,
