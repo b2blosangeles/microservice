@@ -19,9 +19,12 @@ try {
 				me.setState({appid: id }, function() { });
 			//}
 		},
-		  myClick: function (text) {
-			alert(text);
-		    },		
+		myClick: function () {
+			return function(text) {
+				alert(text);
+			}
+
+		},		
 		showList: function() {
 			var me = this;
 			return function() {
