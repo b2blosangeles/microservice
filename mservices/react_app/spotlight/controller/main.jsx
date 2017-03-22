@@ -5,7 +5,7 @@ try {
 		
 		getInitialState: function() {
 			var me = this;
-			/*
+			
 			$.get('http://m.qalet.com/api/newsfeed/wanwei/getTitle.js',
 			{}, 
 			function (data) {
@@ -13,7 +13,7 @@ try {
 				});
 
 			},'json');
-			*/
+		
 			return {list:[]};
 		},
 
@@ -47,7 +47,7 @@ try {
 		<Home/>	
 		,
 		 viewpoint
-	).showList()();
+	);
 	// $('.'+mapping_data.id).show(0);
 } catch (err) {
 	console.log('err.message===>');
