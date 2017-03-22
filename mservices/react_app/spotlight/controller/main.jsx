@@ -19,7 +19,7 @@ try {
 			console.log('e--====-');
 			console.log(e);
 			var obj = viewpoint.find(e.target);
-			(function(obj) {
+			var f = function(obj) {
 				console.log(e);
 				obj.hide();
 				$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
@@ -27,11 +27,13 @@ try {
 				function (data) {
 					obj.show();
 					alert(6);
+					
 					obj.hide();
 					me.setState({list: data }, function() {
 					});
 				},'json');
-			})(obj);	
+			};
+			f(obj);	
 		},	
 		showList: function() {
 			var me = this;
