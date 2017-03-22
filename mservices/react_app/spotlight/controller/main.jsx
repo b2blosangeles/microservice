@@ -20,16 +20,16 @@ try {
 			console.log(e);
 			return function(b) {
 				console.log('b---');
-				console.log(b);
-				$(b.target).hide();
+				console.log(e);
+				$(e.target).hide();
 				$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 				{}, 
 				function (data) {
-					$(b.target).show();
+					$(e.target).show();
 					me.setState({list: data }, function() {
 					});
 				},'json');
-			}.bind(this)	
+			}	
 		},	
 		showList: function() {
 			var me = this;
