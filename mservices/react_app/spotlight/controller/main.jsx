@@ -16,8 +16,7 @@ try {
 		loadData: function() {
 			var me = this;
 			return function(e) {
-				console.log(e);
-				$(e).hide();
+				$(e.target).hide();
 				$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 				{}, 
 				function (data) {
