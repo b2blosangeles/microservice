@@ -16,6 +16,8 @@ try {
 		},
 		loadData: function(e) {
 			var me = this;
+			console.log('e---');
+			console.log(e);
 			return function() {
 				console.log(e);
 				$(e.target).hide();
@@ -39,7 +41,7 @@ try {
 								onClick={me.changeId.bind(me, 'new Date().getTime()')} >Change</button>
 							
 							<button type="button" className="btn btn-success"
-								onClick={me.loadData(this).bind(this)} >Load Data</button>
+								onClick={me.loadData.bind(this)(1)} >Load Data</button>
 						</div>	
 					</div>
 					,
