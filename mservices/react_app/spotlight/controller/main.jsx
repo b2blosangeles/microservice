@@ -29,7 +29,7 @@ try {
 					me.setState({list: data }, function() {
 					});
 				},'json');
-			}	
+			}.bind(this)	
 		},	
 		showList: function() {
 			var me = this;
@@ -42,7 +42,7 @@ try {
 								onClick={me.changeId.bind(me, 'new Date().getTime()')} >Change</button>
 							
 							<button type="button" className="btn btn-success"
-								onClick={me.loadData.bind(this)()} >Load Data</button>
+								onClick={me.loadData.bind(this)} >Load Data</button>
 						</div>	
 					</div>
 					,
