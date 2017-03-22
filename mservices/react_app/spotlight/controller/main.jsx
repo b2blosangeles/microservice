@@ -13,7 +13,7 @@ try {
 				//console.log(me.state);
 			});
 		},
-		loadData: function(e) {
+		loadData: function(null, e) {
 			var me = this;
 			console.log(e);
 			$(e.target).hide();
