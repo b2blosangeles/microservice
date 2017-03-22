@@ -46,7 +46,7 @@ try {
 				ReactDOM.render(
 					<DocItem item={item} parent={me} />	
 					,
-					viewpoint.find('viewpoint')[0]
+					viewpoint.find('viewpointb')[0]
 				);				
 			}
 			
@@ -66,7 +66,7 @@ try {
 						</div>	
 					</div>
 					,
-					viewpoint.find('viewpoint')[0]
+					viewpoint.find('viewpointb')[0]
 				);
 			}	
 		},		
@@ -75,7 +75,7 @@ try {
 			return (
 				<span>
 					<div id="pp"/>
-					<viewpoint>...</viewpoint>
+					<viewpointb>...</viewpointb>
 				</span>	
 			  );
 		},
