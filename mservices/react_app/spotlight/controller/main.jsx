@@ -18,14 +18,13 @@ try {
 		},
 		loadData: function(data) {
 			var me = this;
-			alert(1);
 			return function(e) {
 				me.tt();
 				$(e.target).hide();
 				$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 				{}, 
 				function (data) {
-					// $(o).show();
+					$(e.target).show();
 					me.setState({list: data }, function() {
 					});
 				},'json');
