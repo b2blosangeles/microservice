@@ -7,7 +7,7 @@
 .qalet_box { background-color:lightyellow; color:darkgreen; }
 [/if]
 [if $solution == 3]
-.qalet_box { background-color:lightblue; }
+.qalet_box { background-color:lightblue; ; color:red;}
 [/if]
 [if $solution == 4]
 .qalet_box { background-color:pink;}
