@@ -74,8 +74,8 @@ try {
 			var me = this;		
 			return (
 				<span>
-					<div id="pp">={me.props.viewpoint}={mapping_data.id}</div>
-					<viewpointb>...</viewpointb>
+					<div id="pp">{mapping_data.id}</div>
+					<{mapping_data.id}>...</{mapping_data.id}>
 				</span>	
 			  );
 		},
@@ -91,7 +91,7 @@ try {
 	});
 	
 	ReactDOM.render(
-		<Home viewpoint={mapping_data.id}/>	
+		<Home/>	
 		,
 		 viewpoint[0]
 	);
