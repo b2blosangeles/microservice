@@ -15,17 +15,16 @@ try {
 		},
 		loadData: function(data) {
 			var me = this;
-			var event = null;
+			var target = null;
 			return function(e) {
 				$(e.target).hide();
-				if (e.target) { event = e;
-				}	       
+				if (e.target) { target = e.target; }	       
 				$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 				{}, 
 				function (data) {
 					// $(e.target).show();
-					console.log(event);
-					console.log('event--->');
+					console.log( target);
+					console.log(' target--->');
 					console.log('$(event.target).show();');
 					me.setState({list: data }, function() {
 					});
