@@ -19,17 +19,12 @@ try {
 				console.log(e);
 				var obj = $(e.target);
 				obj.hide();
-				setTimeout(
-					function() {
-						console.log(obj);
-					}, 1000
-				
-				);
-			
 				$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 				{}, 
 				function (data) {
 					obj.show();
+					alert(3);
+					obj.hide();
 					me.setState({list: data }, function() {
 					});
 				},'json');
