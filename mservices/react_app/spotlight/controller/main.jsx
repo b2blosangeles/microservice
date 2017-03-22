@@ -16,6 +16,7 @@ try {
 		loadData: function(data) {
 			var me = this;
 			return function(e) {
+				console.log(e);
 				(function(e) {
 					$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 					{}, 
@@ -38,7 +39,7 @@ try {
 								onClick={me.changeId.bind(me, 'new Date().getTime()')} >Change</button>
 							
 							<button type="button" className="btn btn-success"
-								onClick={me.loadData(this)} >Load Data</button>
+								onClick={me.loadData()} >Load Data</button>
 						</div>	
 					</div>
 					,
