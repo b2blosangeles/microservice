@@ -14,8 +14,9 @@ try {
 				});
 
 			},'json');
+*/
 			return {list:[]};
-*/			
+			
 		},
 
 		showList: function() {
