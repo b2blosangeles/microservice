@@ -37,11 +37,13 @@ try {
 				<div>...</div>
 			  );
 		},
+		/*
 		componentDidMount: function() {
 			var me = this;
 			console.log('--1');
 			me.showList()();
-		},		
+		},
+		*/	
 		componentDidUpdate: function() {
 			var me = this;
 			console.log('--2');
