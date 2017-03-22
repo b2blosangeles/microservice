@@ -27,6 +27,8 @@ try {
 					console.log(' target--->');
 					console.log( target);
 					$(target).show();
+					alert(1);
+					$(target).hide();
 					me.setState({list: data }, function() {
 					});
 				},'json');
