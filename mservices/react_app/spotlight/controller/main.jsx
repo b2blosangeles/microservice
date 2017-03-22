@@ -15,9 +15,7 @@ try {
 		},
 		changeId: function(id) {
 			var me = this;
-			//return function(id) {
-				me.setState({appid: id }, function() { });
-			//}
+			me.setState({appid: id }, function() { });
 		},
 		myClick: function (text) {
 			alert(text);
@@ -31,7 +29,7 @@ try {
 						<div className="row">
 							Spotlight 2
 							<button type="button" className="btn btn-success" 
-								onClick={me.myClick.bind(me, "Hello world")} >Change</button>
+								onClick={me.changeId.bind(me, new Date().getTime())} >Change</button>
 						</div>	
 					</div>
 					,
