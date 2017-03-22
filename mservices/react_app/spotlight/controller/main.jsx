@@ -4,13 +4,7 @@ try {
 	var Home = React.createClass({
 		getInitialState: function() {
 			var me = this;
-			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
-			{}, 
-			function (data) {
-				me.setState({list: data }, function() {
-				});
-			},'json');
-			
+			me.loadData();
 			return {list: [], appid:1234 };
 		},
 		changeId: function(id) {
@@ -19,13 +13,14 @@ try {
 				//console.log(me.state);
 			});
 		},
-		changeId2: function(id) {
+		loadData: function(id) {
 			var me = this;
-			return function() {
-				me.setState({appid: id }, function() { });
-				// me.setState({appid: id }, function() { });
-			}
-			
+			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
+			{}, 
+			function (data) {
+				me.setState({list: data }, function() {
+				});
+			},'json');
 		},	
 		showList: function() {
 			var me = this;
@@ -37,8 +32,8 @@ try {
 							<button type="button" className="btn btn-success" 
 								onClick={me.changeId.bind(me, 'new Date().getTime()')} >Change</button>
 							
-							<button type="button" className="btn btn-success" style={{display:'none'}}
-								onClick={me.changeId2('aaa')} >Change2</button>
+							<button type="button" className="btn btn-success"
+								onClick={me.loadData.bind(me)} >Load Data</button>
 						</div>	
 					</div>
 					,
