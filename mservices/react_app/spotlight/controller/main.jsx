@@ -34,17 +34,17 @@ try {
 				<div>...</div>
 			  );
 		},
-		/*
+		
 		componentDidMount: function() {
 			var me = this;
 			console.log('--1');
 			me.showList()();
 			console.log('--11');
-		},*/		
+		},		
 		componentDidUpdate: function() {
 			var me = this;
 			console.log('--2');
-			me.showList()();
+		//	me.showList()();
 			
 		}
 	});
