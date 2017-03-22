@@ -36,7 +36,7 @@ try {
 								onClick={me.changeId.bind(me, 'new Date().getTime()')} >Change</button>
 							
 							<button type="button" className="btn btn-success" 
-								onClick={me.changeId2('aaa')} >Change2</button>
+								onClick={me.changeId2('aaa', 'bbb')} >Change2</button>
 						</div>	
 					</div>
 					,
