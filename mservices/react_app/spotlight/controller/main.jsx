@@ -49,7 +49,7 @@ try {
 	ReactDOM.render(
 		<Home/>	
 		,
-		viewpoint
+		$('.'+mapping_data.id)[0]
 	);
 	// $('.'+mapping_data.id).show(0);
 } catch (err) {
