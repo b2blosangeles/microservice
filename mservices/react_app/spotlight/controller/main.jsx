@@ -15,16 +15,16 @@ try {
 		},
 		loadData: function(data) {
 			var me = this;
-			console.log('data-==>');
-			console.log(this);
-			
-			return function(e) {	       
-				$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
-				{}, 
-				function (data) {
-					me.setState({list: data }, function() {
-					});
-				},'json');
+			return function(e) {
+				(function() {
+					$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
+					{}, 
+					function (data) {
+						console.log(e);
+						me.setState({list: data }, function() {
+						});
+					},'json');
+				})();
 			}.bind(this) 	
 		},	
 		showList: function() {
