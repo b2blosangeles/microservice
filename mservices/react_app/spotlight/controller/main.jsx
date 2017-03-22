@@ -17,7 +17,7 @@ try {
 			var me = this;
 
 			console.log(e);
-			$(e.target).hide();
+			$(e).hide();
 			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 			{}, 
 			function (data) {
