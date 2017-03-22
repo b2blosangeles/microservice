@@ -17,23 +17,13 @@ try {
 		loadData: function(e) {
 			console.log(e);
 			$(e.target).hide();
-			/*
-			var me = this;
-			return function(e) {
-				obj = $(e.target);
-				obj.hide();
-				$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
-				{}, 
-				function (data) {
-					obj.show();
-					alert(5);
-					obj.hide();
-					me.setState({list: data }, function() {
-					});
-				},'json');
-			
-			}.bind(this) 	
-			*/
+			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
+			{}, 
+			function (data) {
+				$(e.target).show();
+				me.setState({list: data }, function() {
+				});
+			},'json');
 		},	
 		showList: function() {
 			var me = this;
