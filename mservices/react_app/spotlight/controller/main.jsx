@@ -42,7 +42,7 @@ try {
 								onClick={me.changeId.bind(me, 'new Date().getTime()')} >Change</button>
 							
 							<button type="button" className="btn btn-success"
-								onClick={me.loadData.bind(this).bind(this)} >Load Data</button>
+								onClick={me.loadData.bind(this)().bind(this)} >Load Data</button>
 						</div>	
 					</div>
 					,
