@@ -14,7 +14,9 @@ try {
 				//console.log(me.state);
 			});
 		},
-		loadData: function(data) {
+		loadData: function(event) {
+			console.log(event);
+			/*
 			var me = this;
 			return function(e) {
 				obj = $(e.target);
@@ -30,6 +32,7 @@ try {
 				},'json');
 			
 			}.bind(this) 	
+			*/
 		},	
 		showList: function() {
 			var me = this;
@@ -42,7 +45,7 @@ try {
 								onClick={me.changeId.bind(me, 'new Date().getTime()')} >Change</button>
 							
 							<button type="button" className="btn btn-success"
-								onClick={me.loadData()} >Load Data</button>
+								onClick={me.loadData.bind(this)} >Load Data</button>
 						</div>	
 					</div>
 					,
