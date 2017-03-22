@@ -5,9 +5,7 @@ try {
 		
 		getInitialState: function() {
 			var me = this;
-			me.setState({list: [] }, function() {
-				me.showList()();
-			});
+			me.setState({list: [] }, function() {});
 			$.get('http://m.qalet.com/api/newsfeed/wanwei/getTitle.js',
 			{}, 
 			function (data) {
