@@ -31,7 +31,7 @@ try {
 		render: function() {
 			var me = this;		
 			return (
-				<span className={'vp_'+mapping_data.id}>...</span>
+				<span className={'vp_'+mapping_data.id}/>
 			  );
 		},
 		
@@ -49,7 +49,7 @@ try {
 	ReactDOM.render(
 		<Home/>	
 		,
-		 viewpoint
+		viewpoint
 	);
 	// $('.'+mapping_data.id).show(0);
 } catch (err) {
