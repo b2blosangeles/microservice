@@ -16,7 +16,7 @@ try {
 		loadData: function(data) {
 			var me = this;
 			return function(e) {
-				(function() {
+				(function(e) {
 					$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 					{}, 
 					function (data) {
@@ -24,7 +24,7 @@ try {
 						me.setState({list: data }, function() {
 						});
 					},'json');
-				})();
+				})(e);
 			}.bind(this) 	
 		},	
 		showList: function() {
