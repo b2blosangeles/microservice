@@ -13,7 +13,10 @@ try {
 			
 			return {list: [], appid:1234 };
 		},
-
+		changeId function(id) {
+			var me = this;
+			me.setState({appid: id }, function() { });	
+		},
 		showList: function() {
 			var me = this;
 			return function() {
@@ -41,6 +44,7 @@ try {
 		},		
 		componentDidUpdate: function() {
 			var me = this;
+			console.log('componentDidUpdate-'+new Date());
 			me.showList()();
 			
 		}
