@@ -61,7 +61,7 @@ $(document).ready(
 			for (var i = 0; i < v.length; i++) {
 				_QALET_._p++;
 				var data = $(v[i]).html();
-				console.log(data);
+			//	console.log(data);
 				if (!data)  continue;
 				try {
 					var o = JSON.parse(data.replace(/(“|”)/ig, '"'));	
@@ -95,7 +95,7 @@ $(document).ready(
 					var osr = _sobj[os];
 					var l = Object.keys(osr).join(',');
 					var csslink = os.replace(/\.(js|jsx)$/, '.css') +'?plus='+l;
-					console.log('---'+os+'---');
+				//	console.log('---'+os+'---');
 					var jslink = os +'?plus='+l;
 					$('<link rel="stylesheet" type="text/css" href="'+ csslink +'" />').appendTo("head");
 					$.getScript( jslink,
