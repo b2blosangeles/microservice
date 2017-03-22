@@ -19,12 +19,11 @@ try {
 
 		showList: function() {
 			var me = this;
-			console.log(3);
 			return function() {
 				ReactDOM.render(
 					<div className="container-fluid qalet_box">
 						<div className="row">
-							Spotlight 1	
+							Spotlight	
 						</div>	
 					</div>
 					,
@@ -35,12 +34,11 @@ try {
 		render: function() {
 			var me = this;		
 			return (
-				<div>.T.</div>
+				<div>...</div>
 			  );
 		},
 		componentDidUpdate: function() {
 			var me = this;
-			console.log(1);
 			me.showList()();
 		}
 	});
