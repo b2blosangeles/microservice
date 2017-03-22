@@ -15,20 +15,13 @@ try {
 		},
 		loadData: function(data) {
 			var me = this;
+			console.log('data--->');
 			console.log(data);
-			var target = null;
-			return function(e) {
-				$(e.target).hide();
-				if (e.target) { target = e.target; }	       
+			
+			return function(e) {	       
 				$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 				{}, 
 				function (data) {
-					console.log( target);
-					console.log(' target--->');
-					console.log( target);
-					$(target).show();
-					//alert(2);
-					$(target).hide();
 					me.setState({list: data }, function() {
 					});
 				},'json');
