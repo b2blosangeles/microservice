@@ -17,11 +17,17 @@ try {
 			var me = this;
 			return function(e) {
 				console.log(e);
+				setTimeout(
+					function() {
+						console.log(e);
+					}, 1000
+				
+				);
 				(function(e) {
 					$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 					{}, 
 					function (data) {
-						console.log(e);
+						//console.log(e);
 						me.setState({list: data }, function() {
 						});
 					},'json');
