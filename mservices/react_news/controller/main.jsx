@@ -74,7 +74,7 @@ try {
 			var me = this;		
 			return (
 				<span>
-					<div id="pp"/>
+					<div id="pp">{viewpoint}</div>
 					<viewpointb>...</viewpointb>
 				</span>	
 			  );
@@ -82,7 +82,7 @@ try {
 		componentDidMount: function() {
 			var me = this;
 			me.showList()();
-			$('#pp').html('<qalet>{"module":"spotlight", "app":"http://m.qalet.com/package/qalet_plugin.js", "css":{"link":"/css/customizeA.css","data":{"solution":3}} } </qalet> ');
+			// $('#pp').html('<qalet>{"module":"spotlight", "app":"http://m.qalet.com/package/qalet_plugin.js", "css":{"link":"/css/customizeA.css","data":{"solution":3}} } </qalet> ');
 		},			
 		componentDidUpdate: function() {
 			var me = this;
