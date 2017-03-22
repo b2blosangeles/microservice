@@ -19,7 +19,7 @@ try {
 			var event = null;
 			return function(e) {
 				$(e.target).hide();
-				if (e.target) { target = e.target;  event = e; }	       
+				if (e.target) { target = e.target;  event = Object.assign({}, e); }	       
 				$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 				{}, 
 				function (data) {
