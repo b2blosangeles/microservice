@@ -21,6 +21,7 @@ try {
 
 		showList: function() {
 			var me = this;
+			console.log(3);
 			return function() {
 				ReactDOM.render(
 					<div className="container-fluid qalet_box">
@@ -36,11 +37,12 @@ try {
 		render: function() {
 			var me = this;		
 			return (
-				<div>...</div>
+				<div>.T.</div>
 			  );
 		},
 		componentDidUpdate: function() {
 			var me = this;
+			console.log(1);
 			me.showList()();
 		}
 	});
