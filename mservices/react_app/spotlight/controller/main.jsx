@@ -16,7 +16,7 @@ try {
 		changeId: function(id) {
 			var me = this;
 			me.setState({appid: id }, function(a, b) { 
-				console.log(me.state);
+				//console.log(me.state);
 			});
 		},
 		changeId2: function(id) {
@@ -57,9 +57,11 @@ try {
 			var me = this;
 			me.showList()();
 		},		
-		componentDidUpdate: function() {
+		componentDidUpdate: function(prevProps, prevState) {
 			var me = this;
 			console.log('componentDidUpdate-'+new Date());
+			console.log(prevState);
+			console.log(me.state);
 			me.showList()();
 			
 		}
