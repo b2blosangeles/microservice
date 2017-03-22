@@ -27,12 +27,14 @@ try {
 				{}, 
 				function (data) {
 
-					obj.show();
+					
 					alert(7);
 				console.log(viewpoint[0]);
 				console.log(target);	
-					viewpoint.find(e.target).show();					
-					obj.hide();
+					var bbj = viewpoint.find(e.target).show();
+					bbj.show();
+					alert(8);
+					bbj.hide();
 					me.setState({list: data }, function() {
 					});
 				},'json');
