@@ -14,7 +14,7 @@ try {
 				me.showList()();
 			},'json');
 			
-			return true;
+			return {list: [] };
 		},
 
 		showList: function() {
