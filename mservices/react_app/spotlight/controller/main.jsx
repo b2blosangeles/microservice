@@ -19,8 +19,8 @@ try {
 			console.log('e--====-');
 			console.log(e);
 			var obj = viewpoint.find(e.target);
-			var f = function(obj) {
-				console.log(e);
+			var f = function() {
+				console.log(viewpoint[0]);
 				obj.hide();
 				$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 				{}, 
@@ -33,7 +33,7 @@ try {
 					});
 				},'json');
 			};
-			f(obj);	
+			f();	
 		},	
 		showList: function() {
 			var me = this;
