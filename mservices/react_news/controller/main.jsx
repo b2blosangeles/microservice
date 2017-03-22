@@ -40,7 +40,7 @@ try {
 				});
 
 			},'json');
-			return true;
+			return {list: data };
 		},
 		showDoc: function(item) {
 			var me = this;
