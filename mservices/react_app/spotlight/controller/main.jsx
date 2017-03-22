@@ -37,8 +37,8 @@ try {
 							<button type="button" className="btn btn-success" 
 								onClick={me.changeId.bind(me, 'new Date().getTime()')} >Change</button>
 							
-							<button type="button" className="btn btn-success" 
-								onClick={me.changeId2('aaa')} >Change2</button>
+							<!--button type="button" className="btn btn-success" 
+								onClick={me.changeId2('aaa')} >Change2</button-->
 						</div>	
 					</div>
 					,
@@ -55,7 +55,7 @@ try {
 		
 		componentDidMount: function() {
 			var me = this;
-			me.showList()();
+		//	me.showList()();
 		},		
 		componentDidUpdate: function(prevProps, prevState) {
 			var me = this;
