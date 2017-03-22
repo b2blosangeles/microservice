@@ -1,5 +1,5 @@
 try {	
-	var viewpoint = $('.'+mapping_data.id).find('.vp_'+mapping_data.id)[0];
+	var viewpoint = $('.'+mapping_data.id);
 	var DocItem =  React.createClass({
 		getInitialState: function() {
 			var me = this;
@@ -46,7 +46,7 @@ try {
 				ReactDOM.render(
 					<DocItem item={item} parent={me} />	
 					,
-					viewpoint
+					viewpoint.find('.vp_'+mapping_data.id)[0]
 				);				
 			}
 			
@@ -66,7 +66,7 @@ try {
 						</div>	
 					</div>
 					,
-					viewpoint
+					viewpoint.find('.vp_'+mapping_data.id)[0]
 				);
 			}	
 		},		
@@ -93,7 +93,7 @@ try {
 	ReactDOM.render(
 		<Home/>	
 		,
-		$('.'+mapping_data.id)[0]
+		viewpoint[0]
 	);
 	// $('.'+mapping_data.id).show(0);
 } catch (err) {
