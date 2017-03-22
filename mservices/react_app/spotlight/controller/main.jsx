@@ -14,6 +14,8 @@ try {
 
 			},'json');
 			*/
+			me.setState({list: []}, function() {
+			});
 			return {list:[]};
 		},
 
