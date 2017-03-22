@@ -14,8 +14,12 @@ try {
 
 			},'json');
 			*/
-			me.setState({list:88}, function() {
-			});
+			setTimeout() {
+				function() {
+					me.setState({list:88}, function() {
+					});				
+				}, 1000
+			}
 			return {list:[]};
 		},
 
