@@ -36,11 +36,11 @@ try {
 			function (data) {
 				me.setState({list: data }, function() {
 					//me.playVideo(d[Math.floor(Math.random()*d.length)].vid)();
-					me.showList()();
+				//	me.showList()();
 				});
 
 			},'json');
-			return {list: data };
+			return {list: [] };
 		},
 		showDoc: function(item) {
 			var me = this;
@@ -80,7 +80,7 @@ try {
 		componentDidMount: function() {
 			var me = this;
 			console.log('--1A');
-			me.showList()();
+		//	me.showList()();
 		},			
 		componentDidUpdate: function() {
 			var me = this;
