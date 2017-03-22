@@ -24,7 +24,7 @@ try {
 					me.setState({list: data }, function() {
 					});
 				},'json');
-			}.bind(this) 	
+			} 	
 		},	
 		showList: function() {
 			var me = this;
