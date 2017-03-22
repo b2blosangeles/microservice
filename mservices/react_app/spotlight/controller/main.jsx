@@ -14,8 +14,8 @@ try {
 			return {list: [], appid:1234 };
 		},
 		changeId: function() {
+			var me = this;
 			return function(id) {
-				var me = this;
 				me.setState({appid: id }, function() { });
 			}
 		},
