@@ -27,7 +27,7 @@ try {
 						<div className="row">
 							Spotlight 2
 							<button type="button" className="btn btn-success" 
-								onClick={me.changeId(+new Date())}>Change</button>
+								>Change</button>
 						</div>	
 					</div>
 					,
