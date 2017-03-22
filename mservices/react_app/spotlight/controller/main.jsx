@@ -13,18 +13,19 @@ try {
 				//console.log(me.state);
 			});
 		},
-		loadData: function(data, e) {
+		loadData: function() {
 			var me = this;
-
-			console.log(e);
-			$(e).hide();
-			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
-			{}, 
-			function (data) {
-				// $(o).show();
-				me.setState({list: data }, function() {
-				});
-			},'json');
+			return function(e) {
+				console.log(e);
+				$(e).hide();
+				$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
+				{}, 
+				function (data) {
+					// $(o).show();
+					me.setState({list: data }, function() {
+					});
+				},'json');
+			}.bind(this) 	
 		},	
 		showList: function() {
 			var me = this;
@@ -37,7 +38,7 @@ try {
 								onClick={me.changeId.bind(me, 'new Date().getTime()')} >Change</button>
 							
 							<button type="button" className="btn btn-success"
-								onClick={(event) => me.loadData(null, event)} >Load Data</button>
+								onClick={me.loadData()} >Load Data</button>
 						</div>	
 					</div>
 					,
