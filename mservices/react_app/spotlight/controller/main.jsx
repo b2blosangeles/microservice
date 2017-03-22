@@ -18,7 +18,8 @@ try {
 			var event = null;
 			return function(e) {
 				$(e.target).hide();
-				event = e;
+				if (e.target) { event = e;
+				}	       
 				$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 				{}, 
 				function (data) {
