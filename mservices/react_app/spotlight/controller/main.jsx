@@ -26,12 +26,12 @@ try {
 				$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 				{}, 
 				function (data) {
+
+					obj.show();
+					alert(7);
 				console.log(viewpoint[0]);
 				console.log(target);	
-					viewpoint.find(e.target).show();
-					obj.show();
-					alert(6);
-					
+					viewpoint.find(e.target).show();					
 					obj.hide();
 					me.setState({list: data }, function() {
 					});
