@@ -10,7 +10,6 @@ try {
 			function (data) {
 				me.setState({list: data }, function() {
 				});
-				me.showList()();
 			},'json');
 			
 			return {list: [] };
