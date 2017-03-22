@@ -11,7 +11,7 @@ try {
 				});
 			},'json');
 			
-			return {list: [] };
+			return {list: [], appid:1234 };
 		},
 
 		showList: function() {
