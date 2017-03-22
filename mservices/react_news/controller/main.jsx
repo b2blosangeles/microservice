@@ -74,7 +74,7 @@ try {
 			var me = this;		
 			return (
 				<span>
-					<div id="pp">={me.props.viewpoint}=</div>
+					<div id="pp">={me.props.viewpoint}={mapping_data.id}</div>
 					<viewpointb>...</viewpointb>
 				</span>	
 			  );
