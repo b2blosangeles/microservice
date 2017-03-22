@@ -31,7 +31,7 @@ try {
 		render: function() {
 			var me = this;		
 			return (
-				<div className={'vp_'+mapping_data.id}>..</div>
+				<span className={'vp_'+mapping_data.id}>..</span>
 			  );
 		},
 		
