@@ -18,13 +18,16 @@ try {
 			var me = this;
 			console.log('e--====-');
 			console.log(e);
+			var target = e.target;
 			var obj = viewpoint.find(e.target);
 			var f = function() {
-				console.log(viewpoint[0]);
+
 				obj.hide();
 				$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 				{}, 
 				function (data) {
+				console.log(viewpoint[0]);
+				console.log(target);					
 					obj.show();
 					alert(6);
 					
