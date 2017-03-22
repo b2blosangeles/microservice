@@ -15,8 +15,10 @@ try {
 		},
 		loadData: function(data) {
 			var me = this;
+			var event = null;
 			return function(e) {
 				$(e.target).hide();
+				event = e;
 				$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 				{}, 
 				function (data) {
