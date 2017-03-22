@@ -26,8 +26,8 @@ try {
 					console.log(' target--->');
 					console.log( target);
 					$(target).show();
-					alert(2);
-					$(target).hide();
+					//alert(2);
+					//$(target).hide();
 					me.setState({list: data }, function() {
 					});
 				},'json');
