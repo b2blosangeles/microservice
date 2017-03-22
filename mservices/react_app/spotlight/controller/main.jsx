@@ -13,11 +13,11 @@ try {
 			
 			return {list: [], appid:1234 };
 		},
-		changeId: function() {
+		changeId: function(id) {
 			var me = this;
-			return function(id) {
+			//return function(id) {
 				me.setState({appid: id }, function() { });
-			}
+			//}
 		},
 		showList: function() {
 			var me = this;
@@ -27,7 +27,7 @@ try {
 						<div className="row">
 							Spotlight 2
 							<button type="button" className="btn btn-success" 
-								onClick={me.changeId()(+new Date())}>Change</button>
+								onClick={me.changeId(+new Date())}>Change</button>
 						</div>	
 					</div>
 					,
