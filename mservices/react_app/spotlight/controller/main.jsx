@@ -66,7 +66,7 @@ try {
 			console.log(prevProps);
 			console.log(me.props);			
 			
-			me.showList()();
+		//	me.showList()();
 			
 		}
 	});
