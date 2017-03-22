@@ -21,7 +21,7 @@ try {
 		},
 		myClick: function () {
 			return function(text) {
-				alert(text);
+				console.log(text);
 			}
 
 		},		
@@ -33,7 +33,7 @@ try {
 						<div className="row">
 							Spotlight 2
 							<button type="button" className="btn btn-success" 
-								onClick={me.myClick(null, "Hello world")} >Change</button>
+								onClick={me.myClick("Hello world")} >Change</button>
 						</div>	
 					</div>
 					,
