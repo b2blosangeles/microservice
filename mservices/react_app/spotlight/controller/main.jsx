@@ -21,11 +21,11 @@ try {
 			return function(b) {
 				console.log('b---');
 				console.log(b);
-				$(e.target).hide();
+				$(b.target).hide();
 				$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 				{}, 
 				function (data) {
-					$(e.target).show();
+					$(b.target).show();
 					me.setState({list: data }, function() {
 					});
 				},'json');
