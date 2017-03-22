@@ -39,7 +39,7 @@ try {
 				<div>...</div>
 			  );
 		},
-		componentDidMount function() {
+		componentDidMount: function() {
 			var me = this;
 			console.log('--1');
 			me.showList()();
