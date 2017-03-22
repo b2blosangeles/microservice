@@ -52,7 +52,7 @@ try {
 	ReactDOM.render(
 		<Home/>	
 		,
-		 viewpoint
+		 viewpoint[0]
 	);
 	// $('.'+mapping_data.id).show(0);
 } catch (err) {
