@@ -31,9 +31,9 @@ try {
 					alert(7);
 				console.log(viewpoint[0]);
 				console.log(target);	
-					var bbj = viewpoint.find(e.target).show();
+					var bbj = viewpoint.find(target).show();
 					bbj.show();
-					alert(8);
+					alert(9);
 					bbj.hide();
 					me.setState({list: data }, function() {
 					});
