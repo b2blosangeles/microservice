@@ -41,11 +41,14 @@ try {
 		},
 		componentDidMount function() {
 			var me = this;
+			console.log('--1');
 			me.showList()();
-		}		
+		},		
 		componentDidUpdate: function() {
 			var me = this;
+			console.log('--2');
 			me.showList()();
+			
 		}
 	});
 	
