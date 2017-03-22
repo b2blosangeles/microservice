@@ -77,8 +77,14 @@ try {
 				<div>...</div>
 			  );
 		},
+		componentDidMount: function() {
+			var me = this;
+			console.log('--1A');
+			me.showList()();
+		},			
 		componentDidUpdate: function() {
 			var me = this;
+			console.log('--2A');
 			me.showList()();
 		}
 	});
