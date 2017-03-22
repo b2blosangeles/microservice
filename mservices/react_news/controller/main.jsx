@@ -91,7 +91,7 @@ try {
 	});
 	
 	ReactDOM.render(
-		<Home viewpoint={this.props.name}/>	
+		<Home viewpoint={mapping_data.id}/>	
 		,
 		 viewpoint[0]
 	);
