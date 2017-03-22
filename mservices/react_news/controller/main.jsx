@@ -57,8 +57,6 @@ try {
 				ReactDOM.render(
 					<div className="container-fluid qalet_box">
 						<div className="row">
-							<div id="pp">
-							</div>    							
 							
 							<p>	
 							{me.state.list.map(function(item, index) {
@@ -75,6 +73,7 @@ try {
 		render: function() {
 			var me = this;		
 			return (
+				<div id="pp"/>
 				<viewpoint>...</viewpoint>
 			  );
 		},
