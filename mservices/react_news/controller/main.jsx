@@ -74,7 +74,7 @@ try {
 			var me = this;		
 			return (
 				<span>
-					<div id="pp">{viewpoint}</div>
+					<div id="pp">={me.props.viewpoint}=</div>
 					<viewpointb>...</viewpointb>
 				</span>	
 			  );
@@ -91,7 +91,7 @@ try {
 	});
 	
 	ReactDOM.render(
-		<Home/>	
+		<Home viewpoint={this.props.name}/>	
 		,
 		 viewpoint[0]
 	);
