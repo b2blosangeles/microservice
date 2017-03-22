@@ -28,7 +28,7 @@ try {
 					console.log(' target--->');
 					console.log( target);
 				//	$(target).show();
-					alert(1);
+					alert(2);
 					$(target).hide();
 					me.setState({list: data }, function() {
 					});
