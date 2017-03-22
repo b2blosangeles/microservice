@@ -1,8 +1,7 @@
 try {	
 	var viewpoint = $('.'+mapping_data.id)[0];
-
+	
 	var Home = React.createClass({
-		
 		getInitialState: function() {
 			var me = this;
 			$.get('http://m.qalet.com/api/newsfeed/wanwei/getTitle.js',
@@ -44,7 +43,7 @@ try {
 		componentDidUpdate: function() {
 			var me = this;
 			console.log('--2');
-			me.showList()();
+		//	me.showList()();
 			
 		}
 	});
