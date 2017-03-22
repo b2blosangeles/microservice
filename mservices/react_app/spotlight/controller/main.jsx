@@ -16,8 +16,7 @@ try {
 		changeId: function(id) {
 			var me = this;
 			me.setState({appid: id }, function(a, b) { 
-				console.log(a);
-				console.log(b);
+				console.log(me.state);
 			});
 		},
 		changeId2: function(id) {
