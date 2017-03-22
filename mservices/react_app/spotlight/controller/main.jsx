@@ -13,13 +13,13 @@ try {
 				//console.log(me.state);
 			});
 		},
-		loadData: function(o) {
+		loadData: function(e) {
 			var me = this;
-			$(o).hide();
+			$(event.target).hide();
 			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 			{}, 
 			function (data) {
-				$(o).show();
+				// $(o).show();
 				me.setState({list: data }, function() {
 				});
 			},'json');
@@ -35,7 +35,7 @@ try {
 								onClick={me.changeId.bind(me, 'new Date().getTime()')} >Change</button>
 							
 							<button type="button" className="btn btn-success"
-								onClick={me.loadData.bind(me, this)} >Load Data</button>
+								onClick={me.loadData.bind(me)} >Load Data</button>
 						</div>	
 					</div>
 					,
