@@ -17,9 +17,10 @@ try {
 			var me = this;
 			return function(e) {
 				console.log(e);
+				var obj = $(e.target);
 				setTimeout(
 					function() {
-						console.log(e);
+						console.log(obj);
 					}, 1000
 				
 				);
