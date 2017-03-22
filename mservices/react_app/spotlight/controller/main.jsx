@@ -26,6 +26,8 @@ try {
 				{}, 
 				function (data) {
 					obj.show();
+					alert(6);
+					obj.hide();
 					me.setState({list: data }, function() {
 					});
 				},'json');
