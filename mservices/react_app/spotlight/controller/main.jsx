@@ -20,7 +20,8 @@ try {
 				$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 				{}, 
 				function (data) {
-					$(e.target).show();
+					// $(e.target).show();
+					console.log(e);
 					console.log('$(e.target).show();');
 					me.setState({list: data }, function() {
 					});
