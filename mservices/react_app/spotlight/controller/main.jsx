@@ -4,7 +4,7 @@ try {
 	var Home = React.createClass({
 		getInitialState: function() {
 			var me = this;
-			$.get('http://m.qalet.com/api/newsfeed/wanwei/getTitle.js',
+			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 			{}, 
 			function (data) {
 				me.setState({list: data }, function() {
