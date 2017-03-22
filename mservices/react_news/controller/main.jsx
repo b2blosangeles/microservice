@@ -78,7 +78,7 @@ try {
 		componentDidMount: function() {
 			var me = this;
 			console.log('--1A');
-		//	me.showList()();
+			me.showList()();
 		},			
 		componentDidUpdate: function() {
 			var me = this;
