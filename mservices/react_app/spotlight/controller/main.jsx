@@ -13,7 +13,7 @@ try {
 			
 			return {list: [], appid:1234 };
 		},
-		changeId function(id) {
+		changeId: function(id) {
 			var me = this;
 			me.setState({appid: id }, function() { });	
 		},
@@ -24,6 +24,7 @@ try {
 					<div className="container-fluid qalet_box">
 						<div className="row">
 							Spotlight 2
+							<button type="button" className="btn btn-success" onClick={changeId(1)}>Change</button>
 						</div>	
 					</div>
 					,
