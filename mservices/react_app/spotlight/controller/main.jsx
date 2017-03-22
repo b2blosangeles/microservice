@@ -18,8 +18,7 @@ try {
 			var me = this;
 			console.log('e---');
 			console.log(e);
-			(function(b) {
-				console.log('b---');
+			(function(e) {
 				console.log(e);
 				$(e.target).hide();
 				$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
@@ -29,7 +28,7 @@ try {
 					me.setState({list: data }, function() {
 					});
 				},'json');
-			})();	
+			})(e);	
 		},	
 		showList: function() {
 			var me = this;
