@@ -9,6 +9,7 @@ try {
 		},
 		changeId: function(id) {
 			var me = this;
+			var obj = null;
 			me.setState({appid: id }, function(a, b) { 
 				//console.log(me.state);
 			});
@@ -16,14 +17,13 @@ try {
 		loadData: function(data) {
 			var me = this;
 			return function(e) {
-				console.log(e);
-				var obj = $(e.target);
+				obj = $(e.target);
 				obj.hide();
 				$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 				{}, 
 				function (data) {
 					obj.show();
-					alert(3);
+					alert(5);
 					obj.hide();
 					me.setState({list: data }, function() {
 					});
