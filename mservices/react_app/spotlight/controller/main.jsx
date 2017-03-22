@@ -14,8 +14,9 @@ try {
 				//console.log(me.state);
 			});
 		},
-		loadData: function(event) {
-			console.log(event);
+		loadData: function(e) {
+			console.log(e);
+			$(e.target).hide();
 			/*
 			var me = this;
 			return function(e) {
