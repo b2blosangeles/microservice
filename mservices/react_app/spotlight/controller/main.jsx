@@ -13,9 +13,9 @@ try {
 				//console.log(me.state);
 			});
 		},
-		loadData: function(e) {
+		loadData: function(data, e) {
 			var me = this;
-			console.log(me);
+
 			console.log(e);
 		//	$(e.target).hide();
 			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
