@@ -35,8 +35,6 @@ try {
 			{}, 
 			function (data) {
 				me.setState({list: data }, function() {
-					//me.playVideo(d[Math.floor(Math.random()*d.length)].vid)();
-				//	me.showList()();
 				});
 
 			},'json');
