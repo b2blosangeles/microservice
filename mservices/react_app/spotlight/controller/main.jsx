@@ -14,6 +14,7 @@ try {
 			});
 		},
 		loadData: function(data) {
+			var me = this;
 			alert(1);
 			return function(e) {
 				alert(2);
