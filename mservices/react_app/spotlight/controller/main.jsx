@@ -1,5 +1,3 @@
-	console.log('PPP==>');
-
 try {	
 	var viewpoint = $('.'+mapping_data.id)[0];
 
