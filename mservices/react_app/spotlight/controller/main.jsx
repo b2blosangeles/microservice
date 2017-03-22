@@ -59,17 +59,11 @@ try {
 		},		
 		componentDidUpdate: function(prevProps, prevState) {
 			var me = this;
-			console.log('componentDidUpdate-'+new Date());
-			console.log(prevState);
-			console.log(me.state);
-			console.log('-----------');
-			console.log(prevProps);
-			console.log(me.props);			
+			console.log('componentDidUpdate-'+new Date());			
 			if (JSON.stringify(prevState) !== JSON.stringify(me.state)) {
 				console.log('prevState changed===!');
+				me.showList()();
 			}
-		//	me.showList()();
-			
 		}
 	});
 	
