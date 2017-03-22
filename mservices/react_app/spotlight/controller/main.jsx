@@ -16,18 +16,16 @@ try {
 		loadData: function(data) {
 			var me = this;
 			var target = null;
-			var event = null;
 			return function(e) {
 				$(e.target).hide();
-				if (e.target) { target = e.target;  event = Object.assign({}, e); }	       
+				if (e.target) { target = e.target; }	       
 				$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 				{}, 
 				function (data) {
-					$(event.target).show();
 					console.log( target);
 					console.log(' target--->');
 					console.log( target);
-				//	$(target).show();
+					$(target).show();
 					alert(2);
 					$(target).hide();
 					me.setState({list: data }, function() {
