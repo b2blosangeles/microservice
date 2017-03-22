@@ -65,7 +65,9 @@ try {
 			console.log('-----------');
 			console.log(prevProps);
 			console.log(me.props);			
-			
+			if (JSON.stringify(prevState) !== JSON.stringify(me.state)) {
+				console.log('prevState changed===!');
+			}
 		//	me.showList()();
 			
 		}
