@@ -62,6 +62,10 @@ try {
 			console.log('componentDidUpdate-'+new Date());
 			console.log(prevState);
 			console.log(me.state);
+			console.log('-----------');
+			console.log(prevProps);
+			console.log(me.props);			
+			
 			me.showList()();
 			
 		}
