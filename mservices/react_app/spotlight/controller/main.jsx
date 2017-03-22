@@ -15,7 +15,7 @@ try {
 		},
 		loadData: function(data) {
 			var me = this;
-			console.log(me);
+			console.log(data);
 			var target = null;
 			return function(e) {
 				$(e.target).hide();
