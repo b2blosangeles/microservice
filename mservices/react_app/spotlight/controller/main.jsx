@@ -18,21 +18,22 @@ try {
 			return function(e) {
 				console.log(e);
 				var obj = $(e.target);
+				obj.hide();
 				setTimeout(
 					function() {
 						console.log(obj);
 					}, 1000
 				
 				);
-				(function(e) {
-					$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
-					{}, 
-					function (data) {
-						//console.log(e);
-						me.setState({list: data }, function() {
-						});
-					},'json');
-				})(e);
+			
+				$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
+				{}, 
+				function (data) {
+					obj.show();
+					me.setState({list: data }, function() {
+					});
+				},'json');
+			
 			}.bind(this) 	
 		},	
 		showList: function() {
