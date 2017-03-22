@@ -17,10 +17,14 @@ try {
 			var me = this;
 			me.setState({appid: id }, function() { });
 		},
-		myClick: function (text) {
-			alert(text);
-
-		},		
+		changeId2: function() {
+			var me = this;
+			return function(id) {
+				alert(id);
+				// me.setState({appid: id }, function() { });
+			}
+			
+		},	
 		showList: function() {
 			var me = this;
 			return function() {
@@ -29,7 +33,10 @@ try {
 						<div className="row">
 							Spotlight 2
 							<button type="button" className="btn btn-success" 
-								onClick={me.changeId.bind(me, new Date().getTime())} >Change</button>
+								onClick={me.changeId.bind(me, 'new Date().getTime()')} >Change</button>
+							
+							<button type="button" className="btn btn-success" 
+								onClick={me.changeId2('aaa')} >Change2</button>
 						</div>	
 					</div>
 					,
