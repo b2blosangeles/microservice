@@ -13,11 +13,14 @@ try {
 				//console.log(me.state);
 			});
 		},
+		tt:function() {
+			alert(1234);
+		},
 		loadData: function(data) {
 			var me = this;
 			alert(1);
 			return function(e) {
-				alert(2);
+				me.tt();
 				$(e.target).hide();
 				$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 				{}, 
