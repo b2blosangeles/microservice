@@ -1,5 +1,5 @@
 try {	
-	var viewpoint = $('.'+mapping_data.id).find('.vp_'+mapping_data.id)[0];
+	var viewpoint = $('.'+mapping_data.id);
 	
 	var Home = React.createClass({
 		getInitialState: function() {
@@ -24,7 +24,7 @@ try {
 						</div>	
 					</div>
 					,
-					viewpoint
+					viewpoint.find('.vp_'+mapping_data.id)[0]
 				);
 			}	
 		},		
@@ -49,7 +49,7 @@ try {
 	ReactDOM.render(
 		<Home/>	
 		,
-		$('.'+mapping_data.id)[0]
+		viewpoint[0]
 	);
 	// $('.'+mapping_data.id).show(0);
 } catch (err) {
