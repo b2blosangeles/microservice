@@ -24,6 +24,7 @@ try {
 				function (data) {
 					// $(e.target).show();
 					console.log(event);
+					console.log('event--->');
 					console.log('$(event.target).show();');
 					me.setState({list: data }, function() {
 					});
