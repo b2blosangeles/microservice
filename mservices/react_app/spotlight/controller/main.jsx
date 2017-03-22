@@ -19,6 +19,9 @@ try {
 				me.setState({appid: id }, function() { });
 			//}
 		},
+		  myClick: function (text) {
+			alert(text);
+		    },		
 		showList: function() {
 			var me = this;
 			return function() {
@@ -27,7 +30,7 @@ try {
 						<div className="row">
 							Spotlight 2
 							<button type="button" className="btn btn-success" 
-								>Change</button>
+								onClick={this.myClick("Hello world")} >Change</button>
 						</div>	
 					</div>
 					,
