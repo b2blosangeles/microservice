@@ -39,6 +39,10 @@ try {
 				<div>...</div>
 			  );
 		},
+		componentDidMount function() {
+			var me = this;
+			me.showList()();
+		}		
 		componentDidUpdate: function() {
 			var me = this;
 			me.showList()();
