@@ -18,7 +18,7 @@ try {
 			var me = this;
 			console.log('e---');
 			console.log(e);
-			return function(b) {
+			(function(b) {
 				console.log('b---');
 				console.log(e);
 				$(e.target).hide();
@@ -29,7 +29,7 @@ try {
 					me.setState({list: data }, function() {
 					});
 				},'json');
-			}	
+			})();	
 		},	
 		showList: function() {
 			var me = this;
