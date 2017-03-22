@@ -17,9 +17,9 @@ try {
 			var me = this;
 			me.setState({appid: id }, function() { });
 		},
-		changeId2: function() {
+		changeId2: function(id) {
 			var me = this;
-			return function(id) {
+			return function() {
 				alert(id);
 				// me.setState({appid: id }, function() { });
 			}
