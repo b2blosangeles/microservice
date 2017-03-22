@@ -1,5 +1,5 @@
 try {	
-	var viewpoint = $('.'+mapping_data.id)[0];
+	var viewpoint = $('.'+mapping_data.id);
 	
 	var Home = React.createClass({
 		getInitialState: function() {
@@ -24,14 +24,14 @@ try {
 						</div>	
 					</div>
 					,
-					viewpoint
+					viewpoint.find('viewpoint')[0]
 				);
 			}	
 		},		
 		render: function() {
 			var me = this;		
 			return (
-				<div>...</div>
+				<viewpoint>...</viewpoint>
 			  );
 		},
 		
