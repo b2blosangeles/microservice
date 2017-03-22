@@ -18,7 +18,7 @@ try {
 			var me = this;
 			console.log('e---');
 			console.log(e);
-			var obj = $(e.target);
+			var obj = viewpoint.find(e.target);
 			(function(obj) {
 				console.log(e);
 				obj.hide();
