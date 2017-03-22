@@ -18,17 +18,18 @@ try {
 			var me = this;
 			console.log('e---');
 			console.log(e);
-			(function(e) {
+			var obj = $(e.target);
+			(function(obj) {
 				console.log(e);
-				$(e.target).hide();
+				obj.hide();
 				$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 				{}, 
 				function (data) {
-					$(e.target).show();
+					obj.show();
 					me.setState({list: data }, function() {
 					});
 				},'json');
-			})(e);	
+			})(obj);	
 		},	
 		showList: function() {
 			var me = this;
