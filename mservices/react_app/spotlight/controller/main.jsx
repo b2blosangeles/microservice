@@ -14,7 +14,7 @@ try {
 
 			},'json');
 			*/
-			me.setState({list: []}, function() {
+			me.setState({list:88}, function() {
 			});
 			return {list:[]};
 		},
