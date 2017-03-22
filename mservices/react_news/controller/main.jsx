@@ -40,6 +40,7 @@ try {
 				});
 
 			},'json');
+			me.showList()();
 			return {list:[]};
 		},
 		showDoc: function(item) {
