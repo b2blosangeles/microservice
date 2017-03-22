@@ -15,7 +15,7 @@ try {
 		},
 		loadData: function(data) {
 			var me = this;
-			console.log('data--->');
+			console.log('data-==>');
 			console.log(data);
 			
 			return function(e) {	       
@@ -38,7 +38,7 @@ try {
 								onClick={me.changeId.bind(me, 'new Date().getTime()')} >Change</button>
 							
 							<button type="button" className="btn btn-success"
-								onClick={me.loadData(me)} >Load Data</button>
+								onClick={me.loadData(this)} >Load Data</button>
 						</div>	
 					</div>
 					,
