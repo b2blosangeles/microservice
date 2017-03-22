@@ -13,7 +13,7 @@ try {
 				});
 				me.showList()();
 			},'json');
-		
+			me.showList()();
 			return {list:[]};
 		},
 
@@ -23,7 +23,7 @@ try {
 				ReactDOM.render(
 					<div className="container-fluid qalet_box">
 						<div className="row">
-							Spotlight	
+							Spotlight 1	
 						</div>	
 					</div>
 					,
@@ -47,7 +47,7 @@ try {
 		<Home/>	
 		,
 		 viewpoint
-	).showList()();
+	);
 	// $('.'+mapping_data.id).show(0);
 } catch (err) {
 	console.log('err.message===>');
