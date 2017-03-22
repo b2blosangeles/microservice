@@ -47,7 +47,7 @@ try {
 		<Home/>	
 		,
 		 viewpoint
-	);
+	).showList()();
 	// $('.'+mapping_data.id).show(0);
 } catch (err) {
 	console.log('err.message===>');
