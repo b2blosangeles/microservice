@@ -18,8 +18,9 @@ try {
 			var me = this;
 			console.log('e---');
 			console.log(e);
-			return function() {
-				console.log(e);
+			return function(b) {
+				console.log('b---');
+				console.log(b);
 				$(e.target).hide();
 				$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 				{}, 
