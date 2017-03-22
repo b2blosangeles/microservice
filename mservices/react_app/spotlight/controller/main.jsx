@@ -16,7 +16,7 @@ try {
 		loadData: function(data) {
 			var me = this;
 			console.log('data-==>');
-			console.log(data);
+			console.log(this);
 			
 			return function(e) {	       
 				$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
