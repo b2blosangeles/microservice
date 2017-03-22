@@ -4,7 +4,7 @@ try {
 	var Home = React.createClass({
 		getInitialState: function() {
 			var me = this;
-			me.loadData();
+		//	me.loadData();
 			return {list: [], appid:1234 };
 		},
 		changeId: function(id) {
