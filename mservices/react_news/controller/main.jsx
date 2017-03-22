@@ -57,10 +57,8 @@ try {
 				ReactDOM.render(
 					<div className="container-fluid qalet_box">
 						<div className="row">
-							<qalet>{"module":"spotlight",
-								"app":"http://m.qalet.com/package/qalet_plugin.js",
-								"css":{"link":"/css/customizeA.css","data":{"solution":3}} }
-							</qalet>    							
+							<div id="pp">
+							</div>    							
 							
 							<p>	
 							{me.state.list.map(function(item, index) {
