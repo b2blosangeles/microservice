@@ -60,7 +60,7 @@
 				<div className="modal fade ModalAlert" tabindex="-1" role="dialog" aria-hidden="true">
 				  <div className="modal-dialog" role="document">
 					<div className={'alert alert-' + style} role="alert">
-						<span dangerouslySetInnerHTML={messag} />
+						<span dangerouslySetInnerHTML={message}/>
 						<button type="button" className="close" data-dismiss="modal" style={{display:showcloseicon}}>
 							&times;
 						</button>
