@@ -39,7 +39,7 @@ try {
 					alert(90);
 					console.log('--bbj-->');
 					console.log(bbj);
-					bbj.show();
+					$(bbj).show();
 					 bbj.css({border:'6px solid red'});
 					alert(91);
 					bbj.hide();
