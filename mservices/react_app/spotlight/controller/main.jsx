@@ -2,7 +2,7 @@ try {
 	var viewpoint = $('.'+mapping_data.id);	
 	class Home extends React.Component {
 		constructor({ initialChecked }) {
-			super();
+			super(props);
 			this.state = {list: [], appid:1234 };
 		}		
 		changeId(id) {
