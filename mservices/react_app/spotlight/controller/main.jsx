@@ -15,7 +15,10 @@ try {
 			viewpoint.find('.ModalAlert').modal({backdrop:'static'});
 		},
 		inh: function() {
-			return this;
+			var me = this;
+			return function() {
+				return '4455';	
+			};
 		},
 		loadData: function(e) {
 			var me = this;
@@ -45,7 +48,7 @@ try {
 								onClick={me.loadData.bind(this)} >Load Data</button>
 						</div>
 						{me.state.appid}
-						<ModalAlert data={{"title":"test title"}} parent={me} config={me.inh}/>
+						<ModalAlert data={{"title":"test title"}} parent={me} config={me.inh()}/>
 						<GeneralModal data={{"title":"test title"}} />
 					</div>
 					,
