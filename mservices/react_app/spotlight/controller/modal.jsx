@@ -29,7 +29,7 @@
 		render: function() {
 			var me = this;		
 			return (
-				<div className="modal fade ModalAlert" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div className="modal fade modal-fluid ModalAlert" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 				  <div className="modal-dialog" role="document">
 					<div className="alert alert-success" role="alert">
 						<strong>!</strong> You successfully read this important alert message.
