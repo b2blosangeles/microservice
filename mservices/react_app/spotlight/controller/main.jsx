@@ -20,8 +20,10 @@ try {
 			obj.attr('disabled', true);
 			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 			{}, 
-			function (data) {	
+			function (data) {
+				
 				me.setState({list: data }, function() {
+					obj.attr('disabled', false);
 				});
 			},'json');
 		},	
