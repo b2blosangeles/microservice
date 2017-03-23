@@ -30,14 +30,12 @@ try {
 			//	console.log(viewpoint[0]);
 			//	console.log(target);	
 					var bbj = viewpoint.find(target).show();
-					console.log(bbj);
 					bbj.show();
 					console.log('--bbj-->');
 					console.log(bbj);
-					 bbj.css({border:'6px solid red'});
 					bbj.css({border:'6px solid red'});
 					// alert(91);
-				//	bbj.hide();
+					bbj.hide();
 					me.setState({list: data }, function() {
 					});
 				},'json');
