@@ -9,7 +9,7 @@ try {
 		changeId: function(id) {
 			var me = this;
 			var obj = null;
-			$('#myModal').modal({backdrop:'static'});
+			viewpoint.find('.ModalAlert').modal({backdrop:'static'});
 			// me.setState({appid: id }, function(a, b) { 
 				//console.log(me.state);
 			// });
@@ -18,11 +18,11 @@ try {
 			var me = this;
 			var obj = $(e.target);
 			obj.attr('disabled', true);
-			$('#myModal').modal({backdrop:'static'});
+			viewpoint.find('.GeneralModal').modal({backdrop:'static'});
 			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 			{}, 
 			function (data) {
-				$('#myModal').modal('hide');
+				viewpoint.find('.GeneralModal').modal('hide');
 				me.setState({list: data }, function() {
 					obj.attr('disabled', false);
 				});
@@ -42,6 +42,7 @@ try {
 								onClick={me.loadData.bind(this)} >Load Data</button>
 						</div>
 						<ModalAlert data={{"title":"test title"}} />
+						<GeneralModal data={{"title":"test title"}} />
 					</div>
 					,
 					viewpoint.find('.vp_'+mapping_data.id)[0]
