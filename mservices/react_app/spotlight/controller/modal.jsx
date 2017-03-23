@@ -25,6 +25,52 @@
 		}		
 	});
 
+	var ModalLoading = React.createClass({
+		getInitialState: function() {
+			var me = this;
+			setInterval(function(){
+				me.setState({ModalLoading: me.props.parent.state.ModalLoading });				
+			}, 200);
+			
+			return {list: [] };
+		},
+		componentDidUpdate: function(prevProps, prevState) {
+			var me = this;
+			if (prevState.ModalLoading !== me.state.ModalLoading) {
+				console.log('sub ModalLoading chnaged ===');
+				me.render();
+			}
+		},
+		render: function() {
+			var me = this;	
+			var style, message, showcloseicon;
+			switch(me.state.ModalLoading) {
+				case "success":
+					style = 'success';
+					message = '<strong>!</strong>Successfully download data.';
+					showcloseicon = '';
+					break;
+				case "warning":
+					style = 'warning';
+					message = 'Loading ...';
+					showcloseicon = 'none';
+					break;			
+			} 
+			return (
+				<div className="modal fade ModalLoading" tabindex="-1" role="dialog" aria-hidden="true">
+				  <div className="modal-dialog" role="document">
+					<div className={'alert alert-' + style} role="alert">
+						<span dangerouslySetInnerHTML={{__html: message}}></span>
+						<button type="button" className="close" data-dismiss="modal" style={{display:showcloseicon}}>
+							&times;
+						</button>
+					</div>
+				  </div>
+				</div>	
+			  );
+		}		
+	});
+
 	var ModalAlert = React.createClass({
 		getInitialState: function() {
 			var me = this;
