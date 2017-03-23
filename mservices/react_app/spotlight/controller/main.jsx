@@ -28,7 +28,7 @@ try {
 				function (data) {
 
 					
-					alert(7);
+				//	alert(7);
 				console.log(viewpoint[0]);
 				console.log(target);	
 					var bbj = viewpoint.find(target).show();
@@ -42,7 +42,7 @@ try {
 					$(bbj).show();
 					 bbj.css({border:'6px solid red'});
 					alert(91);
-					bbj.hide();
+				//	bbj.hide();
 					me.setState({list: data }, function() {
 					});
 				},'json');
