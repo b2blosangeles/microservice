@@ -38,6 +38,7 @@
 			var me = this;
 			if (prevState.appid !== me.state.appid) {
 				console.log('sub chnaged ===');
+				me.render();
 			}
 		},
 		render: function() {
