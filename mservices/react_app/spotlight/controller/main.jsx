@@ -83,7 +83,8 @@ try {
 		
 		componentDidMount: function() {
 			var me = this;
-			me.showList()();
+			// me.showList()();
+			me.popUp()();
 		},		
 		componentDidUpdate: function(prevProps, prevState) {
 			var me = this;
