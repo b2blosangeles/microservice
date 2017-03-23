@@ -90,6 +90,7 @@ try {
 			var me = this;
 			// me.showList()();
 			me.popUp()();
+			$('#myModal').modal({});
 		},		
 		componentDidUpdate: function(prevProps, prevState) {
 			var me = this;
