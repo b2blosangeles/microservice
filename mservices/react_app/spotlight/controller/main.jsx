@@ -32,12 +32,13 @@ try {
 				console.log(viewpoint[0]);
 				console.log(target);	
 					var bbj = viewpoint.find(target).show();
-					 bbj.css({border:'1px solid red'}); 
+					 
 					console.log('--bbj-->');
 					console.log(bbj);
 					bbj.show();
-					alert(9);
-					bbj.hide();
+					 bbj.css({border:'6px solid red'});
+					alert(91);
+					// bbj.hide();
 					me.setState({list: data }, function() {
 					});
 				},'json');
