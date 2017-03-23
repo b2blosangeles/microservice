@@ -8,7 +8,7 @@ try {
 		},
 		changeId: function(id) {
 			var me = this;
-			me.setState({appid: new Date() });
+			me.setState({appid: new Date().getTime() });
 			viewpoint.find('.ModalAlert').modal({backdrop:'static'});
 		},
 
