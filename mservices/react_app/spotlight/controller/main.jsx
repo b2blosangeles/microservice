@@ -8,6 +8,7 @@ try {
 		},
 		changeId: function(id) {
 			var me = this;
+			alert(id);
 			me.setState({appid: id }, function(a, b) { 
 				viewpoint.find('.ModalAlert').modal({backdrop:'static'});
 			});
