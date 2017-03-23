@@ -32,7 +32,7 @@
 				me.setState({appid: me.props.parent.state.appid });				
 			}, 2000);
 			
-			return {list: [], appid:7788 };
+			return {list: [] };
 		},
 		componentDidUpdate: function(prevProps, prevState) {
 			var me = this;
