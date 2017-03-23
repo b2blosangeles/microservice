@@ -26,6 +26,9 @@
 	});
 
 	var ModalAlert = React.createClass({
+		test: function() {
+			alert('ttst');
+		},
 		render: function() {
 			var me = this;		
 			return (
