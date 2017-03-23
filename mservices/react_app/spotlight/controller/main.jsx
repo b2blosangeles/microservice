@@ -9,7 +9,7 @@ try {
 		changeId: function(id) {
 			var me = this;
 			var obj = null;
-			
+			$('#myModal').modal({backdrop:'static'});
 			// me.setState({appid: id }, function(a, b) { 
 				//console.log(me.state);
 			// });
