@@ -18,12 +18,12 @@ try {
 			var me = this;
 			var target = e.target;
 			var obj = $(e.target);
-			obj.attr('readonly', true);
+			obj.attr('disabled', true);
 			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 			{}, 
 			function (data) {	
 			//	var bbj = viewpoint.find(target).show();
-				obj.attr('readonly', false);
+				obj.attr('disabled', false);
 				me.setState({list: data }, function() {
 				});
 			},'json');
