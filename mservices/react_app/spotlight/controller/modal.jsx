@@ -30,7 +30,7 @@
 			var me = this;
 			setInterval(function(){
 				me.setState({ModalAlert: me.props.parent.state.ModalAlert });				
-			}, 2000);
+			}, 200);
 			
 			return {list: [] };
 		},
