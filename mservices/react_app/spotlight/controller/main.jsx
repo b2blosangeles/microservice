@@ -14,7 +14,7 @@ try {
 			var me = this;
 			var obj = $(e.target);
 			obj.attr('disabled', true);
-			/// viewpoint.find('.GeneralModal').modal({backdrop:'static'});
+			/* viewpoint.find('.GeneralModal').modal({backdrop:'static'}); */
 			me.setState({ModalAlert: '' });
 			viewpoint.find('.ModalAlert').modal({backdrop:'static'});
 			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
