@@ -17,7 +17,7 @@ try {
 		inh: function() {
 			var me = this;
 			return function() {
-				return '4455';	
+				return me.state.appid;	
 			};
 		},
 		loadData: function(e) {
