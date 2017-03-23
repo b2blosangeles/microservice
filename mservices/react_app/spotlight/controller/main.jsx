@@ -8,11 +8,10 @@ try {
 		},
 		changeId: function(id) {
 			var me = this;
-			var obj = null;
-			viewpoint.find('.ModalAlert').modal({backdrop:'static'});
 			me.setState({appid: id }, function(a, b) { 
 				//console.log(me.state);
 			});
+			viewpoint.find('.ModalAlert').modal({backdrop:'static'});
 		},
 		loadData: function(e) {
 			var me = this;
