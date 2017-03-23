@@ -29,18 +29,15 @@ try {
 
 					
 				//	alert(7);
-				console.log(viewpoint[0]);
-				console.log(target);	
+			//	console.log(viewpoint[0]);
+			//	console.log(target);	
 					var bbj = viewpoint.find(target).show();
-					 
-					
 					console.log(bbj);
 					bbj.show();
-					// alert(90);
 					console.log('--bbj-->');
 					console.log(bbj);
-					$(bbj).show();
 					 bbj.css({border:'6px solid red'});
+					bbj.css({border:'6px solid red'});
 					// alert(91);
 				//	bbj.hide();
 					me.setState({list: data }, function() {
