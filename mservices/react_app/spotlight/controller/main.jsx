@@ -32,6 +32,8 @@ try {
 				console.log(viewpoint[0]);
 				console.log(target);	
 					var bbj = viewpoint.find(target).show();
+					console.log('--bbj-->');
+					console.log(bbj);
 					bbj.show();
 					alert(9);
 					bbj.hide();
