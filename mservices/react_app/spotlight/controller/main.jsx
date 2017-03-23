@@ -3,7 +3,7 @@ try {
 	class Home extends React.Component {
 		constructor({ initialChecked }) {
 			super();
-			this.state = { {list: [], appid:1234 }
+			this.state = {list: [], appid:1234 };
 		}		
 		changeId(id) {
 			var me = this;
