@@ -16,8 +16,6 @@ try {
 		},
 		loadData: function(e) {
 			var me = this;
-			console.log('e------');
-			console.log(e);
 			var target = e.target;
 			var obj = viewpoint.find(e.target);
 			var f = function() {
