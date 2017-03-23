@@ -46,6 +46,7 @@ try {
 						{me.state.appid}
 						<ModalAlert data={{"title":"test title"}} parent={me}/>
 						<GeneralModal data={{"title":"test title"}} />
+						<ModalLoading data={{"title":"test title"}} parent={me} />
 					</div>
 					,
 					viewpoint.find('.vp_'+mapping_data.id)[0]
