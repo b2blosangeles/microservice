@@ -8,9 +8,7 @@ try {
 		},
 		changeId: function(id) {
 			var me = this;
-			me.setState({appid: id }, function(a, b) { 
-				
-			});
+			me.setState({appid: id });
 			viewpoint.find('.ModalAlert').modal({backdrop:'static'});
 		},
 		inh: function() {
@@ -41,13 +39,13 @@ try {
 						<div className="row">
 							Spotlight 2
 							<button type="button" className="btn btn-success" 
-								onClick={me.changeId.bind(me, 'new Date().getTime()')} >Change</button>
+								onClick={me.changeId.bind(me, new Date().getTime())} >Change</button>
 							
 							<button type="button" className="btn btn-success"
 								onClick={me.loadData.bind(this)} >Load Data</button>
 						</div>
 						{me.state.appid}
-						<ModalAlert data={{"title":"test title"}} parent={me} ff={me.state.appid}/>
+						<ModalAlert data={{"title":"test title"}} parent={me}/>
 						<GeneralModal data={{"title":"test title"}} />
 					</div>
 					,
