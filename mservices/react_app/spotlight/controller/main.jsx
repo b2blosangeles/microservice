@@ -8,7 +8,7 @@ try {
 		},
 		changeId: function(id) {
 			var me = this;
-			me.setState({appid: new Date().getTime() });
+			me.setState({ModalAlert: 'Success' });
 			viewpoint.find('.ModalAlert').modal({backdrop:'static'});
 		},
 
@@ -16,11 +16,14 @@ try {
 			var me = this;
 			var obj = $(e.target);
 			obj.attr('disabled', true);
-			viewpoint.find('.GeneralModal').modal({backdrop:'static'});
+			/// viewpoint.find('.GeneralModal').modal({backdrop:'static'});
+			me.setState({ModalAlert: '' });
+			viewpoint.find('.ModalAlert').modal({backdrop:'static'});
 			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 			{}, 
 			function (data) {
-				viewpoint.find('.GeneralModal').modal('hide');
+				// viewpoint.find('.GeneralModal').modal('hide');
+				me.setState({ModalAlert: 'Success' });
 				me.setState({list: data }, function() {
 					obj.attr('disabled', false);
 				});
