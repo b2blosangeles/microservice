@@ -9,9 +9,9 @@ try {
 		changeId: function(id) {
 			var me = this;
 			me.setState({appid: id }, function(a, b) { 
-				//console.log(me.state);
+				viewpoint.find('.ModalAlert').modal({backdrop:'static'});
 			});
-			viewpoint.find('.ModalAlert').modal({backdrop:'static'});
+			
 		},
 		loadData: function(e) {
 			var me = this;
