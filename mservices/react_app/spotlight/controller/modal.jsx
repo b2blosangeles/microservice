@@ -26,8 +26,10 @@
 	});
 
 	var ModalAlert = React.createClass({
-		test: function() {
-			alert('ttst');
+		getInitialState: function() {
+			var me = this;
+			console.log(me.props.parent.inh()());
+			return {list: [], appid:7788 };
 		},
 		render: function() {
 			var me = this;		
@@ -36,8 +38,8 @@
 				  <div className="modal-dialog" role="document">
 					<div className="alert alert-warning" role="alert">
 						<strong>!</strong> You successfully read this important alert message. 
-						{this.props.parent.state.appid}==> {this.props.parent.inh()()}
-						
+						{this.props.parent.state.appid}==>
+						-->{me.state.appid}
 						<button type="button" className="close" data-dismiss="modal" aria-label="Close">
 							  <span aria-hidden="true">&times;</span>
 						</button>
