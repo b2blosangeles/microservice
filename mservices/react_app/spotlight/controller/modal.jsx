@@ -61,7 +61,7 @@
 				  <div className="modal-dialog" role="document">
 					<div className={'alert alert-' + style} role="alert">
 						<strong>!</strong> {message}. 
-						<button type="button" className="close" data-dismiss="modal" style={display:showcloseicon}>
+						<button type="button" className="close" data-dismiss="modal" style={{display:showcloseicon}}>
 							&times;
 						</button>
 					</div>
