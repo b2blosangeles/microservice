@@ -31,8 +31,12 @@
 			return (
 				<div className="modal fade ModalAlert" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 				  <div className="modal-dialog" role="document">
-					<div className="modal-content">			  
+					<div className="modal-content">		
+<div class="alert alert-success" role="alert">
+  <strong>Well done!</strong> You successfully read this important alert message.
+</div>							
 					      <div className="modal-footer">
+					      
 						<button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
 						<button type="button" className="btn btn-primary">Save changes</button>
 					      </div>
