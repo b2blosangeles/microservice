@@ -48,10 +48,12 @@
 				case "success":
 					style = 'success';
 					message = 'Successfully download data.';
+					showclosticon = '';
 					break;
 				case "warning":
 					style = 'warning';
 					message = 'Loading ...';
+					showclosticon = 'none';
 					break;			
 			} 
 			return (
@@ -59,7 +61,9 @@
 				  <div className="modal-dialog" role="document">
 					<div className={'alert alert-' + style} role="alert">
 						<strong>!</strong> {message}. 
-						<button type="button" className="close" data-dismiss="modal" aria-label="Close">&times;</button>
+						<button type="button" className="close" data-dismiss="modal" aria-label="Close" style={display:showclosticon}>
+							&times;
+						</button>
 					</div>
 				  </div>
 				</div>	
