@@ -18,11 +18,11 @@ try {
 			var me = this;
 			var obj = $(e.target);
 			obj.attr('disabled', true);
-			$('#myModal').modal({});
+			$('#myModal').modal({backdrop:false});
 			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 			{}, 
 			function (data) {
-				$('#myModal').modal('hide');
+			//	$('#myModal').modal('hide');
 				me.setState({list: data }, function() {
 					obj.attr('disabled', false);
 				});
