@@ -47,7 +47,7 @@
 			switch(me.state.ModalAlert) {
 				case "success":
 					style = 'success';
-					message = 'Successfully download data.';
+					message = '<strong>!</strong>Successfully download data.';
 					showcloseicon = '';
 					break;
 				case "warning":
@@ -60,7 +60,7 @@
 				<div className="modal fade ModalAlert" tabindex="-1" role="dialog" aria-hidden="true">
 				  <div className="modal-dialog" role="document">
 					<div className={'alert alert-' + style} role="alert">
-						<strong>!</strong> {message}. 
+						<span dangerouslySetInnerHTML={messag} />
 						<button type="button" className="close" data-dismiss="modal" style={{display:showcloseicon}}>
 							&times;
 						</button>
