@@ -32,7 +32,8 @@
 				<div className="modal fade ModalAlert" tabindex="-1" role="dialog" aria-hidden="true">
 				  <div className="modal-dialog" role="document">
 					<div className="alert alert-warning" role="alert">
-						<strong>!</strong> You successfully read this important alert message. {me.props.parent.state.appid}==> {me.props.config}
+						<strong>!</strong> You successfully read this important alert message. {props.parent.state.appid}==> 
+						{props.title}
 						<button type="button" className="close" data-dismiss="modal" aria-label="Close">
 							  <span aria-hidden="true">&times;</span>
 						</button>
