@@ -50,7 +50,7 @@
 					<div className={'alert alert-' + me.state.ModalAlert} role="alert">
 						<strong>!</strong> You successfully read this important alert message. 
 						{this.props.parent.state.ModalAlert}==>
-						-->{me.state.ModalAlertd}=={style}
+						-->{me.state.ModalAlert}==
 						<button type="button" className="close" data-dismiss="modal" aria-label="Close">
 							  <span aria-hidden="true">&times;</span>
 						</button>
