@@ -10,7 +10,7 @@ try {
 		changeId: function(id) {
 			var me = this;
 			var obj = null;
-			$('#myModal').modal({});
+			
 			// me.setState({appid: id }, function(a, b) { 
 				//console.log(me.state);
 			// });
@@ -19,10 +19,11 @@ try {
 			var me = this;
 			var obj = $(e.target);
 			obj.attr('disabled', true);
+			$('#myModal').modal({});
 			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 			{}, 
 			function (data) {
-				
+				$('#myModal').modal('hide');
 				me.setState({list: data }, function() {
 					obj.attr('disabled', false);
 				});
