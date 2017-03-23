@@ -66,6 +66,7 @@ try {
 			console.log('componentDidUpdate-'+new Date());			
 			if (JSON.stringify(prevState) !== JSON.stringify(me.state)) {
 				console.log('prevState changed===!');
+				me.render();
 			//	me.showList()();
 			}
 		}
