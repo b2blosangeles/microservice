@@ -9,6 +9,7 @@ try {
 		changeId: function(id) {
 			var me = this;
 			alert(id);
+			this.refs.ModalAlert.test();
 			me.setState({appid: id }, function(a, b) { 
 				
 			});
