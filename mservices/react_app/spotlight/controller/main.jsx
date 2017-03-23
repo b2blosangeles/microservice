@@ -70,7 +70,7 @@ try {
 			//	me.showList()();
 			}
 		}
-	});
+	}
 	
 	ReactDOM.render(
 		<Home/>	
