@@ -31,6 +31,9 @@
 			console.log(me.props.parent.inh()());
 			return {list: [], appid:7788 };
 		},
+		componentDidUpdate: function(prevProps, prevState) {
+			console.log('sub chnaged ===');
+		},
 		render: function() {
 			var me = this;		
 			return (
