@@ -43,13 +43,11 @@
 		},
 		render: function() {
 			var me = this;	
-			var style = 'success';
-			
-			
+
 			return (
 				<div className="modal fade ModalAlert" tabindex="-1" role="dialog" aria-hidden="true">
 				  <div className="modal-dialog" role="document">
-					<div className={'alert alert-' + style} role="alert">
+					<div className={'alert alert-' + me.state.ModalAlert} role="alert">
 						<strong>!</strong> You successfully read this important alert message. 
 						{this.props.parent.state.ModalAlert}==>
 						-->{me.state.ModalAlertd}=={style}
