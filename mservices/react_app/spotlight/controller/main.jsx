@@ -8,8 +8,6 @@ try {
 		},
 		changeId: function(id) {
 			var me = this;
-			alert(id);
-			me.refs.child.test();
 			me.setState({appid: id }, function(a, b) { 
 				
 			});
@@ -49,7 +47,7 @@ try {
 								onClick={me.loadData.bind(this)} >Load Data</button>
 						</div>
 						{me.state.appid}
-						<ModalAlert data={{"title":"test title"}} parent={me} config={me.inh}/>
+						<ModalAlert data={{"title":"test title"}} parent={me}/>
 						<GeneralModal data={{"title":"test title"}} />
 					</div>
 					,
