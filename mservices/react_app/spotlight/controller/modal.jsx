@@ -31,7 +31,7 @@
 			return (
 				<div className="modal fade ModalAlert" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 				  <div className="modal-dialog" role="document">
-<div class="alert alert-success" role="alert">
+<div className="alert alert-success" role="alert">
   <strong>Well done!</strong> You successfully read this important alert message.
 </div>						  
 					<div className="modal-content">		
