@@ -1,8 +1,8 @@
-	var Modal = React.createClass({
+	var GeneralModal = React.createClass({
 		render: function() {
 			var me = this;		
 			return (
-				<div className="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div className="modal fade GeneralModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 				  <div className="modal-dialog" role="document">
 				    <div className="modal-content">
 				      <div className="modal-header">
@@ -12,7 +12,7 @@
 					</button>
 				      </div>
 				      <div className="modal-body">
-					...test...{JSON.stringify(me.props.data)}===
+					...GeneralModal..{JSON.stringify(me.props.data)}===
 				      </div>
 				      <div className="modal-footer">
 					<button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -39,7 +39,7 @@
 					</button>
 				      </div>
 				      <div className="modal-body">
-					...test...{JSON.stringify(me.props.data)}===
+					...ModalAlert...{JSON.stringify(me.props.data)}===
 				      </div>
 				      <div className="modal-footer">
 					<button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
