@@ -28,7 +28,7 @@
 	var ModalAlert = React.createClass({
 		getInitialState: function() {
 			var me = this;
-			setTimeout(function(){
+			setInverval(function(){
 				console.log(me.props.parent.inh()());
 			}, 2000);
 			
