@@ -10,9 +10,10 @@ try {
 		changeId: function(id) {
 			var me = this;
 			var obj = null;
-			me.setState({appid: id }, function(a, b) { 
+			$('#myModal').modal({});
+			// me.setState({appid: id }, function(a, b) { 
 				//console.log(me.state);
-			});
+			// });
 		},
 		loadData: function(e) {
 			var me = this;
@@ -112,7 +113,7 @@ try {
 			var me = this;
 			me.showList()();
 			// me.popUp()();
-			$('#myModal').modal({});
+			
 		},		
 		componentDidUpdate: function(prevProps, prevState) {
 			var me = this;
