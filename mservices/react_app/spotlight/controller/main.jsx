@@ -18,7 +18,7 @@ try {
 			// me.setState({ModalAlert: 'warning' });
 			me.setState({ModalLoading: 'warning' });
 		
-			viewpoint.find('.ModalAlert').modal({backdrop:'static'});
+			viewpoint.find('.ModalLoading').modal({backdrop:'static'});
 			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 			{}, 
 			function (data) {
