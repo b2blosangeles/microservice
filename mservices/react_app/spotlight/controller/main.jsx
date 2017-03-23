@@ -36,12 +36,12 @@ try {
 					
 					console.log(bbj);
 					bbj.show();
-					alert(90);
+					// alert(90);
 					console.log('--bbj-->');
 					console.log(bbj);
 					$(bbj).show();
 					 bbj.css({border:'6px solid red'});
-					alert(91);
+					// alert(91);
 				//	bbj.hide();
 					me.setState({list: data }, function() {
 					});
