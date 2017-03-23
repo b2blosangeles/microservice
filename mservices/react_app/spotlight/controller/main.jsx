@@ -32,6 +32,7 @@ try {
 				console.log(viewpoint[0]);
 				console.log(target);	
 					var bbj = viewpoint.find(target).show();
+					 bbj.css({border:'1px solid red'}); 
 					console.log('--bbj-->');
 					console.log(bbj);
 					bbj.show();
