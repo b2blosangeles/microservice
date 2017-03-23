@@ -43,7 +43,7 @@
 		},
 		render: function() {
 			var me = this;	
-			var style = 'success';
+			var style = success;
 			
 			
 			return (
