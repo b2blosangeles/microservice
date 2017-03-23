@@ -41,6 +41,7 @@ try {
 							<button type="button" className="btn btn-success"
 								onClick={me.loadData.bind(this)} >Load Data</button>
 						</div>
+						{me.state.appid}
 						<ModalAlert data={{"title":"test title"}} config={me.state.appid} />
 						<GeneralModal data={{"title":"test title"}} />
 					</div>
