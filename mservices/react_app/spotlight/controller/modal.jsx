@@ -59,9 +59,7 @@
 				  <div className="modal-dialog" role="document">
 					<div className={'alert alert-' + style} role="alert">
 						<strong>!</strong> {message}. 
-						<button type="button" className="close" data-dismiss="modal" aria-label="Close">
-							  <span aria-hidden="true">&times;</span>
-						</button>
+						<button type="button" className="close" data-dismiss="modal" aria-label="Close"></button>
 					</div>
 				  </div>
 				</div>	
