@@ -31,11 +31,6 @@ try {
 			//	console.log(target);	
 					var bbj = viewpoint.find(target).show();
 					bbj.show();
-					console.log('--bbj-->');
-					console.log(bbj);
-					bbj.css({border:'6px solid red'});
-					// alert(91);
-					//bbj.hide();
 					me.setState({list: data }, function() {
 					});
 				},'json');
