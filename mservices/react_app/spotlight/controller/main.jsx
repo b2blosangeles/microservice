@@ -1,18 +1,16 @@
 try {	
 	var viewpoint = $('.'+mapping_data.id);	
-	var Home = React.createClass({
-		getInitialState: function() {
-			var me = this;
-		//	me.loadData();
-			return {list: [], appid:1234 };
-		},
-		changeId: function(id) {
+	class Home extends React.Component {
+		constructor({ initialChecked }) {
+			super();
+			this.state = { {list: [], appid:1234 }
+		}		
+		changeId:(id) {
 			var me = this;
 			me.setState({ModalAlert: 'Success' });
 			viewpoint.find('.ModalAlert').modal({backdrop:'static'});
-		},
-
-		loadData: function(e) {
+		}
+		loadData(e) {
 			var me = this;
 			var obj = $(e.target);
 			obj.attr('disabled', true);
@@ -28,8 +26,8 @@ try {
 					obj.attr('disabled', false);
 				});
 			},'json');
-		},		
-		showList: function() {
+		}		
+		showList() {
 			var me = this;
 			return function() {
 				ReactDOM.render(
@@ -50,21 +48,20 @@ try {
 					viewpoint.find('.vp_'+mapping_data.id)[0]
 				);
 			}	
-		},		
-		render: function() {
+		}
+		render() {
 			var me = this;		
 			return (
 				<span className={'vp_'+mapping_data.id}>..</span>
 			  );
-		},
-		
-		componentDidMount: function() {
+		}
+		componentDidMount() {
 			var me = this;
 			me.showList()();
 			// me.popUp()();
 			
-		},		
-		componentDidUpdate: function(prevProps, prevState) {
+		}
+		componentDidUpdate(prevProps, prevState) {
 			var me = this;
 			console.log('componentDidUpdate-'+new Date());			
 			if (JSON.stringify(prevState) !== JSON.stringify(me.state)) {
@@ -85,4 +82,3 @@ try {
 	console.log('err.message===>');
 	console.log(err.message);
 }
-
