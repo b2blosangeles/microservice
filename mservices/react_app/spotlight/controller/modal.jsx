@@ -29,14 +29,14 @@
 		getInitialState: function() {
 			var me = this;
 			setInterval(function(){
-				me.setState({appid: me.props.parent.state.appid });				
+				me.setState({ModalAlert: me.props.parent.state.ModalAlert });				
 			}, 2000);
 			
 			return {list: [] };
 		},
 		componentDidUpdate: function(prevProps, prevState) {
 			var me = this;
-			if (prevState.appid !== me.state.appid) {
+			if (prevState.ModalAlert !== me.state.ModalAlert) {
 				console.log('sub chnaged ===');
 				me.render();
 			}
@@ -48,8 +48,8 @@
 				  <div className="modal-dialog" role="document">
 					<div className="alert alert-warning" role="alert">
 						<strong>!</strong> You successfully read this important alert message. 
-						{this.props.parent.state.appid}==>
-						-->{me.state.appid}
+						{this.props.parent.state.ModalAlert}==>
+						-->{me.state.ModalAlertd}
 						<button type="button" className="close" data-dismiss="modal" aria-label="Close">
 							  <span aria-hidden="true">&times;</span>
 						</button>
