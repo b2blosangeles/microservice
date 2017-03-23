@@ -5,7 +5,7 @@ try {
 			super();
 			this.state = { {list: [], appid:1234 }
 		}		
-		changeId:(id) {
+		changeId(id) {
 			var me = this;
 			me.setState({ModalAlert: 'Success' });
 			viewpoint.find('.ModalAlert').modal({backdrop:'static'});
