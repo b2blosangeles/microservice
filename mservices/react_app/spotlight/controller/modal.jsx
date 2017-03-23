@@ -28,7 +28,10 @@
 	var ModalAlert = React.createClass({
 		getInitialState: function() {
 			var me = this;
-			console.log(me.props.parent.inh()());
+			setTimeout(function(){
+				console.log(me.props.parent.inh()());
+			}, 2000);
+			
 			return {list: [], appid:7788 };
 		},
 		componentDidUpdate: function(prevProps, prevState) {
