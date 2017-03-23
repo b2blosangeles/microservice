@@ -35,6 +35,7 @@
 			return {list: [], appid:7788 };
 		},
 		componentDidUpdate: function(prevProps, prevState) {
+			var me = this;
 			if (prevState.appid !== me.state.appid) {
 				console.log('sub chnaged ===');
 			}
