@@ -43,17 +43,17 @@
 		},
 		render: function() {
 			var me = this;	
-			var style, message;
+			var style, message, showcloseicon;
 			switch(me.state.ModalAlert) {
 				case "success":
 					style = 'success';
 					message = 'Successfully download data.';
-					showclosticon = '';
+					showcloseicon = '';
 					break;
 				case "warning":
 					style = 'warning';
 					message = 'Loading ...';
-					showclosticon = 'none';
+					showcloseicon = 'none';
 					break;			
 			} 
 			return (
@@ -61,7 +61,7 @@
 				  <div className="modal-dialog" role="document">
 					<div className={'alert alert-' + style} role="alert">
 						<strong>!</strong> {message}. 
-						<button type="button" className="close" data-dismiss="modal" aria-label="Close" style={display:showclosticon}>
+						<button type="button" className="close" data-dismiss="modal" style={display:showcloseicon}>
 							&times;
 						</button>
 					</div>
