@@ -12,7 +12,7 @@
 					</button>
 				      </div>
 				      <div className="modal-body">
-					...test...{me.props.data.title}===
+					...test...{me.props.data}===
 				      </div>
 				      <div className="modal-footer">
 					<button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
