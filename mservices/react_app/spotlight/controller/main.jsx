@@ -18,7 +18,7 @@ try {
 			var me = this;
 			var target = e.target;
 			var obj = viewpoint.find(e.target);
-			var f = function() {
+		//	var f = function() {
 
 				obj.hide();
 				$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
@@ -39,8 +39,8 @@ try {
 					me.setState({list: data }, function() {
 					});
 				},'json');
-			};
-			f();	
+		//	};
+		//	f();	
 		},	
 		showList: function() {
 			var me = this;
