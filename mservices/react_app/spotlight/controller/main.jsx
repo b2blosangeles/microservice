@@ -15,13 +15,13 @@ try {
 			var obj = $(e.target);
 			obj.attr('disabled', true);
 			/* viewpoint.find('.GeneralModal').modal({backdrop:'static'}); */
-			me.setState({ModalAlert: '' });
+			me.setState({ModalAlert: 'warning' });
 			viewpoint.find('.ModalAlert').modal({backdrop:'static'});
 			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 			{}, 
 			function (data) {
 				// viewpoint.find('.GeneralModal').modal('hide');
-				me.setState({ModalAlert: 'Success' });
+				me.setState({ModalAlert: 'success' });
 				me.setState({list: data }, function() {
 					obj.attr('disabled', false);
 				});
