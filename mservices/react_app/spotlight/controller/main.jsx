@@ -41,7 +41,7 @@ try {
 							<button type="button" className="btn btn-success"
 								onClick={me.loadData.bind(this)} >Load Data</button>
 						</div>
-						<Modal data={"title":"test title"} />
+						<Modal data={{"title":"test title"}} />
 					</div>
 					,
 					viewpoint.find('.vp_'+mapping_data.id)[0]
