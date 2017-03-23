@@ -36,6 +36,7 @@ try {
 					console.log('--bbj-->');
 					console.log(bbj);
 					bbj.show();
+					alert(90);
 					 bbj.css({border:'6px solid red'});
 					alert(91);
 					bbj.hide();
