@@ -31,6 +31,10 @@ try {
 			var me = this;
 			return function() {
 				ReactDOM.render(
+					<span>	
+					<button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+					  Launch demo modal
+					</button>					
 					<div className="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 					  <div className="modal-dialog" role="document">
 					    <div className="modal-content">
@@ -50,6 +54,7 @@ try {
 					    </div>
 					  </div>
 					</div>
+					</span>	
 					,
 					viewpoint.find('.vp_'+mapping_data.id)[0]
 				);
