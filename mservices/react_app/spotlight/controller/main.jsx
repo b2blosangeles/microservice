@@ -10,9 +10,9 @@ try {
 			var me = this;
 			var obj = null;
 			viewpoint.find('.ModalAlert').modal({backdrop:'static'});
-			// me.setState({appid: id }, function(a, b) { 
+			me.setState({appid: id }, function(a, b) { 
 				//console.log(me.state);
-			// });
+			});
 		},
 		loadData: function(e) {
 			var me = this;
@@ -41,7 +41,7 @@ try {
 							<button type="button" className="btn btn-success"
 								onClick={me.loadData.bind(this)} >Load Data</button>
 						</div>
-						<ModalAlert data={{"title":"test title"}} />
+						<ModalAlert data={{"title":"test title"}} config={me.state.appid} />
 						<GeneralModal data={{"title":"test title"}} />
 					</div>
 					,
