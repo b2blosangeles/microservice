@@ -29,7 +29,7 @@
 		getInitialState: function() {
 			var me = this;
 			setInterval(function(){
-				console.log(me.props.parent.inh()());
+				me.setState({appid: me.props.parent.inh()() });				
 			}, 2000);
 			
 			return {list: [], appid:7788 };
