@@ -15,7 +15,7 @@ try {
 			viewpoint.find('.ModalAlert').modal({backdrop:'static'});
 		},
 		inh: function() {
-			return 'eer';
+			return this;
 		},
 		loadData: function(e) {
 			var me = this;
