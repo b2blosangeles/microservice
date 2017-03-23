@@ -17,25 +17,16 @@ try {
 		loadData: function(e) {
 			var me = this;
 			var target = e.target;
-			var obj = viewpoint.find(e.target);
-		//	var f = function() {
-
-				obj.hide();
-				$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
-				{}, 
-				function (data) {
-
-					
-				//	alert(7);
-			//	console.log(viewpoint[0]);
-			//	console.log(target);	
-					var bbj = viewpoint.find(target).show();
-					bbj.show();
-					me.setState({list: data }, function() {
-					});
-				},'json');
-		//	};
-		//	f();	
+			var obj = $(e.target);
+			obj.hide();
+			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
+			{}, 
+			function (data) {	
+				var bbj = viewpoint.find(target).show();
+				bbj.show();
+				me.setState({list: data }, function() {
+				});
+			},'json');
 		},	
 		showList: function() {
 			var me = this;
