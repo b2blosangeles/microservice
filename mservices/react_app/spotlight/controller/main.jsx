@@ -19,7 +19,6 @@ try {
 			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 			{}, 
 			function (data) {
-				viewpoint.find('.ModalLoading').modal('hide');
 				me.setState({ModalLoading: null });
 				me.setState({list: data }, function() {
 					obj.attr('disabled', false);
