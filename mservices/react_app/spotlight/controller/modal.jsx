@@ -104,8 +104,7 @@ class ModalPlus extends React.Component {
 				var opacity = me.state.ModalPlus.backdrop.opacity;
 				modal_backdrop += '.modal-backdrop.fade.in {opacity: '+ opacity +';filter: alpha(opacity=' + (opacity * 100) + ');}';
 			}
-			
-			var modal_backdrop = ".modal-backdrop {background-color: "+me.state.ModalPlus.backdrop+"; }";
+
 			$('html > head').append($('<style>'+modal_backdrop+'</style>'));	
 		} else {
 			if (_defaule_modal_backdrop) $('html > head').append($('<style>'+_defaule_modal_backdrop+'</style>'));
