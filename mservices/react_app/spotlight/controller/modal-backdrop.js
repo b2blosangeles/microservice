@@ -6,7 +6,6 @@ var _defaule_modal_backdrop;
 		for (var sx = 0; sx < fullstylesheets.length; sx++) {
 		    var sheetclasses = fullstylesheets[sx].rules || document.styleSheets[sx].cssRules;
 		    for (var cx = 0; cx < sheetclasses.length; cx++) {
-			    console.log(sheetclasses[cx].selectorText.replace(/\s/ig, ''));
 			if (sheetclasses[cx].selectorText.replace(/\s/ig, '') == f.replace(/\s/ig, '')) {	
 			//	hasstyle = true; break; 
 				hasstyle = sheetclasses[cx].cssText; break; 
@@ -16,9 +15,11 @@ var _defaule_modal_backdrop;
 		return hasstyle;
 	};
 	//.modal-backdrop,.modal-backdrop.fade.in
-	_defaule_modal_backdrop = getCssRule('.modal-backdrop')+getCssRule('.modal-backdrop,.modal-backdrop.fade.in');
-	console.log('bbb==');
-	console.log(getCssRule('.modal-backdrop,.modal-backdrop.fade.in'));
+	_defaule_modal_backdrop = getCssRule('.modal-backdrop')+
+		getCssRule('.modal-backdrop,.modal-backdrop.fade.in') + 
+		getCssRule('.modal-backdrop,.modal-backdrop.fade');
+	console.log('bbb==>');
+	console.log(getCssRule('.modal-backdrop,.modal-backdrop.fade'));
 	if (!_defaule_modal_backdrop) {
 		_defaule_modal_backdrop = ".modal-backdrop {position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 1040; background-color: #000000; }"+
 		".modal-backdrop.fade {opacity: 0;} .modal-backdrop,.modal-backdrop.fade.in {opacity: 0.5;filter: alpha(opacity=50);}";
