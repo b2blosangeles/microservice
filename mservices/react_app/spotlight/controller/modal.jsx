@@ -78,7 +78,7 @@
 		},
 		componentDidUpdate: function(prevProps, prevState) {
 			var me = this;
-			if (prevState.ModalAlert !== me.state.ModalAlert) {
+			if (JSON.stringify(prevState.ModalAlert) !== JSON.stringify(me.state.ModalAlert)) {
 				console.log('sub chnaged ===');
 				me.render();
 				viewpoint.find('.ModalAlert').modal({backdrop:'static'});
