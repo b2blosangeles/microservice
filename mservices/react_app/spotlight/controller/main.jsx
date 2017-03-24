@@ -8,7 +8,7 @@
 		test(id) {
 			var me = this;
 			if (!id) var id = new Date().getTime();
-			me.setState({ModalPlus: {type:'loading', style:'info', id: id}});
+			me.setState({ModalPlus: {type:'loading', style:'info', message:'node job', id: id}});
 		}		
 		changeId(id) {
 			var me = this;
