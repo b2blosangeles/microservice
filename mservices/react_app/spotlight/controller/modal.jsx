@@ -143,8 +143,8 @@ class ModalPlus extends React.Component {
 		var me = this;	
 		switch(me.state.ModalPlus.type) {
 			case "alert":
-				var style = 'success';
-				var message = '<strong>!</strong>Successfully download data.';
+				var style = (me.state.ModalPlus.style)?me.state.ModalPlus.style:'info';
+				var message = (me.state.ModalPlus.message)?me.state.ModalPlus.message:'<strong>!</strong> Successfully download data.';
 				var showcloseicon = '';
 				return (			
 					<div className="modal fade ModalPlus" tabindex="-1" role="dialog" aria-hidden="true">
