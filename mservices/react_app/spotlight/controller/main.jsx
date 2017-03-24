@@ -1,4 +1,4 @@
-// try {	
+try {	
 	var viewpoint = $('.'+mapping_data.id);	
 	class Home extends React.Component {
 		constructor(props) {
@@ -86,9 +86,7 @@
 			var me = this;
 			console.log('componentDidUpdate-'+new Date());			
 			if (JSON.stringify(prevState) !== JSON.stringify(me.state)) {
-				console.log('prevState changed===!');
-				
-			//	me.showList()();
+			//	console.log('prevState changed===!');
 			}
 		}
 	}
@@ -98,8 +96,7 @@
 		,
 		viewpoint[0]
 	);
-	// $('.'+mapping_data.id).show(0);
-// } catch (err) {
-//	console.log('err.message===>');
-//	console.log(err.message);
-//}
+ } catch (err) {
+	console.log('err.message===>');
+	console.log(err.message);
+}
