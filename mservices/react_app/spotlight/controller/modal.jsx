@@ -29,7 +29,6 @@ class ModalPlus extends React.Component {
 	componentDidUpdate (prevProps, prevState) {
 		var me = this;
 		if (prevState.ModalPlus !== me.state.ModalPlus) {
-			console.log('sub chnaged ===');
 			me.render();
 			viewpoint.find('.ModalPlus').modal({backdrop:'static'});
 		} 
