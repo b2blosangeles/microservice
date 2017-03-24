@@ -61,8 +61,8 @@ class ModalPlus extends React.Component {
 				}
 				break;	
 			case "loading":
-				var textcolor = (me.state.ModalPlus.textcolor)?me.state.ModalPlus.textcolor :'#000';
-				var message = (me.state.ModalPlus.message)?('Loading ... ' + me.state.ModalPlus.message):'Loading ...';
+				var textcolor = (me.state.ModalPlus.textcolor)?me.state.ModalPlus.textcolor :'#fff';
+				var message = (me.state.ModalPlus.message)?(me.state.ModalPlus.message):'Loading ...';
 				message = '<span style="color:'+textcolor+'">'+message+'</span>';
 				if (!err_msg) {
 					return (			
