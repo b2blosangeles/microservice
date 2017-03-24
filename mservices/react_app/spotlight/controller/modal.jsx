@@ -36,7 +36,6 @@
 		},
 		componentDidUpdate: function(prevProps, prevState) {
 			var me = this;
-			me.viewpoint = me.state.ModalLoading.viewpoint;
 			if (prevState.ModalLoading !== me.state.ModalLoading) {
 				console.log('sub ModalLoading chnaged ===');
 				if (!me.viewpoint && (me.state.ModalLoading) && (me.state.ModalLoading.viewpoint)) {
