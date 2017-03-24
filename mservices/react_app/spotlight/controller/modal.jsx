@@ -94,6 +94,12 @@ class ModalPlus extends React.Component {
 				var style = (me.state.ModalPlus.style)?me.state.ModalPlus.style:'info';
 				var message = (me.state.ModalPlus.message)?('<strong>!</strong> ' + me.state.ModalPlus.message):'<strong>!</strong>';
 				var showcloseicon = '';
+				if (me.state.ModalPlus.backdrop) {
+					var modal_backdrop = ".modal-backdrop {position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 1040; background-color: "+me.state.ModalPlus.backdrop+"; }"+
+					".modal-backdrop.fade {opacity: 0;} .modal-backdrop,.modal-backdrop.fade.in {opacity: 0.5;filter: alpha(opacity=50);}";
+					var style = $('<style>'+modal_backdrop+'</style>');
+					$('html > head').append(style);		
+				}
 				if (!err_msg) {
 					return (			
 						<div className="modal fade ModalPlus" tabindex="-1" role="dialog" aria-hidden="true">
