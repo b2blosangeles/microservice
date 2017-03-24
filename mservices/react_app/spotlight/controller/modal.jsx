@@ -106,13 +106,13 @@ class ModalPlus extends React.Component {
 							</div>
 						  </div>
 						</div>	
-					)
+					);
 				}
 				break;	
 			default:
 				err_msg = 'wrong or missong ModelPlus Type';
 		} 
-		//if (!err_msg) {
+		if (!err_msg) {
 			return (
 				<div className="modal fade ModalPlus" tabindex="-1" role="dialog" aria-hidden="true">
 				  <div className="modal-dialog" role="document">
@@ -124,7 +124,9 @@ class ModalPlus extends React.Component {
 					</div>
 				  </div>
 				</div>	
-			)
-		//}	
+			);
+		} else {
+			return(<span></span>);
+		}
 	}				
 }
