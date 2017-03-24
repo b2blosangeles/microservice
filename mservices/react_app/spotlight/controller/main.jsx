@@ -8,12 +8,12 @@
 		test(id) {
 			var me = this;
 			if (!id) var id = new Date().getTime();
-			me.setState({ModalPlus: {type:'loading', style:'info', backdrop:{bg:'#ff0000', opacity:.9}, id: id}});
+			me.setState({ModalPlus: {type:'loading', style:'info', backdrop:{bg:'#ff0000', opacity:0.5}, id: id}});
 		}		
 		changeId(id) {
 			var me = this;
-			me.setState({ModalPlus: {type:'alert', style:'warning', message:'nice job', backdrop:{bg:'#ff0000', opacity:0.1}, style:'warning'}});
-		//	viewpoint.find('.ModalAlert').modal({backdrop:'static'});
+			if (!id) var id = new Date().getTime();
+			me.setState({ModalPlus: {type:'alert', style:'warning', message:'nice job', backdrop:{bg:'#ff0000', opacity:0.1, id: id}, style:'warning'}});
 		}
 		loadData(e) {
 			var me = this;
