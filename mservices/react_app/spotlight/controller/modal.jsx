@@ -4,7 +4,7 @@ class ModalPlus extends React.Component {
 		setInterval(function(){
 			if (typeof me.props.parent.state.ModalPlus == null) {
 				console.log('cancel it !');
-			} else	
+			} else	{
 				if  (me.props.parent.state.ModalPlus !== me.state.ModalPlus) {
 					me.setState({ModalPlus: me.props.parent.state.ModalPlus });
 				}	
