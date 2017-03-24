@@ -119,3 +119,56 @@
 			  );
 		}		
 	});
+
+	class ModalPlus extends React.Component {
+		constructor(props) {
+			super(props);
+			setInterval(function(){
+				if (me.props.parent.state.ModalPlus) {
+					me.setState({ModalPlus: me.props.parent.state.ModalPlus });
+				}				
+			}, 100);
+			this.state = {ModalPlus: ''}
+		}				
+		componentDidUpdate: function(prevProps, prevState) {
+			var me = this;
+			
+			if (prevState.ModalPlus !== me.state.ModalPlus) {
+				console.log('sub chnaged ===');
+				me.render();
+				viewpoint.find('.ModalPlus').modal({backdrop:'static'});
+			}
+		}
+		render: function() {
+			var me = this;	
+			var style, message, showcloseicon;
+			switch(me.state.Modalcode) {
+				case "success":
+					style = 'success';
+					message = '<strong>!</strong>Successfully download data.';
+					showcloseicon = '';
+					break;
+				case "warning":
+					style = 'warning';
+					message = 'Loading ...';
+					showcloseicon = 'none';
+					break;	
+				default:
+					style = 'success';
+					message = '<strong>!</strong>Successfully download data.';
+					showcloseicon = '';				
+			} 
+			return (
+				<div className="modal fade ModalPlus" tabindex="-1" role="dialog" aria-hidden="true">
+				  <div className="modal-dialog" role="document">
+					<div className={'alert alert-' + style} role="alert">
+						<span dangerouslySetInnerHTML={{__html: message}}></span>
+						<button type="button" className="close" data-dismiss="modal" style={{display:showcloseicon}}>
+							&times;
+						</button>
+					</div>
+				  </div>
+				</div>	
+			  );
+		}				
+	}
