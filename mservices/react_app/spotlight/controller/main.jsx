@@ -11,7 +11,7 @@
 			me.setState({ModalPlus: {type:'loading', style:'info', id: id}});
 			setTimeout(
 				function() {
-					me.setState({ModalPlus: {type:'loading', style:'info', id: id}});	
+					me.setState({ModalPlus: null});	
 				}, 6000
 			
 			)
