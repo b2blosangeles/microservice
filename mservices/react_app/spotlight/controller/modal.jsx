@@ -39,11 +39,12 @@
 			me.viewpoint = me.state.ModalLoading.viewpoint;
 			if (prevState.ModalLoading !== me.state.ModalLoading) {
 				console.log('sub ModalLoading chnaged ===');
-				if (!me.viewpoint) {
+				if (!me.viewpoint && (me.state.ModalLoading) && (me.state.ModalLoading.viewpoint)) {
 					me.viewpoint = me.state.ModalLoading.viewpoint;
+					me.viewpoint.find('.ModalLoading').modal({backdrop:'static'});
 				}
 				me.render();
-				me.viewpoint.find('.ModalLoading').modal({backdrop:'static'});
+				
 			}
 		},
 		render: function() {
