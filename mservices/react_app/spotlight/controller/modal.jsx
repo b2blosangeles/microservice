@@ -38,7 +38,9 @@
 			var me = this;
 			if (prevState.ModalLoading !== me.state.ModalLoading) {
 				console.log('sub ModalLoading chnaged ===');
-				if (!me.viewpoint && (me.state.ModalLoading) && (me.state.ModalLoading.viewpoint)) {
+				if (!me.state.ModalLoading && (me.viewpoint)) {
+					me.viewpoint.find('.ModalLoading').modal('hide');
+				} else if (!me.viewpoint && (me.state.ModalLoading) && (me.state.ModalLoading.viewpoint)) {
 					me.viewpoint = me.state.ModalLoading.viewpoint;
 					me.viewpoint.find('.ModalLoading').modal({backdrop:'static'});
 				}
