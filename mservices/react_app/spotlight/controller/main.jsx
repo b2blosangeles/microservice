@@ -39,6 +39,9 @@ try {
 								onClick={me.loadData.bind(me)} >Load Data</button>
 						</div>
 						{me.state.appid}
+						
+						<ModalPlus data={{"title":"test title"}} parent={me}/>
+						
 						<ModalAlert data={{"title":"test title"}} parent={me}/>
 						<GeneralModal data={{"title":"test title"}} />
 						<ModalLoading data={{"title":"test title"}} parent={me} />
