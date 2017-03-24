@@ -87,7 +87,7 @@
 		render: function() {
 			var me = this;	
 			var style, message, showcloseicon;
-			switch(me.state.ModalAlert) {
+			switch(me.state.ModalAlert.code) {
 				case "success":
 					style = 'success';
 					message = '<strong>!</strong>Successfully download data.';
