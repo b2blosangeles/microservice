@@ -38,7 +38,7 @@
 			var me = this;
 			if (prevState.ModalLoading !== me.state.ModalLoading) {
 				console.log('sub ModalLoading chnaged ===');
-				me.render();
+			//	me.render();
 			}
 		},
 		render: function() {
