@@ -32,7 +32,7 @@ var _modal_backdrop_ = {
 	},
 	reset:function() {
 		var me = this;
-		$('html > head').append( $('<style>' + me.default + '</style>'));
+		if (me.default) $('html > head').append( $('<style>' + me.default + '</style>'));
 	},	
 	init:function() {
 		var me = this;
