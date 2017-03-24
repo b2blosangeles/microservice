@@ -52,7 +52,7 @@
 						<span dangerouslySetInnerHTML={{__html: message}}></span>
 						<button type="button" className="close" data-dismiss="modal">
 							&times;
-						</button>
+						</button> 
 					</div>
 				  </div>
 				</div>	
