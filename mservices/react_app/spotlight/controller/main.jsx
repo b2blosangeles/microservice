@@ -32,7 +32,7 @@
 			var obj = $(e.target);
 			obj.attr('disabled', true);
 			if (!id) var id = new Date().getTime();
-			me.setState({ModalPlus: {type:'loading', textcolor:'#000000', hold:200,
+			me.setState({ModalPlus: {type:'loading', textcolor:'#fff', hold:200,
 						 message:'<img src="https://i.stack.imgur.com/oQ0tF.gif" width="24">',  id: id}});
 			
 			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
@@ -63,7 +63,6 @@
 							<button type="button" className="btn btn-success"
 								onClick={me.loadData.bind(me)} >Load Data</button>
 						</div>
-						{me.state.appid}
 						<ModalPlus parent={me}/>
 					</div>
 					,
