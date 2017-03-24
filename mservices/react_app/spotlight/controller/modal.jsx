@@ -97,7 +97,11 @@
 					style = 'warning';
 					message = 'Loading ...';
 					showcloseicon = 'none';
-					break;			
+					break;	
+				default:
+					style = 'success';
+					message = '<strong>!</strong>Successfully download data.';
+					showcloseicon = '';				
 			} 
 			return (
 				<div className="modal fade ModalAlert" tabindex="-1" role="dialog" aria-hidden="true">
