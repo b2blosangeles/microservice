@@ -8,14 +8,13 @@ try {
 		loading(id) {
 			var me = this;
 			if (!id) var id = new Date().getTime();
-			me.setState({ModalPlus: {type:'loading', textcolor:'#000000', 
+			me.setState({ModalPlus: {type:'loading', textcolor:'#000000', hold:1000,
 						 message:'<img src="https://i.stack.imgur.com/oQ0tF.gif" width="24">',  id: id}});
 			setTimeout(
 				function() {
 					
 					me.setState({ModalPlus: 'cancel'});	
-				}, 6000
-			
+				}, 5000
 			)
 		}		
 		popup(id) {
@@ -79,13 +78,11 @@ try {
 		}
 		componentDidMount() {
 			var me = this;
-			me.showList()();
-			// me.popUp()();
-			
+			me.showList()();	
 		}
 		componentDidUpdate(prevProps, prevState) {
 			var me = this;
-			console.log('componentDidUpdate-'+new Date());			
+		//	console.log('componentDidUpdate-'+new Date());			
 			if (JSON.stringify(prevState) !== JSON.stringify(me.state)) {
 			//	console.log('prevState changed===!');
 			}
