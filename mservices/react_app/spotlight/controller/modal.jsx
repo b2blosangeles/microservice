@@ -62,7 +62,7 @@ class ModalPlus extends React.Component {
 				break;	
 			case "loading":
 				var style = (me.state.ModalPlus.style)?me.state.ModalPlus.style:'';
-				var message = (me.state.ModalPlus.message)?('Loading ... ' + me.state.ModalPlus.message):'<strong>!</strong>';
+				var message = (me.state.ModalPlus.message)?('Loading ... ' + me.state.ModalPlus.message):'Loading ...';
 				var showcloseicon = '';
 				if (!err_msg) {
 					return (			
