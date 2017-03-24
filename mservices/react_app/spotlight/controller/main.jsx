@@ -11,7 +11,7 @@
 			me.setState({ModalPlus: {type:'loading', style:'info', id: id}});
 			setTimeout(
 				function() {
-					me.setState({ModalPlus: null});	
+					me.setState({ModalPlus: 'cancel'});	
 				}, 6000
 			
 			)
