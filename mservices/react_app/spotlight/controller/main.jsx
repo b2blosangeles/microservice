@@ -23,7 +23,7 @@ try {
 			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 			{}, 
 			function (data) {
-				viewpoint.find('.GeneralModal').modal('hide');
+				viewpoint.find('.ModalLoading').modal('hide');
 				alert('done');
 			//	me.setState({ModalLoading: null });
 				// me.setState({ModalAlert: 'success' });
