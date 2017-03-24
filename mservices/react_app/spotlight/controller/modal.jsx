@@ -24,8 +24,8 @@ class ModalPlus extends React.Component {
 		var err_msg = '';
 		console.log('sub 8 ===');
 		if (_modal_backdrop_) {
-			if (me.state.ModalPlus.backdrop)  _modal_backdrop_.setNew(me.state.ModalPlus.backdrop);	
-			else  _modal_backdrop_.reset();
+			if (me.state.ModalPlus.backdrop)  _modal_backdrop_.set(me.state.ModalPlus.backdrop);	
+			else  _modal_backdrop_.resetDefault();
 		}
 		switch(me.state.ModalPlus.type) {
 			case "alert":
