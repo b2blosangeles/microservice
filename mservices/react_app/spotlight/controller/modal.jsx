@@ -5,6 +5,7 @@ class ModalPlus extends React.Component {
 			if (me.props.parent.state.ModalPlus) {
 				if (me.props.parent.state.ModalPlus == 'cancel') {
 					console.log('cancel it !');
+					me.props.parent.state.ModalPlus = null;
 				} else if  (me.props.parent.state.ModalPlus !== me.state.ModalPlus) {
 						me.setState({ModalPlus: me.props.parent.state.ModalPlus });
 					}	
