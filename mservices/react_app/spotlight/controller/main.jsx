@@ -12,7 +12,7 @@ try {
 						 message:'<img src="https://i.stack.imgur.com/oQ0tF.gif" width="24">',  id: id}});
 			setTimeout(
 				function() {
-					// me.setState({ModalPlus: {type:'alert', style:'success', message:'nice job', id: new Date().getTime()}});
+					
 					me.setState({ModalPlus: 'cancel'});	
 				}, 10000
 			
@@ -39,7 +39,7 @@ try {
 			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 			{}, 
 			function (data) {
-				me.setState({ModalPlus: {type:'cancel'}});
+				me.setState({ModalPlus: {type:'alert', style:'success', message:'saved', id: new Date().getTime()}});
 				me.setState({list: data }, function() {
 					obj.attr('disabled', false);
 				});
