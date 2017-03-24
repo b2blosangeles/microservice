@@ -94,6 +94,7 @@ class ModalPlus extends React.Component {
 				var style = (me.state.ModalPlus.style)?me.state.ModalPlus.style:'info';
 				var message = (me.state.ModalPlus.message)?('<strong>!</strong> ' + me.state.ModalPlus.message):'<strong>!</strong>';
 				var showcloseicon = '';
+				console.log('added me.state.ModalPlus.backdrop!====>');
 				if (me.state.ModalPlus.backdrop) {
 					console.log('added me.state.ModalPlus.backdrop!');
 					var modal_backdrop = ".modal-backdrop {position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 1040; background-color: "+me.state.ModalPlus.backdrop+"; }"+
