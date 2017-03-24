@@ -12,9 +12,10 @@ try {
 						 message:'<img src="https://i.stack.imgur.com/oQ0tF.gif" width="24">',  id: id}});
 			setTimeout(
 				function() {
-					me.setState({ModalPlus: {type:'cancel', callback:function() {
-						me.setState({ModalPlus: {type:'alert', style:'success', message:'nice job', id: new Date().getTime()}});	
-					}}});	
+					me.setState({ModalPlus: {type:'alert', style:'success', message:'nice job', id: new Date().getTime()}});
+					//me.setState({ModalPlus: {type:'cancel', callback:function() {
+					//	me.setState({ModalPlus: {type:'alert', style:'success', message:'nice job', id: new Date().getTime()}});	
+					//}}});	
 				}, 10000
 			
 			)
