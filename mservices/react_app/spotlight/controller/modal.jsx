@@ -143,33 +143,30 @@ class ModalPlus extends React.Component {
 		var me = this;	
 		var tpl, style, message, showcloseicon;
 		
-		switch(me.state.ModalPlus.code) {
-			case "success":
+		switch(me.state.ModalPlus.type) {
+			case "alert":
 				style = 'success';
 				message = '<strong>!</strong>Successfully download data.';
 				showcloseicon = '';
-				break;
-			case "info":
-				style = 'info';
-				message = 'Loading ...';
-				showcloseicon = 'none';
+				
+				tpl =			
+					<div className="modal fade ModalPlus" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div className="modal-dialog" role="document">
+						<div className={'alert alert-' + style} role="alert">
+							<span dangerouslySetInnerHTML={{__html: message}}></span> ===
+							<button type="button" className="close" data-dismiss="modal" style={{display:showcloseicon}}>
+								&times;
+							</button>
+						</div>
+					  </div>
+					</div>	
 				break;	
 			default:
 				style = 'success';
 				message = '<strong>!</strong>Successfully download data.';
-				showcloseicon = '';				
+				showcloseicon = '';
+				tpl = <span>Nothing</span>
 		} 
-		tpl =
-			<div className="modal fade ModalPlus" tabindex="-1" role="dialog" aria-hidden="true">
-			  <div className="modal-dialog" role="document">
-				<div className={'alert alert-' + style} role="alert">
-					<span dangerouslySetInnerHTML={{__html: message}}></span> ===
-					<button type="button" className="close" data-dismiss="modal" style={{display:showcloseicon}}>
-						&times;
-					</button>
-				</div>
-			  </div>
-			</div>			
 		return (
 			tpl	
 		  );
