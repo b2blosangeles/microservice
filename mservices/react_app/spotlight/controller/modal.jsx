@@ -67,59 +67,6 @@
 		}		
 	});
 
-	var ModalAlert = React.createClass({
-		getInitialState: function() {
-			var me = this;
-			setInterval(function(){
-				if (me.props.parent.state.ModalAlert) {
-					me.setState({ModalAlert: me.props.parent.state.ModalAlert });
-				}				
-			}, 100);
-			return {ModalAlert: {} };
-		},
-		componentDidUpdate: function(prevProps, prevState) {
-			var me = this;
-			
-			if (prevState.ModalAlert !== me.state.ModalAlert) {
-				console.log('sub chnaged ===');
-				me.render();
-				viewpoint.find('.ModalAlert').modal({backdrop:'static'});
-			}
-		},
-		render: function() {
-			var me = this;	
-			var style, message, showcloseicon;
-			switch(me.state.ModalAlert.code) {
-				case "success":
-					style = 'success';
-					message = '<strong>!</strong>Successfully download data.';
-					showcloseicon = '';
-					break;
-				case "warning":
-					style = 'warning';
-					message = 'Loading ...';
-					showcloseicon = 'none';
-					break;	
-				default:
-					style = 'success';
-					message = '<strong>!</strong>Successfully download data.';
-					showcloseicon = '';				
-			} 
-			return (
-				<div className="modal fade ModalAlert" tabindex="-1" role="dialog" aria-hidden="true">
-				  <div className="modal-dialog" role="document">
-					<div className={'alert alert-' + style} role="alert">
-						<span dangerouslySetInnerHTML={{__html: message}}></span>
-						<button type="button" className="close" data-dismiss="modal" style={{display:showcloseicon}}>
-							&times;
-						</button>
-					</div>
-				  </div>
-				</div>	
-			  );
-		}		
-	});
-
 class ModalPlus extends React.Component {
 	constructor(props) {
 		var me = super(props);
@@ -144,7 +91,7 @@ class ModalPlus extends React.Component {
 		switch(me.state.ModalPlus.type) {
 			case "alert":
 				var style = (me.state.ModalPlus.style)?me.state.ModalPlus.style:'info';
-				var message = (me.state.ModalPlus.message)?me.state.ModalPlus.message:'<strong>!</strong> Successfully download data.';
+				var message = (me.state.ModalPlus.message)?('<strong>!</strong> ' + me.state.ModalPlus.message):'<strong>!</strong>';
 				var showcloseicon = '';
 				return (			
 					<div className="modal fade ModalPlus" tabindex="-1" role="dialog" aria-hidden="true">
@@ -164,7 +111,7 @@ class ModalPlus extends React.Component {
 					<div className="modal fade ModalPlus" tabindex="-1" role="dialog" aria-hidden="true">
 					  <div className="modal-dialog" role="document">
 						<div className="alert alert-danger" role="alert">
-							<strong>!</strong> Wrong or Missong Model Plus Type
+							<strong>!</strong> wrong or missong ModelPlus Type
 							<button type="button" className="close" data-dismiss="modal">
 								&times;
 							</button>
