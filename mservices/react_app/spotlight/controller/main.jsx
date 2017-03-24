@@ -8,7 +8,8 @@
 		loading(id) {
 			var me = this;
 			if (!id) var id = new Date().getTime();
-			me.setState({ModalPlus: {type:'loading', style:'warning', message:'<img src="https://i.stack.imgur.com/oQ0tF.gif">'  id: id}});
+			me.setState({ModalPlus: {type:'loading', style:'warning', 
+						 message:'<img src="https://i.stack.imgur.com/oQ0tF.gif">',  id: id}});
 			setTimeout(
 				function() {
 					me.setState({ModalPlus: 'cancel'});	
