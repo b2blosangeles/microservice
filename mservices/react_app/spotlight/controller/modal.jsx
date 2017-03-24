@@ -142,7 +142,7 @@ class ModalPlus extends React.Component {
 	render () {
 		var me = this;	
 		var style, message, showcloseicon;
-		switch(me.state.Modalcode) {
+		switch(me.state.ModalPlus.code) {
 			case "success":
 				style = 'success';
 				message = '<strong>!</strong>Successfully download data.';
