@@ -6,8 +6,7 @@
 		    var sheetclasses = fullstylesheets[sx].rules || document.styleSheets[sx].cssRules;
 		    for (var cx = 0; cx < sheetclasses.length; cx++) {
 			if (sheetclasses[cx].selectorText == f) {
-			    hasstyle = true; break;
-			    //return classes[x].style;               
+			    hasstyle = true; break;            
 			}
 		    }
 		}
