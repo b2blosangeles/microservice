@@ -1,3 +1,4 @@
+var _defaule_modal_backdrop;
 (function() {
 	function getCssRule(f) {
 		var hasstyle = false;
@@ -13,14 +14,11 @@
 		}
 		return hasstyle;
 	};
-	var cssRule = getCssRule('.modal-backdrop')
-	if (!cssRule) {
-		cssRule = ".modal-backdrop {position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 1040; background-color: #000000; }"+
+	defaule_modal_backdrop = getCssRule('.modal-backdrop')
+	if (!_defaule_modal_backdrop) {
+		_defaule_modal_backdrop = ".modal-backdrop {position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 1040; background-color: #000000; }"+
 		".modal-backdrop.fade {opacity: 0;} .modal-backdrop,.modal-backdrop.fade.in {opacity: 0.5;filter: alpha(opacity=50);}";
 		var style = $('<style>'+cssRule+'</style>');
 		$('html > head').append(style);
 	}
-
-	console.log("cssRule===>");
-	console.log(cssRule);
 })();
