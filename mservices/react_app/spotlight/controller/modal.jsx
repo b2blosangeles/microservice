@@ -139,7 +139,7 @@ class ModalPlus extends React.Component {
 			viewpoint.find('.ModalPlus').modal({backdrop:'static'});
 		}
 	}
-	render function() {
+	render () {
 		var me = this;	
 		var style, message, showcloseicon;
 		switch(me.state.Modalcode) {
