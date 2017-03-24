@@ -165,7 +165,7 @@ class ModalPlus extends React.Component {
 					<div className="modal fade ModalPlus" tabindex="-1" role="dialog" aria-hidden="true">
 					  <div className="modal-dialog" role="document">
 						<div className="alert alert-danger" role="alert">
-							Wrong Model Plus Type
+							<strong>!</strong> Wrong or Missong Model Plus Type
 							<button type="button" className="close" data-dismiss="modal">
 								&times;
 							</button>
