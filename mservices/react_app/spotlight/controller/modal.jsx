@@ -122,6 +122,7 @@
 
 class ModalPlus extends React.Component {
 	constructor(props) {
+		var me = this;
 		super(props);
 		setInterval(function(){
 			if (me.props.parent.state.ModalPlus) {
