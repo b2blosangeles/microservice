@@ -1,4 +1,22 @@
-	var GeneralModal = React.createClass({
+(function() {
+	function checkcss(f) {
+		var hasstyle = false;
+		var fullstylesheets = document.styleSheets;
+		for (var sx = 0; sx < fullstylesheets.length; sx++) {
+		    var sheetclasses = fullstylesheets[sx].rules || document.styleSheets[sx].cssRules;
+		    for (var cx = 0; cx < sheetclasses.length; cx++) {
+			if (sheetclasses[cx].selectorText == f) {
+			    hasstyle = true; break;
+			    //return classes[x].style;               
+			}
+		    }
+		}
+		return hasstyle;
+	};
+	console.log('checkcss-modal-backdrop=>');
+	console.log(checkcss('.modal-backdrop'));
+})	
+var GeneralModal = React.createClass({
 		render: function() {
 			var me = this;		
 			return (
