@@ -141,19 +141,8 @@ class ModalPlus extends React.Component {
 	}
 	render () {
 		var me = this;	
-		var style, message, showcloseicon;
-		var tpl =
-			<div className="modal fade ModalPlus" tabindex="-1" role="dialog" aria-hidden="true">
-			  <div className="modal-dialog" role="document">
-				<div className={'alert alert-' + style} role="alert">
-					<span dangerouslySetInnerHTML={{__html: message}}></span> ===
-					<button type="button" className="close" data-dismiss="modal" style={{display:showcloseicon}}>
-						&times;
-					</button>
-				</div>
-			  </div>
-			</div>			    
-		    
+		var tpl, style, message, showcloseicon;
+		
 		switch(me.state.ModalPlus.code) {
 			case "success":
 				style = 'success';
@@ -170,6 +159,17 @@ class ModalPlus extends React.Component {
 				message = '<strong>!</strong>Successfully download data.';
 				showcloseicon = '';				
 		} 
+		tpl =
+			<div className="modal fade ModalPlus" tabindex="-1" role="dialog" aria-hidden="true">
+			  <div className="modal-dialog" role="document">
+				<div className={'alert alert-' + style} role="alert">
+					<span dangerouslySetInnerHTML={{__html: message}}></span> ===
+					<button type="button" className="close" data-dismiss="modal" style={{display:showcloseicon}}>
+						&times;
+					</button>
+				</div>
+			  </div>
+			</div>			
 		return (
 			tpl	
 		  );
