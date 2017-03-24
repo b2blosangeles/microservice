@@ -1,72 +1,3 @@
-var GeneralModal = React.createClass({
-		render: function() {
-			var me = this;		
-			return (
-				<div className="modal fade GeneralModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-				  <div className="modal-dialog" role="document">
-				    <div className="modal-content">
-				      <div className="modal-header">
-					<h5 className="modal-title" id="exampleModalLabel">Modal title</h5>
-					<button type="button" className="close" data-dismiss="modal" aria-label="Close">
-					  <span aria-hidden="true">&times;</span>
-					</button>
-				      </div>
-				      <div className="modal-body">
-					...GeneralModal..{JSON.stringify(me.props.data)}===
-				      </div>
-				      <div className="modal-footer">
-					<button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-					<button type="button" className="btn btn-primary">Save changes</button>
-				      </div>
-				    </div>
-				  </div>
-				</div>	
-			  );
-		}		
-	});
-
-	var ModalLoading = React.createClass({
-		getInitialState: function() {
-			var me = this;
-			setInterval(function(){
-				me.setState({ModalLoading: me.props.parent.state.ModalLoading });				
-			}, 200);
-			
-			return {list: [] };
-		},
-		componentDidUpdate: function(prevProps, prevState) {
-			var me = this;
-			if (prevState.ModalLoading !== me.state.ModalLoading) {
-				console.log('sub ModalLoading chnaged ===');
-				if (!me.state.ModalLoading) {
-					viewpoint.find('.ModalLoading').modal('hide');
-					delete me.viewpoint;
-				} else {
-					viewpoint.find('.ModalLoading').modal({backdrop:'static'});
-				}
-				me.render();
-				
-			}
-		},
-		render: function() {
-			var me = this;	
-			var message;
-			message = (me.state.ModalLoading)?me.state.ModalLoading.message:'';
-			return (
-				<div className="modal fade ModalLoading" tabindex="-1" role="dialog" aria-hidden="true">
-				  <div className="modal-dialog" role="document">
-					<div className="alert alert-warning" role="alert">
-						<span dangerouslySetInnerHTML={{__html: message}}></span>
-						<button type="button" className="close" data-dismiss="modal">
-							&times;
-						</button> 
-					</div>
-				  </div>
-				</div>	
-			  );
-		}		
-	});
-
 class ModalPlus extends React.Component {
 	constructor(props) {
 		var me = super(props);
@@ -92,13 +23,13 @@ class ModalPlus extends React.Component {
 		var me = this;	
 		var err_msg = '';
 		console.log('sub 8 ===');
-		if ((me.state.ModalPlus.backdrop) && (_modal_backdrop_)) {
-			var modal_backdrop = _modal_backdrop_.setNew(me.state.ModalPlus.backdrop);
-			console.log(modal_backdrop);	
-		} else {
-			if (_modal_backdrop_.default) $('html > head').append($('<style>'+ _modal_backdrop_.default+'</style>'));
+		if (_modal_backdrop_) {
+			if (me.state.ModalPlus.backdrop) {
+				_modal_backdrop_.setNew(me.state.ModalPlus.backdrop);	
+			} else {
+				if (_modal_backdrop_.default) $('html > head').append($('<style>'+ _modal_backdrop_.default+'</style>'));
+			}
 		}
-		
 		switch(me.state.ModalPlus.type) {
 			case "alert":
 				var style = (me.state.ModalPlus.style)?me.state.ModalPlus.style:'info';
