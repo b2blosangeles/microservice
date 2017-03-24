@@ -19,10 +19,12 @@ try {
 			me.setState({ModalLoading: {message:'Loading...', pendding:1000} });
 		
 			viewpoint.find('.ModalLoading').modal({backdrop:'static'});
+			
 			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 			{}, 
 			function (data) {
 				viewpoint.find('.GeneralModal').modal('hide');
+				alert('done');
 			//	me.setState({ModalLoading: null });
 				// me.setState({ModalAlert: 'success' });
 				me.setState({list: data }, function() {
