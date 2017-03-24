@@ -6,7 +6,7 @@
 			this.state = {list: [], appid:1234 };
 		}
 		test(id) {
-			alert(document.styleSheets[0]['modal-backdrop']);
+			console.log(document.styleSheets[0]);
 			var me = this;
 			if (!id) var id = new Date().getTime();
 			me.setState({ModalPlus: {type:'loading', style:'info', id: id}});
