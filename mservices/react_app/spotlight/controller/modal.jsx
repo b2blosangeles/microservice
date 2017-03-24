@@ -130,7 +130,7 @@ class ModalPlus extends React.Component {
 		}, 100);
 		this.state = {ModalPlus: ''}
 	}				
-	componentDidUpdate: function(prevProps, prevState) {
+	componentDidUpdate (prevProps, prevState) {
 		var me = this;
 
 		if (prevState.ModalPlus !== me.state.ModalPlus) {
@@ -139,7 +139,7 @@ class ModalPlus extends React.Component {
 			viewpoint.find('.ModalPlus').modal({backdrop:'static'});
 		}
 	}
-	render: function() {
+	render function() {
 		var me = this;	
 		var style, message, showcloseicon;
 		switch(me.state.Modalcode) {
