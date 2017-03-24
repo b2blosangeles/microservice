@@ -9,9 +9,8 @@ class ModalPlus extends React.Component {
 					viewpoint.find('.ModalPlus').modal('hide');
 					if (typeof me.props.parent.state.ModalPlus.callback == 'function') {
 						me.props.parent.state.ModalPlus.callback();
-					} else {
-						alert(me.props.parent.state.ModalPlus.callback.toString());
-					}
+						alert(234);
+					} 
 					me.props.parent.state.ModalPlus = null;
 				} else {
 					if (me.props.parent.state.ModalPlus.hold) {
