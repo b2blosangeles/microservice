@@ -61,18 +61,15 @@ class ModalPlus extends React.Component {
 				}
 				break;	
 			case "loading":
-				var style = (me.state.ModalPlus.style)?me.state.ModalPlus.style:'info';
-				var message = (me.state.ModalPlus.message)?('<strong>!</strong> ' + me.state.ModalPlus.message):'<strong>!</strong>';
+				var style = (me.state.ModalPlus.style)?me.state.ModalPlus.style:'';
+				var message = (me.state.ModalPlus.message)?('Loading ... ' + me.state.ModalPlus.message):'<strong>!</strong>';
 				var showcloseicon = '';
 				if (!err_msg) {
 					return (			
 						<div className="modal fade ModalPlus" tabindex="-1" role="dialog" aria-hidden="true">
 						  <div className="modal-dialog" role="document">
-							<div className={'alert alert-' + style} role="alert">
-								<span dangerouslySetInnerHTML={{__html: message}}></span> ===
-								<button type="button" className="close" data-dismiss="modal" style={{display:showcloseicon}}>
-									&times;
-								</button>
+							<div className={'text-' + style}>
+								<span dangerouslySetInnerHTML={{__html: message}}></span>
 							</div>
 						  </div>
 						</div>	
