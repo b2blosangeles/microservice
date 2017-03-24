@@ -36,10 +36,14 @@
 		},
 		componentDidUpdate: function(prevProps, prevState) {
 			var me = this;
+			me.viewpoint = me.state.ModalLoading.viewpoint;
 			if (prevState.ModalLoading !== me.state.ModalLoading) {
 				console.log('sub ModalLoading chnaged ===');
+				if (!me.viewpoint) {
+					me.viewpoint = me.state.ModalLoading.viewpoint;
+				}
 				me.render();
-				me.state.ModalLoading.viewpoint.find('.ModalLoading').modal({backdrop:'static'});
+				me.viewpoint.find('.ModalLoading').modal({backdrop:'static'});
 			}
 		},
 		render: function() {
