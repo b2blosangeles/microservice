@@ -148,7 +148,6 @@ class ModalPlus extends React.Component {
 				style = 'success';
 				message = '<strong>!</strong>Successfully download data.';
 				showcloseicon = '';
-				
 				tpl =			
 					<div className="modal fade ModalPlus" tabindex="-1" role="dialog" aria-hidden="true">
 					  <div className="modal-dialog" role="document">
@@ -162,15 +161,12 @@ class ModalPlus extends React.Component {
 					</div>	
 				break;	
 			default:
-				style = 'success';
-				message = '<strong>!</strong>Successfully download data.';
-				showcloseicon = '';
 				tpl = 
 					<div className="modal fade ModalPlus" tabindex="-1" role="dialog" aria-hidden="true">
 					  <div className="modal-dialog" role="document">
-						<div className={'alert alert-' + style} role="alert">
-							Nothing to display
-							<button type="button" className="close" data-dismiss="modal" style={{display:showcloseicon}}>
+						<div className="alert alert-danger" role="alert">
+							Wrong Model Plus Type
+							<button type="button" className="close" data-dismiss="modal">
 								&times;
 							</button>
 						</div>
