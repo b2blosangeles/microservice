@@ -22,7 +22,7 @@
 				
 			    };
 			
-			console.log(_f('.modal'));
+			console.log(_f('.modal-backdrop'));
 			
 			
 			var me = this;
