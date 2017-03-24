@@ -8,7 +8,7 @@
 		loading(id) {
 			var me = this;
 			if (!id) var id = new Date().getTime();
-			me.setState({ModalPlus: {type:'loading', style:'success', 
+			me.setState({ModalPlus: {type:'loading', textcolor:'#000000', 
 						 message:'<img src="https://i.stack.imgur.com/oQ0tF.gif" width="24">',  id: id}});
 			setTimeout(
 				function() {
