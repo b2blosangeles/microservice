@@ -2,12 +2,12 @@ class ModalPlus extends React.Component {
 	constructor(props) {
 		var me = super(props);
 		setInterval(function(){
-			if (typeof me.props.parent.state.ModalPlus == null) {
-				console.log('cancel it !');
-			} else	{
-				if  (me.props.parent.state.ModalPlus !== me.state.ModalPlus) {
-					me.setState({ModalPlus: me.props.parent.state.ModalPlus });
-				}	
+			if (me.props.parent.state.ModalPlus) {
+				if (typeof me.props.parent.state.ModalPlus == null) {
+					console.log('cancel it !');
+				} else if  (me.props.parent.state.ModalPlus !== me.state.ModalPlus) {
+						me.setState({ModalPlus: me.props.parent.state.ModalPlus });
+					}	
 			}				
 		}, 100);
 		this.state = {ModalPlus: ''}
