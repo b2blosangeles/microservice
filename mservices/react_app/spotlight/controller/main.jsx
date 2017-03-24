@@ -7,14 +7,14 @@ try {
 		}		
 		changeId(id) {
 			var me = this;
-			me.setState({ModalAlert: 'Success' });
+			me.setState({ModalAlert: 'success' });
 			viewpoint.find('.ModalAlert').modal({backdrop:'static'});
 		}
 		loadData(e) {
 			var me = this;
 			var obj = $(e.target);
 			obj.attr('disabled', true);
-			me.setState({ModalLoading: {viewpoint:viewpoint, message:'Loading...', pendding:1000} });
+			me.setState({ModalLoading: {message:'Loading...', pendding:1000} });
 			
 			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 			{}, 
