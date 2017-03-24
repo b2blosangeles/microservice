@@ -91,22 +91,10 @@ class ModalPlus extends React.Component {
 	render () {
 		var me = this;	
 		var err_msg = '';
-		console.log('sub 7 ===');
-		if (me.state.ModalPlus.backdrop) {
+		console.log('sub 8 ===');
+		if ((me.state.ModalPlus.backdrop) && (_modal_backdrop_)) {
 			var modal_backdrop = _modal_backdrop_.setNew(me.state.ModalPlus.backdrop);
-
-			if (me.state.ModalPlus.backdrop.bg) {
-				modal_backdrop += '.modal-backdrop {background-color: '+me.state.ModalPlus.backdrop.bg+'; }';
-			}
-			if (me.state.ModalPlus.backdrop.fade) {
-				modal_backdrop += '.modal-backdrop.fade {opacity: '+ me.state.ModalPlus.backdrop.fade +';}';
-			}
-			if (me.state.ModalPlus.backdrop.opacity) {
-				var opacity = me.state.ModalPlus.backdrop.opacity;
-				modal_backdrop += '.modal-backdrop.fade.in {opacity: '+ opacity +';filter: alpha(opacity=' + (opacity * 100) + ');}';
-			}
-			console.log(modal_backdrop);
-			$('html > head').append($('<style>'+modal_backdrop+'</style>'));	
+			console.log(modal_backdrop);	
 		} else {
 			if (_modal_backdrop_.default) $('html > head').append($('<style>'+ _modal_backdrop_.default+'</style>'));
 		}
