@@ -43,25 +43,14 @@
 		},
 		render: function() {
 			var me = this;	
-			var style, message, showcloseicon;
-			switch(me.state.ModalLoading) {
-				case "success":
-					style = 'success';
-					message = '<strong>!</strong>Successfully download data.';
-					showcloseicon = '';
-					break;
-				case "warning":
-					style = 'warning';
-					message = 'Loading ...';
-					showcloseicon = 'none';
-					break;			
-			} 
+			var message;
+			message = me.state.ModalLoading.message;
 			return (
 				<div className="modal fade ModalLoading" tabindex="-1" role="dialog" aria-hidden="true">
 				  <div className="modal-dialog" role="document">
-					<div className={'alert alert-' + style} role="alert">
+					<div className="alert alert-warning" role=alert">
 						<span dangerouslySetInnerHTML={{__html: message}}></span>
-						<button type="button" className="close" data-dismiss="modal" style={{display:showcloseicon}}>
+						<button type="button" className="close" data-dismiss="modal">
 							&times;
 						</button>
 					</div>
