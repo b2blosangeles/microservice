@@ -15,7 +15,7 @@ var _defaule_modal_backdrop;
 		}
 		return hasstyle;
 	};
-	_defaule_modal_backdrop = getCssRule('.modal-backdrop');
+	_defaule_modal_backdrop = getCssRule('.modal-backdrop, .modal-backdrop.fade.in');
 	console.log('bbb==');
 	console.log(getCssRule('.in'));
 	if (!_defaule_modal_backdrop) {
