@@ -8,8 +8,8 @@ class ModalPlus extends React.Component {
 					console.log('cancel it !');
 					viewpoint.find('.ModalPlus').modal('hide');
 					me.props.parent.state.ModalPlus = null;
-				} else if {
-					if (me.props.parent.state.ModalPlus.hold) && !me.props.parent.state.ModalPlus.startTime) {
+				} else {
+					if ((me.props.parent.state.ModalPlus.hold) && !me.props.parent.state.ModalPlus.startTime) {
 						me.props.parent.state.ModalPlus.startTime = new Date().getTime();
 					}
 					if (me.props.parent.state.ModalPlus !== me.state.ModalPlus) {
