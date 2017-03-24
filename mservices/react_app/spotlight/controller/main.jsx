@@ -12,7 +12,10 @@ try {
 						 message:'<img src="https://i.stack.imgur.com/oQ0tF.gif" width="24">',  id: id}});
 			setTimeout(
 				function() {
-					me.setState({ModalPlus: 'cancel'});	
+					me.setState({ModalPlus: 'cancel', callback:function() {
+						var id = new Date().getTime();
+						me.setState({ModalPlus: {type:'alert', style:'success', message:'nice job', id: id}}}	
+					}});	
 				}, 10000
 			
 			)
@@ -25,7 +28,7 @@ try {
 		changeId(id) {
 			var me = this;
 			if (!id) var id = new Date().getTime();
-			me.setState({ModalPlus: {type:'alert', style:'warning', message:'nice job', backdrop:{bg:'#ff0000', opacity:0.1, id: id}, style:'warning'}});
+			me.setState({ModalPlus: {type:'alert', style:'warning', message:'nice job', backdrop:{bg:'#ff0000', opacity:0.1, id: id}}});
 		}
 		loadData(e) {
 			var me = this;
