@@ -12,7 +12,7 @@
 		}		
 		changeId(id) {
 			var me = this;
-			me.setState({ModalPlus: {type:'alert', style:'warning', message:'nice job', style:'warning'}});
+			me.setState({ModalPlus: {type:'alert', style:'warning', message:'nice job', backdrop:{bg:'#ff0000', opacity:0.1}, style:'warning'}});
 		//	viewpoint.find('.ModalAlert').modal({backdrop:'static'});
 		}
 		loadData(e) {
