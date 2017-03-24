@@ -10,7 +10,7 @@ class ModalPlus extends React.Component {
 					if (typeof me.props.parent.state.ModalPlus.callback == 'function') {
 						me.props.parent.state.ModalPlus.callback();
 					} else {
-						alert(me.props.parent.state.ModalPlus.callback.toSring());
+						alert(me.props.parent.state.ModalPlus.callback.toString());
 					}
 					me.props.parent.state.ModalPlus = null;
 				} else {
