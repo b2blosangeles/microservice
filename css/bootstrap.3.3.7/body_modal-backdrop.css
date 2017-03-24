@@ -6,7 +6,7 @@
   left: 0;
   z-index: 1040;
   /* background-color: #000000; */
-   background-color: darkblue;
+   background-color: #333;
 }
 .modal-backdrop.fade {
   opacity: 0;
