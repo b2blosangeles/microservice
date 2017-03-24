@@ -31,12 +31,14 @@
 			var me = this;
 			var obj = $(e.target);
 			obj.attr('disabled', true);
-			me.setState({ModalLoading: {message:'Loading...', pendding:1000} });
+			if (!id) var id = new Date().getTime();
+			me.setState({ModalPlus: {type:'loading', style:'success', 
+						 message:'<img src="https://i.stack.imgur.com/oQ0tF.gif" width="24">',  id: id}});
 			
 			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 			{}, 
 			function (data) {
-				me.setState({ModalLoading: null });
+				me.setState({ModalPlus: 'cancel'});
 				me.setState({list: data }, function() {
 					obj.attr('disabled', false);
 				});
