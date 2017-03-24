@@ -61,9 +61,9 @@ class ModalPlus extends React.Component {
 				}
 				break;	
 			case "loading":
-				var style = (me.state.ModalPlus.style)?me.state.ModalPlus.style:'';
+				var textcolor = (me.state.ModalPlus.textcolor)?me.state.ModalPlus.textcolor :'#000';
 				var message = (me.state.ModalPlus.message)?('Loading ... ' + me.state.ModalPlus.message):'Loading ...';
-				var showcloseicon = '';
+				message = '<span style="color:'+textcolor+'">'+message+'</span>';
 				if (!err_msg) {
 					return (			
 						<div className="modal fade ModalPlus" tabindex="-1" role="dialog" aria-hidden="true">
