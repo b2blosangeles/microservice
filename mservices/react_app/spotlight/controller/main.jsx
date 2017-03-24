@@ -9,6 +9,12 @@
 			var me = this;
 			if (!id) var id = new Date().getTime();
 			me.setState({ModalPlus: {type:'loading', style:'info', id: id}});
+			setTimeout(
+				function() {
+					me.setState({ModalPlus: {type:'loading', style:'info', id: id}});	
+				}, 6000
+			
+			)
 		}		
 		popup(id) {
 			var me = this;
