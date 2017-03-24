@@ -44,7 +44,7 @@
 		render: function() {
 			var me = this;	
 			var message;
-			message = me.state.ModalLoading.message;
+			message = (me.state.ModalLoading)?me.state.ModalLoading.message:'';
 			return (
 				<div className="modal fade ModalLoading" tabindex="-1" role="dialog" aria-hidden="true">
 				  <div className="modal-dialog" role="document">
