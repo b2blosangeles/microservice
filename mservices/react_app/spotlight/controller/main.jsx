@@ -16,7 +16,7 @@ try {
 			obj.attr('disabled', true);
 			/* viewpoint.find('.GeneralModal').modal({backdrop:'static'}); */
 			// me.setState({ModalAlert: 'warning' });
-			me.setState({ModalLoading: {message:'', pendding:1000} });
+			me.setState({ModalLoading: {message:'Loding...', pendding:1000} });
 		
 			viewpoint.find('.ModalLoading').modal({backdrop:'static'});
 			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
