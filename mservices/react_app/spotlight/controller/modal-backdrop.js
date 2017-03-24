@@ -15,7 +15,7 @@ var _modal_backdrop_ = {
 		}
 		return hasstyle;
 	},
-	setNew:function(cfg) {
+	set:function(cfg) {
 		var modal_backdrop = '';
 		if (cfg.bg) {
 			modal_backdrop += '.modal-backdrop {background-color: '+cfg.bg+'; }';
@@ -30,7 +30,7 @@ var _modal_backdrop_ = {
 		$('html > head').append( $('<style>'+modal_backdrop+'</style>'));
 		return modal_backdrop;
 	},
-	reset:function() {
+	resetDefault:function() {
 		var me = this;
 		if (me.default) $('html > head').append( $('<style>' + me.default + '</style>'));
 	},	
