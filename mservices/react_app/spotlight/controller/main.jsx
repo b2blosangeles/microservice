@@ -24,7 +24,6 @@ try {
 			{}, 
 			function (data) {
 				viewpoint.find('.ModalLoading').modal('hide');
-				alert('done');
 			//	me.setState({ModalLoading: null });
 				// me.setState({ModalAlert: 'success' });
 				me.setState({list: data }, function() {
