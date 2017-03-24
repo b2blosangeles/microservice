@@ -8,11 +8,11 @@
 		test(id) {
 			var me = this;
 			if (!id) var id = new Date().getTime();
-			me.setState({ModalPlus: {type:'loading', style:'info', message:'node job', id: id}});
+			me.setState({ModalPlus: {type:'loading', style:'info', id: id}});
 		}		
 		changeId(id) {
 			var me = this;
-			me.setState({ModalPlus: {type:'alert', style:'warning'}});
+			me.setState({ModalPlus: {type:'alert', style:'warning', message:'nice job', style:'warning'}});
 		//	viewpoint.find('.ModalAlert').modal({backdrop:'static'});
 		}
 		loadData(e) {
