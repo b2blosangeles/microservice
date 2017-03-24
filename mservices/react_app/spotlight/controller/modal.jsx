@@ -87,24 +87,18 @@
 		render: function() {
 			var me = this;	
 			var style, message, showcloseicon;
-			if (!me.state.ModalAlert) {
-				style = 'success';
-				message = '<strong>!</strong>Successfully download data.';
-				showcloseicon = '';			
-			} else {
-				switch(me.state.ModalAlert.code) {
-					case "success":
-						style = 'success';
-						message = '<strong>!</strong>Successfully download data.';
-						showcloseicon = '';
-						break;
-					case "warning":
-						style = 'warning';
-						message = 'Loading ...';
-						showcloseicon = 'none';
-						break;			
-				}
-			}			
+			switch(me.state.ModalAlert.code) {
+				case "success":
+					style = 'success';
+					message = '<strong>!</strong>Successfully download data.';
+					showcloseicon = '';
+					break;
+				case "warning":
+					style = 'warning';
+					message = 'Loading ...';
+					showcloseicon = 'none';
+					break;			
+			} 
 			return (
 				<div className="modal fade ModalAlert" tabindex="-1" role="dialog" aria-hidden="true">
 				  <div className="modal-dialog" role="document">
