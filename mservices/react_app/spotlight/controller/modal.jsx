@@ -148,8 +148,8 @@ class ModalPlus extends React.Component {
 				message = '<strong>!</strong>Successfully download data.';
 				showcloseicon = '';
 				break;
-			case "warning":
-				style = 'warning';
+			case "info":
+				style = 'info';
 				message = 'Loading ...';
 				showcloseicon = 'none';
 				break;	
