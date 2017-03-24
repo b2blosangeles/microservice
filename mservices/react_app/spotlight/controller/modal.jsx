@@ -81,6 +81,7 @@
 			if (prevState.ModalAlert !== me.state.ModalAlert) {
 				console.log('sub chnaged ===');
 				me.render();
+				viewpoint.find('.ModalAlert').modal({backdrop:'static'});
 			}
 		},
 		render: function() {

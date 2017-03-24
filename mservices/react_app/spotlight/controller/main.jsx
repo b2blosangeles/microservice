@@ -8,7 +8,7 @@ try {
 		changeId(id) {
 			var me = this;
 			me.setState({ModalAlert: 'success' });
-			viewpoint.find('.ModalAlert').modal({backdrop:'static'});
+		//	viewpoint.find('.ModalAlert').modal({backdrop:'static'});
 		}
 		loadData(e) {
 			var me = this;
