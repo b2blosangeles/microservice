@@ -171,7 +171,7 @@ class ModalPlus extends React.Component {
 						</div>
 					  </div>
 					</div>	
-				}	
+				)	
 		} 
 	}				
 }
