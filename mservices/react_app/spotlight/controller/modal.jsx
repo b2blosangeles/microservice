@@ -74,8 +74,7 @@
 				if (me.props.parent.state.ModalAlert) {
 					me.setState({ModalAlert: me.props.parent.state.ModalAlert });
 				}				
-			}, 200);
-			
+			}, 100);
 			return {ModalAlert: {} };
 		},
 		componentDidUpdate: function(prevProps, prevState) {
