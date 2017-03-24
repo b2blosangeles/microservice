@@ -22,7 +22,7 @@
 				
 			    };
 			
-			console.log(_f('.notUsedClassName'));
+			console.log(_f('.modal'));
 			
 			
 			var me = this;
