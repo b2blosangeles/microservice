@@ -74,7 +74,7 @@ class ModalPlus extends React.Component {
 							</button>
 						      </div>
 						      <div className="modal-body">
-							...GeneralModal..{JSON.stringify(me.props.data)}===
+							...GeneralModal..===
 						      </div>
 						      <div className="modal-footer">
 							<button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
