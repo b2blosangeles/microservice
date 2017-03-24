@@ -165,7 +165,17 @@ class ModalPlus extends React.Component {
 				style = 'success';
 				message = '<strong>!</strong>Successfully download data.';
 				showcloseicon = '';
-				tpl = <span>Nothing</span>
+				tpl = 
+					<div className="modal fade ModalPlus" tabindex="-1" role="dialog" aria-hidden="true">
+					  <div className="modal-dialog" role="document">
+						<div className={'alert alert-' + style} role="alert">
+							Nothing to display
+							<button type="button" className="close" data-dismiss="modal" style={{display:showcloseicon}}>
+								&times;
+							</button>
+						</div>
+					  </div>
+					</div>						
 		} 
 		return (
 			tpl	
