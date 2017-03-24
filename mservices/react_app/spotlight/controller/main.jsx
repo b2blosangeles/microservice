@@ -40,7 +40,7 @@ try {
 			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 			{}, 
 			function (data) {
-				me.setState({ModalPlus: 'cancel'});
+				me.setState({ModalPlus: {type:'cancel'}});
 				me.setState({list: data }, function() {
 					obj.attr('disabled', false);
 				});
