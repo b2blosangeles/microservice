@@ -37,8 +37,8 @@ var _modal_backdrop_ = {
 	init:function() {
 		var me = this;
 		me.default = me.getCssRule('.modal-backdrop')+
-			me.this.getCssRule('.modal-backdrop,.modal-backdrop.fade.in') + 
-			me.this.getCssRule('.modal-backdrop.fade');
+			me.getCssRule('.modal-backdrop,.modal-backdrop.fade.in') + 
+			me.getCssRule('.modal-backdrop.fade');
 
 		if (me.default == '') {
 			_modal_backdrop_.default = ".modal-backdrop {position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 1040; background-color: #000000; }"+
