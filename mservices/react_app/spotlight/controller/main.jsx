@@ -4,6 +4,12 @@
 		constructor(props) {
 			super(props);
 			this.state = {list: [], appid:1234 };
+		}
+		test(id) {
+			var me = this;
+			if (!id) var id = new Date().getTime();
+			me.setState({ModalPlus: {type:'alert', style:'info', id: id}});
+		//	viewpoint.find('.ModalAlert').modal({backdrop:'static'});
 		}		
 		changeId(id) {
 			var me = this;
@@ -31,7 +37,10 @@
 				ReactDOM.render(
 					<div className="container-fluid qalet_box">
 						<div className="row">
-							Spotlight 2
+							Spotlight
+							<button type="button" className="btn btn-success" 
+								onClick={me.test.bind(me)} >test</button>
+							
 							<button type="button" className="btn btn-success" 
 								onClick={me.changeId.bind(me, new Date().getTime())} >Change</button>
 							
