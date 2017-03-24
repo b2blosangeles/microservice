@@ -14,7 +14,7 @@ try {
 				function() {
 					me.setState({ModalPlus: 'cancel', callback:function() {
 						var id = new Date().getTime();
-						me.setState({ModalPlus: {type:'alert', style:'success', message:'nice job', id: id}}}	
+						me.setState({ModalPlus: {type:'alert', style:'success', message:'nice job', id: id}});	
 					}});	
 				}, 10000
 			
