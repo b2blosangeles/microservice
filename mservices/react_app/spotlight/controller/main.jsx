@@ -5,7 +5,12 @@
 			super(props);
 			this.state = {list: [], appid:1234 };
 		}
-		test(id) {
+		loading(id) {
+			var me = this;
+			if (!id) var id = new Date().getTime();
+			me.setState({ModalPlus: {type:'loading', style:'info', id: id}});
+		}		
+		popup(id) {
 			var me = this;
 			if (!id) var id = new Date().getTime();
 			me.setState({ModalPlus: {type:'popup', style:'info', id: id}});
@@ -38,7 +43,10 @@
 						<div className="row">
 							Spotlight
 							<button type="button" className="btn btn-success" 
-								onClick={me.test.bind(me)} >test</button>
+								onClick={me.popup.bind(me)} >popup</button>
+							
+							<button type="button" className="btn btn-success" 
+								onClick={me.loading.bind(me)} >loading</button>
 							
 							<button type="button" className="btn btn-success" 
 								onClick={me.changeId.bind(me, new Date().getTime())} >Change</button>
