@@ -8,11 +8,11 @@
 		loading(id) {
 			var me = this;
 			if (!id) var id = new Date().getTime();
-			me.setState({ModalPlus: {type:'loading', style:'info', id: id}});
+			me.setState({ModalPlus: {type:'loading', style:'info', hold:6000, id: id}});
 			setTimeout(
 				function() {
 					me.setState({ModalPlus: 'cancel'});	
-				}, 6000
+				}, 10000
 			
 			)
 		}		
