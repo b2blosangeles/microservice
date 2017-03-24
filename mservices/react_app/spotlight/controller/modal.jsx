@@ -15,7 +15,7 @@
 	};
 	console.log('checkcss-modal-backdrop=>');
 	console.log(checkcss('.modal-backdrop'));
-})	
+})();	
 var GeneralModal = React.createClass({
 		render: function() {
 			var me = this;		
