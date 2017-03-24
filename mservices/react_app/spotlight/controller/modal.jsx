@@ -93,10 +93,8 @@ class ModalPlus extends React.Component {
 		var err_msg = '';
 		console.log('sub 6 ===');
 		if (me.state.ModalPlus.backdrop) {
-			console.log('added me.state.ModalPlus.backdrop!');
 			var modal_backdrop = ".modal-backdrop {background-color: "+me.state.ModalPlus.backdrop+"; }";
-			var style = $('<style>'+modal_backdrop+'</style>');
-			$('html > head').append(style);		
+			$('html > head').append($('<style>'+modal_backdrop+'</style>'));	
 		} else {
 			$('html > head').append($('<style>'+_defaule_modal_backdrop+'</style>'));
 		}
