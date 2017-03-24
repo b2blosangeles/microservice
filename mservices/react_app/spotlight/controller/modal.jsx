@@ -48,7 +48,7 @@
 			return (
 				<div className="modal fade ModalLoading" tabindex="-1" role="dialog" aria-hidden="true">
 				  <div className="modal-dialog" role="document">
-					<div className="alert alert-warning" role=alert">
+					<div className="alert alert-warning" role="alert">
 						<span dangerouslySetInnerHTML={{__html: message}}></span>
 						<button type="button" className="close" data-dismiss="modal">
 							&times;
