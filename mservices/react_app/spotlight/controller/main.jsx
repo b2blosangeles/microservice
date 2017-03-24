@@ -7,7 +7,7 @@
 		}		
 		changeId(id) {
 			var me = this;
-			me.setState({ModalPlus: {code:'info', tm: new Date().getTime()}});
+			me.setState({ModalPlus: {type:'alert', style:'info', tm: new Date().getTime()}});
 		//	viewpoint.find('.ModalAlert').modal({backdrop:'static'});
 		}
 		loadData(e) {
