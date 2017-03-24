@@ -6,7 +6,8 @@ var _defaule_modal_backdrop;
 		for (var sx = 0; sx < fullstylesheets.length; sx++) {
 		    var sheetclasses = fullstylesheets[sx].rules || document.styleSheets[sx].cssRules;
 		    for (var cx = 0; cx < sheetclasses.length; cx++) {
-			if (sheetclasses[cx].selectorText == f) {	
+			    console.log(sheetclasses[cx].selectorText.replace(/\s/ig, ''));
+			if (sheetclasses[cx].selectorText.replace(/\s/ig, '') == f.replace(/\s/ig, '')) {	
 			//	hasstyle = true; break; 
 				hasstyle = sheetclasses[cx].cssText; break; 
 			}
