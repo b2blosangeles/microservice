@@ -141,14 +141,12 @@ class ModalPlus extends React.Component {
 	}
 	render () {
 		var me = this;	
-		var tpl, style, message, showcloseicon;
-		
 		switch(me.state.ModalPlus.type) {
 			case "alert":
-				style = 'success';
-				message = '<strong>!</strong>Successfully download data.';
-				showcloseicon = '';
-				tpl =			
+				var style = 'success';
+				var message = '<strong>!</strong>Successfully download data.';
+				var showcloseicon = '';
+				return (			
 					<div className="modal fade ModalPlus" tabindex="-1" role="dialog" aria-hidden="true">
 					  <div className="modal-dialog" role="document">
 						<div className={'alert alert-' + style} role="alert">
@@ -159,9 +157,10 @@ class ModalPlus extends React.Component {
 						</div>
 					  </div>
 					</div>	
+				)	
 				break;	
 			default:
-				tpl = 
+				return (
 					<div className="modal fade ModalPlus" tabindex="-1" role="dialog" aria-hidden="true">
 					  <div className="modal-dialog" role="document">
 						<div className="alert alert-danger" role="alert">
@@ -171,10 +170,8 @@ class ModalPlus extends React.Component {
 							</button>
 						</div>
 					  </div>
-					</div>						
+					</div>	
+				}	
 		} 
-		return (
-			tpl	
-		  );
 	}				
 }
