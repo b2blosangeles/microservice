@@ -9,11 +9,10 @@
 			var me = this;
 			if (!id) var id = new Date().getTime();
 			me.setState({ModalPlus: {type:'loading', style:'info', id: id}});
-		//	viewpoint.find('.ModalAlert').modal({backdrop:'static'});
 		}		
 		changeId(id) {
 			var me = this;
-			me.setState({ModalPlus: {type:'alert', style:'info', tm: new Date().getTime()}});
+			me.setState({ModalPlus: {type:'alert', style:'warning'}});
 		//	viewpoint.find('.ModalAlert').modal({backdrop:'static'});
 		}
 		loadData(e) {
@@ -48,12 +47,7 @@
 								onClick={me.loadData.bind(me)} >Load Data</button>
 						</div>
 						{me.state.appid}
-						
-						<ModalPlus data={{"title":"test title"}} parent={me}/>
-						
-						<ModalAlert data={{"title":"test title"}} parent={me}/>
-						<GeneralModal data={{"title":"test title"}} />
-						<ModalLoading data={{"title":"test title"}} parent={me} />
+						<ModalPlus parent={me}/>
 					</div>
 					,
 					viewpoint.find('.vp_'+mapping_data.id)[0]
