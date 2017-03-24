@@ -1,4 +1,4 @@
-try {	
+// try {	
 	var viewpoint = $('.'+mapping_data.id);	
 	class Home extends React.Component {
 		constructor(props) {
@@ -80,7 +80,7 @@ try {
 		viewpoint[0]
 	);
 	// $('.'+mapping_data.id).show(0);
-} catch (err) {
-	console.log('err.message===>');
-	console.log(err.message);
-}
+// } catch (err) {
+//	console.log('err.message===>');
+//	console.log(err.message);
+//}
