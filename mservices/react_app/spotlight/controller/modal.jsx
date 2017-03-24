@@ -88,9 +88,7 @@ class ModalPlus extends React.Component {
 							</button>
 							<h5 className="modal-title" id="exampleModalLabel">Modal title</h5>
 						      </div>
-						      <div className="modal-body">
-							...GeneralModal..===
-						      </div>
+
 						      <div className="modal-footer">
 							<button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
 							<button type="button" className="btn btn-primary">Save changes</button>
