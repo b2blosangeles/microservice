@@ -84,6 +84,8 @@ class ModalPlus extends React.Component {
 			console.log('sub chnaged ===');
 			me.render();
 			viewpoint.find('.ModalPlus').modal({backdrop:'static'});
+		} else {
+			console.log('sub 3 ===');
 		}
 	}
 	render () {
