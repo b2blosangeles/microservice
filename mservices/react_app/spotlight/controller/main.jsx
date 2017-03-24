@@ -23,7 +23,7 @@ try {
 			{}, 
 			function (data) {
 				viewpoint.find('.GeneralModal').modal('hide');
-				me.setState({ModalLoading: null });
+			//	me.setState({ModalLoading: null });
 				// me.setState({ModalAlert: 'success' });
 				me.setState({list: data }, function() {
 					obj.attr('disabled', false);
