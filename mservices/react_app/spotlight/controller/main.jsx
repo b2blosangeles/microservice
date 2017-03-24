@@ -14,8 +14,8 @@ try {
 			var me = this;
 			var obj = $(e.target);
 			obj.attr('disabled', true);
-			me.setState({ModalLoading: {message:'Loading...', pendding:1000} });
-			viewpoint.find('.ModalLoading').modal({backdrop:'static'});
+			me.setState({ModalLoading: {viewpoint:viewpoint, message:'Loading...', pendding:1000} });
+			
 			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 			{}, 
 			function (data) {

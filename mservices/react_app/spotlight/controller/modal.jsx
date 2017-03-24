@@ -39,6 +39,7 @@
 			if (prevState.ModalLoading !== me.state.ModalLoading) {
 				console.log('sub ModalLoading chnaged ===');
 				me.render();
+				me.state.ModalLoading.viewpoint.find('.ModalLoading').modal({backdrop:'static'});
 			}
 		},
 		render: function() {
