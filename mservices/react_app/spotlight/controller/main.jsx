@@ -5,9 +5,9 @@ try {
 			super(props);
 			this.state = {list: [], appid:1234 };
 		}
-		docviwer() {
+		docviwer(data) {
 			return (
-				<Docviwer data={{title:'t t t'}}/>
+				<Docviwer data=data/>
 			)
 		}
 		unicode() {
@@ -27,7 +27,7 @@ try {
 		}		
 		popup() {
 			var me = this;
-			me.setState({ModalPlus: {type:'popup', style:'info', body: me.docviwer,id: me.unicode()}});
+			me.setState({ModalPlus: {type:'popup', style:'info', body: me.docviwer({title:8899}),id: me.unicode()}});
 		}		
 		changeId() {
 			var me = this;
