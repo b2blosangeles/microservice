@@ -1,5 +1,5 @@
 try {	
-	var viewpoint = $('.'+mapping_data.id);
+	var viewpoint = $('.'+mapping_data.id), viewpoint0 = mapping_data.id;
 	var DocItem =  React.createClass({
 		getInitialState: function() {
 			var me = this;
@@ -58,7 +58,7 @@ try {
 		},		
 		popup:function() {
 			var me = this;
-			me.setState({ModalPlus: {type:'alert', style:'warning', message:'nice job', id: me.unicode(), viewpoint:viewpoint}});	
+			me.setState({ModalPlus: {type:'alert', style:'warning', message:'nice job', id: me.unicode(), viewpoint:viewpoint0}});	
 		},
 		showList: function() {
 			var me = this;
