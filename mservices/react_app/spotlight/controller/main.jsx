@@ -7,7 +7,7 @@ try {
 		}
 		docviwer() {
 			return (
-				<Docviwer data={title:'t t t'}/>
+				<Docviwer data={{title:'t t t'}}/>
 			)
 		}
 		loading(id) {
