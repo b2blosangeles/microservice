@@ -7,7 +7,7 @@ try {
 		}
 		pp() {
 			return (
-				<span>test</span>
+				<span>test pp</span>
 			)
 		}
 		loading(id) {
@@ -25,7 +25,7 @@ try {
 		popup(id) {
 			var me = this;
 			if (!id) var id = new Date().getTime();
-			me.setState({ModalPlus: {type:'popup', style:'info', id: id}});
+			me.setState({ModalPlus: {type:'popup', style:'info', popup_body: me.pp,id: id}});
 		}		
 		changeId(id) {
 			var me = this;
