@@ -10,7 +10,7 @@ class Docviwer extends React.Component {
           <button type="button" className="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
-          <h5 className="modal-title" id="exampleModalLabel">{me.props.data}</h5>
+          <h5 className="modal-title" id="exampleModalLabel">{me.props.data.title}</h5>
         </div>
         <div className="modal-body">
           Test case Docviwer
