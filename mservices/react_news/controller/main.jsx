@@ -58,7 +58,7 @@ try {
 		},		
 		popup:function() {
 			var me = this;
-			me.setState({ModalPlus: {type:'alert', style:'warning', message:'nice job'}});	
+			me.setState({ModalPlus: {type:'alert', style:'warning', message:'nice job', id: me.unicode()}});	
 		},
 		showList: function() {
 			var me = this;
