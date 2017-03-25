@@ -1,5 +1,5 @@
 try {	
-	var viewpoint = $('.'+mapping_data.id);	
+	var viewpoint = $('.'+mapping_data.id), viewpoint0 = mapping_data.id;	
 	class Home extends React.Component {
 		constructor(props) {
 			super(props);
@@ -27,7 +27,7 @@ try {
 		}		
 		popup() {
 			var me = this;
-			me.setState({ModalPlus: {type:'popup', style:'info', viewpoint:viewpoint,
+			me.setState({ModalPlus: {type:'popup', style:'info', viewpoint:viewpoint0,
 				body: me.docviwer({title:'title', body:'test body'}), id: me.unicode()}});
 		}		
 		changeId() {
