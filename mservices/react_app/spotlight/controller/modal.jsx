@@ -78,7 +78,7 @@ class ModalPlus extends React.Component {
 				break;	
 			case "popup":
 				if (!err_msg) {
-					if (me.state.ModalPlus.popup_body) {
+					if (me.state.ModalPlus.body) {
 						return (			
 							<div className="modal fade ModalPlus" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 							  <div className="modal-dialog" role="document">
