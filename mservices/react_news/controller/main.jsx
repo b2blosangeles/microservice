@@ -51,8 +51,14 @@ try {
 			}
 			
 		},
+		unicode() {
+			if (!this._unicode) this._unicode = 0;
+			return this._unicode++;
+		}		
 		popup:function() {
-			alert('popup');	
+			var me = this;
+			me.setState({ModalPlus: {type:'alert', style:'warning', message:'nice job', 
+				backdrop:{bg:'#ff0000', opacity:0.1, id: me.unicode()}}});	
 		},
 		showList: function() {
 			var me = this;
