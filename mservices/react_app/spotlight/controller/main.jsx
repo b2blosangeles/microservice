@@ -25,7 +25,7 @@ try {
 		popup(id) {
 			var me = this;
 			if (!id) var id = new Date().getTime();
-			me.setState({ModalPlus: {type:'popup', style:'info', popup_body: me.pp,id: id}});
+			me.setState({ModalPlus: {type:'popup', style:'info', body: me.pp,id: id}});
 		}		
 		changeId(id) {
 			var me = this;
