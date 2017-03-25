@@ -103,12 +103,14 @@ class ModalPlus extends React.Component {
 				}
 				break;	
 			case "popup":
+				var body = (me.state.ModalPlus.body)?(me.state.ModalPlus.body):'<ModalContentes/>';
 				if (!err_msg) {
 					return (			
 						<div className="modal fade ModalPlus" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 						  <div className="modal-dialog" role="document">
 		    					<div className="modal-content">
-								<ModalContentes/>
+								<span dangerouslySetInnerHTML={{__html: body}}></span>
+								
 							</div>
 						  </div>
 						</div>		
