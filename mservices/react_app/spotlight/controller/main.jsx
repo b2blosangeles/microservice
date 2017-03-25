@@ -64,7 +64,7 @@ try {
 								onClick={me.loading.bind(me)} >loading</button>
 							
 							<button type="button" className="btn btn-success" 
-								onClick={me.changeId.bind(me, new Date().getTime())} >Change</button>
+								onClick={me.changeId.bind(me)} >Change</button>
 							
 							<button type="button" className="btn btn-success"
 								onClick={me.loadData.bind(me)} >Load Data</button>
