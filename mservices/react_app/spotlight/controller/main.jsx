@@ -7,7 +7,7 @@ try {
 		}
 		docviwer(data) {
 			return (
-				<Docviwer data=data/>
+				<Docviwer data={data}/>
 			)
 		}
 		unicode() {
