@@ -54,7 +54,7 @@ try {
 		unicode() {
 			if (!this._unicode) this._unicode = 0;
 			return this._unicode++;
-		}		
+		},		
 		popup:function() {
 			var me = this;
 			me.setState({ModalPlus: {type:'alert', style:'warning', message:'nice job', 
