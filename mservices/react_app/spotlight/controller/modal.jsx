@@ -24,8 +24,6 @@ class ModalPlus extends React.Component {
 					}	
 					
 				}	
-			} else {
-				viewpoint.find('.ModalPlus').modal('hide');
 			}
 		}, 100);
 		this.state = {ModalPlus: ''}
