@@ -1,5 +1,5 @@
 try {	
-	var viewpoint = $('.'+mapping_data.id), viewpoint0 = mapping_data.id;	
+	var viewpoint = $('.'+mapping_data.id);	
 	class Home extends React.Component {
 		constructor(props) {
 			super(props);
@@ -70,7 +70,7 @@ try {
 							<button type="button" className="btn btn-success"
 								onClick={me.loadData.bind(me)} >Load Data</button>
 						</div>
-						<ModalPlus parent={me}/>
+						<ModalPlus parent={me} viewpoint={viewpoint}/>
 					</div>
 					,
 					viewpoint.find('.vp_'+mapping_data.id)[0]
