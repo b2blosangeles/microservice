@@ -16,7 +16,7 @@ try {
 		}
 		loading() {
 			var me = this;
-			me.setState({ModalPlus: {type:'loading', textcolor:'#000000', hold:1000,
+			me.setState({ModalPlus: {type:'loading', textcolor:'#000000', hold:1000, 
 						 message:'<img src="https://i.stack.imgur.com/oQ0tF.gif" width="24">',  id: me.unicode()}});
 			setTimeout(
 				function() {
@@ -27,7 +27,7 @@ try {
 		}		
 		popup() {
 			var me = this;
-			me.setState({ModalPlus: {type:'popup', style:'info', 
+			me.setState({ModalPlus: {type:'popup', style:'info', viewpoint:viewpoint,
 				body: me.docviwer({title:'title', body:'test body'}), id: me.unicode()}});
 		}		
 		changeId() {
