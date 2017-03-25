@@ -66,7 +66,8 @@ try {
 				ReactDOM.render(
 					<div className="container-fluid qalet_box">
 						<div className="row">
-							
+							<button type="button" className="btn btn-success" 
+								onClick={me.popup.bind(me)} >Change</button>
 							<p>	
 							{me.state.list.map(function(item, index) {
 								return <ListItem item={item} parent={me}/>
