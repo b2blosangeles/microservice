@@ -1,30 +1,3 @@
-class ModalContentes extends React.Component {
-	constructor(props) {
-		var me = super(props);	
-	}	
-	render() {
-		return(
-		<span>
-			<div className="modal-header">
-				<button type="button" className="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-				<h5 className="modal-title" id="exampleModalLabel">Modal title</h5>
-			</div>
-			<div className="modal-body">
-				.===
-			</div>
-			<div className="modal-footer">
-				<button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-				<button type="button" className="btn btn-primary">Save changes</button>
-			</div>
-		</span>			
-
-		);
-	}
-	
-}	
-
 class ModalPlus extends React.Component {
 	constructor(props) {
 		var me = super(props);
@@ -104,7 +77,6 @@ class ModalPlus extends React.Component {
 				}
 				break;	
 			case "popup":
-				var body = (me.state.ModalPlus.popup_body)?(me.state.ModalPlus.popupbody):'test';
 				if (!err_msg) {
 					if (me.state.ModalPlus.popup_body) {
 						return (			
