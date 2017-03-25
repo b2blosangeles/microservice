@@ -10,11 +10,14 @@ try {
 				<Docviwer data={{title:'t t t'}}/>
 			)
 		}
-		loading(id) {
+		unicode() {
+			if (!this._unicode) this._unicode = 0;
+			return this._unicode++;
+		}
+		loading() {
 			var me = this;
-			if (!id) var id = new Date().getTime();
 			me.setState({ModalPlus: {type:'loading', textcolor:'#000000', hold:1000,
-						 message:'<img src="https://i.stack.imgur.com/oQ0tF.gif" width="24">',  id: id}});
+						 message:'<img src="https://i.stack.imgur.com/oQ0tF.gif" width="24">',  id: me.unicode()}});
 			setTimeout(
 				function() {
 					
@@ -22,28 +25,26 @@ try {
 				}, 5000
 			)
 		}		
-		popup(id) {
+		popup() {
 			var me = this;
-			if (!id) var id = new Date().getTime();
-			me.setState({ModalPlus: {type:'popup', style:'info', body: me.docviwer,id: id}});
+			me.setState({ModalPlus: {type:'popup', style:'info', body: me.docviwer,id: me.unicode()}});
 		}		
-		changeId(id) {
+		changeId() {
 			var me = this;
-			if (!id) var id = new Date().getTime();
-			me.setState({ModalPlus: {type:'alert', style:'warning', message:'nice job', backdrop:{bg:'#ff0000', opacity:0.1, id: id}}});
+			me.setState({ModalPlus: {type:'alert', style:'warning', message:'nice job', 
+				backdrop:{bg:'#ff0000', opacity:0.1, id: me.unicode()}}});
 		}
 		loadData(e) {
 			var me = this;
 			var obj = $(e.target);
 			obj.attr('disabled', true);
-			if (!id) var id = new Date().getTime();
 			me.setState({ModalPlus: {type:'loading', textcolor:'#fff', hold:10,
-						 message:'<img src="https://i.stack.imgur.com/oQ0tF.gif" width="24">',  id: id}});
+				message:'<img src="https://i.stack.imgur.com/oQ0tF.gif" width="24">',  id: me.unicode()}});
 			
 			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 			{}, 
 			function (data) {
-				me.setState({ModalPlus: {type:'alert', style:'success', message:'saved', id: new Date().getTime()}});
+				me.setState({ModalPlus: {type:'alert', style:'success', message:'saved', id: me.unicode()}});
 				me.setState({list: data }, function() {
 					obj.attr('disabled', false);
 				});
