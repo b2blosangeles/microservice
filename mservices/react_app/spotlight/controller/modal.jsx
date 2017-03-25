@@ -96,6 +96,7 @@ class ModalPlus extends React.Component {
 						  <div className="modal-dialog" role="document">
 							<div className={'text-' + style}>
 								<span dangerouslySetInnerHTML={{__html: message}}></span>
+								
 							</div>
 						  </div>
 						</div>	
@@ -111,7 +112,8 @@ class ModalPlus extends React.Component {
 		    					<div className="modal-content">
 								<ModalContentes/>
 								<span dangerouslySetInnerHTML={{__html: body}}></span>
-								
+								----
+								{me.props.parent.pp()}
 							</div>
 						  </div>
 						</div>		
