@@ -51,6 +51,9 @@ try {
 			}
 			
 		},
+		popup:function() {
+			alert('popup');	
+		},
 		showList: function() {
 			var me = this;
 			return function() {
