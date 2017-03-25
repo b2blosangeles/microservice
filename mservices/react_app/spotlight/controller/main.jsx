@@ -70,7 +70,7 @@ try {
 							<button type="button" className="btn btn-success"
 								onClick={me.loadData.bind(me)} >Load Data</button>
 						</div>
-						<ModalPlus parent={me} viewpoint={viewpoint}/>
+						<ModalPlus parent={me} viewpoint={mapping_data.id}/>
 					</div>
 					,
 					viewpoint.find('.vp_'+mapping_data.id)[0]
