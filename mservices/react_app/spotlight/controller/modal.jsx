@@ -50,6 +50,7 @@ class ModalPlus extends React.Component {
 						  <div className="modal-dialog" role="document">
 							<div className={'alert alert-' + style} role="alert">
 								<span dangerouslySetInnerHTML={{__html: message}}></span> ===
+								{me.props.viewpoint} - {mapping_data.id}
 								<button type="button" className="close" data-dismiss="modal" style={{display:showcloseicon}}>
 									&times;
 								</button>
