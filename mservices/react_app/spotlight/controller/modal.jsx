@@ -109,6 +109,7 @@ class ModalPlus extends React.Component {
 						<div className="modal fade ModalPlus" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 						  <div className="modal-dialog" role="document">
 		    					<div className="modal-content">
+								<ModalContentes/>
 								<span dangerouslySetInnerHTML={{__html: body}}></span>
 								
 							</div>
