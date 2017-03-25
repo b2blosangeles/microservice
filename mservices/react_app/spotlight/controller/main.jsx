@@ -57,7 +57,7 @@ try {
 				ReactDOM.render(
 					<div className="container-fluid qalet_box">
 						<div className="row">
-							Spotlight
+							Spotlight - {mapping_data.id}  - {me.props.viewpoint} - 
 							<button type="button" className="btn btn-success" 
 								onClick={me.popup.bind(me)} >popup</button>
 							
