@@ -74,7 +74,7 @@ try {
 							})}
 								
 							</p>	
-							<ModalPlus parent={me} viewpoint={viewpoint} />
+							<ModalPlus parent={me} viewpoint={mapping_data.id} />
 						</div>	
 					</div>
 					,
