@@ -5,6 +5,11 @@ try {
 			super(props);
 			this.state = {list: [], appid:1234 };
 		}
+		pp() {
+			return (
+				<span>test</span>
+			)
+		}
 		loading(id) {
 			var me = this;
 			if (!id) var id = new Date().getTime();
