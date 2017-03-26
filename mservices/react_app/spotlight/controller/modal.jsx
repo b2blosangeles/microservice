@@ -3,7 +3,8 @@ class ModalPlus extends React.Component {
 		var me = super(props);
 		setInterval(function(){
 			// console.log(me.props.viewpoint + '---' + mapping_data.id);
-			if ((me.props.parent.state.ModalPlus) && (me.props.viewpoint == mapping_data.id)) {	
+			if (me.props.parent.state.ModalPlus) {	
+				console.log(me.props.level+'===');
 				if (me.props.parent.state.ModalPlus == 'cancel') {
 				//	console.log('cancel it !');
 					viewpoint.find('.ModalPlus').modal('hide');
