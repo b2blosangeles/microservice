@@ -82,10 +82,9 @@ try {
 				);
 			}	
 		},	
-		niu:function() {
-			if (!this._niu)	this._niu = 0;
-			this._niu++;
-			return this._niu;
+		level:function() {
+			if (!this._level) this._level = 0;
+			return this._level++;
 		},
 		render: function() {
 			var me = this;		
