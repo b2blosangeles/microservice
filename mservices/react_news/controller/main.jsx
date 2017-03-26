@@ -74,7 +74,7 @@ try {
 							})}
 								
 							</p>	
-							<ModalPlus parent={me} level={me.level()} />
+							<ModalPlus parent={me} level={'a_'+me.level()} />
 						</div>	
 					</div>
 					,
