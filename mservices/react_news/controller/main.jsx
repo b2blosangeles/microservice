@@ -84,7 +84,8 @@ try {
 		},	
 		level:function() {
 			if (!this._level) this._level = 0;
-			return this._level++;
+			this._level++;
+			return this._level;
 		},
 		render: function() {
 			var me = this;		
