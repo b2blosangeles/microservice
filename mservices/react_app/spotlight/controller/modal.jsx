@@ -4,7 +4,6 @@ class ModalPlus extends React.Component {
 		setInterval(function(){
 			// console.log(me.props.viewpoint + '---' + mapping_data.id);
 			if ((me.props.parent.state.ModalPlus) && me.props.level == 1) {	
-				console.log(me.props.level+'===');
 				if (me.props.parent.state.ModalPlus == 'cancel') {
 				//	console.log('cancel it !');
 					viewpoint.find('.ModalPlus').modal('hide');
@@ -104,7 +103,7 @@ class ModalPlus extends React.Component {
 											<h5 className="modal-title" id="exampleModalLabel">Modal title</h5>
 										</div>
 										<div className="modal-body">
-											.===
+											{me.props.leve}
 										</div>
 										<div className="modal-footer">
 											<button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
