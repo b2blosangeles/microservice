@@ -77,11 +77,11 @@ try {
 				);
 			}	
 		}
-		level:function() {
+		level() {
 			if (!this._level) this._level = 0;
 			this._level++;
 			return this._level;
-		},		
+		}		
 		render() {
 			var me = this;		
 			return (
