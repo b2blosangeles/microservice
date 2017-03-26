@@ -74,7 +74,7 @@ try {
 							})}
 								
 							</p>	
-							<ModalPlus parent={me} viewpoint={me.level()} />
+							<ModalPlus parent={me} level={me.level()} />
 						</div>	
 					</div>
 					,
