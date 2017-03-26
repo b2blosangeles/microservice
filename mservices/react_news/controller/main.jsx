@@ -74,14 +74,19 @@ try {
 							})}
 								
 							</p>	
-							<ModalPlus parent={me} viewpoint={mapping_data.id} />
+							<ModalPlus parent={me} viewpoint={me.niu} />
 						</div>	
 					</div>
 					,
 					viewpoint.find('.vp_'+mapping_data.id)[0]
 				);
 			}	
-		},		
+		},	
+		niu:function() {
+			if (!this._niu)	this._niu = 0;
+			this._niu++;
+			return this._niu;
+		},
 		render: function() {
 			var me = this;		
 			return (
