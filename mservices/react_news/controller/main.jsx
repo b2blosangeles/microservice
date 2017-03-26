@@ -74,7 +74,7 @@ try {
 							})}
 								
 							</p>	
-							<ModalPlus parent={me} viewpoint={me.niu} />
+							<ModalPlus parent={me} viewpoint={me.niu()} />
 						</div>	
 					</div>
 					,
