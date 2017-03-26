@@ -74,7 +74,7 @@ try {
 							})}
 								
 							</p>	
-							<ModalPlus parent={me} level="A" />
+							<ModalPlus parent={me} level="{mapping_data.id}" />
 						</div>	
 					</div>
 					,
