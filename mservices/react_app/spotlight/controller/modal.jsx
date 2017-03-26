@@ -24,7 +24,7 @@ class ModalPlus extends React.Component {
 				}	
 			} else {
 				if (me.props.viewpoint != mapping_data.id) {
-					console.log((me.props.viewpoint+'-=-=-=-'+mapping_data.id);
+					console.log(me.props.viewpoint+'-=-=-=-'+mapping_data.id);
 				}
 			}
 		}, 100);
