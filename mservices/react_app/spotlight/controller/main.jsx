@@ -27,7 +27,7 @@ try {
 		}		
 		popup() {
 			var me = this;
-			me.setState({ModalPlus: {type:'popup', style:'info',
+			me.setState({ModalPlus: {type:'popup', style:'info', pp:mapping_data.id,
 				body: me.docviwer({title:'title', body:'test body'}), id: me.unicode()}});
 		}		
 		changeId() {
