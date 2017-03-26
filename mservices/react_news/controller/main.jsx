@@ -99,7 +99,7 @@ try {
 		componentDidMount: function() {
 			var me = this;
 			me.showList()();
-			$('#pp').html('<qalet style="display:none">{"module":"spotlight", "app":"http://m.qalet.com/package/qalet_plugin.js", "css":{"link":"/css/customizeA.css","data":{"solution":3}} } </qalet> ');
+		//	$('#pp').html('<qalet style="display:none">{"module":"spotlight", "app":"http://m.qalet.com/package/qalet_plugin.js", "css":{"link":"/css/customizeA.css","data":{"solution":3}} } </qalet> ');
 		},			
 		componentDidUpdate: function() {
 			var me = this;
