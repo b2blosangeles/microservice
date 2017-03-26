@@ -29,7 +29,7 @@ class ModalPlus extends React.Component {
 	}				
 	componentDidUpdate (prevProps, prevState) {
 		var me = this;
-		if (prevState.ModalPlus !== me.state.ModalPlus && (me.props.viewpoint == mapping_data.id)) {
+		if (prevState.ModalPlus !== me.state.ModalPlus) {
 			//me.render();
 			viewpoint.find('.ModalPlus').modal({backdrop:'static'});
 			console.log(me.props.viewpoint + '==' + mapping_data.id);
