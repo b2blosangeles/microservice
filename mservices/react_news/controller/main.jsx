@@ -56,9 +56,9 @@ try {
 			if (!this._unicode) this._unicode = 0;
 			return this._unicode++;
 		},		
-		popup:function() {
+		popup:function(idd) {
 			var me = this;
-			me.setState({ModalPlus: {type:'popup', style:'warning', message:'nice job', pp:mapping_data.id, id: me.unicode()}});	
+			me.setState({ModalPlus: {type:'popup', style:'warning', message:'nice job', pp:idd, id: me.unicode()}});	
 		},
 		showList: function() {
 			var me = this;
@@ -67,7 +67,7 @@ try {
 					<div className="container-fluid qalet_box">
 						<div className="row">
 							<button type="button" className="btn btn-success" 
-								onClick={me.popup.bind(me)} >Change</button>
+								onClick={me.popup.bind(me,mapping_data.id)} >Change</button>
 							<p>	
 							{me.state.list.map(function(item, index) {
 								return <ListItem item={item} parent={me}/>
