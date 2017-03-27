@@ -94,7 +94,7 @@ class ModalPlus extends React.Component {
 						return (			
 							<div className={me.modalClass()} tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 							  <div className="modal-dialog" role="document">
-								<div className={'modal-content ' + box_class}>
+								<div className={'modal-content ' + box_class} style={box_style} >
 									{me.state.ModalPlus.body}
 								</div>
 							  </div>
@@ -104,7 +104,7 @@ class ModalPlus extends React.Component {
 						return (
 							<div className={me.modalClass()} tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 							  <div className="modal-dialog" role="document">
-								<div className={'modal-content ' + box_class}>	
+								<div className={'modal-content ' + box_class} style={box_style} >	
 									<span>
 										<div className="modal-header">
 											<button type="button" className="close" data-dismiss="modal" style={{display:close_icon}}>
