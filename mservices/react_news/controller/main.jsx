@@ -74,7 +74,10 @@ try {
 		},		
 		popup:function() {
 			var me = this;
-			me.setState({ModalPlus: {type:'popup', style:'warning', message:'nice job ok', id: me.unicode()}});	
+			me.setState({ModalPlus: {type:'popup', 
+				body_class:'warning', 		 
+				box_style:{color:'red'},		 
+				message:'no time to job !!', id: me.unicode()}});	
 		},
 		showList: function() {
 			var me = this;
