@@ -93,7 +93,6 @@ class ModalPlus extends React.Component {
 							<div className={me.modalClass()} tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 							  <div className="modal-dialog" role="document">
 								<div className="modal-content">
-.									{me.props.parent.state.ModalPlus.pp}=={mapping_data.id}
 									{me.state.ModalPlus.body}
 								</div>
 							  </div>
