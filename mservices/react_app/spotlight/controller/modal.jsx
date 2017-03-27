@@ -84,6 +84,11 @@ class ModalPlus extends React.Component {
 				
 				var box_class = '', box_style = '', message = '', close_icon = true;
 				
+				box_class = (me.state.ModalPlus.box_class)?me.state.ModalPlus.box_class:'info';
+				message = (me.state.ModalPlus.message)?('<strong>!</strong> ' + me.state.ModalPlus.message):'<strong>!</strong>';
+				close_icon = (me.state.ModalPlus.close_icon === false)?'none':'';
+				box_style = (me.state.ModalPlus.box_style)?me.state.ModalPlus.box_style:{};
+				
 				if (!err_msg) {
 					if (me.state.ModalPlus.body) {
 						return (			
@@ -108,7 +113,7 @@ class ModalPlus extends React.Component {
 											<h5 className="modal-title" id="exampleModalLabel">Modal title</h5>
 										</div>
 										<div className="modal-body">
-											<span dangerouslySetInnerHTML={{__html: me.state.ModalPlus.message}}></span>
+											<span dangerouslySetInnerHTML={{__html: message}}></span>
 										</div>
 										<div className="modal-footer">
 											<button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
