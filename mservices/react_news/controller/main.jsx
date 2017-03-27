@@ -74,7 +74,7 @@ try {
 							})}
 								
 							</p>	
-							aaa<ModalPlus parent={me} level="aaa" />
+							<ModalPlus parent={me} level="aaa" />
 						</div>	
 					</div>
 					,
