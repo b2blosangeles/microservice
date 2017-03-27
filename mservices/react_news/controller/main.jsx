@@ -67,7 +67,7 @@ try {
 			setTimeout(
 				function() {
 				//	me.setState({ModalPlus: 'cancel'});
-					me.popup();
+					me.alert();
 				}, 5000
 			)			
 			
