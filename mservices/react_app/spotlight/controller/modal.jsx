@@ -55,7 +55,7 @@ class ModalPlus extends React.Component {
 				var showcloseicon = '';
 				if (!err_msg) {
 					return (			
-						<div className={modalClass()} tabindex="-1" role="dialog" aria-hidden="true">
+						<div className={me.modalClass()} tabindex="-1" role="dialog" aria-hidden="true">
 						  <div className="modal-dialog" role="document">
 							<div className={'alert alert-' + style} role="alert">
 								<span dangerouslySetInnerHTML={{__html: message}}></span>
@@ -75,7 +75,7 @@ class ModalPlus extends React.Component {
 				message = '<span style="color:'+textcolor+'">'+message+'</span>';
 				if (!err_msg) {
 					return (			
-						<div className={modalClass()} tabindex="-1" role="dialog" aria-hidden="true">
+						<div className={me.modalClass()} tabindex="-1" role="dialog" aria-hidden="true">
 						  <div className="modal-dialog" role="document">
 							<div className={'text-' + style}>
 								<span dangerouslySetInnerHTML={{__html: message}}></span>
@@ -90,7 +90,7 @@ class ModalPlus extends React.Component {
 				if (!err_msg) {
 					if (me.state.ModalPlus.body) {
 						return (			
-							<div className{modalClass()} tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div className{me.modalClass()} tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 							  <div className="modal-dialog" role="document">
 								<div className="modal-content">
 .									{me.props.parent.state.ModalPlus.pp}=={mapping_data.id}
@@ -101,7 +101,7 @@ class ModalPlus extends React.Component {
 						)
 					} else {
 						return (
-							<div className={modalClass()} tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+							<div className={me.modalClass()} tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 							  <div className="modal-dialog" role="document">
 								<div className="modal-content">	
 									<span>
@@ -131,7 +131,7 @@ class ModalPlus extends React.Component {
 		} 
 		if (err_msg) {
 			return (
-				<div className={modalClass()} tabindex="-1" role="dialog" aria-hidden="true">
+				<div className={me.modalClass()} tabindex="-1" role="dialog" aria-hidden="true">
 				  <div className="modal-dialog" role="document">
 					<div className="alert alert-danger" role="alert">
 						<strong>!</strong> {err_msg} == {me.props.level} - {mapping_data.id}
