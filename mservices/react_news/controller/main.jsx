@@ -62,7 +62,7 @@ try {
 			var me = this;
 			me.setState({ModalPlus: {type:'loading', 
 			 box_style:{color:'yellow'},
-			 message:'nice ...', id: me.unicode()}});	
+			 message:'Loading ... <img src="https://i.stack.imgur.com/oQ0tF.gif" width="24">', id: me.unicode()}});	
 		},		
 		popup:function() {
 			var me = this;
