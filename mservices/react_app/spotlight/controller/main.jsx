@@ -10,14 +10,10 @@ try {
 				<Docviwer data={data}/>
 			)
 		}
-		unicode() {
-			if (!this._unicode) this._unicode = 0;
-			return this._unicode++;
-		}
 		loading() {
 			var me = this;
 			me.setState({ModalPlus: {type:'loading', textcolor:'#000000', hold:1000, 
-						 message:'<img src="https://i.stack.imgur.com/oQ0tF.gif" width="24">',  id: me.unicode()}});
+						 message:'<img src="https://i.stack.imgur.com/oQ0tF.gif" width="24">'}});
 			setTimeout(
 				function() {
 					
@@ -28,24 +24,24 @@ try {
 		popup() {
 			var me = this;
 			me.setState({ModalPlus: {type:'popup', style:'info', 
-				body: me.docviwer({title:'title', body:'test body'}), id: me.unicode()}});
+				body: me.docviwer({title:'title', body:'test body'})}});
 		}		
 		changeId() {
 			var me = this;
 			me.setState({ModalPlus: {type:'alert', style:'warning', message:'nice job', 
-				backdrop:{bg:'#ff0000', opacity:0.1, id: me.unicode()}}});
+				backdrop:{bg:'#ff0000', opacity:0.1}}});
 		}
 		loadData(e) {
 			var me = this;
 			var obj = $(e.target);
 			obj.attr('disabled', true);
 			me.setState({ModalPlus: {type:'loading', textcolor:'#fff', hold:10,
-				message:'<img src="https://i.stack.imgur.com/oQ0tF.gif" width="24">',  id: me.unicode()}});
+				message:'<img src="https://i.stack.imgur.com/oQ0tF.gif" width="24">'}});
 			
 			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 			{}, 
 			function (data) {
-				me.setState({ModalPlus: {type:'alert', style:'success', message:'saved', id: me.unicode()}});
+				me.setState({ModalPlus: {type:'alert', style:'success', message:'saved'}});
 				me.setState({list: data }, function() {
 					obj.attr('disabled', false);
 				});
@@ -57,7 +53,7 @@ try {
 				ReactDOM.render(
 					<div className="container-fluid qalet_box">
 						<div className="row">
-							Spotlight - {mapping_data.id}  - {me.props.viewpoint} - 
+							Spotlight - {mapping_data.id}  - {me.props.viewpoint}:: 
 							<button type="button" className="btn btn-success" 
 								onClick={me.popup.bind(me)} >popup</button>
 							
