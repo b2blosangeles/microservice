@@ -63,6 +63,13 @@ try {
 			me.setState({ModalPlus: {type:'loading', 
 			 box_style:{color:'yellow'},
 			 message:'Loading ... <img src="https://i.stack.imgur.com/oQ0tF.gif" width="24">', id: me.unicode()}});	
+	
+			setTimeout(
+				function() {
+					me.setState({ModalPlus: 'cancel'});	
+				}, 5000
+			)			
+			
 		},		
 		popup:function() {
 			var me = this;
