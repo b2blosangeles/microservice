@@ -65,16 +65,15 @@ class ModalPlus extends React.Component {
 				}
 				break;	
 			case "loading":
-				var textcolor = (me.state.ModalPlus.textcolor)?me.state.ModalPlus.textcolor :'#fff';
+				var message = '', box_style={};
 				var message = (me.state.ModalPlus.message)?(me.state.ModalPlus.message):'Loading ...';
-				message = '<span style="color:'+textcolor+'">'+message+'</span>';
+				box_style = (me.state.ModalPlus.box_style)?me.state.ModalPlus.box_style:{color:'#fff'};
 				if (!err_msg) {
 					return (			
 						<div className={me.modalClass()} tabindex="-1" role="dialog" aria-hidden="true">
 						  <div className="modal-dialog" role="document">
-							<div className={'text-' + style}>
+							<div style={box_style}>
 								<span dangerouslySetInnerHTML={{__html: message}}></span>
-								
 							</div>
 						  </div>
 						</div>	
