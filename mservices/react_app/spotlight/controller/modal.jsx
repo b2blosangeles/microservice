@@ -81,6 +81,9 @@ class ModalPlus extends React.Component {
 				}
 				break;	
 			case "popup":
+				
+				var box_class = '', box_style = '', message = '', close_icon = true;
+				
 				if (!err_msg) {
 					if (me.state.ModalPlus.body) {
 						return (			
