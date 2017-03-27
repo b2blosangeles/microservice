@@ -74,7 +74,7 @@ try {
 							})}
 								
 							</p>	
-							<ModalPlus parent={me} level="aaa" />
+							<ModalPlus parent={me} />
 						</div>	
 					</div>
 					,
@@ -82,11 +82,6 @@ try {
 				);
 			}	
 		},	
-		level:function() {
-			if (!this._level) this._level = 0;
-			this._level++;
-			return this._level;
-		},
 		render: function() {
 			var me = this;		
 			return (
