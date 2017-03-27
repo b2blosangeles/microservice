@@ -61,7 +61,7 @@ try {
 		loading:function() {
 			var me = this;
 			me.setState({ModalPlus: {type:'loading', 
-			 box_style:{color:yellow},
+			 box_style:{color:'yellow'},
 			 message:'nice ...', id: me.unicode()}});	
 		},		
 		popup:function() {
