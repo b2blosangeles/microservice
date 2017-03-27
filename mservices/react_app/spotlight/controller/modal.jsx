@@ -7,7 +7,6 @@ class ModalPlus extends React.Component {
 					me.props.parent.state.ModalPlus._id = new Date().getTime();
 					return true;
 				}	
-				
 				if (me.props.parent.state.ModalPlus == 'cancel') {
 					viewpoint.find('.ModalPlus').modal('hide');
 					me.props.parent.state.ModalPlus = null;
