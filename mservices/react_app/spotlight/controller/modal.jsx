@@ -44,7 +44,7 @@ class ModalPlus extends React.Component {
 			case "alert":
 				var box_class = '', box_style = '', message = '', close_icon = true;
 				
-				box_class = (me.state.ModalPlus.box_style)?me.state.ModalPlus.box_class:'info';
+				box_class = (me.state.ModalPlus.box_class)?me.state.ModalPlus.box_class:'info';
 				message = (me.state.ModalPlus.message)?('<strong>!</strong> ' + me.state.ModalPlus.message):'<strong>!</strong>';
 				close_icon = (me.state.ModalPlus.close_icon === false)?'hidden':'';
 				
