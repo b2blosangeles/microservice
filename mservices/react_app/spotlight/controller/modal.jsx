@@ -111,7 +111,7 @@ class ModalPlus extends React.Component {
 											<h5 className="modal-title" id="exampleModalLabel">Modal title</h5>
 										</div>
 										<div className="modal-body">
-											{me.props.parent.state.ModalPlus.pp}=={mapping_data.id}
+											default body
 										</div>
 										<div className="modal-footer">
 											<button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -133,7 +133,7 @@ class ModalPlus extends React.Component {
 				<div className={me.modalClass()} tabindex="-1" role="dialog" aria-hidden="true">
 				  <div className="modal-dialog" role="document">
 					<div className="alert alert-danger" role="alert">
-						<strong>!</strong> {err_msg} == {me.props.level} - {mapping_data.id}
+						<strong>!</strong> {err_msg} -> {mapping_data.id}
 						<button type="button" className="close" data-dismiss="modal">
 							&times;
 						</button>
