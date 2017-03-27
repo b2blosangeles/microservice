@@ -55,7 +55,7 @@ try {
 		alert:function() {
 			var me = this;
 			me.setState({ModalPlus: {type:'alert', body_class:'warning', 
-						 body_style:{border:'6px solid red'},
+						 box_style:{border:'6px solid red'},
 						 message:'nice <span style="color:red">job</span> ok', id: me.unicode()}});	
 		},		
 		popup:function() {
