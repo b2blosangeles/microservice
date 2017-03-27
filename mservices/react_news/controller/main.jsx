@@ -75,7 +75,7 @@ try {
 					<div className="container-fluid qalet_box">
 						<div className="row">
 							<button type="button" className="btn btn-success" 
-								onClick={me.alert.bind(me,'aaa')} >Change</button>
+								onClick={me.loading.bind(me)} >Change</button>
 							{/*
 							<p style={{display:'none'}}>	
 							{me.state.list.map(function(item, index) {
