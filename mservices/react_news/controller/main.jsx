@@ -51,6 +51,10 @@ try {
 		unicode() {
 			if (!this._unicode) this._unicode = 0;
 			return this._unicode++;
+		},	
+		alert:function() {
+			var me = this;
+			me.setState({ModalPlus: {type:'alert', body_class:'warning', message:'<b>nice</b> job ok', id: me.unicode()}});	
 		},		
 		popup:function() {
 			var me = this;
@@ -63,7 +67,7 @@ try {
 					<div className="container-fluid qalet_box">
 						<div className="row">
 							<button type="button" className="btn btn-success" 
-								onClick={me.popup.bind(me,'aaa')} >Change</button>
+								onClick={me.alert.bind(me,'aaa')} >Change</button>
 							<p>	
 							{me.state.list.map(function(item, index) {
 								return <ListItem item={item} parent={me}/>
