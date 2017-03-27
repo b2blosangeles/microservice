@@ -25,7 +25,6 @@ try {
 		}	
 	});
 	var Home = React.createClass({
-		
 		getInitialState: function() {
 			var me = this;
 
