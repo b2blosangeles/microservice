@@ -56,9 +56,9 @@ try {
 			if (!this._unicode) this._unicode = 0;
 			return this._unicode++;
 		},		
-		popup:function(idd) {
+		popup:function() {
 			var me = this;
-			me.setState({ModalPlus: {type:'popup', style:'warning', message:'nice job', pp:idd, id: me.unicode()}});	
+			me.setState({ModalPlus: {type:'popup', style:'warning', message:'nice job ok', id: me.unicode()}});	
 		},
 		showList: function() {
 			var me = this;
