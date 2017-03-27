@@ -26,7 +26,7 @@ class ModalPlus extends React.Component {
 				}	
 			} 
 			
-		}, 100);
+		}, 50);
 		this.state = {ModalPlus: ''}
 	}				
 	componentDidUpdate (prevProps, prevState) {
