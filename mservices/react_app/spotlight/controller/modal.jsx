@@ -4,7 +4,7 @@ class ModalPlus extends React.Component {
 		setInterval(function(){	
 			if (me.props.parent.state.ModalPlus) {	
 				if (!me.props.parent.state.ModalPlus._id) {
-					me.props.parent.state.ModalPlus._id = new Date().getTime();
+					me.props.parent.state.ModalPlus._id = true;
 					return true;
 				}	
 				if (me.props.parent.state.ModalPlus == 'cancel') {
