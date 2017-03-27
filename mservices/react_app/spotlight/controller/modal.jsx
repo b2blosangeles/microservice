@@ -93,7 +93,7 @@ class ModalPlus extends React.Component {
 							<div className{modalClass()} tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 							  <div className="modal-dialog" role="document">
 								<div className="modal-content">
-.									-{me.props.level}-==-{me.props.parent.state.ModalPlus.pp}=={mapping_data.id}
+.									{me.props.parent.state.ModalPlus.pp}=={mapping_data.id}
 									{me.state.ModalPlus.body}
 								</div>
 							  </div>
@@ -112,7 +112,7 @@ class ModalPlus extends React.Component {
 											<h5 className="modal-title" id="exampleModalLabel">Modal title</h5>
 										</div>
 										<div className="modal-body">
-											-{me.props.level}-==-{me.props.parent.state.ModalPlus.pp}=={mapping_data.id}
+											{me.props.parent.state.ModalPlus.pp}=={mapping_data.id}
 										</div>
 										<div className="modal-footer">
 											<button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
