@@ -52,7 +52,7 @@ class ModalPlus extends React.Component {
 					return (			
 						<div className={me.modalClass()} tabindex="-1" role="dialog" aria-hidden="true">
 						  <div className="modal-dialog" role="document">
-							<div className={'alert alert-' + box_style} role="alert">
+							<div className={'alert alert-' + box_class} role="alert">
 								<span dangerouslySetInnerHTML={{__html: message}}></span>
 								{me.props.viewpoint} ={me.state.pp} = - {mapping_data.id}
 								<button type="button" className="close" data-dismiss="modal" style={{display:close_icon}}>
