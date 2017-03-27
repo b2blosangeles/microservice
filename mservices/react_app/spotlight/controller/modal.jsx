@@ -2,12 +2,12 @@ class ModalPlus extends React.Component {
 	constructor(props) {
 		var me = super(props);
 		setInterval(function(){
-	
-			if (me.props.parent.state.ModalPlus) {	
-				console.log(me.props.parent.state.ModalPlus.id+'-----');
+			
+			if (me.props.parent.state.ModalPlus._id) {	
+				return true;
 			}
 			if (me.props.parent.state.ModalPlus) {	
-				
+				me.props.parent.state.ModalPlus._id = new Date().getTime();
 				if (me.props.parent.state.ModalPlus == 'cancel') {
 					viewpoint.find('.ModalPlus').modal('hide');
 					me.props.parent.state.ModalPlus = null;
