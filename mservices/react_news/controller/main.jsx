@@ -47,22 +47,18 @@ try {
 				);				
 			}
 			
-		},
-		unicode() {
-			if (!this._unicode) this._unicode = 0;
-			return this._unicode++;
 		},	
 		alert:function() {
 			var me = this;
 			me.setState({ModalPlus: {type:'alert', body_class:'warning', 
 			 box_style:{border:'6px solid red'},
-			 message:'nice <span style="color:red">job</span> ok', id: me.unicode()}});	
+			 message:'nice <span style="color:red">job</span> ok'}});	
 		},	
 		loading:function() {
 			var me = this;
 			me.setState({ModalPlus: {type:'loading', 
 			 box_style:{color:'yellow'},
-			 message:'Loading ... <img src="https://i.stack.imgur.com/oQ0tF.gif" width="24">', id: me.unicode()}});	
+			 message:'Loading ... <img src="https://i.stack.imgur.com/oQ0tF.gif" width="24">'}});	
 	
 			setTimeout(
 				function() {
