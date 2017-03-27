@@ -94,7 +94,7 @@ class ModalPlus extends React.Component {
 						return (			
 							<div className={me.modalClass()} tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 							  <div className="modal-dialog" role="document">
-								<div className="modal-content">
+								<div className={'modal-content ' + box_class}>
 									{me.state.ModalPlus.body}
 								</div>
 							  </div>
@@ -104,7 +104,7 @@ class ModalPlus extends React.Component {
 						return (
 							<div className={me.modalClass()} tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 							  <div className="modal-dialog" role="document">
-								<div className="modal-content">	
+								<div className={'modal-content ' + box_class}>	
 									<span>
 										<div className="modal-header">
 											<button type="button" className="close" data-dismiss="modal" style={{display:close_icon}}>
@@ -135,7 +135,7 @@ class ModalPlus extends React.Component {
 				<div className={me.modalClass()} tabindex="-1" role="dialog" aria-hidden="true">
 				  <div className="modal-dialog" role="document">
 					<div className="alert alert-danger" role="alert">
-						<strong>!</strong> {err_msg} -> {mapping_data.id}
+						<strong>!</strong> {err_msg}
 						<button type="button" className="close" data-dismiss="modal">
 							&times;
 						</button>
