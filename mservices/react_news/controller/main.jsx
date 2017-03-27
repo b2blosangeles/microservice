@@ -11,8 +11,6 @@ try {
 				},
 				error: function(xhr,status,error){
 					alert('error');
-					
-
 				}
 			});			
 			return {doc:[]};
@@ -45,7 +43,6 @@ try {
 			return function() {
 				ReactDOM.render(
 					<DocItem item={item} parent={me} />
-					
 					,
 					viewpoint.find('.vp_'+mapping_data.id)[0]
 				);				
@@ -72,7 +69,6 @@ try {
 							{me.state.list.map(function(item, index) {
 								return <ListItem item={item} parent={me}/>
 							})}
-								
 							</p>	
 							<ModalPlus parent={me} />
 						</div>	
