@@ -42,9 +42,12 @@ class ModalPlus extends React.Component {
 		}
 		switch(me.state.ModalPlus.type) {
 			case "alert":
-				var box_style = (me.state.ModalPlus.box_style)?me.state.ModalPlus.box_style:'info';
-				var message = (me.state.ModalPlus.message)?('<strong>!</strong> ' + me.state.ModalPlus.message):'<strong>!</strong>';
-				var closeicon = (me.state.ModalPlus.closeicon === false)?'hidden':'';
+				var box_class = '', box_style = '', message = '', close_icon = true;
+				
+				box_class = (me.state.ModalPlus.box_style)?me.state.ModalPlus.box_class:'info';
+				message = (me.state.ModalPlus.message)?('<strong>!</strong> ' + me.state.ModalPlus.message):'<strong>!</strong>';
+				close_icon = (me.state.ModalPlus.close_icon === false)?'hidden':'';
+				
 				if (!err_msg) {
 					return (			
 						<div className={me.modalClass()} tabindex="-1" role="dialog" aria-hidden="true">
@@ -52,7 +55,7 @@ class ModalPlus extends React.Component {
 							<div className={'alert alert-' + box_style} role="alert">
 								<span dangerouslySetInnerHTML={{__html: message}}></span>
 								{me.props.viewpoint} ={me.state.pp} = - {mapping_data.id}
-								<button type="button" className="close" data-dismiss="modal" style={{display:closeicon}}>
+								<button type="button" className="close" data-dismiss="modal" style={{display:close_icon}}>
 									&times;
 								</button>
 							</div>
