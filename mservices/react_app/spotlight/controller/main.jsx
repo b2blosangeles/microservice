@@ -23,14 +23,9 @@ try {
 		}		
 		popup() {
 			var me = this;
-			me.setState({ModalPlus: {type:'popup', style:'info', 
+			me.setState({ModalPlus: {type:'popup', style:'info', backdrop:{bg:'#ff0000', opacity:0.1},
 				body: me.docviwer({title:'title', body:'test body'})}});
 		}		
-		changeId() {
-			var me = this;
-			me.setState({ModalPlus: {type:'alert', style:'warning', message:'nice job', 
-				backdrop:{bg:'#ff0000', opacity:0.1}}});
-		}
 		loadData(e) {
 			var me = this;
 			var obj = $(e.target);
@@ -59,9 +54,6 @@ try {
 							
 							<button type="button" className="btn btn-success" 
 								onClick={me.loading.bind(me)} >loading</button>
-							
-							<button type="button" className="btn btn-success" 
-								onClick={me.changeId.bind(me)} >Change</button>
 							
 							<button type="button" className="btn btn-success"
 								onClick={me.loadData.bind(me)} >Load Data</button>
