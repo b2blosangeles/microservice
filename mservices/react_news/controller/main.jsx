@@ -73,7 +73,9 @@ try {
 			me.setState({ModalPlus: {type:'popup', 
 				body_class:'warning', 		 
 				box_style:{color:'red'},		 
-				message:'no time to job !!'}});	
+				message:
+					<span>tt</span>		
+				}});	
 		},
 		showList: function() {
 			var me = this;
