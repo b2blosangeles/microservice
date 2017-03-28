@@ -69,7 +69,7 @@ try {
 						<div className="row">
 							Spotlight - {mapping_data.id}  - {me.props.viewpoint}:: 
 							<button type="button" className="btn btn-success" 
-								onClick={me.popup.bind(me)} >popup</button>
+								onClick={me.loading.bind(me)} >loading</button>
 							
 							<button type="button" className="btn btn-success" 
 								onClick={me.alert.bind(me)} >alert</button>
