@@ -70,7 +70,7 @@ try {
 		},
 		niu: function(data) {
 			return (
-				<span>ttg</span>
+				<span>{data.title}</span>
 			)
 		},		
 		popup:function(doc) {
