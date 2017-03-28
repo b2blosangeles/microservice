@@ -20,7 +20,11 @@ try {
 					me.setState({ModalPlus: 'cancel'});	
 				}, 5000
 			)
-		}		
+		}
+		alert() {
+			var me = this;
+			me.setState({ModalPlus: {type:'alert', body_class:'success', message:'saved'}});
+		}			
 		popup() {
 			var me = this;
 			me.setState({ModalPlus: {type:'popup', style:'info', backdrop:{bg:'#ff0000', opacity:0.1},
@@ -53,7 +57,7 @@ try {
 								onClick={me.popup.bind(me)} >popup</button>
 							
 							<button type="button" className="btn btn-success" 
-								onClick={me.loading.bind(me)} >loading</button>
+								onClick={me.alert.bind(me)} >alert</button>
 							
 							<button type="button" className="btn btn-success"
 								onClick={me.loadData.bind(me)} >Load Data</button>
