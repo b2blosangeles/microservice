@@ -209,16 +209,15 @@ class Loading extends React.Component {
 		var message = '', box_style={};
 		var message = (me.state.ModalPlus.message)?(me.state.ModalPlus.message):'Loading ...';
 		box_style = (me.state.ModalPlus.box_style)?me.state.ModalPlus.box_style:{color:'#fff'};
-		if (!err_msg) {
-			return (			
-				<div className={me.modalClass()} tabindex="-1" role="dialog" aria-hidden="true">
-				  <div className="modal-dialog" role="document">
-					<div style={box_style}>
-						<span dangerouslySetInnerHTML={{__html: message}}></span>
-					</div>
-				  </div>
-				</div>	
-			);
-		}
+
+		return (			
+			<div className={me.modalClass()} tabindex="-1" role="dialog" aria-hidden="true">
+			  <div className="modal-dialog" role="document">
+				<div style={box_style}>
+					<span dangerouslySetInnerHTML={{__html: message}}></span>
+				</div>
+			  </div>
+			</div>	
+		);
 	}				
 }
