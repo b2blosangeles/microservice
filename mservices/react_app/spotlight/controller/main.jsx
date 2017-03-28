@@ -48,17 +48,14 @@ try {
 			var me = this;
 			me.lock(e);
 
-
+			me.setState({ModalLoading: {textcolor:'#fff', hold:100,
+				message:'<img src="https://i.stack.imgur.com/oQ0tF.gif" width="24">'}});	
 			
 			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 			{}, 
 			function (data) {
 				
-			me.setState({ModalLoading: {textcolor:'#fff', hold:100,
-						    message:'<img src="https://i.stack.imgur.com/oQ0tF.gif" width="24">'}});		
-
 				me.setState({ModalPlus: {type:'alert', style:'success', message:'saved B'}});
-								
 				setTimeout(
 					function() {
 						me.setState({ModalLoading: 'cancel'});	
