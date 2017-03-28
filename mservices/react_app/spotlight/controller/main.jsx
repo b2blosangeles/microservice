@@ -48,7 +48,7 @@ try {
 			var me = this;
 			me.lock(e);
 
-			me.setState({Loading: {type:'loading', textcolor:'#fff', hold:1000,
+			me.setState({Loading: {type:'loading', textcolor:'#fff', hold:100,
 				message:'<img src="https://i.stack.imgur.com/oQ0tF.gif" width="24">'}});
 			
 			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
@@ -58,8 +58,8 @@ try {
 				
 				setTimeout(
 					function() {
-					//	me.setState({Loading: 'cancel'});	
-					},6000
+						me.setState({Loading: 'cancel'});	
+					},12000
 				
 				);
 				
