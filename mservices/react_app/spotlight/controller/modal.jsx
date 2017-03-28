@@ -176,12 +176,12 @@ class Loading extends React.Component {
 					if  (!me.props.parent.state.Loading .startTime) {
 						me.props.parent.state.Loading.startTime = new Date().getTime();
 					}
-					if  (new Date().getTime() < (me.props.parent.state.ModalPlus.hold + me.props.parent.state.ModalPlus.startTime)) {
+					if  (new Date().getTime() < (me.props.parent.state.Loading.hold + me.props.parent.state.Loading.startTime)) {
 						return true;
 					}
 				}
 				if (me.props.parent.state.Loading !== me.state.Loading) {
-					me.setState({ModalPlus: me.props.parent.state.Loading });
+					me.setState({Loading: me.props.parent.state.Loading });
 				}	
 
 					
