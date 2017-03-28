@@ -179,6 +179,7 @@ class ModalLoading extends React.Component {
 		if (prevState.ModalLoading !== me.state.ModalLoading) {
 			// me.render();
 			viewpoint.find('.ModalLoading_'+ mapping_data.id).modal({backdrop:'static'});
+			$($viewpoint.find('.ModalLoading_'+ mapping_data.id)).css("z-index", "1500");
 		} 
 	}
 	ModalLoadingClass () {
