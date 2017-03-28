@@ -62,7 +62,7 @@ try {
 	
 			setTimeout(
 				function() {
-					me.setState({loading: 'cancel'});
+					me.setState({Loading: 'cancel'});
 				}, 5000
 			)			
 			
