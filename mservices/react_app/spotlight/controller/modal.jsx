@@ -57,11 +57,6 @@ class ModalPlus extends React.Component {
 				box_style = (me.state.ModalPlus.box_style)?me.state.ModalPlus.box_style:{};
 					
 				if (!err_msg) {
-					return (
-					<ModalPlus_Alert 
-						parent={me} data={{box_class:box_class,box_style:box_style,message:message, close_icon:close_icon}} />
-					)
-					/*
 					return (			
 						<div className={me.modalClass()} tabindex="-1" role="dialog" aria-hidden="true">
 						  <div className="modal-dialog" role="document">
@@ -74,7 +69,6 @@ class ModalPlus extends React.Component {
 						  </div>
 						</div>	
 					);
-					*/
 				}
 				break;	
 			case "loading":
@@ -161,25 +155,4 @@ class ModalPlus extends React.Component {
 			return(<span></span>);
 		}
 	}				
-}
-
-class ModalPlus_Alert extends React.Component {
-	constructor(props) {
-		var me = super(props);
-	}
-	render () {
-		var me = this;
-		return (			
-			<div className={me.props.parent.modalClass()} tabindex="-1" role="dialog" aria-hidden="true">
-			  <div className="modal-dialog" role="document">
-				<div className={'alert alert-' + me.props.data.box_class} style={me.props.data.box_style} role="alert">
-					<span dangerouslySetInnerHTML={{__html: me.props.data.message}}></span>
-					<button type="button" className="close" data-dismiss="modal" style={{display:me.props.data.close_icon}}>
-						&times;
-					</button>
-				</div>
-			  </div>
-			</div>	
-		);
-	}	
 }
