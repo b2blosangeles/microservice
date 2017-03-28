@@ -74,10 +74,7 @@ try {
 				body_class:'warning', 		 
 				box_style:{color:'red'},		 
 				message:
-					ReactDOM.render(
-						<span>ttg</span>
-					)	 
-							
+					<span>ttg</span>	 		
 				}});	
 		},
 		showList: function() {
