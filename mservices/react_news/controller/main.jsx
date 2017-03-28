@@ -75,13 +75,14 @@ try {
 		},		
 		popup:function(doc) {
 			var me = this;
+			 if (!doc) {
+				var doc = {title:'title', body:'test body'};
+			 }			
 			me.setState({ModalPlus: {type:'popup', 
 				body_class:'warning', 		 
 				box_style:{color:'red'},		 
 				// message:me.niu
-				 if (!doc) {
-					var doc = {title:'title', body:'test body'};
-				 }
+	
 				message: me.niu({title:'title', body:'test body'});
 				}});	
 		},
