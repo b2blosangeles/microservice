@@ -74,7 +74,7 @@ try {
 				body_class:'warning', 		 
 				box_style:{color:'red'},		 
 				message:
-					return(
+					ReactDOM.render(
 						<span>ttg</span>
 					)	 
 							
