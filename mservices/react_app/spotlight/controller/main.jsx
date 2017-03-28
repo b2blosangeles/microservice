@@ -12,7 +12,7 @@ try {
 		}
 		loading() {
 			var me = this;
-			me.setState({Loading: {type:'Loading', textcolor:'#000000', hold:1000, 
+			me.setState({ModalLoading: {type:'Loading', textcolor:'#000000', hold:1000, 
 				message:'<img src="https://i.stack.imgur.com/oQ0tF.gif" width="24">'}});
 			setTimeout(
 				function() {
