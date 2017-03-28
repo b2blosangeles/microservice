@@ -67,6 +67,7 @@ try {
 			)			
 			
 		},
+		
 		niu: function(data) {
 			var me = this;
 			var close_icon = false;
