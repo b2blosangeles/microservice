@@ -74,7 +74,10 @@ try {
 				body_class:'warning', 		 
 				box_style:{color:'red'},		 
 				message:
-					<span>tt</span>		
+					return(
+						<span>ttg</span>
+					)	 
+							
 				}});	
 		},
 		showList: function() {
