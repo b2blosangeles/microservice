@@ -56,13 +56,13 @@ try {
 		},	
 		loading:function() {
 			var me = this;
-			me.setState({Loading: {type:'loading', 
+			me.setState({ModalLoading: {type:'loading', 
 			 box_style:{color:'yellow'},
 			 message:'Loading ... <img src="https://i.stack.imgur.com/oQ0tF.gif" width="24">'}});	
 	
 			setTimeout(
 				function() {
-					me.setState({Loading: 'cancel'});
+					me.setState({ModalLoading: 'cancel'});
 				}, 5000
 			)			
 			
