@@ -32,7 +32,7 @@ try {
 			me.setState({ModalPlus: {type:'popup', style:'info', backdrop:{bg:'#ff0000', opacity:0.1},
 				body: me.docviwer({title:'title', body:'test body'})}});
 		}		
-		loadData(e, d) {
+		loadData(d, e) {
 			console.log(d);
 			var me = this;
 			var obj = $(e.target);
