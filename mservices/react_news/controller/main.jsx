@@ -116,7 +116,7 @@ try {
 							})}
 							</p>
 							<ModalPlus parent={me} />
-							<Loading parent={me} />
+							<ModalLoading parent={me} />
 						</div>	
 					</div>
 					,
