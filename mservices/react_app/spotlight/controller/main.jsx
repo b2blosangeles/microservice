@@ -55,6 +55,15 @@ try {
 			{}, 
 			function (data) {
 				me.setState({ModalPlus: {type:'alert', style:'success', message:'saved'}});
+				
+				setTimeout(
+					function() {
+						me.setState({Loading: 'cancel'});	
+					},6000
+				
+				);
+				
+				
 				me.setState({list: data }, function() {
 					me.release(e);
 				});
