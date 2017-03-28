@@ -57,8 +57,10 @@ class ModalPlus extends React.Component {
 				box_style = (me.state.ModalPlus.box_style)?me.state.ModalPlus.box_style:{};
 					
 				if (!err_msg) {
+					return (
 					<ModalPlus_Alert 
 						data={{box_class:box_class,box_style:box_style,message:message, close_icon:close_icon}} />
+					)
 					/*
 					return (			
 						<div className={me.modalClass()} tabindex="-1" role="dialog" aria-hidden="true">
