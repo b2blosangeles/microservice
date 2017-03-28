@@ -31,12 +31,24 @@ try {
 			var me = this;
 			me.setState({ModalPlus: {type:'popup', style:'info', backdrop:{bg:'#ff0000', opacity:0.1},
 				body: me.docviwer({title:'title', body:'test body'})}});
+		}
+		lock(e) {
+			if ((e.target) && $(e.target) && ($(e.target)[0])) {
+				var obj = $(e.target);
+				obj.attr('disabled', true);
+			}
+		}
+		release(e) {
+			if ((e.target) && $(e.target) && ($(e.target)[0])) {
+				var obj = $(e.target);
+				obj.attr('disabled', false);
+			}
 		}		
 		loadData(d, e) {
-			console.log(d);
+			console.log(e);
 			var me = this;
-			var obj = $(e.target);
-			obj.attr('disabled', true);
+			me.lock(e);
+
 			me.setState({ModalPlus: {type:'loading', textcolor:'#fff', hold:1000,
 				message:'<img src="https://i.stack.imgur.com/oQ0tF.gif" width="24">'}});
 			
@@ -45,7 +57,7 @@ try {
 			function (data) {
 				me.setState({ModalPlus: {type:'alert', style:'success', message:'saved'}});
 				me.setState({list: data }, function() {
-					obj.attr('disabled', false);
+					release(e);
 				});
 			},'json');
 		}		
