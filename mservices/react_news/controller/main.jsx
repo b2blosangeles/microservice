@@ -68,7 +68,7 @@ try {
 			)			
 			
 		},
-		niu(data) {
+		niu: function(data) {
 			return (
 				<span>ttg</span>
 			)
