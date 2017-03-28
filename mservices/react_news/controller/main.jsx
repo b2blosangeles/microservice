@@ -69,6 +69,7 @@ try {
 			
 		},
 		niu: function(data) {
+			var close_icon = false;
 			return (
 				<span>
 					<div className="modal-header">
