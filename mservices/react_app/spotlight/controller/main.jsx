@@ -86,7 +86,7 @@ try {
 								onClick={me.loadData.bind(me, 2)} >Load Data</button>
 						</div>
 						<ModalPlus parent={me}/>
-						<Loading parent={me}/>
+						<ModalLoading parent={me}/>
 					</div>
 					,
 					viewpoint.find('.vp_'+mapping_data.id)[0]
