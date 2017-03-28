@@ -56,14 +56,13 @@ try {
 		},	
 		loading:function() {
 			var me = this;
-			me.setState({ModalPlus: {type:'loading', 
+			me.setState({Loading: {type:'loading', 
 			 box_style:{color:'yellow'},
 			 message:'Loading ... <img src="https://i.stack.imgur.com/oQ0tF.gif" width="24">'}});	
 	
 			setTimeout(
 				function() {
-				//	me.setState({ModalPlus: 'cancel'});
-					me.alert();
+					me.setState({loading: 'cancel'});
 				}, 5000
 			)			
 			
@@ -108,7 +107,7 @@ try {
 					<div className="container-fluid qalet_box">
 						<div className="row">
 							<button type="button" className="btn btn-success" 
-								onClick={me.popup.bind(me)} >Change</button>
+								onClick={me.loading.bind(me)} >Change</button>
 							<p>	
 							{me.state.list.map(function(item, index) {
 								return <ListItem item={item} parent={me}/>
