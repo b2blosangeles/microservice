@@ -75,7 +75,7 @@ try {
 								onClick={me.alert.bind(me)} >alert</button>
 							
 							<button type="button" className="btn btn-success"
-								onClick={me.loadData.bind(me, 1, 2)} >Load Data</button>
+								onClick={me.loadData.bind(me, 2)} >Load Data</button>
 						</div>
 						<ModalPlus parent={me}/>
 					</div>
