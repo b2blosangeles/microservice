@@ -67,14 +67,18 @@ try {
 				}, 5000
 			)			
 			
+		},
+		niu(data) {
+			return (
+				<span>ttg</span>
+			)
 		},		
 		popup:function() {
 			var me = this;
 			me.setState({ModalPlus: {type:'popup', 
 				body_class:'warning', 		 
 				box_style:{color:'red'},		 
-				message:
-					<span>ttg</span>	 		
+				message:me.niu(); 		
 				}});	
 		},
 		showList: function() {
