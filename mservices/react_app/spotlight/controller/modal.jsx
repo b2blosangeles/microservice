@@ -166,7 +166,7 @@ class Loading extends React.Component {
 			if (me.props.parent.state.Loading) {	
 				if (me.props.parent.state.Loading == 'cancel') {
 					viewpoint.find('.Loading').modal('hide');
-					me.props.parent.state.ModalPlus = null;
+					me.props.parent.state.Loading = null;
 					return true
 				}				
 				if (!me.props.parent.state.Loading._id) {
