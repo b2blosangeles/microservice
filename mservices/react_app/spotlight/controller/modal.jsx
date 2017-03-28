@@ -71,24 +71,6 @@ class ModalPlus extends React.Component {
 					);
 				}
 				break;	
-			/*	
-			case "loading":
-				var message = '', box_style={};
-				var message = (me.state.ModalPlus.message)?(me.state.ModalPlus.message):'Loading ...';
-				box_style = (me.state.ModalPlus.box_style)?me.state.ModalPlus.box_style:{color:'#fff'};
-				if (!err_msg) {
-					return (			
-						<div className={me.modalClass()} tabindex="-1" role="dialog" aria-hidden="true">
-						  <div className="modal-dialog" role="document">
-							<div style={box_style}>
-								<span dangerouslySetInnerHTML={{__html: message}}></span>
-							</div>
-						  </div>
-						</div>	
-					);
-				}
-				break;
-			*/	
 			case "popup":
 				
 				var box_class = '', box_style = '', message = '', close_icon = true;
@@ -209,7 +191,7 @@ class ModalLoading extends React.Component {
 			else  _modal_backdrop_.resetDefault();
 		}
 		var message = '', box_style={};
-		var message = (me.state.ModalLoading.message)?(me.state.ModalLoading.message):'ModalLoading ...';
+		var message = (me.state.ModalLoading.message)?(me.state.ModalLoading.message):'Loading ...';
 		box_style = (me.state.ModalLoading.box_style)?me.state.ModalLoading.box_style:{color:'#fff'};
 
 		return (			
