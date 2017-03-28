@@ -71,6 +71,7 @@ class ModalPlus extends React.Component {
 					);
 				}
 				break;	
+			/*	
 			case "loading":
 				var message = '', box_style={};
 				var message = (me.state.ModalPlus.message)?(me.state.ModalPlus.message):'Loading ...';
@@ -86,7 +87,8 @@ class ModalPlus extends React.Component {
 						</div>	
 					);
 				}
-				break;	
+				break;
+			*/	
 			case "popup":
 				
 				var box_class = '', box_style = '', message = '', close_icon = true;
