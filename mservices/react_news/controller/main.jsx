@@ -73,13 +73,16 @@ try {
 				<span>ttg</span>
 			)
 		},		
-		popup:function() {
+		popup:function(doc) {
 			var me = this;
 			me.setState({ModalPlus: {type:'popup', 
 				body_class:'warning', 		 
 				box_style:{color:'red'},		 
 				// message:me.niu
-				message: me.niu({title:'title', body:'test body'})
+				 if (!doc) {
+					var doc = {title:'title', body:'test body'};
+				 }
+				message: me.niu({title:'title', body:'test body'});
 				}});	
 		},
 		showList: function() {
