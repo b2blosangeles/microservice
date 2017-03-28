@@ -82,7 +82,7 @@ try {
 				body_class:'warning', 		 
 				box_style:{color:'red'},		 
 				// message:me.niu
-				message: me.niu({title:'title', body:'test body'})
+				message: me.niu(doc)
 				}
 			});	
 		},
