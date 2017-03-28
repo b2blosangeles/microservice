@@ -168,6 +168,7 @@ class ModalPlus_Alert extends React.Component {
 		var me = super(props);
 	}
 	render () {
+		var me = this;
 		return (			
 			<div className={me.modalClass()} tabindex="-1" role="dialog" aria-hidden="true">
 			  <div className="modal-dialog" role="document">
