@@ -57,7 +57,7 @@ try {
 			function (data) {
 				me.setState({ModalPlus: {type:'alert', style:'success', message:'saved'}});
 				me.setState({list: data }, function() {
-					release(e);
+					me.release(e);
 				});
 			},'json');
 		}		
