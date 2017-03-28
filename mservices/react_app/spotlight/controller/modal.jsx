@@ -120,7 +120,7 @@ class ModalPlus extends React.Component {
 											<h5 className="modal-title" id="exampleModalLabel">Modal title</h5>
 										</div>
 										<div className="modal-body">
-											<span dangerouslySetInnerHTML={{__html: message}}></span>
+											{/*<span dangerouslySetInnerHTML={{__html: message}}></span>*/}
 											=={me.state.ModalPlus.message}==
 										</div>
 										<div className="modal-footer">
