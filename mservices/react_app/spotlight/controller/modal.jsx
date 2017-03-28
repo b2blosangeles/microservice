@@ -121,7 +121,7 @@ class ModalPlus extends React.Component {
 										</div>
 										<div className="modal-body">
 											{/*<span dangerouslySetInnerHTML={{__html: message}}></span>*/}
-											=={me.state.ModalPlus.message}==
+											{me.state.ModalPlus.message}
 										</div>
 										<div className="modal-footer">
 											<button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
