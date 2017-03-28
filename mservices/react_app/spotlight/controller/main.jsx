@@ -21,12 +21,12 @@ try {
 				}, 5000
 			)
 		}
-		alert:function() {
+		alert() {
 			var me = this;
 			me.setState({ModalPlus: {type:'alert', body_class:'warning', 
 			 box_style:{border:'1px solid red'},
 			 message:'nice <span style="color:red">job</span> ok'}});	
-		},				
+		}				
 		popup() {
 			var me = this;
 			me.setState({ModalPlus: {type:'popup', style:'info', backdrop:{bg:'#ff0000', opacity:0.1},
