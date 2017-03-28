@@ -90,13 +90,11 @@ try {
 						<div className="row">
 							<button type="button" className="btn btn-success" 
 								onClick={me.popup.bind(me)} >Change</button>
-							{/*
-							<p style={{display:'none'}}>	
+							<p>	
 							{me.state.list.map(function(item, index) {
 								return <ListItem item={item} parent={me}/>
 							})}
 							</p>
-							*/}
 							<ModalPlus parent={me} />
 						</div>	
 					</div>
