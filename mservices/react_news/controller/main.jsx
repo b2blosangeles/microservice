@@ -78,7 +78,7 @@ try {
 			me.setState({ModalPlus: {type:'popup', 
 				body_class:'warning', 		 
 				box_style:{color:'red'},		 
-				message:me.niu(); 		
+				message:me.niu() 		
 				}});	
 		},
 		showList: function() {
