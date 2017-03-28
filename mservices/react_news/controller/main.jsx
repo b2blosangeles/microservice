@@ -70,7 +70,21 @@ try {
 		},
 		niu: function(data) {
 			return (
-				<span>{data.title}</span>
+				<span>
+					<div className="modal-header">
+						<button type="button" className="close" data-dismiss="modal" style={{display:close_icon}}>
+							&times;
+						</button>
+						<h5 className="modal-title" id="exampleModalLabel">{data.title}</h5>
+					</div>
+					<div className="modal-body">
+						<span dangerouslySetInnerHTML={{data.body}}></span>
+					</div>
+					<div className="modal-footer">
+						<button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" className="btn btn-primary">Save changes</button>
+					</div>
+				</span>	
 			)
 		},		
 		popup:function(doc) {
@@ -82,7 +96,7 @@ try {
 				body_class:'warning', 		 
 				box_style:{color:'red'},		 
 				// message:me.niu
-				message: me.niu(doc)
+				body: me.niu(doc)
 				}
 			});	
 		},
