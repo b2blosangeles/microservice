@@ -53,9 +53,11 @@ try {
 			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 			{}, 
 			function (data) {
+				message:'<img src="https://i.stack.imgur.com/oQ0tF.gif" width="24">'}});
+			
 				me.setState({ModalPlus: {type:'alert', style:'success', message:'saved A'}});
 			me.setState({ModalLoading: {textcolor:'#fff', hold:100,
-				message:'<img src="https://i.stack.imgur.com/oQ0tF.gif" width="24">'}});				
+								
 				setTimeout(
 					function() {
 						me.setState({ModalLoading: 'cancel'});	
