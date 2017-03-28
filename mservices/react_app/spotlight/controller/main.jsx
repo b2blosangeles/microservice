@@ -32,7 +32,8 @@ try {
 			me.setState({ModalPlus: {type:'popup', style:'info', backdrop:{bg:'#ff0000', opacity:0.1},
 				body: me.docviwer({title:'title', body:'test body'})}});
 		}		
-		loadData(e) {
+		loadData(e, d) {
+			console.log(d);
 			var me = this;
 			var obj = $(e.target);
 			obj.attr('disabled', true);
@@ -62,7 +63,7 @@ try {
 								onClick={me.alert.bind(me)} >alert</button>
 							
 							<button type="button" className="btn btn-success"
-								onClick={me.loadData.bind(me)} >Load Data</button>
+								onClick={me.loadData.bind(me, 1)} >Load Data</button>
 						</div>
 						<ModalPlus parent={me}/>
 					</div>
