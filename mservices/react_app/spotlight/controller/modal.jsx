@@ -159,61 +159,61 @@ class ModalPlus extends React.Component {
 	}				
 }
 
-class Loading extends React.Component {
+class ModalLoading extends React.Component {
 	constructor(props) {
 		var me = super(props);
 		setInterval(function(){	
-			if (me.props.parent.state.Loading) {	
-				if (me.props.parent.state.Loading == 'cancel') {
-					viewpoint.find('.Loading').modal('hide');
-					me.props.parent.state.Loading = null;
+			if (me.props.parent.state.ModalLoading) {	
+				if (me.props.parent.state.ModalLoading == 'cancel') {
+					viewpoint.find('.ModalLoading').modal('hide');
+					me.props.parent.state.ModalLoading = null;
 					return true
 				}				
-				if (!me.props.parent.state.Loading._id) {
-					me.props.parent.state.Loading._id = true;
+				if (!me.props.parent.state.ModalLoading._id) {
+					me.props.parent.state.ModalLoading._id = true;
 					return true;
 				}		
 	
-				if (me.props.parent.state.Loading.hold) {
-					if  (!me.props.parent.state.Loading .startTime) {
-						me.props.parent.state.Loading.startTime = new Date().getTime();
+				if (me.props.parent.state.ModalLoading.hold) {
+					if  (!me.props.parent.state.ModalLoading .startTime) {
+						me.props.parent.state.ModalLoading.startTime = new Date().getTime();
 					}
-					if  (new Date().getTime() < (me.props.parent.state.Loading.hold + me.props.parent.state.Loading.startTime)) {
+					if  (new Date().getTime() < (me.props.parent.state.ModalLoading.hold + me.props.parent.state.ModalLoading.startTime)) {
 						return true;
 					}
 				}
-				if (me.props.parent.state.Loading !== me.state.Loading) {
-					me.setState({Loading: me.props.parent.state.Loading });
+				if (me.props.parent.state.ModalLoading !== me.state.ModalLoading) {
+					me.setState({ModalLoading: me.props.parent.state.ModalLoading });
 				}	
 
 					
 			} 
 			
 		}, 50);
-		this.state = {Loading: ''}
+		this.state = {ModalLoading: ''}
 	}				
 	componentDidUpdate (prevProps, prevState) {
 		var me = this;
-		if (prevState.Loading !== me.state.Loading) {
+		if (prevState.ModalLoading !== me.state.ModalLoading) {
 			// me.render();
-			viewpoint.find('.Loading_'+ mapping_data.id).modal({backdrop:'static'});
+			viewpoint.find('.ModalLoading_'+ mapping_data.id).modal({backdrop:'static'});
 		} 
 	}
-	loadingClass () {
-		return 'modal fade Loading Loading_'+ mapping_data.id;
+	ModalLoadingClass () {
+		return 'modal fade ModalLoading ModalLoading_'+ mapping_data.id;
 	}	
 	render () {
 		var me = this, err_msg = '';
 		if (_modal_backdrop_) {
-			if (me.state.Loading.backdrop)  _modal_backdrop_.set(me.state.Loading.backdrop);	
+			if (me.state.ModalLoading.backdrop)  _modal_backdrop_.set(me.state.ModalLoading.backdrop);	
 			else  _modal_backdrop_.resetDefault();
 		}
 		var message = '', box_style={};
-		var message = (me.state.Loading.message)?(me.state.Loading.message):'Loading ...';
-		box_style = (me.state.Loading.box_style)?me.state.Loading.box_style:{color:'#fff'};
+		var message = (me.state.ModalLoading.message)?(me.state.ModalLoading.message):'ModalLoading ...';
+		box_style = (me.state.ModalLoading.box_style)?me.state.ModalLoading.box_style:{color:'#fff'};
 
 		return (			
-			<div className={me.loadingClass()} tabindex="-1" role="dialog" aria-hidden="true">
+			<div className={me.ModalLoadingClass()} tabindex="-1" role="dialog" aria-hidden="true">
 			  <div className="modal-dialog" role="document">
 				<div style={box_style}>
 					<span dangerouslySetInnerHTML={{__html: message}}></span>
