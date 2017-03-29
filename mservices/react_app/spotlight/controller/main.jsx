@@ -103,7 +103,7 @@ try {
 			var me = this;
 			me.showList()();
 			if (!viewpoint.find('.vpniuniu')[0]) {
-				console,log('.vpniuniu missing---');
+				console.log('.vpniuniu missing---');
 			}	
 			// $viewpoint.find('.vp_'+mapping_data.id)[0]
 		}
