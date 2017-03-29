@@ -101,7 +101,11 @@ try {
 		}
 		componentDidMount() {
 			var me = this;
-			me.showList()();	
+			me.showList()();
+			if (!viewpoint.find('.vpniuniu')[0]) {
+				console,log('.vpniuniu missing---');
+			}	
+			// $viewpoint.find('.vp_'+mapping_data.id)[0]
 		}
 		componentDidUpdate(prevProps, prevState) {
 			var me = this;
