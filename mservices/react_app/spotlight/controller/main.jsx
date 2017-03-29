@@ -104,12 +104,7 @@ try {
 		componentDidMount() {
 			var me = this;
 			me.showList()();
-			if (!viewpoint.find('.vpniuniu')[0]) {
-				console.log('.vpniuniu missing---');
-				viewpoint.find('.vp_'+mapping_data.id).append('<div class=".vpniuniu">Appended text</div>');
-				ReactDOM.render(<span><ModalPlus parent={me}/><ModalLoading parent={me}/></span>, 
-						viewpoint.find('.vp_'+mapping_data.id).find('.vpniuniu')[0]);
-			}	
+
 			// $viewpoint.find('.vp_'+mapping_data.id)[0]
 		}
 		componentDidUpdate(prevProps, prevState) {
@@ -118,6 +113,13 @@ try {
 			if (JSON.stringify(prevState) !== JSON.stringify(me.state)) {
 			//	console.log('prevState changed===!');
 			}
+			
+			if (!viewpoint.find('.vpniuniu')[0]) {
+				console.log('.vpniuniu missing---');
+				viewpoint.find('.vp_'+mapping_data.id).append('<div class=".vpniuniu">Appended text</div>');
+				ReactDOM.render(<span><ModalPlus parent={me}/><ModalLoading parent={me}/></span>, 
+						viewpoint.find('.vp_'+mapping_data.id).find('.vpniuniu')[0]);
+			}				
 		}
 	}
 	
