@@ -107,8 +107,7 @@ try {
 			if (!viewpoint.find('.vpniuniu')[0]) {
 				console.log('.vpniuniu missing---');
 				viewpoint.find('.vp_'+mapping_data.id).append('<div class=".vpniuniu">Appended text</div>');
-				ReactDOM.render(<ModalPlus parent={me}/>, viewpoint.find('.vpniuniu'[0]);
-				ReactDOM.render(<odalLoading parent={me}/>, viewpoint.find('.vpniuniu'[0]);
+				ReactDOM.render(<span><ModalPlus parent={me}/><ModalLoading parent={me}/></span>, viewpoint.find('.vpniuniu'[0]);
 			}	
 			// $viewpoint.find('.vp_'+mapping_data.id)[0]
 		}
