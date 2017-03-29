@@ -85,10 +85,10 @@ try {
 							<button type="button" className="btn btn-success"
 								onClick={me.loadData.bind(me, 2)} >Load Data</button>
 						</div>
-						{/*
+						
 						<ModalPlus parent={me}/>
 						<ModalLoading parent={me}/>
-						*/}
+						
 					</div>
 					,
 					viewpoint.find('.vp_'+mapping_data.id)[0]
@@ -113,13 +113,14 @@ try {
 			if (JSON.stringify(prevState) !== JSON.stringify(me.state)) {
 			//	console.log('prevState changed===!');
 			}
-			
+			/*
 			if (!viewpoint.find('.vpniuniu')[0]) {
 				console.log('.vpniuniu missing---');
 				viewpoint.find('.vp_'+mapping_data.id).append('<div class=".vpniuniu_'+mapping_data.id+'">Appended text</div>');
 				ReactDOM.render(<span><ModalPlus parent={me}/><ModalLoading parent={me}/></span>, 
 						viewpoint.find('.vpniuniu_'+mapping_data.id)[0]);
-			}				
+			}
+			*/
 		}
 	}
 	
