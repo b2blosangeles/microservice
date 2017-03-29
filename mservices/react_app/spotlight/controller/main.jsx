@@ -104,7 +104,7 @@ try {
 			me.showList()();
 			if (!viewpoint.find('.vpniuniu')[0]) {
 				console.log('.vpniuniu missing---');
-				viewpoint.find('.vpniuniu').append("<b class=".vpniuniu">Appended text</b>");
+				viewpoint.find('.vpniuniu').append('<b class=".vpniuniu">Appended text</b>');
 			}	
 			// $viewpoint.find('.vp_'+mapping_data.id)[0]
 		}
