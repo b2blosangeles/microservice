@@ -1,8 +1,6 @@
 {
 	"tpls":[],
-	"filelist":[
-		
-	],
+	"filelist":[],
 	"mservice": {	
 		"jsmarty_news":[
 			"/mservices/jsmarty_news/controller/main.js"
@@ -35,8 +33,7 @@
 		"spotlight":[
 			"/js/react/react.min.js",
 			"/js/react/react-dom.min.js",
-			"/js/react/ReactRouter/3.0.2/ReactRouter.min.js",
-			"/mservices/react_app/spotlight/controller/modalA.jsx"
+			"/js/react/ReactRouter/3.0.2/ReactRouter.min.js"
 		]
 	},
 	"ms_tpls": {
