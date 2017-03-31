@@ -150,14 +150,14 @@ try {
 		}
 	});
 	
-	ReactDOM.render(
+	var myChild = ReactDOM.render(
 		<Home/>	
 		,
 		viewpoint[0]
 	);
 	// $('.'+mapping_data.id).show(0);
 	
-	Home.tt();
+	myChild.tt();
 	
 } catch (err) {
 	console.log(err.message);
