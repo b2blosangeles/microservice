@@ -35,7 +35,7 @@
 		,
 		$('#mm')[0]
 	);
-console.log(ModalPlusAA.modalClass());
+console.log(ModalPlusA.modalClass());
 	/*
 	class ModalLoadingA extends React.Component {
 		constructor(props) {
