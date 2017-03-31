@@ -11,7 +11,7 @@
 			return true;
 			if (prevState.ModalPlus !== me.state.ModalPlus) {
 				me.render();
-				viewpoint.find('.ModalPlus_'+ mapping_data.id).modal({backdrop:'static'});
+				viewpoint.find('.Modal_Module').modal({backdrop:'static'});
 			} 
 		}
 		modalClass () {
@@ -19,13 +19,13 @@
 		}	
 		render () {
 			var me = this, err_msg = '';
-		//	if (_modal_backdrop_) {
-		//		if (me.state.ModalPlus.backdrop)  _modal_backdrop_.set(me.state.ModalPlus.backdrop);	
-		//		else  _modal_backdrop_.resetDefault();
-		//	}
+			if (_modal_backdrop_) {
+				if (me.state.ModalPlus.backdrop)  _modal_backdrop_.set(me.state.ModalPlus.backdrop);	
+				else  _modal_backdrop_.resetDefault();
+			}
 
 
-			return(<span>niuniu</span>);
+			return(<span>niuniu A</span>);
 		}				
 	}
 	var Modal_Module = ReactDOM.render(
