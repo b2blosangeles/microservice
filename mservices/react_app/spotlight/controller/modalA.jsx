@@ -11,6 +11,7 @@
 			if (prevState.ModalPlus !== me.state.ModalPlus) {
 				me.render();
 				viewpoint.find('.Modal_Module').modal({backdrop:'static'});
+				$('.Modal_Module').modal({backdrop:'static'});
 			} 
 		}
 		modalClass () {
