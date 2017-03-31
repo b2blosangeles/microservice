@@ -1,3 +1,5 @@
+
+if (!ModalPlusA) {
 class ModalPlusA extends React.Component {
 	constructor(props) {
 		var me = super(props);
@@ -207,7 +209,6 @@ class ModalLoadingA extends React.Component {
 }
 
 
-if (!ModalPlusA) {
 	var ModalPlusA = ReactDOM.render(
 		<ModalPlusA />	
 		,
