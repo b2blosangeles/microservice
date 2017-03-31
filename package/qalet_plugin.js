@@ -1,6 +1,8 @@
 {
 	"tpls":[],
-	"filelist":[],
+	"filelist":[
+		"/mservices/react_app/spotlight/controller/modalA.jsx"
+	],
 	"mservice": {	
 		"jsmarty_news":[
 			"/mservices/jsmarty_news/controller/main.js"
