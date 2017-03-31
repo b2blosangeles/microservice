@@ -51,7 +51,7 @@ try {
 			
 		},	
 		tt:function() {
-			alert('tt');
+	//		alert('tt');
 		},			
 		alert:function() {
 			var me = this;
