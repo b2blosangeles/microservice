@@ -30,6 +30,7 @@
 			return(<span></span>);
 		}				
 	}
+cosole.log(ModalPlusA.modalClass());
 	/*
 	class ModalLoadingA extends React.Component {
 		constructor(props) {
