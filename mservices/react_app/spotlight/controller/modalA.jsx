@@ -1,5 +1,3 @@
-
-
 	class ModalPlusA extends React.Component {
 		constructor(props) {
 			var me = super(props);
@@ -27,7 +25,7 @@
 		//	}
 
 
-			return(<span></span>);
+			return(<span>niuniu</span>);
 		}				
 	}
 	var ModalPlus = ReactDOM.render(
