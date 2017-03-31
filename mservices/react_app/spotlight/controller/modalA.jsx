@@ -118,7 +118,7 @@ if (!ModalPlusAA) {
 			}
 		}				
 	}
-
+	/*
 	class ModalLoadingA extends React.Component {
 		constructor(props) {
 			var me = super(props);
@@ -158,8 +158,8 @@ if (!ModalPlusAA) {
 			);
 		}				
 	}
-
-
+	*/
+/*
 	var ModalPlusAA = ReactDOM.render(
 		<ModalPlusA />	
 		,
@@ -170,5 +170,6 @@ if (!ModalPlusAA) {
 		,
 		$('body')[0]
 	);
+*/
 }
 
