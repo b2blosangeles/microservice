@@ -14,7 +14,10 @@ try {
 				}
 			});			
 			return {doc:[]};
-		},		
+		},	
+		tt:function() {
+			alert('tt');
+		},	
 		render: function() {
 			return (
 				<div>Test Itemdoc {this.state.doc.title}	
@@ -24,6 +27,7 @@ try {
 			)
 		}	
 	});
+	DocItem.tt();
 	var Home = React.createClass({
 		getInitialState: function() {
 			var me = this;
