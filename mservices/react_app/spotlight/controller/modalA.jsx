@@ -57,7 +57,7 @@
 	window.Modal_Module = ReactDOM.renderComponent(
 		<ModalPlusA />	
 		,
-		viewpoint.find('.vp_'+mapping_data.id)[0]
+		viewpoint.find('#nmw')[0]
 	);
 // console.log(Modal_Module.modalClass());
 // Modal_Module.setState({ModalPlus: new Date()}); // $('.Modal_Module').modal({backdrop:'static'});
