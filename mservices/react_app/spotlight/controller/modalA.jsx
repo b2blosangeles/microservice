@@ -30,7 +30,12 @@
 			return(<span></span>);
 		}				
 	}
-console.log(ModalPlusA.modalClass());
+	var ModalPlusAA = ReactDOM.render(
+		<ModalPlusA />	
+		,
+		$('body')[0]
+	);
+console.log(ModalPlusAA.modalClass());
 	/*
 	class ModalLoadingA extends React.Component {
 		constructor(props) {
@@ -73,11 +78,7 @@ console.log(ModalPlusA.modalClass());
 	}
 	*/
 /*
-	var ModalPlusAA = ReactDOM.render(
-		<ModalPlusA />	
-		,
-		$('body')[0]
-	);
+
 	var ModalLoadingAA = ReactDOM.render(
 		<ModalLoadingA />	
 		,
