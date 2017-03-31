@@ -23,7 +23,7 @@
 				if (me.state.ModalPlus.backdrop)  _modal_backdrop_.set(me.state.ModalPlus.backdrop);	
 				else  _modal_backdrop_.resetDefault();
 			}
-
+			var box_class = '', box_style = {}, close_icon = '';
 
 			return(
 				<div className={me.modalClass()} tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -31,14 +31,15 @@
 					<div className={'modal-content ' + box_class} style={box_style} >	
 						<span>
 							<div className="modal-header">
-								<button type="button" className="close" data-dismiss="modal" style={{display:close_icon}}>
+								<button type="button" className="close" data-dismiss="modal" 
+									style={{display:close_icon}}>
 									&times;
 								</button>
 								<h5 className="modal-title" id="exampleModalLabel">Modal title</h5>
 							</div>
 							<div className="modal-body">
 								{/*<span dangerouslySetInnerHTML={{__html: message}}></span>*/}
-								{me.state.ModalPlus.message}
+								'me.state.ModalPlus.message'
 							</div>
 							<div className="modal-footer">
 								<button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
