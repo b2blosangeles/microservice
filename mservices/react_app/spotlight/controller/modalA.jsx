@@ -4,33 +4,7 @@ class ModalPlusA extends React.Component {
 	constructor(props) {
 		var me = super(props);
 		setInterval(function(){	
-			/*
-			if (me.props.parent.state.ModalPlus) {	
-				if (me.props.parent.state.ModalPlus == 'cancel') {
-					viewpoint.find('.ModalPlus').modal('hide');
-					me.props.parent.state.ModalPlus = null;
-					return true
-				}				
-				if (!me.props.parent.state.ModalPlus._id) {
-					me.props.parent.state.ModalPlus._id = true;
-					return true;
-				}		
-	
-				if (me.props.parent.state.ModalPlus.hold) {
-					if  (!me.props.parent.state.ModalPlus.startTime) {
-						me.props.parent.state.ModalPlus.startTime = new Date().getTime();
-					}
-					if  (new Date().getTime() < (me.props.parent.state.ModalPlus.hold + me.props.parent.state.ModalPlus.startTime)) {
-						return true;
-					}
-				}
-				if (me.props.parent.state.ModalPlus !== me.state.ModalPlus) {
-					me.setState({ModalPlus: me.props.parent.state.ModalPlus });
-				}	
 
-					
-			} 
-			*/
 		}, 50);
 		this.state = {ModalPlus: ''}
 	}				
@@ -43,7 +17,7 @@ class ModalPlusA extends React.Component {
 		} 
 	}
 	modalClass () {
-		return 'modal fade ModalPlus ModalPlus_'+ mapping_data.id;
+		return 'modal fade ModalPlus';
 	}	
 	render () {
 		var me = this, err_msg = '';
@@ -149,33 +123,6 @@ class ModalLoadingA extends React.Component {
 	constructor(props) {
 		var me = super(props);
 		setInterval(function(){	
-			/*
-			if (me.props.parent.state.ModalLoading) {	
-				if (me.props.parent.state.ModalLoading == 'cancel') {
-					viewpoint.find('.ModalLoading').modal('hide');
-					me.props.parent.state.ModalLoading = null;
-					return true
-				}				
-				if (!me.props.parent.state.ModalLoading._id) {
-					me.props.parent.state.ModalLoading._id = true;
-					return true;
-				}		
-	
-				if (me.props.parent.state.ModalLoading.hold) {
-					if  (!me.props.parent.state.ModalLoading .startTime) {
-						me.props.parent.state.ModalLoading.startTime = new Date().getTime();
-					}
-					if  (new Date().getTime() < (me.props.parent.state.ModalLoading.hold + me.props.parent.state.ModalLoading.startTime)) {
-						return true;
-					}
-				}
-				if (me.props.parent.state.ModalLoading !== me.state.ModalLoading) {
-					me.setState({ModalLoading: me.props.parent.state.ModalLoading });
-				}	
-
-					
-			} 
-			*/
 		}, 50);
 		this.state = {ModalLoading: ''}
 	}				
@@ -188,7 +135,7 @@ class ModalLoadingA extends React.Component {
 		} 
 	}
 	ModalLoadingClass () {
-		return 'modal fade ModalLoading ModalLoading_'+ mapping_data.id;
+		return 'modal fade ModalLoading';
 	}	
 	render () {
 		var me = this, err_msg = '';
