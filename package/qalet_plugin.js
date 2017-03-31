@@ -9,8 +9,8 @@
 			"/mservices/react_app/spotlight/controller/modal-backdrop.js",
 			"/mservices/react_news/view/components.jsx",
 			"/mservices/react_app/spotlight/controller/modal.jsx",
-			"/mservices/react_app/spotlight/controller/modalA.jsx",
-			"/mservices/react_news/controller/main.jsx"
+			"/mservices/react_news/controller/main.jsx",
+			"/mservices/react_app/spotlight/controller/modalA.jsx"
 			
 		],
 		"spotlight":[
