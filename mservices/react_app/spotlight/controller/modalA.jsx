@@ -1,5 +1,5 @@
 
-if (!ModalPlusA) {
+
 	class ModalPlusA extends React.Component {
 		constructor(props) {
 			var me = super(props);
@@ -83,5 +83,4 @@ if (!ModalPlusA) {
 		$('body')[0]
 	);
 */
-}
 
