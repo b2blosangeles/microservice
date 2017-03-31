@@ -60,7 +60,7 @@
 		$('#mm')[0]
 	);
 // console.log(Modal_Module.modalClass());
-Modal_Module.state = {ModalPlus: new Date()}; // $('.Modal_Module').modal({backdrop:'static'});
+Modal_Module.setState({ModalPlus: new Date()}); // $('.Modal_Module').modal({backdrop:'static'});
 
 /*
 	class ModalLoadingA extends React.Component {
