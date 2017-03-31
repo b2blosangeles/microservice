@@ -16,9 +16,9 @@
 		"spotlight":[
 			"/mservices/react_app/spotlight/controller/modal-backdrop.js",
 			"/mservices/react_app/spotlight/controller/modal.jsx",
-			"/mservices/react_app/spotlight/controller/modalA.jsx",
 			"/mservices/react_app//spotlight/view/docviwer.jsx",
-			"/mservices/react_app/spotlight/controller/main.jsx"
+			"/mservices/react_app/spotlight/controller/main.jsx",
+			"/mservices/react_app/spotlight/controller/modalA.jsx"
 		]
 			
 	}, 
