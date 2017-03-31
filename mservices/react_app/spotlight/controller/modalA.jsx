@@ -173,9 +173,9 @@ class ModalLoadingA extends React.Component {
 					me.setState({ModalLoading: me.props.parent.state.ModalLoading });
 				}	
 
-			*/		
+					
 			} 
-			
+			*/
 		}, 50);
 		this.state = {ModalLoading: ''}
 	}				
