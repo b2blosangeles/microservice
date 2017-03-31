@@ -33,7 +33,7 @@
 	var ModalPlusAA = ReactDOM.render(
 		<ModalPlusA />	
 		,
-		$('body')[0]
+		$('#mm')[0]
 	);
 console.log(ModalPlusAA.modalClass());
 	/*
