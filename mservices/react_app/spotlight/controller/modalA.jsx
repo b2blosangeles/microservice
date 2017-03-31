@@ -57,7 +57,7 @@
 	window.Modal_Module = ReactDOM.render(
 		<ModalPlusA />	
 		,
-		$('#nmw')[0]
+		$('#bmw')[0]
 	);
 // console.log(Modal_Module.modalClass());
 // Modal_Module.setState({ModalPlus: new Date()}); // $('.Modal_Module').modal({backdrop:'static'});
