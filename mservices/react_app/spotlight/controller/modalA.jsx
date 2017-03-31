@@ -54,7 +54,7 @@
 			);
 		}				
 	}
-	var Modal_Module = ReactDOM.render(
+	Modal_Module = ReactDOM.render(
 		<ModalPlusA />	
 		,
 		$('#mm')[0]
