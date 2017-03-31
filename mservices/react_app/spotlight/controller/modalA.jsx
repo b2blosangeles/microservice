@@ -149,6 +149,7 @@ class ModalLoadingA extends React.Component {
 	constructor(props) {
 		var me = super(props);
 		setInterval(function(){	
+			/*
 			if (me.props.parent.state.ModalLoading) {	
 				if (me.props.parent.state.ModalLoading == 'cancel') {
 					viewpoint.find('.ModalLoading').modal('hide');
@@ -172,13 +173,14 @@ class ModalLoadingA extends React.Component {
 					me.setState({ModalLoading: me.props.parent.state.ModalLoading });
 				}	
 
-					
+			*/		
 			} 
 			
 		}, 50);
 		this.state = {ModalLoading: ''}
 	}				
 	componentDidUpdate (prevProps, prevState) {
+		return true;
 		var me = this;
 		if (prevState.ModalLoading !== me.state.ModalLoading) {
 			// me.render();
