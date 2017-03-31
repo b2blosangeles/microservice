@@ -15,9 +15,7 @@ try {
 			});			
 			return {doc:[]};
 		},	
-		tt:function() {
-			alert('tt');
-		},	
+
 		render: function() {
 			return (
 				<div>Test Itemdoc {this.state.doc.title}	
@@ -27,7 +25,7 @@ try {
 			)
 		}	
 	});
-	DocItem.tt();
+	
 	var Home = React.createClass({
 		getInitialState: function() {
 			var me = this;
@@ -52,6 +50,9 @@ try {
 			}
 			
 		},	
+		tt:function() {
+			alert('tt');
+		},			
 		alert:function() {
 			var me = this;
 			me.setState({ModalPlus: {type:'alert', body_class:'warning', 
@@ -155,6 +156,9 @@ try {
 		viewpoint[0]
 	);
 	// $('.'+mapping_data.id).show(0);
+	
+	Home.tt();
+	
 } catch (err) {
 	console.log(err.message);
 }
