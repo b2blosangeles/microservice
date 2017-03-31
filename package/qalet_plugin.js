@@ -33,8 +33,7 @@
 		"spotlight":[
 			"/js/react/react.min.js",
 			"/js/react/react-dom.min.js",
-			"/js/react/ReactRouter/3.0.2/ReactRouter.min.js",
-			"/mservices/react_app/spotlight/controller/mmA.js"
+			"/js/react/ReactRouter/3.0.2/ReactRouter.min.js"
 		]
 	},
 	"ms_tpls": {
