@@ -8,7 +8,6 @@
 		}				
 		componentDidUpdate (prevProps, prevState) {
 			var me = this;
-			return true;
 			if (prevState.ModalPlus !== me.state.ModalPlus) {
 				me.render();
 				viewpoint.find('.Modal_Module').modal({backdrop:'static'});
