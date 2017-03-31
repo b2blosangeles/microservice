@@ -206,7 +206,7 @@ class ModalLoading extends React.Component {
 	}				
 }
 
-
+/*
 if (!$('.ModalPlus')[0]) {
 	var ModalPlus = ReactDOM.render(
 		<ModalPlus/>	
@@ -219,3 +219,4 @@ if (!$('.ModalPlus')[0]) {
 		$('body')[0]
 	);
 }
+*/
