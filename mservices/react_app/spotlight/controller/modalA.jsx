@@ -12,7 +12,7 @@
 			if (prevState.ModalPlus !== me.state.ModalPlus) {
 				me.render();
 				console.log(222);
-				viewpoint.find('.Modal_Module').modal({backdrop:'static'});
+				// viewpoint.find('.Modal_Module').modal({backdrop:'static'});
 				$('.Modal_Module').modal({backdrop:'static'});
 			} 
 		}
