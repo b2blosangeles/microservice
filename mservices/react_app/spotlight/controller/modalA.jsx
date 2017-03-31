@@ -4,6 +4,7 @@ class ModalPlusA extends React.Component {
 	constructor(props) {
 		var me = super(props);
 		setInterval(function(){	
+			/*
 			if (me.props.parent.state.ModalPlus) {	
 				if (me.props.parent.state.ModalPlus == 'cancel') {
 					viewpoint.find('.ModalPlus').modal('hide');
@@ -29,7 +30,7 @@ class ModalPlusA extends React.Component {
 
 					
 			} 
-			
+			*/
 		}, 50);
 		this.state = {ModalPlus: ''}
 	}				
