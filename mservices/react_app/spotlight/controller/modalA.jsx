@@ -30,12 +30,12 @@
 			return(<span></span>);
 		}				
 	}
-	var ModalPlusAA = ReactDOM.render(
+	var ModalPlus = ReactDOM.render(
 		<ModalPlusA />	
 		,
 		$('#mm')[0]
 	);
-console.log(ModalPlusAA.modalClass());
+console.log(ModalPlus.modalClass());
 	/*
 	class ModalLoadingA extends React.Component {
 		constructor(props) {
