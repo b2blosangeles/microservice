@@ -54,7 +54,7 @@
 			);
 		}				
 	}
-	window.Modal_Module = ReactDOM.render(
+	window.Modal_Module = ReactDOM.renderComponent(
 		<ModalPlusA />	
 		,
 		viewpoint.find('.vp_'+mapping_data.id)[0]
