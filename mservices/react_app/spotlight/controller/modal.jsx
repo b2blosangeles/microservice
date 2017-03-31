@@ -211,10 +211,10 @@ class ModalLoading extends React.Component {
 var ModalPlus = ReactDOM.render(
 	<ModalPlus/>	
 	,
-	document.body
+	$('body')[0]
 );
 var ModalLoading = ReactDOM.render(
 	<ModalLoading />	
 	,
-	document.body
+	$('body')[0]
 );
