@@ -1,6 +1,6 @@
 
 if (!ModalPlusAA) {
-	class ModalPlusA extends React.Component {
+	class ModalPlusAA extends React.Component {
 		constructor(props) {
 			var me = super(props);
 			setInterval(function(){	
