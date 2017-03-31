@@ -207,7 +207,7 @@ class ModalLoadingA extends React.Component {
 }
 
 
-if (!$('.ModalPlus')[0]) {
+if (!ModalPlusA) {
 	var ModalPlusA = ReactDOM.render(
 		<ModalPlusA />	
 		,
