@@ -207,14 +207,15 @@ class ModalLoading extends React.Component {
 }
 
 
-
-var ModalPlus = ReactDOM.render(
-	<ModalPlus/>	
-	,
-	$('body')[0]
-);
-var ModalLoading = ReactDOM.render(
-	<ModalLoading />	
-	,
-	$('body')[0]
-);
+if (!$('.ModalPlus')[0]) {
+	var ModalPlus = ReactDOM.render(
+		<ModalPlus/>	
+		,
+		$('body')[0]
+	);
+	var ModalLoading = ReactDOM.render(
+		<ModalLoading />	
+		,
+		$('body')[0]
+	);
+}
