@@ -57,7 +57,7 @@
 	window.Modal_Module = ReactDOM.render(
 		<ModalPlusA />	
 		,
-		$('#bmw')[0]
+		viewpoint.find('#bmw')[0]
 	);
 // console.log(Modal_Module.modalClass());
 // Modal_Module.setState({ModalPlus: new Date()}); // $('.Modal_Module').modal({backdrop:'static'});
