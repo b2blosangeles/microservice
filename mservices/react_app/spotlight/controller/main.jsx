@@ -87,9 +87,7 @@ try {
 						</div>
 						
 						<ModalPlus parent={me}/>
-						<ModalLoading parent={me}/>
-						<div id="nmw"></div>
-						
+						<ModalLoading parent={me}/>						
 					</div>
 					,
 					viewpoint.find('.vp_'+mapping_data.id)[0]
