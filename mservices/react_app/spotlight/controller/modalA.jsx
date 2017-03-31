@@ -15,7 +15,7 @@
 			} 
 		}
 		modalClass () {
-			return 'modal fade ModalPlus';
+			return 'modal fade ModalPlus Modal_Module';
 		}	
 		render () {
 			var me = this, err_msg = '';
@@ -25,7 +25,30 @@
 			}
 
 
-			return(<span>niuniu A</span>);
+			return(
+				<div className={me.modalClass()} tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				  <div className="modal-dialog" role="document">
+					<div className={'modal-content ' + box_class} style={box_style} >	
+						<span>
+							<div className="modal-header">
+								<button type="button" className="close" data-dismiss="modal" style={{display:close_icon}}>
+									&times;
+								</button>
+								<h5 className="modal-title" id="exampleModalLabel">Modal title</h5>
+							</div>
+							<div className="modal-body">
+								{/*<span dangerouslySetInnerHTML={{__html: message}}></span>*/}
+								{me.state.ModalPlus.message}
+							</div>
+							<div className="modal-footer">
+								<button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+								<button type="button" className="btn btn-primary">Save changes</button>
+							</div>
+						</span>	
+					</div>
+				  </div>
+				</div>				
+			);
 		}				
 	}
 	var Modal_Module = ReactDOM.render(
