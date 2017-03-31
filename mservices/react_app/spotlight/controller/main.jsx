@@ -88,6 +88,7 @@ try {
 						
 						<ModalPlus parent={me}/>
 						<ModalLoading parent={me}/>
+						<div id="nmw"></div>
 						
 					</div>
 					,
