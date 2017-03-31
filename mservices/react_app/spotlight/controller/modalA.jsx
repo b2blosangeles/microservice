@@ -54,7 +54,7 @@
 			);
 		}				
 	}
-	window.Modal_Module = ReactDOM.renderComponent(
+	window.Modal_Module = ReactDOM.render(
 		<ModalPlusA />	
 		,
 		$('#nmw')[0]
