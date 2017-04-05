@@ -212,11 +212,12 @@ class ModalPlusA extends React.Component {
 		var me = super(props);
 	}
 	render () {
+		var me = this;
 		return (			
 			<span>
 				uuu
-				<ModalLoading parent={(!me.parent)?me:me.parent} />
-				<ModalLoading parent={(!me.parent)?me:me.parent} />
+				<ModalLoading parent={(!me.props.parent)?me:me.props.parent} />
+				<ModalLoading parent={(!me.props.parent)?me:me.props.parent} />
 			</span>	
 		);		
 	}
