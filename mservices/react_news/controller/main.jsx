@@ -119,7 +119,7 @@ try {
 								return <ListItem item={item} parent={me}/>
 							})}
 							</p>
-							<ModalPlusA parent={me} />
+							<ModalPlus parent={me} />
 							
 						</div>	
 					</div>
