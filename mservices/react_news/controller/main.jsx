@@ -33,6 +33,7 @@ try {
 			$.get('http://m.qalet.com/api/newsfeed/wanwei/getTitle.js',
 			{}, 
 			function (data) {
+				console.log(data);
 				me.setState({list: data }, function() {
 				});
 
