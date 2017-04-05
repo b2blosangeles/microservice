@@ -98,15 +98,15 @@ try {
 			var me = this;
 			me.setState({ModalLoading: { box_style:{color:'yellow'},
 				message:'Loading ... <img src="https://i.stack.imgur.com/oQ0tF.gif" width="24">'}});				
-			console.log(doc);
-		//	return true;
+
 			$.get('http://m.qalet.com/api/newsfeed/wanwei/getPage.js', 
 			{url:doc.href},
 			function (data) {
 				me.setState({ModalLoading: 'cancel'});
 				//if (!doc) {
 					var doc = {title:'title', body:'test body'};
-				//}			
+				//}
+				console.log(data);
 				me.setState({ModalPlus: {type:'popup', 
 					body_class:'warning', 		 
 					box_style:{color:'red'},		 
