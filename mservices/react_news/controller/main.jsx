@@ -95,16 +95,21 @@ try {
 		},		
 		popup:function(doc) {
 			var me = this;
-			 if (!doc) {
-				var doc = {title:'title', body:'test body'};
-			 }			
-			me.setState({ModalPlus: {type:'popup', 
-				body_class:'warning', 		 
-				box_style:{color:'red'},		 
-				// message:me.niu
-				body: me.niu(doc)
-				}
-			});	
+			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
+			{}, 
+			function (data) {
+
+				//if (!doc) {
+					var doc = {title:'title', body:'test body'};
+				//}			
+				me.setState({ModalPlus: {type:'popup', 
+					body_class:'warning', 		 
+					box_style:{color:'red'},		 
+					// message:me.niu
+					body: me.niu(doc)
+					}
+				});				
+			},'json');
 		},
 		showList: function() {
 			var me = this;
