@@ -206,6 +206,22 @@ class ModalLoading extends React.Component {
 	}				
 }
 
+
+class ModalPlusA extends React.Component {
+	constructor(props) {
+		var me = super(props);
+	}
+	render () {
+		return (			
+			<span>
+				<ModalLoading />
+				<ModalLoading/>
+			</span>	
+		);		
+	}
+}	
+
+
 /*
 if (!$('.ModalPlus')[0]) {
 	var ModalPlus = ReactDOM.render(
