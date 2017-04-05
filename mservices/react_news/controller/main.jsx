@@ -99,7 +99,7 @@ try {
 				message:'Loading ... <img src="https://i.stack.imgur.com/oQ0tF.gif" width="24">'}});				
 			console.log(doc);
 			return true;
-			$.get({url: 'http://m.qalet.com/api/newsfeed/wanwei/getPage.js', 
+			$.get('http://m.qalet.com/api/newsfeed/wanwei/getPage.js', 
 			{url:me.props.item.href},
 			function (data) {
 				me.setState({ModalLoading: 'cancel'});
