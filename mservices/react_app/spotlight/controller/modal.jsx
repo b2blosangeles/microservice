@@ -59,7 +59,7 @@ class ModalWin extends React.Component {
 				if (!err_msg) {
 					return (			
 						<div className={me.modalClass()} tabindex="-1" role="dialog" aria-hidden="true">
-						  <div className="modal-dialog modal-ku modal-lg" role="document">
+						  <div className="modal-dialog modal-lg" role="document">
 							<div className={'alert alert-' + box_class} style={box_style} role="alert">
 								<span dangerouslySetInnerHTML={{__html: message}}></span>
 								<button type="button" className="close" data-dismiss="modal" style={{display:close_icon}}>
@@ -84,7 +84,7 @@ class ModalWin extends React.Component {
 					if (me.state.ModalPlus.body) {
 						return (			
 							<div className={me.modalClass()} tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-							  <div className="modal-dialog modal-ku  modal-lg" role="document">
+							  <div className="modal-dialog modal-lg" role="document">
 								<div className={'modal-content ' + box_class} style={box_style} >
 									{me.state.ModalPlus.body}
 								</div>
@@ -94,7 +94,7 @@ class ModalWin extends React.Component {
 					} else {
 						return (
 							<div className={me.modalClass()} tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-							  <div className="modal-dialog modal-ku  modal-lg" role="document">
+							  <div className="modal-dialog modal-lg" role="document">
 								<div className={'modal-content ' + box_class} style={box_style} >	
 									<span>
 										<div className="modal-header">
