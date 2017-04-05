@@ -98,7 +98,8 @@ try {
 			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 			{}, 
 			function (data) {
-
+				me.setState({ModalLoading: { box_style:{color:'yellow'},
+			 		message:'Loading ... <img src="https://i.stack.imgur.com/oQ0tF.gif" width="24">'}});	
 				//if (!doc) {
 					var doc = {title:'title', body:'test body'};
 				//}			
