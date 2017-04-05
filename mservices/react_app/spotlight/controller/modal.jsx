@@ -1,4 +1,4 @@
-class ModalPlus extends React.Component {
+class ModalWin extends React.Component {
 	constructor(props) {
 		var me = super(props);
 		setInterval(function(){	
@@ -207,7 +207,7 @@ class ModalLoading extends React.Component {
 }
 
 
-class ModalPlusA extends React.Component {
+class ModalPlus extends React.Component {
 	constructor(props) {
 		var me = super(props);
 	}
@@ -215,8 +215,8 @@ class ModalPlusA extends React.Component {
 		var me = this;
 		return (			
 			<span>
-				uuu
-				<ModalPlus parent={(!me.props.parent)?me:me.props.parent} />
+				vvv
+				<ModalWin parent={(!me.props.parent)?me:me.props.parent} />
 				<ModalLoading parent={(!me.props.parent)?me:me.props.parent} />
 			</span>	
 		);		
