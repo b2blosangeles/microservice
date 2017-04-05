@@ -87,7 +87,6 @@ try {
 						</div>
 						
 						<ModalPlus parent={me}/>
-						<span id="bmw"></span>
 					</div>
 					,
 					viewpoint.find('.vp_'+mapping_data.id)[0]
