@@ -87,7 +87,6 @@ try {
 						</div>
 						
 						<ModalPlus parent={me}/>
-						<ModalLoading parent={me}/>
 						<span id="bmw"></span>
 					</div>
 					,
