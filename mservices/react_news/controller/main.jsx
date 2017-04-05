@@ -30,7 +30,7 @@ try {
 		getInitialState: function() {
 			var me = this;
 
-			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
+			$.get('http://m.qalet.com/api/newsfeed/wanwei/getTitle.js',
 			{}, 
 			function (data) {
 				me.setState({list: data }, function() {
@@ -98,7 +98,7 @@ try {
 			me.setState({ModalLoading: { box_style:{color:'yellow'},
 				message:'Loading ... <img src="https://i.stack.imgur.com/oQ0tF.gif" width="24">'}});				
 
-			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_page.js', 
+			$.get('http://m.qalet.com/api/newsfeed/wanwei/getPage.js', 
 			{url:doc.href},
 			function (data) {
 				me.setState({ModalLoading: 'cancel'});
@@ -128,7 +128,7 @@ try {
 								return <ListItem item={item} parent={me}/>
 							})}
 							</p>
-							<ModalPlus parent={me} />
+							
 							
 						</div>	
 					</div>
@@ -144,7 +144,7 @@ try {
 					<div id="pp">{mapping_data.id}</div>
 					<div id="ttt">{mapping_data.id}</div>
 					<span className={'vp_'+mapping_data.id}>...</span>
-						
+					<ModalPlus parent={me} />	
 				</span>	
 			  );
 		},
@@ -175,4 +175,3 @@ try {
 } catch (err) {
 	console.log(err.message);
 }
-
