@@ -94,9 +94,10 @@ try {
 			)
 		},		
 		popup:function(doc) {
+			var me = this;
 			me.setState({ModalLoading: { box_style:{color:'yellow'},
 				message:'Loading ... <img src="https://i.stack.imgur.com/oQ0tF.gif" width="24">'}});				
-			var me = this;
+			
 			$.get('http://m.qalet.com/api/newsfeed/wxct/wxct_list.js',
 			{}, 
 			function (data) {
