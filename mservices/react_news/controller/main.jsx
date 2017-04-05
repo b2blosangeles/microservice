@@ -128,7 +128,7 @@ try {
 								return <ListItem item={item} parent={me}/>
 							})}
 							</p>
-							
+							<ModalPlus parent={me} />
 							
 						</div>	
 					</div>
@@ -144,7 +144,7 @@ try {
 					<div id="pp">{mapping_data.id}</div>
 					<div id="ttt">{mapping_data.id}</div>
 					<span className={'vp_'+mapping_data.id}>...</span>
-					<ModalPlus parent={me} />	
+						
 				</span>	
 			  );
 		},
