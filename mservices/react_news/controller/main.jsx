@@ -99,9 +99,9 @@ try {
 			me.setState({ModalLoading: { box_style:{color:'yellow'},
 				message:'Loading ... <img src="https://i.stack.imgur.com/oQ0tF.gif" width="24">'}});				
 			console.log(doc);
-			return true;
+		//	return true;
 			$.get('http://m.qalet.com/api/newsfeed/wanwei/getPage.js', 
-			{url:me.props.item.href},
+			{url:doc.href},
 			function (data) {
 				me.setState({ModalLoading: 'cancel'});
 				//if (!doc) {
