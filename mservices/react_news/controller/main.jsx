@@ -100,7 +100,7 @@ try {
 			console.log(doc);
 			return true;
 			$.get({url: 'http://m.qalet.com/api/newsfeed/wanwei/getPage.js', 
-			data:{url:me.props.item.href},
+			{url:me.props.item.href},
 			function (data) {
 				me.setState({ModalLoading: 'cancel'});
 				//if (!doc) {
