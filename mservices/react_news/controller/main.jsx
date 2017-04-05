@@ -128,7 +128,7 @@ try {
 								return <ListItem item={item} parent={me}/>
 							})}
 							</p>
-							<ModalPlus parent={me} />
+							
 							
 						</div>	
 					</div>
@@ -160,7 +160,10 @@ try {
 	});
 	
 	var myChild = ReactDOM.render(
-		<Home/>	
+		<span>
+			<Home/>
+			<ModalPlus parent={Home} />	
+		</span>	
 		,
 		viewpoint[0]
 	);
