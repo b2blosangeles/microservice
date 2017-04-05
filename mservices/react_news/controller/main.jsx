@@ -76,7 +76,7 @@ try {
 			var me = this;
 			var close_icon = false;
 			return (
-				<span class="modal-lg  modal-ku">
+				<span class="modal-lg">
 					<div className="modal-header">
 						<button type="button" className="close" data-dismiss="modal" style={{display:close_icon}}>
 							&times;
