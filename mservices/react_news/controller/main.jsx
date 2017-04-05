@@ -144,7 +144,7 @@ try {
 					<div id="pp">{mapping_data.id}</div>
 					<div id="ttt">{mapping_data.id}</div>
 					<span className={'vp_'+mapping_data.id}>...</span>
-					<ModalPlus parent={Home} />	
+					<ModalPlus parent={me} />	
 				</span>	
 			  );
 		},
