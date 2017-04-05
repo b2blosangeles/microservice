@@ -39,7 +39,7 @@ class ModalWin extends React.Component {
 		} 
 	}
 	modalClass () {
-		return 'modal fade ModalPlus ModalPlus_'+ mapping_data.id;
+		return 'modal fade modal-fluid ModalPlus ModalPlus_'+ mapping_data.id;
 	}	
 	render () {
 		var me = this, err_msg = '';
