@@ -119,8 +119,8 @@ try {
 								return <ListItem item={item} parent={me}/>
 							})}
 							</p>
-							<ModalPlus parent={me} />
-							<ModalLoading parent={me} />
+							<ModalPlusA parent={me} />
+							
 						</div>	
 					</div>
 					,
