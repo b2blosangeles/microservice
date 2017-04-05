@@ -33,7 +33,6 @@ try {
 			$.get('http://m.qalet.com/api/newsfeed/wanwei/getTitle.js',
 			{}, 
 			function (data) {
-				console.log(data);
 				me.setState({list: data }, function() {
 				});
 
@@ -104,7 +103,7 @@ try {
 			function (data) {
 				me.setState({ModalLoading: 'cancel'});
 				//if (!doc) {
-					var doc = {title:'title', body:'test body'};
+					var doc = {title:data.title, body:data.body};
 				//}
 				console.log(data);
 				me.setState({ModalPlus: {type:'popup', 
